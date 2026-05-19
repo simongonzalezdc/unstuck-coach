@@ -108,6 +108,18 @@ Expected behavior:
 Try:
 
 ```text
+My inbox and calendar are a mess and I do not know what is real.
+```
+
+Expected behavior:
+
+- Treats this as system overload, not a personal failure.
+- Rescues live obligations before cleanup.
+- Asks for one hard calendar anchor or one inbox item tied to time, money, safety, or another person.
+
+Try:
+
+```text
 idea: make a shutdown checklist for Sunday nights
 ```
 
@@ -231,7 +243,7 @@ Run the verifier:
 node scripts/verify-public-bundle.mjs
 ```
 
-It should report zero failures, a 2-3 sentence Skool comment draft, and eight console behavior cases. Warnings about the final GitHub link are expected until the public repo URL is inserted.
+It should report zero failures, a 2-3 sentence Skool comment draft, and nine console behavior cases. Warnings about the final GitHub link are expected until the public repo URL is inserted.
 
 For the submission-copy proof, run:
 

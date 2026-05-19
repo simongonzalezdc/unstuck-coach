@@ -11,6 +11,7 @@ const requiredText = [
   "PROJECT_INSTRUCTIONS.md",
   "FIRST_RUN.md",
   "I need a coach to get started on this.",
+  "My inbox and calendar are a mess and I do not know what is real.",
   "First Reply Acceptance Test",
   "Names the friction without blame.",
   "Gives one visible next move.",

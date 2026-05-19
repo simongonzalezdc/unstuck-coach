@@ -17,6 +17,7 @@ Use this as the evidence map for the entry. Each claim should point to a file a 
 | The protocol is runnable before opening Claude | `landing/index.html`, `landing/app.js` | The console translates a messy stuck point into state, friction, one move, and a proof check. |
 | It handles shame and communication threat | `examples.md`, `evals/red-face-tests.md`, `reference/coaching-protocols.md` | Message and conflict spirals are sorted into literal asks before meaning-making. |
 | It externalizes working memory | `rules.md`, `reference/signal-map.md`, `HANDOFF_CARD.md` | The coach holds the list, returns one next move, and parks the rest. |
+| It preserves original Liam calendar and inbox support | `rules.md`, `examples.md`, `reference/coaching-protocols.md`, `reference/signal-map.md`, `PROJECT_INSTRUCTIONS.md`, `landing/app.js` | Inbox piles and calendar drift route to live-obligation rescue, hard anchors, and one visible next item instead of inbox zero or a total schedule rebuild. |
 | It converts research into behavior | `evals/research-to-behavior-checklist.md`, `reference/source-notes.md` | Research concepts map to actual protocols, not bibliography padding. |
 | It is above the brief without hiding the folder | `landing/index.html`, `COMPETITION_RULES_TRACE.md`, `ICM_TRACE.md`, `demo/transcript-pack.md`, `JUDGE_SCORECARD.md` | The landing proof band distinguishes the required-file floor, ICM trace, cold-test transcripts, and judge scorecard. |
 | It removes first-run friction | `landing/index.html`, `PROJECT_INSTRUCTIONS.md`, `demo/transcript-pack.md` | The landing launch kit exposes the exact start prompt and the first cold-test prompts before the judge leaves the page. |
@@ -35,7 +36,7 @@ Use this as the evidence map for the entry. Each claim should point to a file a 
 | The public bundle is self-checking | `scripts/verify-public-bundle.mjs`, `scripts/verify-submission-copy.mjs`, `scripts/verify-submission-surfaces.mjs`, `scripts/verify-pitch-reel.mjs`, `scripts/verify-reel-page.mjs`, `scripts/verify-judge-faq.mjs`, `scripts/verify-judge-scorecard.mjs`, `scripts/verify-competition-rules-trace.mjs`, `scripts/verify-product-thesis.mjs`, `scripts/verify-icm-trace.mjs`, `scripts/verify-first-run.mjs`, `scripts/verify-first-reply-scorecard.mjs`, `scripts/verify-start-here.mjs`, `scripts/verify-landing-copy.mjs`, `scripts/verify-transcript-pack.mjs`, `scripts/verify-first-reply-acceptance.mjs`, `scripts/verify-console-behavior.mjs`, `scripts/prepare-publication-link.mjs`, `scripts/verify-publication-ready.mjs`, `scripts/verify-github-public-url.mjs`, `scripts/final-review-smoke.mjs`, `scripts/verify-clean-public-stage.mjs`, `scripts/build-public-bundle.mjs`, `scripts/stage-public-repo.mjs` | The verifier checks required files, local landing links/assets, product-thesis completeness, Week 5 rules-trace completeness, ICM-trace completeness, pitch-reel readiness, record-ready reel page, judge FAQ, judge scorecard, first-run receipt completeness, first-reply scorecard completeness, start-here prompt readiness, landing copy controls, Skool comment shape, synchronized submission surfaces, transcript-pack completeness, first-reply acceptance, runnable console classifications, privacy patterns, symbol-range leakage, and public GitHub URL visibility; the guarded link helper and final publication gate block posting until the public GitHub link is inserted and publicly visible. |
 | The one-command final smoke gate is ready | `scripts/final-review-smoke.mjs`, `PUBLICATION_CHECKLIST.md`, `scripts/verify-publication-ready.mjs`, `scripts/verify-github-public-url.mjs` | Before approval, the smoke test passes while publication remains blocked only on the final public GitHub link and review placeholder; after link insertion, the ready smoke must prove the GitHub URL is publicly visible. |
 
-## Four Fast Tests
+## Five Fast Tests
 
 Paste these into a Claude Project after loading the folder:
 
@@ -50,6 +51,12 @@ I need to pay the bill, eat something, and answer the text, but I am frozen.
 ```
 
 Expected: activation friction, first-contact move, tiny proof.
+
+```text
+My inbox and calendar are a mess and I do not know what is real.
+```
+
+Expected: live-obligation rescue, one hard calendar anchor or one inbox item, no demand for inbox zero.
 
 ```text
 idea: make a shutdown checklist for Sunday nights

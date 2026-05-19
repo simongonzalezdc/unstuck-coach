@@ -44,6 +44,10 @@ I need to pay the bill, eat something, and answer the text, but I am frozen.
 ```
 
 ```text
+My inbox and calendar are a mess and I do not know what is real.
+```
+
+```text
 idea: make a shutdown checklist for Sunday nights
 ```
 

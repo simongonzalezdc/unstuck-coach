@@ -61,7 +61,7 @@ The product thesis explains the design choice: the folder is the product, first 
 
 The clean repository handoff is guarded too: the staging helper verifies the bundle first, defaults to dry-run, and writes only when the target folder has been reviewed.
 
-To test it, load the folder into a Claude Project and try four prompts: "I need a coach to get started on this." "I need to pay the bill, eat something, and answer the text, but I am frozen." "idea: make a shutdown checklist for Sunday nights." And "That message makes me feel like I did something wrong."
+To test it, load the folder into a Claude Project and try five prompts: "I need a coach to get started on this." "I need to pay the bill, eat something, and answer the text, but I am frozen." "My inbox and calendar are a mess and I do not know what is real." "idea: make a shutdown checklist for Sunday nights." And "That message makes me feel like I did something wrong."
 
 If the response is a lecture, it failed. If it creates one state-aware next move and preserves dignity, it is doing the job.
 ```
@@ -74,10 +74,10 @@ If the response is a lecture, it failed. If it creates one state-aware next move
 - Show the runnable console once.
 - Show one live prompt switch in the demo.
 - Show `FIRST_RUN.md`, `ICM_TRACE.md`, `demo/transcript-pack.md`, and `RECEIPTS.md` so the proof feels inspectable.
-- Show the verifier output only long enough to make the zero-failure gate, ICM rows, clean-stage preflight, first-run checks, copy-button count, eight console behavior cases, and eight transcript cases visible.
+- Show the verifier output only long enough to make the zero-failure gate, ICM rows, clean-stage preflight, first-run checks, copy-button count, nine console behavior cases, and eight transcript cases visible.
 - Do not show local review notes, local paths, browser history, or unpublished repository settings.
 
-## Four Demo Prompts
+## Five Demo Prompts
 
 ```text
 I need a coach to get started on this.
@@ -85,6 +85,10 @@ I need a coach to get started on this.
 
 ```text
 I need to pay the bill, eat something, and answer the text, but I am frozen.
+```
+
+```text
+My inbox and calendar are a mess and I do not know what is real.
 ```
 
 ```text

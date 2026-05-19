@@ -40,10 +40,16 @@ I need a coach to get started on this.
 9. Try:
 
 ```text
+My inbox and calendar are a mess and I do not know what is real.
+```
+
+10. Try:
+
+```text
 I need to pay the bill, eat something, and answer the text, but I am frozen.
 ```
 
-10. Inspect `RECEIPTS.md` and run:
+11. Inspect `RECEIPTS.md` and run:
 
 ```bash
 node scripts/verify-judge-scorecard.mjs

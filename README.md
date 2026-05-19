@@ -136,8 +136,9 @@ The quick test:
 1. Load the folder into a Claude Project.
 2. Try: `I need a coach to get started on this.`
 3. Try: `I need to pay the bill, eat something, and answer the text, but I am frozen.`
-4. Try: `idea: make a shutdown checklist for Sunday nights`
-5. Try: `I tried the same plan three times and failed every time.`
+4. Try: `My inbox and calendar are a mess and I do not know what is real.`
+5. Try: `idea: make a shutdown checklist for Sunday nights`
+6. Try: `I tried the same plan three times and failed every time.`
 
 If Startline gives a productivity article, it failed. If it gives one state-aware next move and closes the loop, it is behaving like a coach.
 
@@ -153,6 +154,10 @@ I need a coach to get started on this.
 
 ```text
 I have too many things in my head. Help me sort them.
+```
+
+```text
+My inbox and calendar are a mess and I do not know what is real.
 ```
 
 ```text

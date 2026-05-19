@@ -8,6 +8,7 @@ Startline Coach helps a whole person cross executive-function barriers when acce
 
 - The user knows what to do but cannot start.
 - The user has too many tasks in working memory.
+- The user's inbox or calendar no longer feels like a usable map.
 - A message, review, or feedback feels personally threatening.
 - The user is returning after avoidance.
 - The user is exiting hyperfocus and needs a clean re-entry breadcrumb.
@@ -65,6 +66,7 @@ The first reply should pass this test before the judge reads anything else:
 3. Open `FIRST_RUN.md`.
 4. Try: `I need a coach to get started on this.`
 5. Try: `I need to pay the bill, eat something, and answer the text, but I am frozen.`
-6. Try: `idea: make a shutdown checklist for Sunday nights`
-7. Try: `That message makes me feel like I did something wrong.`
-8. Compare the response against `demo/before-after.md` and `evals/red-face-tests.md`.
+6. Try: `My inbox and calendar are a mess and I do not know what is real.`
+7. Try: `idea: make a shutdown checklist for Sunday nights`
+8. Try: `That message makes me feel like I did something wrong.`
+9. Compare the response against `demo/before-after.md` and `evals/red-face-tests.md`.
