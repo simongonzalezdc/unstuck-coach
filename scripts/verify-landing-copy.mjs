@@ -22,6 +22,11 @@ const expectedCopyTargets = [
   },
   {
     button: "Copy cold prompt 03",
+    target: "cold-prompt-inbox-calendar",
+    text: "My inbox and calendar are a mess and I do not know what is real.",
+  },
+  {
+    button: "Copy cold prompt 04",
     target: "cold-prompt-feedback",
     text: "That message makes me feel like I did something wrong.",
   },

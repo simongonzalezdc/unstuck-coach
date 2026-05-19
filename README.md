@@ -220,7 +220,7 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 - `scripts/verify-first-run.mjs` checks that the first-run receipt keeps the cold prompt, expected first reply, proof loop, and fail patterns intact.
 - `scripts/verify-first-reply-scorecard.mjs` checks that the first-reply scorecard keeps its pass/fail criteria, fail patterns, and evidence links.
 - `scripts/verify-start-here.mjs` checks that the fastest judge path stays paste-ready.
-- `scripts/verify-landing-copy.mjs` checks that the landing launch-kit prompts stay copy-ready.
+- `scripts/verify-landing-copy.mjs` checks that the landing launch-kit prompts, including the inbox/calendar recovery prompt, stay copy-ready.
 - `scripts/verify-transcript-pack.mjs` checks that the cold-test transcript pack stays complete.
 - `scripts/verify-first-reply-acceptance.mjs` checks that cold-test first replies name friction, give one move, ask for proof, and avoid generic advice patterns.
 - `scripts/verify-console-behavior.mjs` checks the runnable console's protocol classifications.

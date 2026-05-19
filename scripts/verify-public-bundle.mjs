@@ -611,6 +611,7 @@ const landingRequiredText = [
   "First reply preview",
   "Reply with what is open.",
   "Judge the coach before reading the whole folder.",
+  "Copy cold prompt 04",
   "Try: \"My inbox and calendar are a mess and I do not know what is real.\"",
   "Open FAQ",
   "The fastest objections have short answers.",
