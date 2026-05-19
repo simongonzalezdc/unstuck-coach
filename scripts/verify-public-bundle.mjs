@@ -1054,6 +1054,7 @@ const summary = {
   checkedFiles: allFiles.length,
   landingLocalRefs: hrefs.filter(localLinkTarget).length,
   consoleBehaviorCases: consoleBehavior.checkedCases,
+  demoPromptTabs: consoleBehavior.demoPromptTabs,
   productThesisSections: productThesis.sections,
   productThesisEvidenceRefs: productThesis.evidenceRefs,
   competitionRulesTraceBriefRows: competitionRulesTrace.briefRequirementRows,

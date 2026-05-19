@@ -128,7 +128,7 @@ function makeHarness() {
     ["#console-check-note", makeElement()],
   ]);
 
-  const promptTabs = [0, 1, 2, 3, 4].map((index) => makeElement({ demo: String(index) }));
+  const promptTabs = [0, 1, 2, 3, 4, 5].map((index) => makeElement({ demo: String(index) }));
   const sampleChips = [
     "I need a coach to get started on this.",
     "That message makes me feel like I did something wrong.",
@@ -166,7 +166,9 @@ function makeHarness() {
 
 export function verifyConsoleBehavior(root = process.cwd()) {
   const appPath = path.join(root, "landing", "app.js");
+  const htmlPath = path.join(root, "landing", "index.html");
   const source = fs.readFileSync(appPath, "utf8");
+  const html = fs.readFileSync(htmlPath, "utf8");
   const harness = makeHarness();
   const context = vm.createContext({
     document: harness.document,
@@ -180,6 +182,36 @@ export function verifyConsoleBehavior(root = process.cwd()) {
   });
 
   const failures = [];
+  const expectedDemoTabs = [
+    { index: "0", label: "Life freeze" },
+    { index: "1", label: "Get started" },
+    { index: "2", label: "Message spiral" },
+    { index: "3", label: "Inbox/calendar" },
+    { index: "4", label: "Too many loops" },
+    { index: "5", label: "Failed plan" },
+  ];
+  const promptTabs = Array.from(
+    html.matchAll(/<button[^>]*class="prompt-tab[^"]*"[^>]*data-demo="([^"]+)"[^>]*>[\s\S]*?<\/button>/g),
+  ).map((match) => ({
+    index: match[1],
+    label: match[0].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim(),
+  }));
+  if (promptTabs.length !== expectedDemoTabs.length) {
+    failures.push(`landing demo expected ${expectedDemoTabs.length} prompt tabs, found ${promptTabs.length}`);
+  }
+  expectedDemoTabs.forEach((expected, index) => {
+    const actual = promptTabs[index];
+    if (!actual) return;
+    if (actual.index !== expected.index || actual.label !== expected.label) {
+      failures.push(
+        `landing demo tab ${index} expected data-demo=${expected.index} label=${JSON.stringify(expected.label)}, got data-demo=${actual.index} label=${JSON.stringify(actual.label)}`,
+      );
+    }
+    if (!source.includes(`label: "${expected.label}"`)) {
+      failures.push(`landing/app.js demos missing matching label: ${expected.label}`);
+    }
+  });
+
   const cases = defaultCases.map((testCase) => {
     const result = context.coachMoment(testCase.input);
     const actual = {
@@ -208,6 +240,7 @@ export function verifyConsoleBehavior(root = process.cwd()) {
 
   return {
     checkedCases: cases.length,
+    demoPromptTabs: promptTabs.length,
     cases,
     failures,
   };
