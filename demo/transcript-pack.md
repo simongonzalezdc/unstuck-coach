@@ -9,7 +9,7 @@ Each transcript should pass four checks:
 - Holds or parks the extra context.
 - Ends with proof, not vibes.
 
-Run `node scripts/verify-transcript-pack.mjs` to check that all eight cold-test examples still include the expected user prompt, coach move, and proof notes.
+Run `node scripts/verify-transcript-pack.mjs` to check that all nine cold-test examples still include the expected user prompt, coach move, and proof notes.
 
 Run `node scripts/verify-first-reply-acceptance.mjs` to check that those first replies name friction, give one visible move, ask for tiny proof or a state signal, and avoid generic advice patterns.
 
@@ -204,3 +204,29 @@ Why this passes:
 - It calibrates before strategizing.
 - It offers a default.
 - It asks one question.
+
+## 9. Inbox And Calendar Reality
+
+User:
+
+```text
+My inbox and calendar are a mess and I do not know what is real.
+```
+
+Startline Coach:
+
+```text
+This is system overload, not a character problem.
+
+We are not cleaning the whole inbox or rebuilding the week.
+
+Open the calendar first and name the next hard anchor: meeting, deadline, travel, pickup, sleep, or nothing today. Then choose one inbox item tied to time, money, safety, relationship, or another person.
+
+Reply with the anchor only.
+```
+
+Why this passes:
+
+- It treats inbox/calendar chaos as system overload.
+- It rescues live obligations before cleanup.
+- It asks for one hard anchor as proof, not inbox zero.

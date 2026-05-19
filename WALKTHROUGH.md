@@ -39,7 +39,7 @@ Startline Coach is external executive function for the whole human: start, switc
 29. Run `node scripts/verify-landing-copy.mjs`.
 30. Run `node scripts/verify-clean-public-stage.mjs`.
 31. Run `node scripts/final-review-smoke.mjs --expect-blocked`.
-32. Point to the product-thesis evidence refs, rules-trace rows, pitch-reel rows, reel-page scenes, judge-FAQ questions, judge-scorecard rows, submission-surface sync, ICM-trace rows, first-run checks, first-reply scorecard checks, start-here prompt blocks, clean-stage preflight, copy-button count, eight-case console behavior check, eight-case transcript check, and eight-case first-reply check in the verifier output.
+32. Point to the product-thesis evidence refs, rules-trace rows, pitch-reel rows, reel-page scenes, judge-FAQ questions, judge-scorecard rows, submission-surface sync, ICM-trace rows, first-run checks, first-reply scorecard checks, start-here prompt blocks, clean-stage preflight, copy-button count, nine-case console behavior check, nine-case transcript check, and nine-case first-reply check in the verifier output.
 33. Mention that `PUBLICATION_CHECKLIST.md` keeps the private-to-public posting lane explicit.
 34. Mention that `node scripts/prepare-publication-link.mjs --url https://github.com/OWNER/REPO --write` inserts the approved public URL.
 35. Mention that `node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public` dry-runs the clean repository handoff.
@@ -74,7 +74,7 @@ If the response is a lecture, it failed. If it creates one state-aware next move
 - Show the runnable console once.
 - Show one live prompt switch in the demo.
 - Show `FIRST_RUN.md`, `ICM_TRACE.md`, `demo/transcript-pack.md`, and `RECEIPTS.md` so the proof feels inspectable.
-- Show the verifier output only long enough to make the zero-failure gate, ICM rows, clean-stage preflight, first-run checks, copy-button count, nine console behavior cases, and eight transcript cases visible.
+- Show the verifier output only long enough to make the zero-failure gate, ICM rows, clean-stage preflight, first-run checks, copy-button count, nine console behavior cases, nine transcript cases, and nine first-reply checks visible.
 - Do not show local review notes, local paths, browser history, or unpublished repository settings.
 
 ## Five Demo Prompts

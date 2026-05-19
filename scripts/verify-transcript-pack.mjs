@@ -53,6 +53,12 @@ const defaultExpectedTranscripts = [
     coachMustInclude: ["I will not guess", "If choosing is annoying, say yellow"],
     proofMustInclude: ["calibrates before strategizing", "asks one question"],
   },
+  {
+    title: "Inbox And Calendar Reality",
+    user: "My inbox and calendar are a mess and I do not know what is real.",
+    coachMustInclude: ["system overload", "Open the calendar first", "Reply with the anchor only"],
+    proofMustInclude: ["live obligations", "hard anchor", "inbox zero"],
+  },
 ];
 
 function normalize(value) {

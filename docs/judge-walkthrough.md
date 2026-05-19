@@ -231,7 +231,7 @@ It should keep final publishing separate from review: design approval, documente
 
 Open `WALKTHROUGH.md`.
 
-It should make the presentation path obvious: thesis, handoff, demo, transcripts, receipts, verifier, and the four judge prompts.
+It should make the presentation path obvious: thesis, handoff, demo, transcripts, receipts, verifier, and the five judge prompts.
 
 Open `RECEIPTS.md`.
 
@@ -324,7 +324,7 @@ For the transcript-pack proof, run:
 node scripts/verify-transcript-pack.mjs
 ```
 
-It should check eight cold-test transcripts and report zero failures.
+It should check nine cold-test transcripts and report zero failures.
 
 For the first-reply acceptance proof, run:
 
@@ -332,7 +332,7 @@ For the first-reply acceptance proof, run:
 node scripts/verify-first-reply-acceptance.mjs
 ```
 
-It should check all eight transcript first replies for friction naming, one visible move, tiny proof or state signal, and generic-advice failure patterns.
+It should check all nine transcript first replies for friction naming, one visible move, tiny proof or state signal, and generic-advice failure patterns.
 
 For the one-command proof gate before public-link insertion, run:
 

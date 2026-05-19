@@ -31,6 +31,7 @@ const frictionSignals = [
   "The plan failed; you did not",
   "Biology is in the loop",
   "I will not guess",
+  "system overload",
 ];
 
 function wordCount(text) {

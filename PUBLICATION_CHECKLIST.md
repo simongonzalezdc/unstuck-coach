@@ -56,8 +56,8 @@ Expected before public-link insertion:
 - `verify-first-reply-scorecard.mjs` reports the first-reply pass/fail criteria and evidence links with zero failures.
 - `verify-start-here.mjs` reports the 60-second path, first prompt, acceptance test, and proof links with zero failures.
 - `verify-landing-copy.mjs` reports the landing launch-kit copy controls and target prompt text with zero failures.
-- `verify-transcript-pack.mjs` reports 8 checked cases and zero failures.
-- `verify-first-reply-acceptance.mjs` reports 8 checked first replies and zero failures.
+- `verify-transcript-pack.mjs` reports 9 checked cases and zero failures.
+- `verify-first-reply-acceptance.mjs` reports 9 checked first replies and zero failures.
 - `verify-console-behavior.mjs` reports 9 checked behavior cases and zero failures.
 - `verify-public-bundle.mjs` reports zero failures.
 - `verify-clean-public-stage.mjs` stages into a temporary separate folder, verifies the staged payload, removes the temporary target, and reports zero failures.
