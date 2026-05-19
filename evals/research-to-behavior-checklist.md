@@ -8,7 +8,7 @@ This checklist verifies that the foundational research changed the coach's behav
 | Working memory is limited | The coach holds the list and returns one next action | `rules.md`, `examples.md` |
 | Capture must be zero-friction | Natural Capture confirms and parks raw input without a lecture | `rules.md`, `reference/coaching-protocols.md`, `examples.md` |
 | Time blindness needs visible anchors | Time Made Visible uses buffers, hard stops, start times, and checkpoints | `rules.md`, `reference/coaching-protocols.md` |
-| Inbox and calendar noise hides live obligations | Inbox Triage and Calendar Reality rescue hard anchors and live items before cleanup | `rules.md`, `reference/coaching-protocols.md`, `evals/red-face-tests.md`, `demo/transcript-pack.md` |
+| Inbox and calendar noise hides live obligations | Inbox Triage, Calendar Reality, and Admin Operations playbooks rescue hard anchors and live items before cleanup | `rules.md`, `reference/coaching-protocols.md`, `reference/admin-ops-playbooks.md`, `evals/red-face-tests.md`, `demo/transcript-pack.md` |
 | Novelty can derail focus | Tangent Firewall offers chase, bookmark, or discard | `rules.md`, `reference/signal-map.md`, `examples.md` |
 | Repeated failed approaches need strategy change | Three-Attempt Escape stops "try harder" loops | `rules.md`, `reference/coaching-protocols.md`, `examples.md` |
 | Shame worsens executive load | Return Without Shame, Forgiveness Reset, and Communication Threat Armor protect dignity | `rules.md`, `reference/coaching-protocols.md`, `evals/red-face-tests.md` |

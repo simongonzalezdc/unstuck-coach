@@ -40,6 +40,7 @@ const proofChecks = [
   "scripts/verify-first-reply-acceptance.mjs",
   "scripts/verify-console-behavior.mjs",
   "scripts/verify-eval-coverage.mjs",
+  "scripts/verify-admin-ops-playbooks.mjs",
   "scripts/judge-quick-proof.mjs",
   "scripts/verify-public-bundle.mjs",
   "scripts/verify-clean-public-stage.mjs",

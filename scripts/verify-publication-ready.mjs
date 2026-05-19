@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { publicBundleFiles } from "./public-bundle-files.mjs";
+import { verifyAdminOpsPlaybooks } from "./verify-admin-ops-playbooks.mjs";
 import { verifyConsoleBehavior } from "./verify-console-behavior.mjs";
 import { verifyCompetitionRulesTrace } from "./verify-competition-rules-trace.mjs";
 import { verifyFirstReplyAcceptance } from "./verify-first-reply-acceptance.mjs";
@@ -117,6 +118,9 @@ export function verifyPublicationReady() {
   const evalCoverage = verifyEvalCoverage(root);
   addVerifierFailures(failures, "Eval coverage", evalCoverage);
 
+  const adminOpsPlaybooks = verifyAdminOpsPlaybooks(root);
+  addVerifierFailures(failures, "Admin operations playbooks", adminOpsPlaybooks);
+
   const submissionCopy = verifySubmissionCopy(root);
   addVerifierFailures(failures, "Submission copy", submissionCopy);
 
@@ -159,6 +163,8 @@ export function verifyPublicationReady() {
     firstReplyAcceptanceCases: firstReplyAcceptance.checkedCases,
     redFaceTests: evalCoverage.redFaceTests,
     researchToBehaviorRows: evalCoverage.researchRows,
+    adminOpsPlaybooks: adminOpsPlaybooks.playbooks,
+    adminOpsCloseStatuses: adminOpsPlaybooks.closingStatuses,
     skoolCommentSentences: submissionCopy.sentenceCount,
     skoolCommentCharacters: submissionCopy.characterCount,
     submissionSurfaceCharacters: submissionSurfaces.landingSectionCharacters,

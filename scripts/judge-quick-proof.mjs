@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { pathToFileURL } from "node:url";
+import { verifyAdminOpsPlaybooks } from "./verify-admin-ops-playbooks.mjs";
 import { verifyConsoleBehavior } from "./verify-console-behavior.mjs";
 import { verifyEvalCoverage } from "./verify-eval-coverage.mjs";
 import { verifyFirstReplyAcceptance } from "./verify-first-reply-acceptance.mjs";
@@ -29,6 +30,7 @@ export function judgeQuickProof(root = process.cwd()) {
   const firstReplyAcceptance = verifyFirstReplyAcceptance(root);
   const consoleBehavior = verifyConsoleBehavior(root);
   const evalCoverage = verifyEvalCoverage(root);
+  const adminOpsPlaybooks = verifyAdminOpsPlaybooks(root);
   const productThesis = verifyProductThesis(root);
   const icmTrace = verifyIcmTrace(root);
   const judgeFaq = verifyJudgeFaq(root);
@@ -42,6 +44,7 @@ export function judgeQuickProof(root = process.cwd()) {
   addFailures(failures, "First-reply acceptance", firstReplyAcceptance);
   addFailures(failures, "Console behavior", consoleBehavior);
   addFailures(failures, "Eval coverage", evalCoverage);
+  addFailures(failures, "Admin operations playbooks", adminOpsPlaybooks);
   addFailures(failures, "Product thesis", productThesis);
   addFailures(failures, "ICM trace", icmTrace);
   addFailures(failures, "Judge FAQ", judgeFaq);
@@ -66,6 +69,8 @@ export function judgeQuickProof(root = process.cwd()) {
       demoPromptTabs: consoleBehavior.demoPromptTabs,
       redFaceTests: evalCoverage.redFaceTests,
       researchToBehaviorRows: evalCoverage.researchRows,
+      adminOpsPlaybooks: adminOpsPlaybooks.playbooks,
+      adminOpsCloseStatuses: adminOpsPlaybooks.closingStatuses,
       productThesisSections: productThesis.sections,
       icmTraceFitRows: icmTrace.fitRows,
       judgeFaqQuestions: judgeFaq.questions,
@@ -74,7 +79,7 @@ export function judgeQuickProof(root = process.cwd()) {
       skoolCommentCharacters: submissionCopy.characterCount,
     },
     passMeaning:
-      "The folder has a cold-start path, first-reply gate, transcript evidence, runnable console, stress evals, research-to-behavior proof, product thesis, ICM trace, judge FAQ, and scorecard.",
+      "The folder has a cold-start path, first-reply gate, transcript evidence, runnable console, stress evals, admin operations playbooks, research-to-behavior proof, product thesis, ICM trace, judge FAQ, and scorecard.",
     failures,
   };
 }

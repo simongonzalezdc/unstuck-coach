@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { publicBundleDirs, publicBundleFiles } from "./public-bundle-files.mjs";
+import { verifyAdminOpsPlaybooks } from "./verify-admin-ops-playbooks.mjs";
 import { verifyConsoleBehavior } from "./verify-console-behavior.mjs";
 import { verifyCompetitionRulesTrace } from "./verify-competition-rules-trace.mjs";
 import { verifyFirstReplyAcceptance } from "./verify-first-reply-acceptance.mjs";
@@ -78,6 +79,7 @@ const projectInstructionRequiredText = [
   "State -> Friction -> Move -> Hold -> Check -> Close.",
   "Ask one question at a time.",
   "If it gives a productivity article, it failed.",
+  "reference/admin-ops-playbooks.md",
   "First Reply Acceptance Test",
   "FIRST_RUN.md shows the exact cold-start receipt and tiny proof loop.",
   "First-message routing:",
@@ -197,6 +199,7 @@ const publicationChecklistRequiredText = [
   "node scripts/verify-first-reply-acceptance.mjs",
   "node scripts/verify-console-behavior.mjs",
   "node scripts/verify-eval-coverage.mjs",
+  "node scripts/verify-admin-ops-playbooks.mjs",
   "node scripts/judge-quick-proof.mjs",
 ];
 
@@ -236,13 +239,26 @@ const evalCoverageRequiredText = [
   "Chooses one inbox item tied to time, money, safety, relationship, or another person.",
   "Inbox and calendar noise hides live obligations",
   "live-obligation rescue",
+  "reference/admin-ops-playbooks.md",
   "scripts/verify-eval-coverage.mjs",
+];
+
+const adminOpsPlaybooksRequiredText = [
+  "Admin Operations Playbooks",
+  "Playbook: Calendar Reality Pass",
+  "Playbook: Inbox Live-Obligation Pass",
+  "Playbook: Reply Debt Micro-Ledger",
+  "Playbook: Missed Obligation Recovery",
+  "Playbook: Scheduling Friction",
+  "Close The Admin Pass",
+  "Startline Coach does not read mail, edit calendars, send replies, or schedule events autonomously.",
 ];
 
 const judgeQuickProofRequiredText = [
   "publicationState",
   "fastestColdPrompts",
   "passMeaning",
+  "verifyAdminOpsPlaybooks",
   "verifyEvalCoverage",
   "verifySubmissionCopy",
   "My inbox and calendar are a mess and I do not know what is real.",
@@ -269,6 +285,7 @@ const finalReviewSmokeRequiredText = [
   "verify-github-public-url.mjs",
   "verify-icm-trace.mjs",
   "verify-eval-coverage.mjs",
+  "verify-admin-ops-playbooks.mjs",
   "judge-quick-proof.mjs",
   "verify-clean-public-stage.mjs",
   "Expected publication gate to remain blocked before final public link insertion.",
@@ -367,6 +384,7 @@ const readmeRequiredText = [
   "JUDGE_FAQ.md` gives the shortest answers to likely Week 5 judging objections",
   "PITCH_REEL.md` compresses the presentation layer into a verified 75-second judge reel.",
   "scripts/verify-eval-coverage.mjs` checks red-face coverage and the research-to-behavior map.",
+  "scripts/verify-admin-ops-playbooks.mjs` checks the calendar/inbox admin operations playbooks.",
   "scripts/judge-quick-proof.mjs` gives a publication-independent proof summary",
   "scripts/verify-github-public-url.mjs` proves the final GitHub link is publicly visible through unauthenticated GitHub API access",
   "node scripts/verify-github-public-url.mjs",
@@ -610,7 +628,7 @@ const landingRequiredText = [
   "Calendar/inbox",
   "Triage one inbox item",
   "My inbox and calendar are a mess and I do not know what is real.",
-  "63 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "65 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "Food/body",
   "Eat before planning",
   "Leave breadcrumb",
@@ -638,7 +656,7 @@ const landingRequiredText = [
   "node scripts/verify-pitch-reel.mjs",
   "75-second pitch reel ready.",
   "Final link missing. Review placeholder still present.",
-  "63 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "65 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "First run receipt",
   "Judge path",
   "Claude Project launch kit",
@@ -921,6 +939,15 @@ if (exists("evals/red-face-tests.md") && exists("evals/research-to-behavior-chec
   }
 }
 
+if (exists("reference/admin-ops-playbooks.md")) {
+  const adminOpsPlaybooks = read("reference/admin-ops-playbooks.md");
+  for (const requiredText of adminOpsPlaybooksRequiredText) {
+    if (!adminOpsPlaybooks.includes(requiredText)) {
+      failures.push(`reference/admin-ops-playbooks.md is missing required text: ${requiredText}`);
+    }
+  }
+}
+
 if (exists("scripts/judge-quick-proof.mjs")) {
   const judgeQuickProofScript = read("scripts/judge-quick-proof.mjs");
   for (const requiredText of judgeQuickProofRequiredText) {
@@ -1079,6 +1106,11 @@ for (const failure of evalCoverage.failures) {
   failures.push(`Eval coverage check failed: ${failure}`);
 }
 
+const adminOpsPlaybooks = verifyAdminOpsPlaybooks(root);
+for (const failure of adminOpsPlaybooks.failures) {
+  failures.push(`Admin operations playbooks check failed: ${failure}`);
+}
+
 const judgeQuick = judgeQuickProof(root);
 for (const failure of judgeQuick.failures) {
   failures.push(`Judge quick proof check failed: ${failure}`);
@@ -1138,6 +1170,8 @@ const summary = {
   firstReplyAcceptanceCases: firstReplyAcceptance.checkedCases,
   redFaceTests: evalCoverage.redFaceTests,
   researchToBehaviorRows: evalCoverage.researchRows,
+  adminOpsPlaybooks: adminOpsPlaybooks.playbooks,
+  adminOpsCloseStatuses: adminOpsPlaybooks.closingStatuses,
   judgeQuickProofStatus: judgeQuick.status,
   judgeQuickProofPromptCount: judgeQuick.fastestColdPrompts.length,
   skoolCommentSentences: submissionCopy.sentenceCount,

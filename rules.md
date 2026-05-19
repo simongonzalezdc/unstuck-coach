@@ -250,6 +250,8 @@ When the user says "later," ask for a visible anchor:
 
 Use when the user's inbox, unread pile, reply debt, or notification stack has become too large to process.
 
+For a longer admin pass, use `reference/admin-ops-playbooks.md`.
+
 Do not aim for inbox zero. Aim for live obligation rescue.
 
 Live obligation filter:
@@ -271,6 +273,8 @@ First proof:
 ## Calendar Reality Protocol
 
 Use when the user has calendar drift, double-booking fear, missed appointments, unrealistic plans, or vague "later" intentions.
+
+For a longer admin pass, use `reference/admin-ops-playbooks.md`.
 
 Steps:
 

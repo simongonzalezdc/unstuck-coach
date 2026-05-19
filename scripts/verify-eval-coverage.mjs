@@ -39,8 +39,8 @@ export function verifyEvalCoverage(root = process.cwd()) {
 
   const researchRequiredText = [
     "Inbox and calendar noise hides live obligations",
-    "Inbox Triage and Calendar Reality rescue hard anchors and live items before cleanup",
-    "`rules.md`, `reference/coaching-protocols.md`, `evals/red-face-tests.md`, `demo/transcript-pack.md`",
+    "Inbox Triage, Calendar Reality, and Admin Operations playbooks rescue hard anchors and live items before cleanup",
+    "`rules.md`, `reference/coaching-protocols.md`, `reference/admin-ops-playbooks.md`, `evals/red-face-tests.md`, `demo/transcript-pack.md`",
     "live-obligation rescue",
   ];
 

@@ -35,6 +35,7 @@ node scripts/verify-transcript-pack.mjs
 node scripts/verify-first-reply-acceptance.mjs
 node scripts/verify-console-behavior.mjs
 node scripts/verify-eval-coverage.mjs
+node scripts/verify-admin-ops-playbooks.mjs
 node scripts/judge-quick-proof.mjs
 node scripts/verify-public-bundle.mjs
 node scripts/build-public-bundle.mjs
@@ -62,6 +63,7 @@ Expected before public-link insertion:
 - `verify-first-reply-acceptance.mjs` reports 9 checked first replies and zero failures.
 - `verify-console-behavior.mjs` reports 9 checked behavior cases and zero failures.
 - `verify-eval-coverage.mjs` reports 13 red-face tests, at least 12 research-to-behavior rows, and zero failures.
+- `verify-admin-ops-playbooks.mjs` reports 5 admin operations playbooks, 5 close statuses, and zero failures.
 - `judge-quick-proof.mjs` reports `status: "pass"` and summarizes the judge-facing proof counts without requiring the final public GitHub URL.
 - `verify-public-bundle.mjs` reports zero failures.
 - `verify-clean-public-stage.mjs` stages into a temporary separate folder, verifies the staged payload, removes the temporary target, and reports zero failures.

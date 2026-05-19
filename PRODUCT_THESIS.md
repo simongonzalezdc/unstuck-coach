@@ -9,7 +9,7 @@ The public cold test is first contact because it is the easiest moment for a jud
 | Principle | Decision | Evidence |
 | --- | --- | --- |
 | Folder over app | The coach must be drop-in Claude Project knowledge, so the files are the interface. | `identity.md`, `rules.md`, `examples.md`, `reference/`, `PROJECT_INSTRUCTIONS.md` |
-| Whole-person EF access | The coach supports task start, choice, working-memory hold, inbox triage, calendar reality checks, capture, body-state routing, transition, recovery, and closure. | `identity.md`, `rules.md`, `reference/coaching-protocols.md`, `reference/signal-map.md` |
+| Whole-person EF access | The coach supports task start, choice, working-memory hold, inbox triage, calendar reality checks, capture, body-state routing, transition, recovery, and closure. | `identity.md`, `rules.md`, `reference/coaching-protocols.md`, `reference/admin-ops-playbooks.md`, `reference/signal-map.md` |
 | First contact before productivity | The first reply should create one visible move, not explain executive dysfunction. | `START_HERE.md`, `FIRST_RUN.md`, `demo/transcript-pack.md`, `scripts/verify-first-run.mjs`, `scripts/verify-first-reply-acceptance.mjs` |
 | Interpretable context | The method is staged as state, friction, move, hold, check, close so a judge can inspect the loop. | `rules.md`, `reference/coaching-protocols.md`, `ICM_TRACE.md`, `landing/index.html`, `scripts/verify-icm-trace.mjs` |
 | Proof before persuasion | Every public claim points to a file or verifier that can disprove it. | `RECEIPTS.md`, `JUDGE_SCORECARD.md`, `scripts/verify-public-bundle.mjs` |
@@ -24,7 +24,7 @@ The folder structure creates an interpretable coaching system:
 - `identity.md` names the athlete, promise, voice, and limits.
 - `rules.md` defines the coaching loop and response constraints.
 - `examples.md` calibrates tone and behavior under realistic pressure.
-- `reference/` holds reusable protocols, signal maps, source notes, and safety boundaries.
+- `reference/` holds reusable protocols, admin operations playbooks, signal maps, source notes, and safety boundaries.
 - `PROJECT_INSTRUCTIONS.md` turns the folder into paste-ready Claude Project setup.
 - `START_HERE.md` gives a cold judge the fastest possible first run.
 - `FIRST_RUN.md` shows the exact cold-start prompt, expected first reply, and proof loop.
@@ -39,6 +39,7 @@ The product is broader than that demo. Startline also coaches:
 - holding context outside the user's working memory,
 - triaging inbox and message piles by live obligation instead of inbox zero,
 - making calendar reality visible with hard anchors, buffers, and explicit parking,
+- recovering missed obligations through one calendar anchor and one inbox cue instead of panic-scanning everything,
 - capturing raw ideas without opening a new loop,
 - estimating time with setup and transition cost included,
 - checking body state before forcing a plan,

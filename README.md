@@ -93,6 +93,7 @@ startline-coach/
 │   ├── verify-first-reply-acceptance.mjs
 │   ├── verify-console-behavior.mjs
 │   ├── verify-eval-coverage.mjs
+│   ├── verify-admin-ops-playbooks.mjs
 │   ├── judge-quick-proof.mjs
 │   ├── verify-public-bundle.mjs
 │   ├── verify-publication-ready.mjs
@@ -106,6 +107,7 @@ startline-coach/
 │   └── research-to-behavior-checklist.md
 ├── reference/
 │   ├── coaching-protocols.md
+│   ├── admin-ops-playbooks.md
 │   ├── signal-map.md
 │   ├── safety-boundaries.md
 │   └── source-notes.md
@@ -209,6 +211,7 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 - `demo/transcript-pack.md` gives cold-test transcript examples for the moments a judge is likely to try.
 - `evals/red-face-tests.md` stress-tests shame, overload, inbox/calendar reality, time blindness, capture, tangents, hyperfocus, and safety boundaries.
 - `evals/research-to-behavior-checklist.md` maps the research foundation to actual coach behavior, including live-obligation rescue before cleanup.
+- `reference/admin-ops-playbooks.md` gives operational calendar and inbox playbooks for hard-anchor recovery, live-obligation rescue, reply debt, missed obligations, and scheduling friction without claiming account access.
 - `scripts/prepare-publication-link.mjs` dry-runs or writes the final public GitHub URL into `SUBMISSION.md`.
 - `scripts/verify-submission-copy.mjs` checks that the Skool comment draft stays within the required 2-3 sentence shape.
 - `scripts/verify-submission-surfaces.mjs` checks that the Skool draft, SUBMISSION landing version, and landing-page submission copy stay synchronized.
@@ -227,6 +230,7 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 - `scripts/verify-first-reply-acceptance.mjs` checks that cold-test first replies name friction, give one move, ask for proof, and avoid generic advice patterns.
 - `scripts/verify-console-behavior.mjs` checks the runnable console's protocol classifications.
 - `scripts/verify-eval-coverage.mjs` checks red-face coverage and the research-to-behavior map.
+- `scripts/verify-admin-ops-playbooks.mjs` checks the calendar/inbox admin operations playbooks.
 - `scripts/judge-quick-proof.mjs` gives a publication-independent proof summary for the cold judge path, including original-Liam inbox/calendar behavior.
 - `scripts/verify-public-bundle.mjs` checks required files, landing proof/launch-kit text, local landing refs, public-safe text, submission copy, transcript completeness, and console behavior.
 - `scripts/verify-publication-ready.mjs` is the final posting gate after the public GitHub link is inserted; it rejects the old Week 3 repo and reruns the proof-layer checks.
@@ -242,10 +246,11 @@ Run:
 
 ```bash
 node scripts/judge-quick-proof.mjs
+node scripts/verify-admin-ops-playbooks.mjs
 node scripts/verify-public-bundle.mjs
 ```
 
-The quick proof reports the cold-start path, first-reply gate, transcript evidence, runnable console, stress evals, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, and fastest cold prompts without requiring the final public GitHub link. The bundle verifier checks required files, local landing-page links/assets, product thesis, Week 5 rules trace, ICM trace, pitch reel, record-ready reel page, judge FAQ, judge scorecard, first-run receipt, first-reply scorecard, start-here prompt readiness, landing copy controls, Skool comment shape, synchronized submission surfaces, transcript completeness, first-reply acceptance, runnable console behavior, public-safe checklist text, emoji/symbol-range leakage, and private provenance patterns. Before final publication it may warn that the GitHub link is still pending; after the public repo link is inserted, those warnings should be gone.
+The quick proof reports the cold-start path, first-reply gate, transcript evidence, runnable console, stress evals, admin operations playbooks, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, and fastest cold prompts without requiring the final public GitHub link. The bundle verifier checks required files, local landing-page links/assets, product thesis, Week 5 rules trace, ICM trace, pitch reel, record-ready reel page, judge FAQ, judge scorecard, first-run receipt, first-reply scorecard, start-here prompt readiness, landing copy controls, Skool comment shape, synchronized submission surfaces, transcript completeness, first-reply acceptance, runnable console behavior, public-safe checklist text, emoji/symbol-range leakage, and private provenance patterns. Before final publication it may warn that the GitHub link is still pending; after the public repo link is inserted, those warnings should be gone.
 
 To prove the payload can stage into a separate clean repository folder, run:
 

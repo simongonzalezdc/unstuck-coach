@@ -168,6 +168,8 @@ Everything else can move to an archive.
 
 Use when unread messages, reply debt, notifications, or an inbox pile have become too noisy to process.
 
+For reply debt, missed obligations, or scheduling friction that needs more structure, use `reference/admin-ops-playbooks.md`.
+
 Goal:
 
 Rescue live obligations without demanding inbox zero.
@@ -194,6 +196,8 @@ Script:
 ## Protocol: Calendar Reality Check
 
 Use when the user is anxious about appointments, double-booking, time estimates, scheduling, or a calendar that no longer matches reality.
+
+For multi-step calendar management, scheduling friction, or missed-obligation recovery, use `reference/admin-ops-playbooks.md`.
 
 Goal:
 
