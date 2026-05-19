@@ -9,6 +9,7 @@ import { verifyFirstReplyAcceptance } from "./verify-first-reply-acceptance.mjs"
 import { verifyFirstReplyScorecard } from "./verify-first-reply-scorecard.mjs";
 import { verifyFirstRun } from "./verify-first-run.mjs";
 import { verifyIcmTrace } from "./verify-icm-trace.mjs";
+import { judgeQuickProof } from "./judge-quick-proof.mjs";
 import { verifyJudgeFaq } from "./verify-judge-faq.mjs";
 import { verifyJudgeScorecard } from "./verify-judge-scorecard.mjs";
 import { verifyLandingCopy } from "./verify-landing-copy.mjs";
@@ -98,6 +99,7 @@ const startHereRequiredText = [
   "First Reply Acceptance Test",
   "If it gives a productivity article, it failed.",
   "scripts/verify-first-reply-acceptance.mjs",
+  "scripts/judge-quick-proof.mjs",
 ];
 
 const judgeScorecardRequiredText = [
@@ -110,6 +112,7 @@ const judgeScorecardRequiredText = [
   "score the first reply immediately",
   "If the coach gives a productivity article",
   "scripts/verify-judge-scorecard.mjs",
+  "scripts/judge-quick-proof.mjs",
   "scripts/verify-public-bundle.mjs",
 ];
 
@@ -130,6 +133,7 @@ const judgeWalkthroughRequiredText = [
   "scripts/verify-judge-faq.mjs",
   "scripts/verify-judge-scorecard.mjs",
   "scripts/final-review-smoke.mjs --expect-blocked",
+  "scripts/judge-quick-proof.mjs",
   "FIRST_RUN.md",
   "First reply acceptance test",
   "Pass: names friction, gives one visible move, asks for tiny proof or one state signal.",
@@ -151,6 +155,8 @@ const receiptsRequiredText = [
   "articles, menus, moralizing, or vague continuations",
   "unauthenticated proof that the final GitHub URL is public",
   "scripts/verify-github-public-url.mjs",
+  "The fast judge proof is publication-independent",
+  "scripts/judge-quick-proof.mjs",
 ];
 
 const judgeFaqRequiredText = [
@@ -162,6 +168,7 @@ const judgeFaqRequiredText = [
   "How does it fit ICM?",
   "What goes above the brief?",
   "What is still blocked?",
+  "a judge quick proof command",
   "the folder owner approves the landing/reel design",
   "scripts/verify-publication-ready.mjs",
 ];
@@ -190,6 +197,7 @@ const publicationChecklistRequiredText = [
   "node scripts/verify-first-reply-acceptance.mjs",
   "node scripts/verify-console-behavior.mjs",
   "node scripts/verify-eval-coverage.mjs",
+  "node scripts/judge-quick-proof.mjs",
 ];
 
 const rulesTraceRequiredText = [
@@ -231,6 +239,15 @@ const evalCoverageRequiredText = [
   "scripts/verify-eval-coverage.mjs",
 ];
 
+const judgeQuickProofRequiredText = [
+  "publicationState",
+  "fastestColdPrompts",
+  "passMeaning",
+  "verifyEvalCoverage",
+  "verifySubmissionCopy",
+  "My inbox and calendar are a mess and I do not know what is real.",
+];
+
 const stagingHelperRequiredText = [
   "--target",
   "--write",
@@ -252,6 +269,7 @@ const finalReviewSmokeRequiredText = [
   "verify-github-public-url.mjs",
   "verify-icm-trace.mjs",
   "verify-eval-coverage.mjs",
+  "judge-quick-proof.mjs",
   "verify-clean-public-stage.mjs",
   "Expected publication gate to remain blocked before final public link insertion.",
   "Expected final GitHub URL to be publicly visible before publication.",
@@ -349,6 +367,7 @@ const readmeRequiredText = [
   "JUDGE_FAQ.md` gives the shortest answers to likely Week 5 judging objections",
   "PITCH_REEL.md` compresses the presentation layer into a verified 75-second judge reel.",
   "scripts/verify-eval-coverage.mjs` checks red-face coverage and the research-to-behavior map.",
+  "scripts/judge-quick-proof.mjs` gives a publication-independent proof summary",
   "scripts/verify-github-public-url.mjs` proves the final GitHub link is publicly visible through unauthenticated GitHub API access",
   "node scripts/verify-github-public-url.mjs",
 ];
@@ -591,7 +610,7 @@ const landingRequiredText = [
   "Calendar/inbox",
   "Triage one inbox item",
   "My inbox and calendar are a mess and I do not know what is real.",
-  "62 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "63 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "Food/body",
   "Eat before planning",
   "Leave breadcrumb",
@@ -607,6 +626,9 @@ const landingRequiredText = [
   "One-command proof gate",
   "Run the whole proof layer before publishing.",
   "node scripts/final-review-smoke.mjs --expect-blocked",
+  "Judge quick proof",
+  "node scripts/judge-quick-proof.mjs",
+  "publication-independent",
   "node scripts/final-review-smoke.mjs --expect-ready --skip-build",
   "node scripts/verify-clean-public-stage.mjs",
   "Clean repo preflight",
@@ -616,7 +638,7 @@ const landingRequiredText = [
   "node scripts/verify-pitch-reel.mjs",
   "75-second pitch reel ready.",
   "Final link missing. Review placeholder still present.",
-  "62 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "63 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "First run receipt",
   "Judge path",
   "Claude Project launch kit",
@@ -674,6 +696,7 @@ const landingRequiredText = [
   "../scripts/verify-first-reply-scorecard.mjs",
   "../scripts/verify-landing-copy.mjs",
   "../scripts/verify-first-reply-acceptance.mjs",
+  "../scripts/judge-quick-proof.mjs",
   "../scripts/final-review-smoke.mjs",
   "../scripts/verify-clean-public-stage.mjs",
   "../PUBLICATION_CHECKLIST.md",
@@ -898,6 +921,15 @@ if (exists("evals/red-face-tests.md") && exists("evals/research-to-behavior-chec
   }
 }
 
+if (exists("scripts/judge-quick-proof.mjs")) {
+  const judgeQuickProofScript = read("scripts/judge-quick-proof.mjs");
+  for (const requiredText of judgeQuickProofRequiredText) {
+    if (!judgeQuickProofScript.includes(requiredText)) {
+      failures.push(`scripts/judge-quick-proof.mjs is missing required text: ${requiredText}`);
+    }
+  }
+}
+
 if (exists("scripts/stage-public-repo.mjs")) {
   const stagingHelper = read("scripts/stage-public-repo.mjs");
   for (const requiredText of stagingHelperRequiredText) {
@@ -1047,6 +1079,11 @@ for (const failure of evalCoverage.failures) {
   failures.push(`Eval coverage check failed: ${failure}`);
 }
 
+const judgeQuick = judgeQuickProof(root);
+for (const failure of judgeQuick.failures) {
+  failures.push(`Judge quick proof check failed: ${failure}`);
+}
+
 const submissionCopy = verifySubmissionCopy(root);
 for (const failure of submissionCopy.failures) {
   failures.push(`Submission copy check failed: ${failure}`);
@@ -1101,6 +1138,8 @@ const summary = {
   firstReplyAcceptanceCases: firstReplyAcceptance.checkedCases,
   redFaceTests: evalCoverage.redFaceTests,
   researchToBehaviorRows: evalCoverage.researchRows,
+  judgeQuickProofStatus: judgeQuick.status,
+  judgeQuickProofPromptCount: judgeQuick.fastestColdPrompts.length,
   skoolCommentSentences: submissionCopy.sentenceCount,
   skoolCommentCharacters: submissionCopy.characterCount,
   submissionSurfaceCharacters: submissionSurfaces.landingSectionCharacters,

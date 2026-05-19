@@ -93,6 +93,7 @@ startline-coach/
 │   ├── verify-first-reply-acceptance.mjs
 │   ├── verify-console-behavior.mjs
 │   ├── verify-eval-coverage.mjs
+│   ├── judge-quick-proof.mjs
 │   ├── verify-public-bundle.mjs
 │   ├── verify-publication-ready.mjs
 │   ├── verify-github-public-url.mjs
@@ -226,6 +227,7 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 - `scripts/verify-first-reply-acceptance.mjs` checks that cold-test first replies name friction, give one move, ask for proof, and avoid generic advice patterns.
 - `scripts/verify-console-behavior.mjs` checks the runnable console's protocol classifications.
 - `scripts/verify-eval-coverage.mjs` checks red-face coverage and the research-to-behavior map.
+- `scripts/judge-quick-proof.mjs` gives a publication-independent proof summary for the cold judge path, including original-Liam inbox/calendar behavior.
 - `scripts/verify-public-bundle.mjs` checks required files, landing proof/launch-kit text, local landing refs, public-safe text, submission copy, transcript completeness, and console behavior.
 - `scripts/verify-publication-ready.mjs` is the final posting gate after the public GitHub link is inserted; it rejects the old Week 3 repo and reruns the proof-layer checks.
 - `scripts/verify-github-public-url.mjs` proves the final GitHub link is publicly visible through unauthenticated GitHub API access, so the private review repo cannot pass as public.
@@ -239,10 +241,11 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 Run:
 
 ```bash
+node scripts/judge-quick-proof.mjs
 node scripts/verify-public-bundle.mjs
 ```
 
-The verifier checks required files, local landing-page links/assets, product thesis, Week 5 rules trace, ICM trace, pitch reel, record-ready reel page, judge FAQ, judge scorecard, first-run receipt, first-reply scorecard, start-here prompt readiness, landing copy controls, Skool comment shape, synchronized submission surfaces, transcript completeness, first-reply acceptance, runnable console behavior, public-safe checklist text, emoji/symbol-range leakage, and private provenance patterns. Before final publication it may warn that the GitHub link is still pending; after the public repo link is inserted, those warnings should be gone.
+The quick proof reports the cold-start path, first-reply gate, transcript evidence, runnable console, stress evals, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, and fastest cold prompts without requiring the final public GitHub link. The bundle verifier checks required files, local landing-page links/assets, product thesis, Week 5 rules trace, ICM trace, pitch reel, record-ready reel page, judge FAQ, judge scorecard, first-run receipt, first-reply scorecard, start-here prompt readiness, landing copy controls, Skool comment shape, synchronized submission surfaces, transcript completeness, first-reply acceptance, runnable console behavior, public-safe checklist text, emoji/symbol-range leakage, and private provenance patterns. Before final publication it may warn that the GitHub link is still pending; after the public repo link is inserted, those warnings should be gone.
 
 To prove the payload can stage into a separate clean repository folder, run:
 

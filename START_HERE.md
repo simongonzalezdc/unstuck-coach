@@ -63,4 +63,5 @@ That message makes me feel like I did something wrong.
 - `docs/judge-walkthrough.md` for the five-minute judge path.
 - `demo/transcript-pack.md` for nine cold-test examples.
 - `scripts/verify-first-reply-acceptance.mjs` for the executable first-reply gate.
+- `scripts/judge-quick-proof.mjs` for a publication-independent proof summary of the judge path.
 - `scripts/verify-public-bundle.mjs` for the full public-bundle check.

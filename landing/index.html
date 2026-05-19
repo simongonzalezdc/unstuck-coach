@@ -902,6 +902,10 @@
                 <span class="icon icon-path" aria-hidden="true"></span>
                 Final smoke
               </a>
+              <a class="action secondary" href="../scripts/judge-quick-proof.mjs">
+                <span class="icon icon-path" aria-hidden="true"></span>
+                Judge quick proof
+              </a>
               <a class="action secondary" href="../scripts/verify-clean-public-stage.mjs">
                 <span class="icon icon-folder" aria-hidden="true"></span>
                 Clean-stage preflight
@@ -924,6 +928,11 @@
               <p>Pass means the proof layer is green while the public post remains intentionally blocked.</p>
             </article>
             <article>
+              <span class="pane-label">Judge quick proof</span>
+              <strong><code>node scripts/judge-quick-proof.mjs</code></strong>
+              <p>Pass means the publication-independent judge proof layer is green without requiring the final public GitHub URL first.</p>
+            </article>
+            <article>
               <span class="pane-label">After approved public link</span>
               <strong><code>node scripts/final-review-smoke.mjs --expect-ready --skip-build</code></strong>
               <p>Pass means the final URL is inserted and the publication gate is green.</p>
@@ -935,7 +944,7 @@
             </article>
             <article>
               <span class="pane-label">Coverage snapshot</span>
-              <strong>62 public files, 9 console cases, 9 transcripts, 9 first-reply checks.</strong>
+              <strong>63 public files, 9 console cases, 9 transcripts, 9 first-reply checks.</strong>
               <p>The gate also checks product thesis, Week 5 rules trace, ICM trace, pitch reel, judge scorecard, judge FAQ, start path, copy controls, eval coverage, submission shape, and synchronized submission surfaces.</p>
             </article>
             <article>

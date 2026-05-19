@@ -56,6 +56,7 @@ Extra proof files:
 - `scripts/verify-transcript-pack.mjs`
 - `scripts/verify-console-behavior.mjs`
 - `scripts/verify-eval-coverage.mjs`
+- `scripts/judge-quick-proof.mjs`
 - `scripts/verify-public-bundle.mjs`
 - `scripts/verify-publication-ready.mjs`
 - `scripts/build-public-bundle.mjs`
@@ -316,9 +317,10 @@ For the console-only behavior proof, run:
 ```bash
 node scripts/verify-console-behavior.mjs
 node scripts/verify-eval-coverage.mjs
+node scripts/judge-quick-proof.mjs
 ```
 
-It should classify activation friction, a getting-started coach request, communication threat, working-memory overload, idea capture, repeated failed plans, body-first recovery, and calibration fallback. It should also report 13 red-face tests and at least 12 research-to-behavior rows.
+It should classify activation friction, a getting-started coach request, communication threat, working-memory overload, idea capture, repeated failed plans, body-first recovery, inbox/calendar reality, and calibration fallback. It should also report 13 red-face tests, at least 12 research-to-behavior rows, and a passing judge quick proof summary that does not require the final public GitHub URL.
 
 For the transcript-pack proof, run:
 
@@ -339,10 +341,11 @@ It should check all nine transcript first replies for friction naming, one visib
 For the one-command proof gate before public-link insertion, run:
 
 ```bash
+node scripts/judge-quick-proof.mjs
 node scripts/final-review-smoke.mjs --expect-blocked
 ```
 
-It should pass while keeping publication blocked only because the final public GitHub URL is missing and the review placeholder is still present.
+The quick proof should pass as the publication-independent judge summary. The smoke gate should also pass while keeping publication blocked only because the final public GitHub URL is missing and the review placeholder is still present.
 
 For the clean public-repo staging preflight, run:
 

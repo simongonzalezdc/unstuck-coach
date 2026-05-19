@@ -81,12 +81,13 @@ The required folder is present, but the entry also includes:
 - cold-test transcripts,
 - red-face evals,
 - an eval-coverage verifier,
+- a judge quick proof command,
 - an ICM trace,
 - receipts,
 - a clean-public-repo staging preflight,
 - one-command final smoke.
 
-Evidence: `landing/index.html`, `landing/reel.html`, `PITCH_REEL.md`, `RECEIPTS.md`, `scripts/verify-eval-coverage.mjs`, `scripts/verify-public-bundle.mjs`.
+Evidence: `landing/index.html`, `landing/reel.html`, `PITCH_REEL.md`, `RECEIPTS.md`, `scripts/verify-eval-coverage.mjs`, `scripts/judge-quick-proof.mjs`, `scripts/verify-public-bundle.mjs`.
 
 ## What is still blocked?
 
