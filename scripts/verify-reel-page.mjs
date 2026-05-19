@@ -72,6 +72,9 @@ export function verifyReelPage(root = process.cwd()) {
     "overflow-wrap: anywhere",
     "var(--paper)",
     "border-top: 7px solid var(--magenta)",
+    '"PP Editorial New"',
+    "min-height: 100dvh",
+    "transform: rotate(1.2deg)",
     "@media (max-width: 620px)",
   ];
 

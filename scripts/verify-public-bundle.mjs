@@ -387,6 +387,41 @@ const visualCssRequiredText = [
   },
   {
     file: "landing/styles.css",
+    text: '"PP Editorial New"',
+    message: "missing editorial display typography",
+  },
+  {
+    file: "landing/styles.css",
+    text: "--ease-out: cubic-bezier(0.32, 0.72, 0, 1)",
+    message: "missing high-end custom motion curve",
+  },
+  {
+    file: "landing/styles.css",
+    text: "body::before",
+    message: "missing fixed paper/noise texture layer",
+  },
+  {
+    file: "landing/styles.css",
+    text: ".site-nav,",
+    message: "missing detached navigation island styling",
+  },
+  {
+    file: "landing/styles.css",
+    text: "top: 1.15rem",
+    message: "missing detached navigation offset",
+  },
+  {
+    file: "landing/styles.css",
+    text: ".nav-toggle",
+    message: "missing mobile nav morph control",
+  },
+  {
+    file: "landing/styles.css",
+    text: ".reveal-item",
+    message: "missing scroll reveal choreography",
+  },
+  {
+    file: "landing/styles.css",
     text: ".bridge-one",
     message: "missing primary bridge motif",
   },
@@ -409,6 +444,36 @@ const visualCssRequiredText = [
     file: "landing/reel.css",
     text: "border-top: 7px solid var(--magenta)",
     message: "missing colored reel rail",
+  },
+  {
+    file: "landing/reel.css",
+    text: '"PP Editorial New"',
+    message: "missing editorial reel typography",
+  },
+  {
+    file: "landing/reel.css",
+    text: "min-height: 100dvh",
+    message: "missing stable dynamic viewport reel sizing",
+  },
+  {
+    file: "landing/reel.css",
+    text: "transform: rotate(1.2deg)",
+    message: "missing physical reel card tension",
+  },
+  {
+    file: "landing/app.js",
+    text: "IntersectionObserver",
+    message: "missing efficient scroll reveal implementation",
+  },
+  {
+    file: "landing/app.js",
+    text: "optionalSelector",
+    message: "missing verifier-safe optional DOM access",
+  },
+  {
+    file: "landing/index.html",
+    text: 'class="nav-toggle"',
+    message: "missing mobile nav toggle markup",
   },
 ];
 
