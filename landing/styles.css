@@ -25,11 +25,12 @@
   --shadow-ambient: 0 30px 84px rgba(36, 33, 31, 0.14);
   --shadow-soft: 0 18px 52px rgba(36, 33, 31, 0.11);
   --shadow-tight: 0 8px 24px rgba(36, 33, 31, 0.09);
+  --shadow-ink: 0 28px 70px rgba(6, 9, 16, 0.28);
   --radius: 8px;
   --ease-out: cubic-bezier(0.32, 0.72, 0, 1);
   --ease-spring: cubic-bezier(0.2, 0.9, 0.16, 1);
   --wrap: min(1180px, calc(100% - 3rem));
-  --editorial: "PP Editorial New", "Canela", "Fraunces", Georgia, serif;
+  --editorial: "PP Editorial New", "Canela", "Fraunces", "New York", serif;
   font-family: "Avenir Next", "Plus Jakarta Sans", "Geist", "Satoshi", system-ui, sans-serif;
   letter-spacing: 0;
 }
@@ -46,11 +47,12 @@ body {
   min-width: 320px;
   margin: 0;
   background:
-    linear-gradient(90deg, rgba(6, 9, 16, 0.035) 0 1px, transparent 1px 96px),
-    linear-gradient(180deg, rgba(6, 9, 16, 0.035) 0 1px, transparent 1px 96px),
-    linear-gradient(128deg, rgba(255, 192, 24, 0.16) 0%, transparent 31%),
-    linear-gradient(232deg, rgba(0, 215, 232, 0.13) 0%, transparent 34%),
-    linear-gradient(180deg, var(--surface) 0%, var(--paper) 48%, #f0dfc4 100%);
+    linear-gradient(90deg, rgba(6, 9, 16, 0.03) 0 1px, transparent 1px 112px),
+    linear-gradient(180deg, rgba(6, 9, 16, 0.027) 0 1px, transparent 1px 112px),
+    radial-gradient(circle at 88% 8%, rgba(0, 215, 232, 0.13), transparent 25rem),
+    radial-gradient(circle at 9% 80%, rgba(255, 20, 127, 0.08), transparent 22rem),
+    linear-gradient(132deg, rgba(255, 192, 24, 0.1) 0%, transparent 36%),
+    linear-gradient(180deg, var(--surface) 0%, var(--paper) 48%, #f1dfc5 100%);
   color: var(--ink);
   font-size: 16px;
   line-height: 1.5;
@@ -63,7 +65,7 @@ body::before {
   inset: 0;
   z-index: 4;
   pointer-events: none;
-  opacity: 0.046;
+  opacity: 0.038;
   background-image:
     repeating-radial-gradient(circle at 30% 20%, rgba(8, 7, 5, 0.9) 0 0.6px, transparent 0.7px 3px);
   mix-blend-mode: multiply;
@@ -74,12 +76,12 @@ body::after {
   position: fixed;
   inset: 0 auto 0 0;
   z-index: 3;
-  width: 0.82rem;
+  width: 0.54rem;
   pointer-events: none;
   background:
-    linear-gradient(180deg, var(--cyan), var(--lime) 24%, var(--gold) 48%, var(--orange) 70%, var(--magenta)),
-    repeating-linear-gradient(180deg, transparent 0 20px, rgba(255, 245, 220, 0.84) 20px 22px, transparent 22px 46px);
-  box-shadow: 1px 0 0 rgba(6, 9, 16, 0.86);
+    linear-gradient(180deg, var(--steel), var(--cyan) 23%, var(--lime) 40%, var(--gold) 58%, var(--orange) 74%, var(--magenta)),
+    repeating-linear-gradient(180deg, transparent 0 24px, rgba(255, 245, 220, 0.86) 24px 26px, transparent 26px 54px);
+  box-shadow: 1px 0 0 rgba(6, 9, 16, 0.74);
 }
 
 a {
@@ -107,20 +109,21 @@ button {
   top: 1.15rem;
   left: 50%;
   z-index: 7;
-  width: min(1120px, calc(100% - 2rem));
+  width: min(1080px, calc(100% - 2rem));
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 3.75rem;
-  padding: 0.42rem 0.48rem 0.42rem 0.72rem;
-  border: 1px solid rgba(6, 9, 16, 0.18);
+  min-height: 3.48rem;
+  padding: 0.34rem 0.42rem 0.34rem 0.62rem;
+  border: 1px solid rgba(6, 9, 16, 0.2);
   border-radius: 999px;
-  background: rgba(255, 253, 246, 0.78);
+  background: rgba(255, 253, 246, 0.84);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.84),
-    0 18px 52px rgba(36, 33, 31, 0.12);
+    inset 0 -1px 0 rgba(6, 9, 16, 0.05),
+    0 18px 48px rgba(36, 33, 31, 0.11);
   backdrop-filter: blur(20px) saturate(1.18);
 }
 
@@ -136,8 +139,8 @@ button {
   padding: 0.38rem 0.68rem 0.38rem 0.2rem;
   border-radius: 999px;
   color: var(--ink);
-  font-size: 0.91rem;
-  font-weight: 820;
+  font-size: 0.88rem;
+  font-weight: 840;
   letter-spacing: 0;
   white-space: nowrap;
 }
@@ -212,10 +215,10 @@ button {
 .nav-links a,
 .reel-nav nav a {
   position: relative;
-  padding: 0.58rem 0.72rem;
+  padding: 0.52rem 0.66rem;
   border-radius: 999px;
   color: var(--muted-strong);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 720;
   transition:
     color 520ms var(--ease-out),
@@ -240,37 +243,40 @@ button {
 
 .hero {
   position: relative;
-  min-height: 90dvh;
+  min-height: 92dvh;
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(31rem, 1.12fr);
+  grid-template-columns: minmax(0, 0.86fr) minmax(31rem, 1.14fr);
   align-items: center;
-  gap: 4.6rem;
+  gap: 5.1rem;
   width: var(--wrap);
   margin: 0 auto;
-  padding: 8.2rem 0 4.8rem;
+  padding: 8.55rem 0 5.1rem;
   isolation: isolate;
 }
 
 .hero::before {
   content: "";
   position: absolute;
-  inset: 6.3rem -2.4rem 1.8rem;
+  inset: 6.6rem -2.25rem 1.65rem;
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(255, 250, 242, 0.96), rgba(255, 248, 236, 0.68) 58%, transparent),
-    repeating-linear-gradient(135deg, rgba(6, 9, 16, 0.06) 0 1px, transparent 1px 42px),
+    linear-gradient(90deg, rgba(255, 250, 242, 0.96), rgba(255, 248, 236, 0.75) 54%, rgba(255, 248, 236, 0.24)),
+    repeating-linear-gradient(135deg, rgba(6, 9, 16, 0.048) 0 1px, transparent 1px 42px),
     repeating-linear-gradient(90deg, rgba(217, 208, 196, 0.42) 0 1px, transparent 1px 120px),
     repeating-linear-gradient(0deg, rgba(217, 208, 196, 0.34) 0 1px, transparent 1px 120px);
-  border: 1px solid rgba(6, 9, 16, 0.07);
+  border: 1px solid rgba(6, 9, 16, 0.1);
   border-radius: var(--radius);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.84),
+    inset 0 0 0 0.42rem rgba(255, 245, 220, 0.34);
 }
 
 .hero-copy {
   order: 1;
   position: relative;
-  max-width: 46rem;
-  padding-left: 1.15rem;
+  min-width: 0;
+  max-width: 45rem;
+  padding-left: 1.05rem;
   animation: hero-rise 920ms var(--ease-out) both;
 }
 
@@ -280,24 +286,29 @@ button {
   top: 0.2rem;
   bottom: 0.35rem;
   left: 0;
-  width: 0.32rem;
+  width: 0.25rem;
   border-radius: 999px;
-  background: linear-gradient(180deg, var(--cyan), var(--lime), var(--gold), var(--orange), var(--magenta));
-  box-shadow: 0 0 0 1px rgba(6, 9, 16, 0.72);
+  background: linear-gradient(180deg, var(--steel), var(--cyan), var(--lime), var(--gold), var(--orange), var(--magenta));
+  box-shadow:
+    0 0 0 1px rgba(6, 9, 16, 0.72),
+    0 18px 34px rgba(255, 75, 31, 0.12);
 }
 
 .workbench-scene {
   order: 2;
   position: relative;
-  min-height: 40rem;
+  min-width: 0;
+  min-height: 41.5rem;
   border: 2px solid var(--ink);
   border-radius: var(--radius);
   background:
     linear-gradient(145deg, rgba(6, 9, 16, 0.98), rgba(6, 67, 74, 0.96)),
-    linear-gradient(126deg, transparent 0%, rgba(0, 215, 232, 0.12) 42%, transparent 72%);
+    radial-gradient(circle at 20% 18%, rgba(0, 215, 232, 0.18), transparent 17rem),
+    linear-gradient(126deg, transparent 0%, rgba(0, 215, 232, 0.1) 42%, transparent 72%);
   box-shadow:
-    inset 0 0 0 7px rgba(255, 245, 220, 0.08),
-    0 30px 78px rgba(36, 33, 31, 0.2);
+    inset 0 0 0 7px rgba(255, 245, 220, 0.1),
+    inset 0 0 0 12px rgba(6, 9, 16, 0.3),
+    var(--shadow-ink);
   overflow: hidden;
   animation: scene-rise 980ms var(--ease-out) 120ms both;
 }
@@ -305,8 +316,8 @@ button {
 .workbench-scene::before {
   content: "";
   position: absolute;
-  inset: 0.72rem;
-  border: 1px solid rgba(255, 245, 220, 0.44);
+  inset: 0.82rem;
+  border: 1px solid rgba(255, 245, 220, 0.5);
   border-radius: 5px;
   pointer-events: none;
   z-index: 5;
@@ -317,10 +328,10 @@ button {
   position: absolute;
   inset: 0;
   background:
-    repeating-linear-gradient(135deg, transparent 0 28px, rgba(255, 245, 220, 0.08) 28px 29px, transparent 29px 62px),
-    repeating-linear-gradient(45deg, transparent 0 46px, rgba(0, 215, 232, 0.1) 46px 47px, transparent 47px 94px),
-    linear-gradient(90deg, rgba(6, 9, 16, 0.3), transparent 35%, rgba(255, 20, 127, 0.08));
-  opacity: 0.9;
+    repeating-linear-gradient(135deg, transparent 0 31px, rgba(255, 245, 220, 0.07) 31px 32px, transparent 32px 68px),
+    repeating-linear-gradient(45deg, transparent 0 48px, rgba(0, 215, 232, 0.08) 48px 49px, transparent 49px 98px),
+    linear-gradient(90deg, rgba(6, 9, 16, 0.38), transparent 38%, rgba(255, 20, 127, 0.055));
+  opacity: 0.86;
   pointer-events: none;
 }
 
@@ -346,49 +357,51 @@ button {
 }
 
 .bridge-one {
-  right: -5%;
-  top: 7%;
-  width: 31rem;
-  height: 10rem;
+  right: -9%;
+  top: 21%;
+  width: 38rem;
+  height: 7.6rem;
   background:
-    linear-gradient(90deg, var(--steel) 0 18%, var(--sage) 18% 34%, var(--cyan) 34% 48%, var(--lime) 48% 59%, var(--gold) 59% 70%, var(--orange) 70% 84%, var(--magenta-muted) 84% 100%);
-  clip-path: polygon(0 34%, 12% 0, 28% 34%, 44% 0, 60% 34%, 76% 0, 100% 34%, 100% 100%, 0 100%);
+    linear-gradient(90deg, var(--steel) 0 22%, var(--sage) 22% 37%, var(--cyan) 37% 50%, var(--lime) 50% 60%, var(--gold) 60% 70%, var(--orange) 70% 84%, var(--magenta-muted) 84% 100%);
+  transform: rotate(-13deg);
+  clip-path: polygon(0 26%, 9% 0, 18% 26%, 27% 0, 36% 26%, 45% 0, 54% 26%, 63% 0, 72% 26%, 81% 0, 100% 26%, 100% 100%, 0 100%);
 }
 
 .bridge-two {
-  left: 7%;
-  bottom: 9%;
-  width: 16rem;
-  height: 4.4rem;
+  left: -7%;
+  bottom: 18%;
+  width: 25rem;
+  height: 5.2rem;
   background:
-    linear-gradient(90deg, var(--magenta-muted) 0 24%, var(--start) 24% 44%, var(--gold) 44% 64%, var(--sky-muted) 64% 84%, var(--sage) 84% 100%);
-  transform: rotate(-2deg);
-  clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+    linear-gradient(90deg, var(--magenta-muted) 0 19%, var(--start) 19% 38%, var(--gold) 38% 56%, var(--sky-muted) 56% 76%, var(--sage) 76% 100%);
+  transform: rotate(-13deg);
+  clip-path: polygon(0 0, 100% 0, 94% 100%, 0 100%);
 }
 
 .runway-line {
   position: absolute;
   z-index: 2;
-  left: 9%;
-  right: 8%;
-  bottom: 30%;
+  left: 11%;
+  right: 7%;
+  bottom: 33%;
   height: 3px;
   background: linear-gradient(90deg, transparent, var(--cyan), var(--lime), var(--gold), var(--start), transparent);
   transform-origin: left center;
+  transform: rotate(-13deg);
   animation: runway 5.8s var(--ease-out) infinite;
 }
 
 .scene-panel {
   position: absolute;
   z-index: 3;
-  border: 2px solid var(--ink);
+  border: 1px solid rgba(6, 9, 16, 0.86);
   border-radius: var(--radius);
   background:
-    linear-gradient(180deg, rgba(255, 250, 242, 0.97), rgba(248, 243, 235, 0.92));
+    linear-gradient(180deg, rgba(255, 250, 242, 0.97), rgba(248, 243, 235, 0.9));
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.82),
-    0 20px 42px rgba(6, 9, 16, 0.2);
-  padding: 1rem;
+    0 22px 48px rgba(6, 9, 16, 0.24);
+  padding: 1.02rem;
   overflow: hidden;
 }
 
@@ -415,11 +428,11 @@ button {
 }
 
 .task-stack {
-  right: 5%;
-  top: 10%;
-  width: 15.8rem;
-  transform: rotate(1.2deg);
-  border-top: 5px solid var(--cyan);
+  right: 4.8%;
+  top: 8.5%;
+  width: 16.2rem;
+  transform: rotate(0.8deg);
+  border-top: 4px solid var(--cyan);
   animation: float-one 7.5s var(--ease-out) infinite;
 }
 
@@ -459,11 +472,11 @@ button {
 }
 
 .coach-transcript {
-  right: 6%;
-  bottom: 8%;
-  width: 20.6rem;
-  transform: rotate(-1.1deg);
-  border-top: 5px solid var(--lime);
+  right: 5.2%;
+  bottom: 7%;
+  width: 21.4rem;
+  transform: rotate(-0.8deg);
+  border-top: 4px solid var(--lime);
   animation: float-two 8.5s var(--ease-out) infinite;
 }
 
@@ -492,16 +505,16 @@ button {
 }
 
 .life-ledger {
-  left: 5.5%;
-  top: 29%;
-  width: 18.7rem;
+  left: 5.1%;
+  top: 28%;
+  width: 18.9rem;
   color: var(--ink);
   background:
     linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(255, 245, 220, 0.94)),
     linear-gradient(120deg, rgba(255, 20, 127, 0.1), transparent 48%, rgba(0, 215, 232, 0.1));
   border-color: var(--ink);
-  border-top: 5px solid var(--magenta);
-  transform: rotate(-2.4deg);
+  border-top: 4px solid var(--magenta);
+  transform: rotate(-1.8deg);
   animation: float-three 9.5s var(--ease-out) infinite;
 }
 
@@ -546,11 +559,11 @@ button {
 }
 
 .state-meter {
-  left: 6%;
-  bottom: 8%;
+  left: 7%;
+  bottom: 8.5%;
   width: 10.4rem;
-  transform: rotate(1.6deg);
-  border-top: 5px solid var(--gold);
+  transform: rotate(1deg);
+  border-top: 4px solid var(--gold);
   animation: float-four 6.8s var(--ease-out) infinite;
 }
 
@@ -578,12 +591,14 @@ button {
 
 .eyebrow {
   width: fit-content;
+  max-width: 100%;
   margin: 0 0 1rem;
-  padding: 0.4rem 0.58rem;
-  border: 1px solid rgba(6, 9, 16, 0.16);
+  padding: 0.34rem 0.52rem;
+  border: 1px solid rgba(6, 9, 16, 0.18);
   border-radius: 999px;
-  background: rgba(255, 250, 242, 0.72);
+  background: rgba(255, 250, 242, 0.78);
   color: var(--start-deep);
+  overflow-wrap: anywhere;
 }
 
 h1,
@@ -595,20 +610,21 @@ p {
 
 h1 {
   margin: 0;
-  max-width: 12.2ch;
-  font-family: "Avenir Next", "Plus Jakarta Sans", "Geist", "Satoshi", system-ui, sans-serif;
-  font-size: 4.48rem;
-  font-weight: 900;
-  line-height: 0.92;
+  max-width: 12.6ch;
+  font-family: var(--editorial);
+  font-size: 4.86rem;
+  font-weight: 560;
+  line-height: 0.96;
   padding-bottom: 0.12em;
+  text-wrap: balance;
 }
 
 .hero-deck {
-  max-width: 42rem;
-  margin: 1.28rem 0 0;
+  max-width: 40.5rem;
+  margin: 1.38rem 0 0;
   color: var(--ink-soft);
-  font-size: 1.14rem;
-  line-height: 1.66;
+  font-size: 1.08rem;
+  line-height: 1.72;
 }
 
 .hero-life-rail {
@@ -626,7 +642,9 @@ h1 {
   color: var(--muted-strong);
   font-size: 0.76rem;
   font-weight: 820;
-  box-shadow: inset 0 -2px 0 rgba(255, 192, 24, 0.18);
+  box-shadow:
+    inset 0 -2px 0 rgba(255, 192, 24, 0.16),
+    0 6px 16px rgba(36, 33, 31, 0.05);
 }
 
 .mobile-proof-panel {
@@ -655,15 +673,15 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
-  min-height: 3.15rem;
+  min-height: 3.05rem;
   padding: 0.58rem 0.68rem 0.58rem 1.08rem;
-  border: 1px solid rgba(6, 9, 16, 0.22);
+  border: 1px solid rgba(6, 9, 16, 0.24);
   border-radius: 999px;
   background: var(--button-bg);
   color: var(--button-fg);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.78),
-    0 12px 30px rgba(36, 33, 31, 0.09);
+    0 12px 28px rgba(36, 33, 31, 0.08);
   font-weight: 820;
   transition:
     transform 640ms var(--ease-out),
@@ -1493,11 +1511,11 @@ h1 {
 @keyframes runway {
   0%,
   100% {
-    transform: scaleX(0.74);
+    transform: rotate(-13deg) scaleX(0.74);
     opacity: 0.44;
   }
   50% {
-    transform: scaleX(1);
+    transform: rotate(-13deg) scaleX(1);
     opacity: 0.9;
   }
 }
@@ -1725,18 +1743,29 @@ h1 {
     padding: 6.4rem 0 4rem;
   }
 
+  .hero-copy {
+    width: min(100%, 21.6rem);
+    max-width: 21.6rem;
+  }
+
   .hero::before {
     inset: 5.4rem -1rem 1.5rem;
   }
 
   h1 {
-    font-size: 3.05rem;
+    font-size: 3rem;
     max-width: 10.5ch;
   }
 
   .hero-deck {
     font-size: 1.04rem;
     line-height: 1.62;
+  }
+
+  .hero .eyebrow {
+    width: auto;
+    line-height: 1.36;
+    white-space: normal;
   }
 
   .hero-actions,
