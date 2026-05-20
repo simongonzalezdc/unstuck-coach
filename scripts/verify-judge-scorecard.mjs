@@ -42,6 +42,8 @@ export function verifyJudgeScorecard(root = process.cwd()) {
     "Research-to-behavior conversion",
     "Safety and boundaries",
     "Presentation and proof",
+    "calendar/inbox operations band",
+    "Open `landing/index.html` and inspect the calendar/inbox operations band.",
     "JUDGE_FAQ.md",
     "demo/whole-person-tour.md",
     "landing/reel.html",

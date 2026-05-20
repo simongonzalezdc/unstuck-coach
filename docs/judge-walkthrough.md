@@ -160,11 +160,14 @@ The landing page should make the product understandable before you read every fi
 - the Claude Project launch kit
 - the launch-kit copy controls
 - the coaching loop
+- the calendar/inbox operations band
 - the runnable console preview
 - the before/after behavior difference
 - the folder-method map
 - the five-minute judge path
 - the record-ready pitch reel page
+
+Check the Calendar and inbox layer. It should show Calendar Reality, Inbox Live Obligation, Reply Debt Recovery, and the no-account-access safety boundary before asking you to trust the deeper playbooks.
 
 Use the console to type a stuck point. It should return:
 

@@ -7,6 +7,8 @@ import { pathToFileURL } from "node:url";
 const requiredText = [
   "60-Second Path",
   "landing/index.html",
+  "calendar/inbox operations band",
+  "landing/index.html#admin-ops",
   "Claude Project launch kit",
   "PROJECT_INSTRUCTIONS.md",
   "FIRST_RUN.md",

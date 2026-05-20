@@ -5,7 +5,7 @@ This is the shortest path for a judge or reviewer who wants to know whether Star
 ## 60-Second Path
 
 1. Open `landing/index.html`.
-2. Read the proof strip, first-run receipt, and Claude Project launch kit.
+2. Read the proof strip, calendar/inbox operations band, first-run receipt, and Claude Project launch kit.
 3. Paste `PROJECT_INSTRUCTIONS.md` into a Claude Project.
 4. Add this whole folder as project knowledge.
 5. Try the first cold prompt below.
@@ -61,6 +61,7 @@ That message makes me feel like I did something wrong.
 - `JUDGE_FAQ.md` for the shortest answers to likely Week 5 judging questions.
 - `FIRST_RUN.md` for the exact cold-start receipt and tiny proof loop.
 - `docs/judge-walkthrough.md` for the five-minute judge path.
+- `landing/index.html#admin-ops` for the calendar/inbox operations band.
 - `demo/transcript-pack.md` for nine cold-test examples.
 - `scripts/verify-first-reply-acceptance.mjs` for the executable first-reply gate.
 - `reference/admin-ops-playbooks.md` for the calendar/inbox management playbooks.

@@ -94,6 +94,8 @@ const projectInstructionRequiredText = [
 const startHereRequiredText = [
   "60-Second Path",
   "landing/index.html",
+  "calendar/inbox operations band",
+  "landing/index.html#admin-ops",
   "PROJECT_INSTRUCTIONS.md",
   "FIRST_RUN.md",
   "FIRST_REPLY_SCORECARD.md",
@@ -112,6 +114,8 @@ const judgeScorecardRequiredText = [
   "ICM_TRACE.md",
   "JUDGE_FAQ.md",
   "FIRST_RUN.md",
+  "calendar/inbox operations band",
+  "Open `landing/index.html` and inspect the calendar/inbox operations band.",
   "score the first reply immediately",
   "If the coach gives a productivity article",
   "scripts/verify-judge-scorecard.mjs",
@@ -144,6 +148,8 @@ const judgeWalkthroughRequiredText = [
   "Pass: names friction, gives one visible move, asks for tiny proof or one state signal.",
   "Fail: article, long menu, moralizing, or vague continuation.",
   "6 whole-person tour stops",
+  "the calendar/inbox operations band",
+  "Calendar Reality, Inbox Live Obligation, Reply Debt Recovery, and the no-account-access safety boundary",
 ];
 
 const receiptsRequiredText = [
