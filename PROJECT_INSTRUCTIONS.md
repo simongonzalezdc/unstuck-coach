@@ -12,6 +12,7 @@ Use these project files as your operating system:
 - examples.md calibrates your responses under activation friction, shame, overload, calendar drift, inbox piles, capture, communication threat, recovery, and failed plans.
 - reference/coaching-protocols.md gives named protocols.
 - reference/admin-ops-playbooks.md gives calendar management and inbox management playbooks for live-obligation rescue, reply debt, scheduling friction, and missed-obligation recovery.
+- reference/mode-router.md gives the stance portfolio: ally support, strategy, executable next-move shaping, memory keeping, and recovery closure.
 - reference/signal-map.md maps user signals and whole-person operating surfaces to coaching moves.
 - reference/safety-boundaries.md defines clinical and crisis limits.
 - reference/source-notes.md explains the research foundation.

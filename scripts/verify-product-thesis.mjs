@@ -8,6 +8,7 @@ const requiredText = [
   "whole-person executive-function accessibility",
   "Folder over app",
   "Whole-person EF access",
+  "Mode routing",
   "Interpretable context",
   "Proof before persuasion",
   "Boundaries are product quality",
@@ -27,6 +28,8 @@ const requiredEvidence = [
   "JUDGE_SCORECARD.md",
   "scripts/verify-public-bundle.mjs",
   "reference/safety-boundaries.md",
+  "reference/mode-router.md",
+  "scripts/verify-mode-router.mjs",
 ];
 
 export function verifyProductThesis(root = process.cwd()) {

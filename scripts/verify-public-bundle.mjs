@@ -15,6 +15,7 @@ import { verifyJudgeFaq } from "./verify-judge-faq.mjs";
 import { verifyJudgeScorecard } from "./verify-judge-scorecard.mjs";
 import { verifyJudgeBrief } from "./verify-judge-brief.mjs";
 import { verifyLandingCopy } from "./verify-landing-copy.mjs";
+import { verifyModeRouter } from "./verify-mode-router.mjs";
 import { verifyEvalCoverage } from "./verify-eval-coverage.mjs";
 import { verifyPitchReel } from "./verify-pitch-reel.mjs";
 import { verifyReelPage } from "./verify-reel-page.mjs";
@@ -82,6 +83,8 @@ const projectInstructionRequiredText = [
   "Ask one question at a time.",
   "If it gives a productivity article, it failed.",
   "reference/admin-ops-playbooks.md",
+  "reference/mode-router.md",
+  "stance portfolio",
   "First Reply Acceptance Test",
   "FIRST_RUN.md shows the exact cold-start receipt and tiny proof loop.",
   "First-message routing:",
@@ -123,8 +126,11 @@ const judgeScorecardRequiredText = [
   "FIRST_RUN.md",
   "calendar/inbox operations band",
   "Open `landing/index.html` and inspect the calendar/inbox operations band.",
+  "shifting stance instead of giving one generic voice",
   "score it immediately without narrowing the whole-person product scope",
   "If the coach gives a productivity article",
+  "reference/mode-router.md",
+  "scripts/verify-mode-router.mjs",
   "scripts/verify-judge-scorecard.mjs",
   "scripts/verify-judge-brief.mjs",
   "scripts/judge-quick-proof.mjs",
@@ -173,6 +179,9 @@ const receiptsRequiredText = [
   "The first run is a receipt",
   "The first reply is scoreable",
   "preserves original Liam calendar and inbox support",
+  "preserves the original multi-mode coaching insight",
+  "reference/mode-router.md",
+  "scripts/verify-mode-router.mjs",
   "My inbox and calendar are a mess and I do not know what is real.",
   "It makes failure obvious quickly",
   "It is above the brief without hiding the folder",
@@ -221,6 +230,9 @@ const judgeBriefRequiredText = [
   "Calendar/inbox admin operations",
   "original Liam scope",
   "no-account-access boundary",
+  "mode router preserves the original multi-mode assistant insight",
+  "reference/mode-router.md",
+  "ally, strategist, engineer/executor, keeper, and recovery stances",
   "I need a coach to get started on this.",
   "My inbox and calendar are a mess and I do not know what is real.",
   "node scripts/judge-quick-proof.mjs",
@@ -532,6 +544,7 @@ const readmeRequiredText = [
   "├── SUBMISSION.md",
   "├── docs/",
   "│   └── judge-walkthrough.md",
+  "reference/mode-router.md` preserves the original multi-mode assistant insight",
   "reference/signal-map.md` gives the whole-person operating surface map",
   "│   └── whole-person-tour.md",
   "demo/whole-person-tour.md` gives a six-stop cold tour across the full life surface.",
@@ -541,10 +554,12 @@ const readmeRequiredText = [
   "│   ├── public-bundle-files.mjs",
   "│   ├── render-review-screenshots.mjs",
   "│   ├── verify-whole-person-tour.mjs",
+  "│   ├── verify-mode-router.mjs",
   "│   ├── verify-judge-brief.mjs",
   "scripts/render-review-screenshots.mjs` refreshes the landing, admin-band, first-run receipt, scorecard, FAQ, proof-gate, submission section, and reel screenshots for design approval using standard Playwright.",
   "scripts/verify-eval-coverage.mjs` checks red-face coverage and the research-to-behavior map.",
   "scripts/verify-admin-ops-playbooks.mjs` checks the calendar/inbox admin operations playbooks.",
+  "scripts/verify-mode-router.mjs` checks that the coach keeps five stance modes",
   "scripts/verify-judge-brief.mjs` checks that the judge brief keeps the whole-person wedge, above-the-brief case, fast test, failure modes, ICM fit, evidence map, blocked state, and no public-unsafe private/local references.",
   "scripts/judge-quick-proof.mjs` gives a publication-independent proof summary",
   "whole-person tour coverage",
@@ -1417,6 +1432,11 @@ for (const failure of adminOpsPlaybooks.failures) {
   failures.push(`Admin operations playbooks check failed: ${failure}`);
 }
 
+const modeRouter = verifyModeRouter(root);
+for (const failure of modeRouter.failures) {
+  failures.push(`Mode router check failed: ${failure}`);
+}
+
 const judgeQuick = judgeQuickProof(root);
 for (const failure of judgeQuick.failures) {
   failures.push(`Judge quick proof check failed: ${failure}`);
@@ -1485,6 +1505,8 @@ const summary = {
   researchToBehaviorRows: evalCoverage.researchRows,
   adminOpsPlaybooks: adminOpsPlaybooks.playbooks,
   adminOpsCloseStatuses: adminOpsPlaybooks.closingStatuses,
+  modeRouterStances: modeRouter.stances,
+  modeRouterRules: modeRouter.routingRules,
   judgeQuickProofStatus: judgeQuick.status,
   judgeQuickProofPromptCount: judgeQuick.fastestColdPrompts.length,
   skoolCommentSentences: submissionCopy.sentenceCount,

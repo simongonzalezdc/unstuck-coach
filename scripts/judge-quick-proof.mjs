@@ -11,6 +11,7 @@ import { verifyIcmTrace } from "./verify-icm-trace.mjs";
 import { verifyJudgeFaq } from "./verify-judge-faq.mjs";
 import { verifyJudgeScorecard } from "./verify-judge-scorecard.mjs";
 import { verifyJudgeBrief } from "./verify-judge-brief.mjs";
+import { verifyModeRouter } from "./verify-mode-router.mjs";
 import { verifyProductThesis } from "./verify-product-thesis.mjs";
 import { verifyStartHere } from "./verify-start-here.mjs";
 import { verifySubmissionCopy } from "./verify-submission-copy.mjs";
@@ -34,6 +35,7 @@ export function judgeQuickProof(root = process.cwd()) {
   const consoleBehavior = verifyConsoleBehavior(root);
   const evalCoverage = verifyEvalCoverage(root);
   const adminOpsPlaybooks = verifyAdminOpsPlaybooks(root);
+  const modeRouter = verifyModeRouter(root);
   const productThesis = verifyProductThesis(root);
   const icmTrace = verifyIcmTrace(root);
   const judgeFaq = verifyJudgeFaq(root);
@@ -50,6 +52,7 @@ export function judgeQuickProof(root = process.cwd()) {
   addFailures(failures, "Console behavior", consoleBehavior);
   addFailures(failures, "Eval coverage", evalCoverage);
   addFailures(failures, "Admin operations playbooks", adminOpsPlaybooks);
+  addFailures(failures, "Mode router", modeRouter);
   addFailures(failures, "Product thesis", productThesis);
   addFailures(failures, "ICM trace", icmTrace);
   addFailures(failures, "Judge FAQ", judgeFaq);
@@ -79,6 +82,8 @@ export function judgeQuickProof(root = process.cwd()) {
       researchToBehaviorRows: evalCoverage.researchRows,
       adminOpsPlaybooks: adminOpsPlaybooks.playbooks,
       adminOpsCloseStatuses: adminOpsPlaybooks.closingStatuses,
+      modeRouterStances: modeRouter.stances,
+      modeRouterRules: modeRouter.routingRules,
       productThesisSections: productThesis.sections,
       icmTraceFitRows: icmTrace.fitRows,
       judgeFaqQuestions: judgeFaq.questions,
@@ -89,7 +94,7 @@ export function judgeQuickProof(root = process.cwd()) {
       skoolCommentCharacters: submissionCopy.characterCount,
     },
     passMeaning:
-      "The folder has a cold-start path, first-reply gate, transcript evidence, a whole-person judge tour, runnable console, stress evals, admin operations playbooks, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, and concise judge brief.",
+      "The folder has a cold-start path, first-reply gate, transcript evidence, a whole-person judge tour, runnable console, stress evals, admin operations playbooks, mode router, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, and concise judge brief.",
     failures,
   };
 }

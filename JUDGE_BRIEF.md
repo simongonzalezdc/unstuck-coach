@@ -16,6 +16,7 @@ The required folder exists, but the above-the-brief layer makes the entry cold-t
 - A first-reply scorecard turns the opening response into a pass/fail behavior test.
 - A six-stop whole-person tour proves the coach is not work-only.
 - Calendar/inbox admin operations preserve the original Liam scope while keeping the no-account-access boundary explicit.
+- The mode router preserves the original multi-mode assistant insight: ally, strategist, engineer/executor, keeper, and recovery stances are public-safe and verifier-guarded.
 - Transcript packs, red-face evals, and console behavior checks prove that shame, overload, reply debt, time blindness, and body-state friction map to behavior.
 - The landing page, reel, judge FAQ, judge scorecard, and one-command smoke gate make the submission inspectable in public.
 
@@ -59,6 +60,7 @@ The fit is not a label. It is implemented as staged coaching behavior:
 - `FIRST_REPLY_SCORECARD.md`: makes first contact scoreable.
 - `demo/whole-person-tour.md`: proves six life surfaces, not one work category.
 - `reference/admin-ops-playbooks.md`: covers calendar/inbox reality, reply debt, missed obligations, and scheduling friction.
+- `reference/mode-router.md`: shows how the coach shifts stance without turning the response into a menu.
 - `evals/red-face-tests.md`: stress-tests shame, overload, time blindness, and safety boundaries.
 - `JUDGE_FAQ.md`: answers likely objections quickly.
 - `JUDGE_SCORECARD.md`: gives the 18-point judge rubric.

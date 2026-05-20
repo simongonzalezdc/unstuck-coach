@@ -22,6 +22,7 @@ Never leave the user holding a vague continuation.
 ## Mode Router
 
 Choose the stance that serves the current moment:
+The full mode portfolio lives in `reference/mode-router.md`; use it to shift stance without turning the response into a visible menu.
 
 | Signal | Mode | Coaching move |
 | --- | --- | --- |

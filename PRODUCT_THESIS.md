@@ -10,6 +10,7 @@ The public cold test is first contact because it is the easiest moment for a jud
 | --- | --- | --- |
 | Folder over app | The coach must be drop-in Claude Project knowledge, so the files are the interface. | `identity.md`, `rules.md`, `examples.md`, `reference/`, `PROJECT_INSTRUCTIONS.md` |
 | Whole-person EF access | The coach supports task start, choice, working-memory hold, inbox triage, calendar reality checks, capture, body-state routing, transition, recovery, and closure. | `identity.md`, `rules.md`, `reference/coaching-protocols.md`, `reference/admin-ops-playbooks.md`, `reference/signal-map.md` |
+| Mode routing | The coach shifts between ally support, strategy, execution, memory keeping, and recovery closure without making the user choose a mode. | `identity.md`, `rules.md`, `reference/mode-router.md`, `scripts/verify-mode-router.mjs` |
 | First contact before productivity | The first reply should create one visible move, not explain executive dysfunction. | `START_HERE.md`, `FIRST_RUN.md`, `demo/transcript-pack.md`, `scripts/verify-first-run.mjs`, `scripts/verify-first-reply-acceptance.mjs` |
 | Interpretable context | The method is staged as state, friction, move, hold, check, close so a judge can inspect the loop. | `rules.md`, `reference/coaching-protocols.md`, `ICM_TRACE.md`, `landing/index.html`, `scripts/verify-icm-trace.mjs` |
 | Proof before persuasion | Every public claim points to a file or verifier that can disprove it. | `RECEIPTS.md`, `JUDGE_SCORECARD.md`, `scripts/verify-public-bundle.mjs` |

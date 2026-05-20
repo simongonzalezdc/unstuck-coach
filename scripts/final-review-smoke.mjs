@@ -40,6 +40,7 @@ const proofChecks = [
   "scripts/verify-transcript-pack.mjs",
   "scripts/verify-first-reply-acceptance.mjs",
   "scripts/verify-whole-person-tour.mjs",
+  "scripts/verify-mode-router.mjs",
   "scripts/verify-console-behavior.mjs",
   "scripts/verify-eval-coverage.mjs",
   "scripts/verify-admin-ops-playbooks.mjs",
