@@ -26,6 +26,7 @@
   --taste-cyan: #6fc7c5;
   --taste-lichen: #a7af48;
   --taste-saffron: #d9a72f;
+  --taste-coral: #ef724b;
   --taste-clay: #d65f35;
   --taste-berry: #9f365f;
   --taste-ink: #07101c;
@@ -260,14 +261,14 @@ button {
 
 .hero {
   position: relative;
-  min-height: 90dvh;
+  min-height: 84dvh;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(31rem, 1.1fr);
   align-items: center;
-  gap: 4.9rem;
+  gap: 4.35rem;
   width: var(--wrap);
   margin: 0 auto;
-  padding: 9rem 0 5.8rem;
+  padding: 8.4rem 0 4.3rem;
   isolation: isolate;
 }
 
@@ -319,7 +320,7 @@ button {
   order: 2;
   position: relative;
   min-width: 0;
-  min-height: 40.4rem;
+  min-height: 36.8rem;
   border: 2px solid var(--ink);
   border-radius: var(--radius);
   background:
@@ -458,7 +459,7 @@ button {
 .task-stack {
   right: 4.7%;
   top: 7.6%;
-  width: 15.5rem;
+  width: 12.9rem;
   transform: rotate(0.45deg);
   border-top: 3px solid var(--taste-cyan);
   animation: float-one 7.5s var(--ease-out) infinite;
@@ -500,6 +501,7 @@ button {
 }
 
 .coach-transcript {
+  z-index: 4;
   right: 5.4%;
   bottom: 7.2%;
   width: 18.8rem;
@@ -535,7 +537,7 @@ button {
 .life-ledger {
   left: 5.1%;
   top: 15.2%;
-  width: 23rem;
+  width: 21.15rem;
   color: var(--ink);
   background:
     linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(255, 245, 220, 0.94)),

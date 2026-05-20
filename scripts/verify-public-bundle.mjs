@@ -753,6 +753,11 @@ const visualCssRequiredText = [
   },
   {
     file: "landing/styles.css",
+    text: "--taste-coral: #ef724b",
+    message: "missing coral transition signal token",
+  },
+  {
+    file: "landing/styles.css",
     text: "--orange: #ff8b00",
     message: "missing production-orange bridge signal token",
   },
@@ -1156,6 +1161,25 @@ function localLinkTarget(href) {
   return path.normalize(path.join("landing", clean));
 }
 
+function undefinedCssVarFailures(files) {
+  const readableFiles = files.filter((file) => exists(file));
+  const combined = readableFiles.map((file) => read(file)).join("\n");
+  const definitions = new Set([...combined.matchAll(/--([a-z0-9-]+)\s*:/gi)].map((match) => match[1]));
+  const cssFailures = [];
+
+  for (const file of readableFiles) {
+    const content = read(file);
+    for (const match of content.matchAll(/var\(\s*--([a-z0-9-]+)([^)]*)\)/gi)) {
+      const [, name, remainder] = match;
+      if (!definitions.has(name) && !remainder.includes(",")) {
+        cssFailures.push(`${file} uses undefined CSS custom property --${name}`);
+      }
+    }
+  }
+
+  return cssFailures;
+}
+
 const failures = [];
 const warnings = [];
 
@@ -1515,6 +1539,10 @@ for (const requirement of visualCssRequiredText) {
   if (!content.includes(requirement.text)) {
     failures.push(`${requirement.file} ${requirement.message}: ${requirement.text}`);
   }
+}
+
+for (const failure of undefinedCssVarFailures(["landing/styles.css", "landing/reel.css"])) {
+  failures.push(failure);
 }
 
 const consoleBehavior = verifyConsoleBehavior(root);
