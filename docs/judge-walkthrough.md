@@ -4,7 +4,7 @@ Use this path to evaluate Startline Coach in five minutes.
 
 ## 1. Read The Thesis
 
-Open `START_HERE.md`, then `README.md`.
+Open `START_HERE.md`, then `JUDGE_BRIEF.md`, then `README.md`.
 
 Startline Coach is an external executive-function accessibility layer for whole people when intention, care, context, body state, or closure fail to become action.
 
@@ -32,6 +32,7 @@ Extra proof files:
 - `HANDOFF_CARD.md`
 - `JUDGE_SCORECARD.md`
 - `JUDGE_FAQ.md`
+- `JUDGE_BRIEF.md`
 - `PROJECT_INSTRUCTIONS.md`
 - `PUBLICATION_CHECKLIST.md`
 - `WALKTHROUGH.md`
@@ -47,6 +48,7 @@ Extra proof files:
 - `scripts/verify-reel-page.mjs`
 - `scripts/verify-judge-faq.mjs`
 - `scripts/verify-judge-scorecard.mjs`
+- `scripts/verify-judge-brief.mjs`
 - `scripts/verify-competition-rules-trace.mjs`
 - `scripts/verify-product-thesis.mjs`
 - `scripts/verify-icm-trace.mjs`
@@ -177,6 +179,10 @@ Use the console to type a stuck point. It should return:
 - proof check
 
 Open `WRITEUP.md`.
+
+Open `JUDGE_BRIEF.md`.
+
+It should make the winning case readable before the judge opens every proof artifact: whole-person executive-function accessibility, above-the-brief proof, a fast judge test, failure modes, ICM fit, evidence map, and current publication blockers.
 
 Open `PRODUCT_THESIS.md`.
 

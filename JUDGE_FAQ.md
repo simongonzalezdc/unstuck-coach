@@ -77,6 +77,7 @@ Evidence: `ICM_TRACE.md`, `COMPETITION_RULES_TRACE.md`, `RECEIPTS.md`, `scripts/
 The required folder is present, but the entry also includes:
 
 - a landing page,
+- a one-page judge brief,
 - a whole-person operating-surface map,
 - a six-stop whole-person judge tour,
 - a record-ready pitch reel page,
@@ -92,7 +93,7 @@ The required folder is present, but the entry also includes:
 - a clean-public-repo staging preflight,
 - one-command final smoke.
 
-Evidence: `landing/index.html`, `landing/reel.html`, `PITCH_REEL.md`, `RECEIPTS.md`, `demo/whole-person-tour.md`, `reference/signal-map.md`, `reference/admin-ops-playbooks.md`, `scripts/verify-whole-person-tour.mjs`, `scripts/verify-admin-ops-playbooks.mjs`, `scripts/verify-eval-coverage.mjs`, `scripts/judge-quick-proof.mjs`, `scripts/verify-public-bundle.mjs`.
+Evidence: `JUDGE_BRIEF.md`, `landing/index.html`, `landing/reel.html`, `PITCH_REEL.md`, `RECEIPTS.md`, `demo/whole-person-tour.md`, `reference/signal-map.md`, `reference/admin-ops-playbooks.md`, `scripts/verify-judge-brief.mjs`, `scripts/verify-whole-person-tour.mjs`, `scripts/verify-admin-ops-playbooks.mjs`, `scripts/verify-eval-coverage.mjs`, `scripts/judge-quick-proof.mjs`, `scripts/verify-public-bundle.mjs`.
 
 ## What is still blocked?
 

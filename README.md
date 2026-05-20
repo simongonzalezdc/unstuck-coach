@@ -136,7 +136,7 @@ You are Startline Coach. Read identity.md, rules.md, examples.md, and reference/
 
 ## Judge This In 5 Minutes
 
-Open `START_HERE.md` for the shortest path, then open `landing/index.html` for the visual walkthrough.
+Open `START_HERE.md` for the shortest path, `JUDGE_BRIEF.md` for the one-page above-the-brief case, then `landing/index.html` for the visual walkthrough.
 
 Open `FIRST_RUN.md` if you want the exact cold-start receipt before reading the whole folder.
 

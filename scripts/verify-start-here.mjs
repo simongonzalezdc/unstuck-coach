@@ -9,6 +9,8 @@ const requiredText = [
   "landing/index.html",
   "calendar/inbox operations band",
   "landing/index.html#admin-ops",
+  "JUDGE_BRIEF.md",
+  "one-page above-the-brief case",
   "Claude Project launch kit",
   "PROJECT_INSTRUCTIONS.md",
   "FIRST_RUN.md",
@@ -21,6 +23,7 @@ const requiredText = [
   "If it gives a productivity article, it failed.",
   "docs/judge-walkthrough.md",
   "scripts/verify-first-reply-acceptance.mjs",
+  "scripts/verify-judge-brief.mjs",
   "scripts/verify-public-bundle.mjs",
 ];
 
