@@ -106,8 +106,10 @@ Copy the generated payload into the clean Week 5 public repository after the app
 Or stage it with the guarded helper:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public --write
+node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public --write --require-ready
 ```
+
+The `--require-ready` flag is for final publication staging. It refuses to stage if the reviewed source folder still has the placeholder URL or fails `verify-publication-ready.mjs`.
 
 If the target already contains non-git files, the helper stops unless `--force` is passed after review.
 

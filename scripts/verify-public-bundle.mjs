@@ -309,6 +309,9 @@ const publicationChecklistRequiredText = [
   "Run the ready gates from the reviewed source folder.",
   "Run the public-bundle and ready gates again from inside that final public repository.",
   "Run this from the reviewed source folder before staging or copying into the final public repository.",
+  "node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public --write --require-ready",
+  "The `--require-ready` flag is for final publication staging.",
+  "refuses to stage if the reviewed source folder still has the placeholder URL or fails `verify-publication-ready.mjs`",
   "the public repository was staged from the wrong copy",
 ];
 
@@ -423,7 +426,10 @@ const finalPrivacyScanRequiredText = [
 const stagingHelperRequiredText = [
   "--target",
   "--write",
+  "--require-ready",
   "Target must be outside this working folder.",
+  "Use --require-ready only for final publication staging after the reviewed source folder has the final public URL.",
+  "verify-publication-ready.mjs",
   "verify-public-bundle.mjs",
 ];
 

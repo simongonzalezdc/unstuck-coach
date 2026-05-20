@@ -10,10 +10,11 @@ const root = process.cwd();
 
 function usage() {
   return [
-    "Usage: node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public [--write] [--force]",
+    "Usage: node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public [--write] [--force] [--require-ready]",
     "",
     "Default mode is dry-run. Use --write only after the target folder is reviewed.",
     "If the target already has files other than .git, pass --force to replace those files.",
+    "Use --require-ready only for final publication staging after the reviewed source folder has the final public URL.",
   ].join("\n");
 }
 
@@ -105,6 +106,7 @@ export function stagePublicRepo() {
   const targetArg = argValue("--target");
   const write = process.argv.includes("--write");
   const force = process.argv.includes("--force");
+  const requireReady = process.argv.includes("--require-ready");
 
   if (!targetArg || targetArg.startsWith("--")) {
     throw new Error(`${usage()}\n\nMissing --target.`);
@@ -114,6 +116,9 @@ export function stagePublicRepo() {
   assertTargetOutsideRoot(target);
 
   run(process.execPath, ["scripts/verify-public-bundle.mjs"]);
+  if (requireReady) {
+    run(process.execPath, ["scripts/verify-publication-ready.mjs"]);
+  }
 
   const entries = targetEntries(target);
   const summary = {
@@ -121,6 +126,7 @@ export function stagePublicRepo() {
     target,
     write,
     force,
+    requireReady,
     fileCount: publicBundleFiles.length,
     targetExists: fs.existsSync(target),
     targetEntries: entries,
@@ -142,4 +148,3 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     process.exitCode = 1;
   }
 }
-
