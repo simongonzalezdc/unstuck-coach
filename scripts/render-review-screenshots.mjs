@@ -111,6 +111,32 @@ async function main() {
     },
     {
       file: "landing/index.html",
+      name: "startline-review-firstrun-desktop",
+      viewport: { width: 1440, height: 1000 },
+      selector: "#setup",
+      elementOnly: true,
+      requiredText: [
+        "The first run is already scripted.",
+        "First run receipt",
+        "EXACT COLD-START RECEIPT",
+        "I need a coach to get started on this.",
+      ],
+    },
+    {
+      file: "landing/index.html",
+      name: "startline-review-firstrun-mobile",
+      viewport: { width: 390, height: 900 },
+      selector: "#setup",
+      elementOnly: true,
+      requiredText: [
+        "The first run is already scripted.",
+        "First run receipt",
+        "EXACT COLD-START RECEIPT",
+        "I need a coach to get started on this.",
+      ],
+    },
+    {
+      file: "landing/index.html",
       name: "startline-review-scorecard-desktop",
       viewport: { width: 1440, height: 1000 },
       selector: "#scorecard",

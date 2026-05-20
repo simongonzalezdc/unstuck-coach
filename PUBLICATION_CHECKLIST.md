@@ -71,7 +71,7 @@ Expected before public-link insertion:
 - `verify-whole-person-tour.mjs` reports 6 tour stops, 6 prompt blocks, 6 proof checks, 6 immediate-fail checks, and zero failures.
 - `judge-quick-proof.mjs` reports `status: "pass"` and summarizes the judge-facing proof counts without requiring the final public GitHub URL.
 - `verify-public-bundle.mjs` reports zero failures.
-- `render-review-screenshots.mjs` refreshes landing, calendar/inbox admin-band, scorecard, FAQ, proof-gate, submission section, and reel screenshots when Playwright is available through local install or `NODE_PATH`.
+- `render-review-screenshots.mjs` refreshes landing, calendar/inbox admin-band, first-run receipt, scorecard, FAQ, proof-gate, submission section, and reel screenshots when Playwright is available through local install or `NODE_PATH`.
 - `verify-clean-public-stage.mjs` stages into a temporary separate folder, verifies the staged payload, removes the temporary target, and reports zero failures.
 - `final-review-smoke.mjs --expect-blocked` reports `status: "pass"` before the final public link is inserted.
 - Warnings about the missing final GitHub link are expected while the folder is still private.
