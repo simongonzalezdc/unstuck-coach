@@ -13,6 +13,7 @@ import { verifyJudgeScorecard } from "./verify-judge-scorecard.mjs";
 import { verifyJudgeBrief } from "./verify-judge-brief.mjs";
 import { verifyModeRouter } from "./verify-mode-router.mjs";
 import { verifyProductThesis } from "./verify-product-thesis.mjs";
+import { verifySourceNotes } from "./verify-source-notes.mjs";
 import { verifyStartHere } from "./verify-start-here.mjs";
 import { verifySubmissionCopy } from "./verify-submission-copy.mjs";
 import { verifyTranscriptPack } from "./verify-transcript-pack.mjs";
@@ -36,6 +37,7 @@ export function judgeQuickProof(root = process.cwd()) {
   const evalCoverage = verifyEvalCoverage(root);
   const adminOpsPlaybooks = verifyAdminOpsPlaybooks(root);
   const modeRouter = verifyModeRouter(root);
+  const sourceNotes = verifySourceNotes(root);
   const productThesis = verifyProductThesis(root);
   const icmTrace = verifyIcmTrace(root);
   const judgeFaq = verifyJudgeFaq(root);
@@ -53,6 +55,7 @@ export function judgeQuickProof(root = process.cwd()) {
   addFailures(failures, "Eval coverage", evalCoverage);
   addFailures(failures, "Admin operations playbooks", adminOpsPlaybooks);
   addFailures(failures, "Mode router", modeRouter);
+  addFailures(failures, "Source notes", sourceNotes);
   addFailures(failures, "Product thesis", productThesis);
   addFailures(failures, "ICM trace", icmTrace);
   addFailures(failures, "Judge FAQ", judgeFaq);
@@ -84,6 +87,10 @@ export function judgeQuickProof(root = process.cwd()) {
       adminOpsCloseStatuses: adminOpsPlaybooks.closingStatuses,
       modeRouterStances: modeRouter.stances,
       modeRouterRules: modeRouter.routingRules,
+      sourceNotesSections: sourceNotes.sections,
+      sourceNotesDesignLineageBullets: sourceNotes.designLineageBullets,
+      sourceNotesResearchRows: sourceNotes.researchRows,
+      sourceNotesKeyDesignChoices: sourceNotes.keyDesignChoices,
       productThesisSections: productThesis.sections,
       icmTraceFitRows: icmTrace.fitRows,
       judgeFaqQuestions: judgeFaq.questions,
@@ -94,7 +101,7 @@ export function judgeQuickProof(root = process.cwd()) {
       skoolCommentCharacters: submissionCopy.characterCount,
     },
     passMeaning:
-      "The folder has a cold-start path, first-reply gate, transcript evidence, a whole-person judge tour, runnable console, stress evals, admin operations playbooks, mode router, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, and concise judge brief.",
+      "The folder has a cold-start path, first-reply gate, transcript evidence, a whole-person judge tour, runnable console, stress evals, admin operations playbooks, mode router, source-notes lineage proof, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, and concise judge brief.",
     failures,
   };
 }

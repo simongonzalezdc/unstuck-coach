@@ -21,6 +21,7 @@ import { verifyEvalCoverage } from "./verify-eval-coverage.mjs";
 import { verifyPitchReel } from "./verify-pitch-reel.mjs";
 import { verifyReelPage } from "./verify-reel-page.mjs";
 import { verifyProductThesis } from "./verify-product-thesis.mjs";
+import { verifySourceNotes } from "./verify-source-notes.mjs";
 import { verifyStartHere } from "./verify-start-here.mjs";
 import { verifySubmissionCopy } from "./verify-submission-copy.mjs";
 import { verifySubmissionSurfaces } from "./verify-submission-surfaces.mjs";
@@ -384,6 +385,7 @@ const judgeQuickProofRequiredText = [
   "passMeaning",
   "verifyAdminOpsPlaybooks",
   "verifyEvalCoverage",
+  "verifySourceNotes",
   "verifyWholePersonTour",
   "verifyJudgeBrief",
   "verifySubmissionCopy",
@@ -447,6 +449,7 @@ const finalReviewSmokeRequiredText = [
   "verify-publication-ready.mjs",
   "verify-github-public-url.mjs",
   "verify-icm-trace.mjs",
+  "verify-source-notes.mjs",
   "verify-eval-coverage.mjs",
   "verify-admin-ops-playbooks.mjs",
   "verify-whole-person-tour.mjs",
@@ -585,6 +588,10 @@ const staleDiagnosisScopeText = [
     file: "reference/source-notes.md",
     text: "ADHD accessibility ergonomics",
   },
+  {
+    file: "identity.md",
+    text: "ADHD accessibility ergonomics",
+  },
 ];
 
 const readmeRequiredText = [
@@ -605,11 +612,13 @@ const readmeRequiredText = [
   "│   ├── public-bundle-files.mjs",
   "│   ├── render-review-screenshots.mjs",
   "│   ├── verify-landing-accessibility.mjs",
+  "│   ├── verify-source-notes.mjs",
   "│   ├── verify-whole-person-tour.mjs",
   "│   ├── verify-mode-router.mjs",
   "│   ├── verify-judge-brief.mjs",
   "scripts/render-review-screenshots.mjs` refreshes the landing, admin-band, first-run receipt, scorecard, FAQ, proof-gate, submission section, and reel screenshots for design approval using standard Playwright.",
   "scripts/verify-landing-accessibility.mjs` checks landing semantics, labeled controls, hash targets, reduced-motion handling, focus-visible treatment, and accessibility behavior wiring.",
+  "scripts/verify-source-notes.mjs` checks the public source notes for competition fit, design lineage, research translation, portability, and private-provenance safety.",
   "scripts/verify-eval-coverage.mjs` checks red-face coverage and the research-to-behavior map.",
   "scripts/verify-admin-ops-playbooks.mjs` checks the calendar/inbox admin operations playbooks.",
   "scripts/verify-mode-router.mjs` checks that the coach keeps five stance modes",
@@ -860,7 +869,7 @@ const landingRequiredText = [
   "Inbox live item",
   "Reply without shame tax",
   "My inbox and calendar are a mess and I do not know what is real.",
-  "74 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "75 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "Food/body",
   "Leave breadcrumb",
   "This is activation friction, not a planning problem.",
@@ -920,7 +929,7 @@ const landingRequiredText = [
   "node scripts/verify-pitch-reel.mjs",
   "75-second pitch reel ready.",
   "Final link missing. Review placeholder still present.",
-  "74 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "75 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "First run receipt",
   "Judge path",
   "Claude Project launch kit",
@@ -1513,6 +1522,11 @@ for (const failure of modeRouter.failures) {
   failures.push(`Mode router check failed: ${failure}`);
 }
 
+const sourceNotes = verifySourceNotes(root);
+for (const failure of sourceNotes.failures) {
+  failures.push(`Source notes check failed: ${failure}`);
+}
+
 const judgeQuick = judgeQuickProof(root);
 for (const failure of judgeQuick.failures) {
   failures.push(`Judge quick proof check failed: ${failure}`);
@@ -1587,6 +1601,11 @@ const summary = {
   adminOpsCloseStatuses: adminOpsPlaybooks.closingStatuses,
   modeRouterStances: modeRouter.stances,
   modeRouterRules: modeRouter.routingRules,
+  sourceNotesSections: sourceNotes.sections,
+  sourceNotesDesignLineageBullets: sourceNotes.designLineageBullets,
+  sourceNotesResearchRows: sourceNotes.researchRows,
+  sourceNotesKeyDesignChoices: sourceNotes.keyDesignChoices,
+  sourceNotesPortabilityBullets: sourceNotes.portabilityBullets,
   judgeQuickProofStatus: judgeQuick.status,
   judgeQuickProofPromptCount: judgeQuick.fastestColdPrompts.length,
   skoolCommentSentences: submissionCopy.sentenceCount,

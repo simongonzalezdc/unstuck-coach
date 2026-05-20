@@ -85,6 +85,7 @@ startline-coach/
 │   ├── public-bundle-files.mjs
 │   ├── render-review-screenshots.mjs
 │   ├── verify-landing-accessibility.mjs
+│   ├── verify-source-notes.mjs
 │   ├── verify-submission-copy.mjs
 │   ├── verify-submission-surfaces.mjs
 │   ├── verify-pitch-reel.mjs
@@ -235,6 +236,7 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 - `scripts/prepare-publication-link.mjs` dry-runs or writes the final public GitHub URL into `SUBMISSION.md`.
 - `scripts/render-review-screenshots.mjs` refreshes the landing, admin-band, first-run receipt, scorecard, FAQ, proof-gate, submission section, and reel screenshots for design approval using standard Playwright.
 - `scripts/verify-landing-accessibility.mjs` checks landing semantics, labeled controls, hash targets, reduced-motion handling, focus-visible treatment, and accessibility behavior wiring.
+- `scripts/verify-source-notes.mjs` checks the public source notes for competition fit, design lineage, research translation, portability, and private-provenance safety.
 - `scripts/verify-submission-copy.mjs` checks that the Skool comment draft stays within the required 2-3 sentence shape.
 - `scripts/verify-submission-surfaces.mjs` checks that the Skool draft, SUBMISSION landing version, and landing-page submission copy stay synchronized.
 - `scripts/verify-pitch-reel.mjs` checks that the 75-second pitch reel has six timed shots, a short voiceover, and no public-unsafe private/local references.
@@ -271,13 +273,14 @@ Run:
 
 ```bash
 node scripts/judge-quick-proof.mjs
+node scripts/verify-source-notes.mjs
 node scripts/verify-admin-ops-playbooks.mjs
 node scripts/verify-whole-person-tour.mjs
 node scripts/verify-judge-brief.mjs
 node scripts/verify-public-bundle.mjs
 ```
 
-The quick proof reports the cold-start path, first-reply gate, transcript evidence, whole-person tour, runnable console, stress evals, admin operations playbooks, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, concise judge brief, and fastest cold prompts without requiring the final public GitHub link. The bundle verifier checks required files, local landing-page links/assets, product thesis, Week 5 rules trace, ICM trace, pitch reel, record-ready reel page, judge FAQ, judge scorecard, judge brief, first-run receipt, first-reply scorecard, start-here prompt readiness, landing copy controls, Skool comment shape, synchronized submission surfaces, transcript completeness, whole-person tour coverage, first-reply acceptance, runnable console behavior, public-safe checklist text, emoji/symbol-range leakage, and private provenance patterns. Before final publication it may warn that the GitHub link is still pending; after the public repo link is inserted, those warnings should be gone.
+The quick proof reports the cold-start path, first-reply gate, transcript evidence, whole-person tour, runnable console, stress evals, admin operations playbooks, source-notes lineage proof, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, concise judge brief, and fastest cold prompts without requiring the final public GitHub link. The bundle verifier checks required files, local landing-page links/assets, product thesis, source notes, Week 5 rules trace, ICM trace, pitch reel, record-ready reel page, judge FAQ, judge scorecard, judge brief, first-run receipt, first-reply scorecard, start-here prompt readiness, landing copy controls, Skool comment shape, synchronized submission surfaces, transcript completeness, whole-person tour coverage, first-reply acceptance, runnable console behavior, public-safe checklist text, emoji/symbol-range leakage, and private provenance patterns. Before final publication it may warn that the GitHub link is still pending; after the public repo link is inserted, those warnings should be gone.
 
 To prove the payload can stage into a separate clean repository folder, run:
 

@@ -92,4 +92,4 @@ You do not diagnose, treat, interpret trauma, recommend medication, replace ther
 
 ## Source Material
 
-This coach is adapted from a real single-user executive-function assistant system, neurodivergent second-brain research, ADHD accessibility ergonomics, and somatic-first support patterns. The public version removes internal integrations and turns the strongest behaviors into reusable coaching rules. ADHD-informed ergonomics are part of the design foundation; the startline prompt is the fastest public cold test, not the full scope of the coach.
+This coach is adapted from a real single-user executive-function assistant system, neurodivergent second-brain research, ADHD-informed executive-function ergonomics, and somatic-first support patterns. The public version removes internal integrations and turns the strongest behaviors into reusable coaching rules. ADHD-informed ergonomics are part of the design foundation; the startline prompt is the fastest public cold test, not the full scope of the coach.
