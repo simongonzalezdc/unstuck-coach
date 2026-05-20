@@ -9,6 +9,7 @@ import { verifyCompetitionRulesTrace } from "./verify-competition-rules-trace.mj
 import { verifyFirstReplyAcceptance } from "./verify-first-reply-acceptance.mjs";
 import { verifyFirstReplyScorecard } from "./verify-first-reply-scorecard.mjs";
 import { verifyFirstRun } from "./verify-first-run.mjs";
+import { verifyFinalPrivacyScan } from "./verify-final-privacy-scan.mjs";
 import { verifyIcmTrace } from "./verify-icm-trace.mjs";
 import { judgeQuickProof } from "./judge-quick-proof.mjs";
 import { verifyJudgeFaq } from "./verify-judge-faq.mjs";
@@ -286,6 +287,7 @@ const publicationChecklistRequiredText = [
   "node scripts/final-review-smoke.mjs --expect-ready --skip-build",
   "node scripts/verify-publication-ready.mjs",
   "node scripts/verify-github-public-url.mjs",
+  "node scripts/verify-final-privacy-scan.mjs",
   "node scripts/verify-mode-router.mjs",
   "node scripts/verify-first-reply-scorecard.mjs",
   "node scripts/verify-start-here.mjs",
@@ -396,6 +398,16 @@ const judgeQuickProofRequiredText = [
   "My inbox and calendar are a mess and I do not know what is real.",
 ];
 
+const finalPrivacyScanRequiredText = [
+  "verifyFinalPrivacyScan",
+  "publicBundleFiles",
+  "guardScriptFiles",
+  "disallowedLiteralFragments",
+  "unfinishedPresentationPatterns",
+  "skippedGuardScripts",
+  "Private/provenance pattern",
+];
+
 const stagingHelperRequiredText = [
   "--target",
   "--write",
@@ -456,6 +468,7 @@ const finalReviewSmokeRequiredText = [
   "verify-eval-coverage.mjs",
   "verify-admin-ops-playbooks.mjs",
   "verify-whole-person-tour.mjs",
+  "verify-final-privacy-scan.mjs",
   "judge-quick-proof.mjs",
   "verify-clean-public-stage.mjs",
   "Expected publication gate to remain blocked before final public link insertion.",
@@ -467,14 +480,17 @@ const publicationReadyRequiredText = [
   "verifySourceNotes",
   "verifyWholePersonTour",
   "verifyModeRouter",
+  "verifyFinalPrivacyScan",
   "Source notes",
   "Whole-person tour",
   "Landing accessibility",
   "Mode router",
+  "Final privacy scan",
   "sourceNotesResearchRows",
   "wholePersonTourStops",
   "modeRouterStances",
   "landingAccessibilityImages",
+  "finalPrivacyScanFiles",
 ];
 
 const githubPublicUrlRequiredText = [
@@ -642,9 +658,11 @@ const readmeRequiredText = [
   "scripts/verify-mode-router.mjs` checks that the coach keeps five stance modes",
   "scripts/verify-judge-brief.mjs` checks that the judge brief keeps the whole-person wedge, above-the-brief case, fast test, failure modes, ICM fit, evidence map, blocked state, and no public-unsafe private/local references.",
   "scripts/judge-quick-proof.mjs` gives a publication-independent proof summary",
+  "scripts/verify-final-privacy-scan.mjs` gives the final post-link privacy pass a named command",
   "whole-person tour coverage",
   "scripts/verify-github-public-url.mjs` proves the final GitHub link is publicly visible through unauthenticated GitHub API access",
   "node scripts/verify-github-public-url.mjs",
+  "node scripts/verify-final-privacy-scan.mjs",
 ];
 
 const icmTraceRequiredText = [
@@ -887,7 +905,7 @@ const landingRequiredText = [
   "Inbox live item",
   "Reply without shame tax",
   "My inbox and calendar are a mess and I do not know what is real.",
-  "75 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "76 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "Food/body",
   "Leave breadcrumb",
   "This is activation friction, not a planning problem.",
@@ -940,6 +958,7 @@ const landingRequiredText = [
   "node scripts/final-review-smoke.mjs --expect-ready --skip-build",
   "node scripts/verify-clean-public-stage.mjs",
   "../scripts/verify-landing-accessibility.mjs",
+  "../scripts/verify-final-privacy-scan.mjs",
   "Clean repo preflight",
   "node scripts/verify-submission-surfaces.mjs",
   "Submission surfaces synced.",
@@ -947,7 +966,7 @@ const landingRequiredText = [
   "node scripts/verify-pitch-reel.mjs",
   "75-second pitch reel ready.",
   "Final link missing. Review placeholder still present.",
-  "75 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "76 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "First run receipt",
   "Judge path",
   "Claude Project launch kit",
@@ -1373,6 +1392,15 @@ if (exists("scripts/final-review-smoke.mjs")) {
   }
 }
 
+if (exists("scripts/verify-final-privacy-scan.mjs")) {
+  const finalPrivacyScanScript = read("scripts/verify-final-privacy-scan.mjs");
+  for (const requiredText of finalPrivacyScanRequiredText) {
+    if (!finalPrivacyScanScript.includes(requiredText)) {
+      failures.push(`scripts/verify-final-privacy-scan.mjs is missing required text: ${requiredText}`);
+    }
+  }
+}
+
 if (exists("scripts/verify-publication-ready.mjs")) {
   const publicationReady = read("scripts/verify-publication-ready.mjs");
   for (const requiredText of publicationReadyRequiredText) {
@@ -1594,6 +1622,11 @@ for (const failure of judgeBrief.failures) {
   failures.push(`Judge brief check failed: ${failure}`);
 }
 
+const finalPrivacyScan = verifyFinalPrivacyScan(root);
+for (const failure of finalPrivacyScan.failures) {
+  failures.push(`Final privacy scan failed: ${failure}`);
+}
+
 const summary = {
   requiredFiles: publicBundleFiles.length,
   checkedFiles: allFiles.length,
@@ -1649,6 +1682,9 @@ const summary = {
   judgeBriefSections: judgeBrief.sections,
   judgeBriefEvidenceRefs: judgeBrief.evidenceRefs,
   judgeBriefFastTestSteps: judgeBrief.fastTestSteps,
+  finalPrivacyScanFiles: finalPrivacyScan.checkedFiles,
+  finalPrivacyScanTextFiles: finalPrivacyScan.scannedTextFiles,
+  finalPrivacyScanSkippedGuardScripts: finalPrivacyScan.skippedGuardScripts,
   readmeTreeFiles: exists("README.md") ? verifyReadmeTreeAgainstManifest(read("README.md")).files : 0,
   failures,
   warnings,

@@ -43,6 +43,7 @@ node scripts/verify-admin-ops-playbooks.mjs
 node scripts/verify-whole-person-tour.mjs
 node scripts/judge-quick-proof.mjs
 node scripts/verify-public-bundle.mjs
+node scripts/verify-final-privacy-scan.mjs
 NODE_PATH=/path/to/node_modules node scripts/render-review-screenshots.mjs
 node scripts/build-public-bundle.mjs
 node scripts/verify-clean-public-stage.mjs
@@ -77,6 +78,7 @@ Expected before public-link insertion:
 - `verify-whole-person-tour.mjs` reports 6 tour stops, 6 prompt blocks, 6 proof checks, 6 immediate-fail checks, and zero failures.
 - `judge-quick-proof.mjs` reports `status: "pass"` and summarizes the judge-facing proof counts without requiring the final public GitHub URL.
 - `verify-public-bundle.mjs` reports zero failures.
+- `verify-final-privacy-scan.mjs` reports `status: "pass"` and zero private/local provenance leaks across the public bundle.
 - `render-review-screenshots.mjs` refreshes landing, calendar/inbox admin-band, first-run receipt, scorecard, FAQ, proof-gate, submission section, and reel screenshots when Playwright is available through local install or `NODE_PATH`.
 - `verify-clean-public-stage.mjs` stages into a temporary separate folder, verifies the staged payload, removes the temporary target, and reports zero failures.
 - `final-review-smoke.mjs --expect-blocked` reports `status: "pass"` before the final public link is inserted.
@@ -127,6 +129,7 @@ Then run:
 ```bash
 node scripts/verify-publication-ready.mjs
 node scripts/verify-github-public-url.mjs
+node scripts/verify-final-privacy-scan.mjs
 node scripts/final-review-smoke.mjs --expect-ready --skip-build
 ```
 
@@ -139,6 +142,7 @@ The final green state is:
 - The Skool comment draft remains 2-3 sentences.
 - Product thesis, Week 5 rules trace, ICM trace, pitch reel, record-ready reel page, judge FAQ, judge scorecard, first-run receipt, first-reply scorecard, start-here path, landing copy controls, transcript pack, first-reply acceptance, and console behavior cases still pass.
 - Landing accessibility, source-note lineage, mode routing, whole-person tour, admin operations, eval coverage, and submission-surface sync still pass inside the final publication gate.
+- The named final privacy scan passes after the public link is inserted.
 - Submission surfaces still match the approved Skool draft.
 - The clean-stage preflight has passed from the source folder.
 - `final-review-smoke.mjs --expect-ready --skip-build` reports `status: "pass"`.

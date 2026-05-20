@@ -18,6 +18,7 @@ import { verifyLandingAccessibility } from "./verify-landing-accessibility.mjs";
 import { verifyLandingCopy } from "./verify-landing-copy.mjs";
 import { verifyModeRouter } from "./verify-mode-router.mjs";
 import { verifyEvalCoverage } from "./verify-eval-coverage.mjs";
+import { verifyFinalPrivacyScan } from "./verify-final-privacy-scan.mjs";
 import { verifyPitchReel } from "./verify-pitch-reel.mjs";
 import { verifyReelPage } from "./verify-reel-page.mjs";
 import { verifyProductThesis } from "./verify-product-thesis.mjs";
@@ -159,6 +160,9 @@ export function verifyPublicationReady() {
   const judgeBrief = verifyJudgeBrief(root);
   addVerifierFailures(failures, "Judge brief", judgeBrief);
 
+  const finalPrivacyScan = verifyFinalPrivacyScan(root);
+  addVerifierFailures(failures, "Final privacy scan", finalPrivacyScan);
+
   if (!/Skool comment draft:/i.test(submission)) {
     warnings.push("SUBMISSION.md does not expose the Skool comment draft heading.");
   }
@@ -212,6 +216,9 @@ export function verifyPublicationReady() {
     judgeBriefSections: judgeBrief.sections,
     judgeBriefEvidenceRefs: judgeBrief.evidenceRefs,
     judgeBriefFastTestSteps: judgeBrief.fastTestSteps,
+    finalPrivacyScanFiles: finalPrivacyScan.checkedFiles,
+    finalPrivacyScanTextFiles: finalPrivacyScan.scannedTextFiles,
+    finalPrivacyScanSkippedGuardScripts: finalPrivacyScan.skippedGuardScripts,
     failures,
     warnings,
   };

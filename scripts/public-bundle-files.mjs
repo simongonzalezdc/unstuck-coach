@@ -68,6 +68,7 @@ export const publicBundleFiles = [
   "scripts/verify-admin-ops-playbooks.mjs",
   "scripts/judge-quick-proof.mjs",
   "scripts/verify-public-bundle.mjs",
+  "scripts/verify-final-privacy-scan.mjs",
   "scripts/verify-publication-ready.mjs",
   "scripts/verify-github-public-url.mjs",
   "scripts/final-review-smoke.mjs",
