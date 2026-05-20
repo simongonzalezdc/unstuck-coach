@@ -568,6 +568,25 @@ const staleShortcutScopeText = [
   },
 ];
 
+const staleDiagnosisScopeText = [
+  {
+    file: "PROJECT_INSTRUCTIONS.md",
+    text: "for people with ADHD, ADHD-like, or neurodivergent executive-function friction",
+  },
+  {
+    file: "reference/source-notes.md",
+    text: "for people with ADHD, ADHD-like, or neurodivergent executive-function friction",
+  },
+  {
+    file: "reference/source-notes.md",
+    text: "ADHD-friendly accessibility workflows",
+  },
+  {
+    file: "reference/source-notes.md",
+    text: "ADHD accessibility ergonomics",
+  },
+];
+
 const readmeRequiredText = [
   "A folder-based whole-person executive-function accessibility coach for people who need help starting, switching, remembering, regulating, capturing, recovering, and closing loops without shame.",
   "The core idea: Startline Coach acts as portable executive-function accessibility.",
@@ -1391,6 +1410,12 @@ for (const stale of staleWholePersonDriftText) {
 for (const stale of staleShortcutScopeText) {
   if (exists(stale.file) && read(stale.file).includes(stale.text)) {
     failures.push(`${stale.file} still contains stale shortcut-as-scope text: ${stale.text}`);
+  }
+}
+
+for (const stale of staleDiagnosisScopeText) {
+  if (exists(stale.file) && read(stale.file).includes(stale.text)) {
+    failures.push(`${stale.file} still contains stale diagnosis-as-scope text: ${stale.text}`);
   }
 }
 

@@ -8,7 +8,7 @@ The competition asks for a folder-based AI coach for a specific domain. The fold
 
 Startline Coach is intentionally narrow:
 
-> Whole-person executive-function accessibility coaching for people with ADHD, ADHD-like, or neurodivergent executive-function friction.
+> Whole-person executive-function accessibility coaching for people whose lives stall at concrete access thresholds: starting, switching, remembering, regulating, capturing, recovering, or closing loops.
 
 The folder follows the required shape:
 
@@ -25,11 +25,11 @@ This public folder was distilled from prior internal work on:
 - A proactive executive-function coach.
 - Body-doubling and task-initiation support.
 - Somatic-first regulation prompts.
-- ADHD-friendly accessibility workflows.
+- Executive-function accessibility workflows informed by ADHD and neurodivergent ergonomics.
 - Return-after-avoidance and no-shame re-entry.
 - Mode-based assistant behavior, where the assistant's stance matters more than generic answers.
 - Neurodivergent second-brain design, especially low-friction capture and object permanence.
-- ADHD accessibility ergonomics, including working memory, task initiation, time blindness, body-state routing, and communication threat.
+- Accessibility ergonomics for working memory, task initiation, time blindness, body-state routing, and communication threat.
 - Affective design for users who may experience body signals before clear emotion labels.
 
 Non-public paths, phone numbers, personal names, and internal integrations were intentionally removed.
