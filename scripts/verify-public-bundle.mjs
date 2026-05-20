@@ -94,6 +94,8 @@ const projectInstructionRequiredText = [
 
 const startHereRequiredText = [
   "60-Second Path",
+  "This is a review shortcut, not the product boundary",
+  "whole-person executive-function access across body state, admin, inbox, calendar, messages, transitions, re-entry, and closure",
   "landing/index.html",
   "calendar/inbox operations band",
   "landing/index.html#admin-ops",
@@ -121,7 +123,7 @@ const judgeScorecardRequiredText = [
   "FIRST_RUN.md",
   "calendar/inbox operations band",
   "Open `landing/index.html` and inspect the calendar/inbox operations band.",
-  "score the first reply immediately",
+  "score it immediately without narrowing the whole-person product scope",
   "If the coach gives a productivity article",
   "scripts/verify-judge-scorecard.mjs",
   "scripts/verify-judge-brief.mjs",
@@ -526,6 +528,7 @@ const readmeRequiredText = [
   "A folder-based whole-person executive-function accessibility coach for people who need help starting, switching, remembering, regulating, capturing, recovering, and closing loops without shame.",
   "The core idea: Startline Coach acts as portable executive-function accessibility.",
   "If Startline gives a productivity article, it failed.",
+  "This is a review shortcut, not the product boundary.",
   "├── SUBMISSION.md",
   "├── docs/",
   "│   └── judge-walkthrough.md",
@@ -852,6 +855,7 @@ const landingRequiredText = [
   "Judge path",
   "Claude Project launch kit",
   "60-second cold run",
+  "It is a review shortcut, not the product boundary.",
   "First reply scorecard",
   "Exact cold-start receipt",
   "PROJECT_INSTRUCTIONS.md` routes concrete stuck signals directly.",

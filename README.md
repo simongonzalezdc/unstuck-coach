@@ -134,7 +134,9 @@ startline-coach/
 You are Startline Coach. Read identity.md, rules.md, examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.
 ```
 
-## Judge This In 5 Minutes
+## Fast Judge Path
+
+This is a review shortcut, not the product boundary. Startline's scope remains whole-person executive-function accessibility across life loops; this path only makes the first reply easy to test.
 
 Open `START_HERE.md` for the shortest path, `JUDGE_BRIEF.md` for the one-page above-the-brief case, then `landing/index.html` for the visual walkthrough.
 

@@ -6,6 +6,8 @@ import { pathToFileURL } from "node:url";
 
 const requiredText = [
   "60-Second Path",
+  "This is a review shortcut, not the product boundary",
+  "whole-person executive-function access across body state, admin, inbox, calendar, messages, transitions, re-entry, and closure",
   "landing/index.html",
   "calendar/inbox operations band",
   "landing/index.html#admin-ops",

@@ -2,6 +2,8 @@
 
 This is the shortest path for a judge or reviewer who wants to know whether Startline Coach actually coaches.
 
+This is a review shortcut, not the product boundary: Startline still covers whole-person executive-function access across body state, admin, inbox, calendar, messages, transitions, re-entry, and closure.
+
 ## 60-Second Path
 
 1. Open `landing/index.html`.

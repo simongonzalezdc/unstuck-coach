@@ -1,6 +1,6 @@
 # Judge Walkthrough
 
-Use this path to evaluate Startline Coach in five minutes.
+Use this fast path to evaluate the first reply without mistaking the shortcut for the whole product scope.
 
 ## 1. Read The Thesis
 
