@@ -73,7 +73,8 @@ startline-coach/
 │   └── whole-person-tour.md
 ├── landing/
 │   ├── assets/
-│   │   └── startline-handoff-card.svg
+│   │   ├── startline-handoff-card.svg
+│   │   └── startline-admin-bridge.jpg
 │   ├── index.html
 │   ├── reel.html
 │   ├── styles.css
@@ -204,6 +205,7 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 ## Proof Artifacts
 
 - `landing/index.html` gives a visual judge path, above-the-brief proof band, 60-second cold-run band, Claude Project launch kit, runnable coach console, live coaching demo, folder-method map, one-command proof gate, and submission copy.
+- `landing/assets/startline-admin-bridge.jpg` gives the admin-operations band a bitmap operating-map asset using the simplified PuenteWorks bridge/Mola visual language.
 - `landing/reel.html` gives a record-ready six-scene pitch reel page for the optional video/GIF proof layer.
 - `START_HERE.md` gives the 60-second route, exact start prompt, first-reply acceptance test, and fast cold prompts.
 - `PRODUCT_THESIS.md` explains why the folder is the product, why first contact is the public cold test, how whole-person EF accessibility maps to behavior, and where the coach stops.

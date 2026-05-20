@@ -303,8 +303,7 @@ copyControls.forEach((control) => {
 });
 
 const revealTargets = optionalSelectorAll(
-  ".section-heading, .scope-core, .scope-lanes li, .coldrun-steps li, .brief-board article, .scorecard-board article, .reel-board article, .thesis-points article, .handoff-figure, .setup-board article, .response-pane, .coach-console, .console-output article, .file-node, .behavior-grid article, .receipts-grid a, .proofgate-board article, .judge-steps li, .submission-copy",
-  ".section-heading, .scope-core, .scope-lanes li, .admin-rhythm-card, .admin-boundary, .coldrun-steps li, .brief-board article, .scorecard-board article, .reel-board article, .thesis-points article, .handoff-figure, .setup-board article, .response-pane, .coach-console, .console-output article, .file-node, .behavior-grid article, .receipts-grid a, .proofgate-board article, .judge-steps li, .submission-copy",
+  ".section-heading, .scope-core, .scope-lanes li, .admin-rhythm-visual, .admin-rhythm-card, .admin-boundary, .coldrun-steps li, .brief-board article, .scorecard-board article, .reel-board article, .thesis-points article, .handoff-figure, .setup-board article, .response-pane, .coach-console, .console-output article, .file-node, .behavior-grid article, .receipts-grid a, .proofgate-board article, .judge-steps li, .submission-copy",
 );
 
 if ("IntersectionObserver" in window) {

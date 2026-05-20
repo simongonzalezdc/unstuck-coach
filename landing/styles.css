@@ -1130,7 +1130,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.78rem;
-  min-height: 34rem;
+  min-height: 38rem;
   padding: 1rem;
   border: 2px solid var(--ink);
   border-radius: var(--radius);
@@ -1169,6 +1169,61 @@ h1 {
   opacity: 0.72;
 }
 
+.admin-rhythm-visual {
+  position: relative;
+  z-index: 1;
+  grid-column: 1 / -1;
+  min-height: 18rem;
+  margin: 0;
+  padding: 0.52rem;
+  border: 1px solid rgba(6, 9, 16, 0.82);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(6, 9, 16, 0.96), rgba(6, 67, 74, 0.93)),
+    repeating-linear-gradient(90deg, transparent 0 44px, rgba(255, 245, 220, 0.055) 44px 45px, transparent 45px 88px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 245, 220, 0.15),
+    inset 0 0 0 0.34rem rgba(255, 245, 220, 0.08),
+    0 24px 58px rgba(6, 9, 16, 0.18);
+  overflow: hidden;
+}
+
+.admin-rhythm-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0.88rem;
+  z-index: 2;
+  border: 1px solid rgba(255, 245, 220, 0.58);
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.admin-rhythm-visual::after {
+  content: "";
+  position: absolute;
+  left: 0.52rem;
+  right: 0.52rem;
+  bottom: 0.52rem;
+  z-index: 2;
+  height: 0.54rem;
+  border-top: 1px solid rgba(6, 9, 16, 0.7);
+  background:
+    linear-gradient(90deg, var(--taste-teal) 0 18%, var(--taste-cyan) 18% 34%, var(--taste-lichen) 34% 50%, var(--taste-saffron) 50% 66%, var(--taste-clay) 66% 82%, var(--taste-berry) 82% 100%);
+  pointer-events: none;
+}
+
+.admin-rhythm-visual img {
+  display: block;
+  width: 100%;
+  height: min(32vw, 24rem);
+  min-height: 17rem;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(255, 245, 220, 0.52);
+  border-radius: 5px;
+  filter: saturate(1.08) contrast(1.03);
+}
+
 .admin-rhythm-card,
 .admin-boundary {
   position: relative;
@@ -1199,16 +1254,16 @@ h1 {
   pointer-events: none;
 }
 
-.admin-rhythm-card:nth-child(1) {
+.admin-rhythm-card:nth-child(2) {
   border-top: 5px solid var(--taste-cyan);
 }
 
-.admin-rhythm-card:nth-child(2) {
+.admin-rhythm-card:nth-child(3) {
   border-top: 5px solid var(--taste-saffron);
   transform: translateY(1.4rem);
 }
 
-.admin-rhythm-card:nth-child(3) {
+.admin-rhythm-card:nth-child(4) {
   border-top: 5px solid var(--taste-clay);
   transform: translateY(-0.4rem);
 }
@@ -2072,9 +2127,13 @@ h1 {
     height: 4.6rem;
   }
 
-  .admin-rhythm-card:nth-child(2),
-  .admin-rhythm-card:nth-child(3) {
+  .admin-rhythm-card:nth-child(3),
+  .admin-rhythm-card:nth-child(4) {
     transform: none;
+  }
+
+  .admin-rhythm-visual img {
+    height: 19rem;
   }
 
   .admin-boundary {

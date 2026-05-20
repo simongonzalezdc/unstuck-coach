@@ -28,6 +28,10 @@ import { verifyWholePersonTour } from "./verify-whole-person-tour.mjs";
 
 const root = process.cwd();
 
+const binaryPublicBundleFiles = new Set([
+  "landing/assets/startline-admin-bridge.jpg",
+]);
+
 const publicSafetyPatterns = [
   /PRIVATE_[A-Z0-9_]*\.md/i,
   /\/Users\/[^/\s)'"`]+/i,
@@ -803,12 +807,12 @@ const landingRequiredText = [
   "Food, messages, bills, transitions, and re-entry all count as access work.",
   "Calendar blocks and inbox triage are not an add-on; they are where a lot of life becomes real again.",
   "Calendar/inbox",
-  "Triage one inbox item",
-  "Name the next hard anchor",
+  "Calendar hard anchor",
+  "Inbox live item",
+  "Reply without shame tax",
   "My inbox and calendar are a mess and I do not know what is real.",
-  "70 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "73 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "Food/body",
-  "Eat before planning",
   "Leave breadcrumb",
   "This is activation friction, not a planning problem.",
   "Above the brief",
@@ -829,6 +833,7 @@ const landingRequiredText = [
   "Verify tour",
   "Calendar + inbox playbooks",
   "Calendar and inbox layer",
+  "startline-admin-bridge.jpg",
   "calendar management and inbox management",
   "Original operations support, rebuilt as safe coaching.",
   "turn calendar drift, inbox noise, reply debt, missed obligations, and",
@@ -865,7 +870,7 @@ const landingRequiredText = [
   "node scripts/verify-pitch-reel.mjs",
   "75-second pitch reel ready.",
   "Final link missing. Review placeholder still present.",
-  "70 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "73 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "First run receipt",
   "Judge path",
   "Claude Project launch kit",
@@ -1062,6 +1067,10 @@ const allFiles = listFiles().filter((file) => {
 });
 
 for (const file of allFiles) {
+  if (binaryPublicBundleFiles.has(file)) {
+    continue;
+  }
+
   const content = read(file);
   if (emojiPattern.test(content)) {
     failures.push(`Emoji or symbol-range character found in public candidate: ${file}`);
