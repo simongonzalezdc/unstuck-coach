@@ -109,6 +109,8 @@ const startHereRequiredText = [
   "landing/index.html",
   "calendar/inbox operations band",
   "landing/index.html#admin-ops",
+  "scripts/render-review-screenshots.mjs",
+  "desktop, mobile, and narrow-mobile visual review captures",
   "PROJECT_INSTRUCTIONS.md",
   "FIRST_RUN.md",
   "FIRST_REPLY_SCORECARD.md",
@@ -234,6 +236,8 @@ const judgeBriefRequiredText = [
   "first-run receipt",
   "first-reply scorecard",
   "six-stop whole-person tour",
+  "repeatable screenshot helper",
+  "desktop, mobile, and narrow mobile",
   "Calendar/inbox admin operations",
   "original Liam scope",
   "no-account-access boundary",
@@ -263,6 +267,7 @@ const judgeBriefRequiredText = [
   "JUDGE_FAQ.md",
   "JUDGE_SCORECARD.md",
   "landing/index.html",
+  "scripts/render-review-screenshots.mjs",
   "scripts/final-review-smoke.mjs",
 ];
 

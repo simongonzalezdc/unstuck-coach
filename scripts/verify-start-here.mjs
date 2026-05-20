@@ -11,6 +11,8 @@ const requiredText = [
   "landing/index.html",
   "calendar/inbox operations band",
   "landing/index.html#admin-ops",
+  "scripts/render-review-screenshots.mjs",
+  "desktop, mobile, and narrow-mobile visual review captures",
   "JUDGE_BRIEF.md",
   "one-page above-the-brief case",
   "Claude Project launch kit",

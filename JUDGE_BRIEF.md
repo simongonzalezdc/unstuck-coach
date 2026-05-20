@@ -15,6 +15,7 @@ The required folder exists, but the above-the-brief layer makes the entry cold-t
 - A first-run receipt proves the exact launch path before a judge reads the folder.
 - A first-reply scorecard turns the opening response into a pass/fail behavior test.
 - A six-stop whole-person tour proves the coach is not work-only.
+- A repeatable screenshot helper proves the landing on desktop, mobile, and narrow mobile instead of relying on one pretty viewport.
 - Calendar/inbox admin operations preserve the original Liam scope while keeping the no-account-access boundary explicit.
 - The mode router preserves the original multi-mode assistant insight: ally, strategist, engineer/executor, keeper, and recovery stances are public-safe and verifier-guarded.
 - Transcript packs, red-face evals, and console behavior checks prove that shame, overload, reply debt, time blindness, and body-state friction map to behavior.
@@ -65,6 +66,7 @@ The fit is not a label. It is implemented as staged coaching behavior:
 - `JUDGE_FAQ.md`: answers likely objections quickly.
 - `JUDGE_SCORECARD.md`: gives the 18-point judge rubric.
 - `landing/index.html`: makes the proof layer visible before the judge reads the repository.
+- `scripts/render-review-screenshots.mjs`: captures desktop, mobile, and narrow-mobile review views.
 - `scripts/judge-quick-proof.mjs`: summarizes the publication-independent proof layer.
 - `scripts/final-review-smoke.mjs`: reruns the proof checks and publication gate.
 

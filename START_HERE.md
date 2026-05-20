@@ -66,6 +66,7 @@ That message makes me feel like I did something wrong.
 - `FIRST_RUN.md` for the exact cold-start receipt and tiny proof loop.
 - `docs/judge-walkthrough.md` for the cold judge path.
 - `landing/index.html#admin-ops` for the calendar/inbox operations band.
+- `scripts/render-review-screenshots.mjs` for the desktop, mobile, and narrow-mobile visual review captures.
 - `demo/transcript-pack.md` for nine cold-test examples.
 - `scripts/verify-first-reply-acceptance.mjs` for the executable first-reply gate.
 - `reference/admin-ops-playbooks.md` for the calendar/inbox management playbooks.

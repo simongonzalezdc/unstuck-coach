@@ -39,6 +39,8 @@ export function verifyJudgeBrief(root = process.cwd()) {
     "first-run receipt",
     "first-reply scorecard",
     "six-stop whole-person tour",
+    "repeatable screenshot helper",
+    "desktop, mobile, and narrow mobile",
     "Calendar/inbox admin operations",
     "original Liam scope",
     "no-account-access boundary",
@@ -70,6 +72,7 @@ export function verifyJudgeBrief(root = process.cwd()) {
     "JUDGE_FAQ.md",
     "JUDGE_SCORECARD.md",
     "landing/index.html",
+    "scripts/render-review-screenshots.mjs",
     "scripts/judge-quick-proof.mjs",
     "scripts/final-review-smoke.mjs",
   ];
