@@ -77,6 +77,8 @@ export function verifySubmissionSurfaces(root = process.cwd()) {
 
   const requiredPhrases = [
     "whose bottleneck is not intelligence or effort",
+    "one-page judge brief",
+    "whole-person tour",
     "productivity extractor",
     "final review smoke test",
   ];

@@ -63,6 +63,8 @@ export function verifySubmissionCopy(root = process.cwd()) {
     /productivity extractor/i,
     /inboxes/i,
     /calendars/i,
+    /one-page judge brief/i,
+    /whole-person tour/i,
     /without shame/i,
     /coach/i,
     /cold-testable/i,
