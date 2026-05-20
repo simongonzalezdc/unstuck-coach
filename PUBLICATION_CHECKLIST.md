@@ -92,7 +92,16 @@ The generated payload is:
 output/public-bundle/startline-coach/
 ```
 
-Copy that folder into the clean Week 5 public repository after approval.
+After approval, keep the reviewed source folder as the canonical copy until the final link is inserted and verified. Do not maintain two different `SUBMISSION.md` files.
+
+Recommended final sequence:
+
+1. Insert the approved final public GitHub URL in the reviewed source folder.
+2. Run the ready gates from the reviewed source folder.
+3. Build or stage the public payload into the clean Week 5 public repository.
+4. Run the public-bundle and ready gates again from inside that final public repository.
+
+Copy the generated payload into the clean Week 5 public repository after the approved link is present in the reviewed source folder.
 
 Or stage it with the guarded helper:
 
@@ -106,11 +115,17 @@ From inside the copied public repository, run:
 
 ```bash
 node scripts/verify-public-bundle.mjs
+node scripts/verify-publication-ready.mjs
+node scripts/verify-github-public-url.mjs
+node scripts/verify-final-privacy-scan.mjs
+node scripts/final-review-smoke.mjs --expect-ready --skip-build
 ```
 
-It should still report zero failures.
+They should still report zero failures. If any command reports that the final URL is missing or still a placeholder, the public repository was staged from the wrong copy.
 
 ## Insert The Final Link
+
+Run this from the reviewed source folder before staging or copying into the final public repository. If the final public repository is already staged, rerun the same command there after copying only to confirm it contains the same approved link.
 
 Dry-run first:
 
