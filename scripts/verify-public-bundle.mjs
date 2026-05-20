@@ -315,6 +315,20 @@ const stagingHelperRequiredText = [
   "verify-public-bundle.mjs",
 ];
 
+const renderReviewScreenshotsRequiredText = [
+  "Playwright is required.",
+  "startline-review-landing-desktop",
+  "startline-review-landing-mobile",
+  "startline-review-admin-desktop",
+  "startline-review-admin-mobile",
+  "startline-review-reel-desktop",
+  "startline-review-reel-mobile",
+  "Original operations support, rebuilt as safe coaching.",
+  "No autonomous reading",
+  "horizontalOverflow",
+  "consoleOrPageEvents",
+];
+
 const finalReviewSmokeRequiredText = [
   "--expect-blocked",
   "--expect-ready",
@@ -435,7 +449,9 @@ const readmeRequiredText = [
   "JUDGE_FAQ.md` gives the shortest answers to likely Week 5 judging objections",
   "PITCH_REEL.md` compresses the presentation layer into a verified 75-second judge reel.",
   "│   ├── public-bundle-files.mjs",
+  "│   ├── render-review-screenshots.mjs",
   "│   ├── verify-whole-person-tour.mjs",
+  "scripts/render-review-screenshots.mjs` refreshes the landing, admin-band, and reel screenshots for design approval using standard Playwright.",
   "scripts/verify-eval-coverage.mjs` checks red-face coverage and the research-to-behavior map.",
   "scripts/verify-admin-ops-playbooks.mjs` checks the calendar/inbox admin operations playbooks.",
   "scripts/judge-quick-proof.mjs` gives a publication-independent proof summary",
@@ -1129,6 +1145,15 @@ if (exists("scripts/stage-public-repo.mjs")) {
   for (const requiredText of stagingHelperRequiredText) {
     if (!stagingHelper.includes(requiredText)) {
       failures.push(`scripts/stage-public-repo.mjs is missing required text: ${requiredText}`);
+    }
+  }
+}
+
+if (exists("scripts/render-review-screenshots.mjs")) {
+  const renderReviewScreenshots = read("scripts/render-review-screenshots.mjs");
+  for (const requiredText of renderReviewScreenshotsRequiredText) {
+    if (!renderReviewScreenshots.includes(requiredText)) {
+      failures.push(`scripts/render-review-screenshots.mjs is missing required text: ${requiredText}`);
     }
   }
 }

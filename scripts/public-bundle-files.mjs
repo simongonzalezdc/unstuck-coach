@@ -39,6 +39,7 @@ export const publicBundleFiles = [
   "landing/assets/startline-handoff-card.svg",
   "scripts/prepare-publication-link.mjs",
   "scripts/public-bundle-files.mjs",
+  "scripts/render-review-screenshots.mjs",
   "scripts/verify-submission-copy.mjs",
   "scripts/verify-submission-surfaces.mjs",
   "scripts/verify-pitch-reel.mjs",
