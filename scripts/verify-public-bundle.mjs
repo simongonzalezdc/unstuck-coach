@@ -823,6 +823,70 @@ function exists(file) {
   return fs.existsSync(path.join(root, file));
 }
 
+function readmeTreeFiles(markdown) {
+  const treeMatch = markdown.match(/```text\nstartline-coach\/\n([\s\S]*?)\n```/);
+  if (!treeMatch) {
+    return {
+      files: [],
+      failures: ["README.md is missing the startline-coach folder tree."],
+    };
+  }
+
+  const stack = [];
+  const files = [];
+  const failures = [];
+  const treeLines = treeMatch[1].split("\n").filter(Boolean);
+
+  for (const line of treeLines) {
+    const match = line.match(/^([│ ]*)[├└]── (.+)$/u);
+    if (!match) {
+      failures.push(`README.md folder tree has an unparsable line: ${line}`);
+      continue;
+    }
+
+    const [, prefix, rawName] = match;
+    const depth = prefix.length / 4;
+    if (!Number.isInteger(depth)) {
+      failures.push(`README.md folder tree has unexpected indentation: ${line}`);
+      continue;
+    }
+
+    const isDirectory = rawName.endsWith("/");
+    const name = rawName.replace(/\/$/, "");
+    stack.length = depth;
+
+    if (isDirectory) {
+      stack[depth] = name;
+      continue;
+    }
+
+    files.push([...stack, name].join("/"));
+  }
+
+  return {
+    files,
+    failures,
+  };
+}
+
+function verifyReadmeTreeAgainstManifest(markdown) {
+  const tree = readmeTreeFiles(markdown);
+  const expected = publicBundleFiles.filter((file) => file !== ".gitignore");
+  const treeSet = new Set(tree.files);
+  const expectedSet = new Set(expected);
+  const missing = expected.filter((file) => !treeSet.has(file));
+  const unexpected = tree.files.filter((file) => !expectedSet.has(file));
+
+  return {
+    files: tree.files.length,
+    failures: [
+      ...tree.failures,
+      ...missing.map((file) => `README.md folder tree is missing public bundle file: ${file}`),
+      ...unexpected.map((file) => `README.md folder tree lists a file outside the public bundle: ${file}`),
+    ],
+  };
+}
+
 function listFiles(dir = ".") {
   const absolute = path.join(root, dir);
   const entries = fs.readdirSync(absolute, { withFileTypes: true });
@@ -1121,6 +1185,10 @@ if (exists("README.md")) {
       failures.push(`README.md is missing required text: ${requiredText}`);
     }
   }
+  const readmeTree = verifyReadmeTreeAgainstManifest(readme);
+  for (const failure of readmeTree.failures) {
+    failures.push(failure);
+  }
 }
 
 for (const stale of staleCodingFirstText) {
@@ -1295,6 +1363,7 @@ const summary = {
   judgeFaqEvidenceRefs: judgeFaq.evidenceRefs,
   judgeScorecardCriteriaRows: judgeScorecard.criteriaRows,
   judgeScorecardFastPathSteps: judgeScorecard.fastPathSteps,
+  readmeTreeFiles: exists("README.md") ? verifyReadmeTreeAgainstManifest(read("README.md")).files : 0,
   failures,
   warnings,
 };
