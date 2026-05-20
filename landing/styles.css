@@ -457,7 +457,7 @@ button {
 
 .task-stack {
   right: 4.7%;
-  top: 8.8%;
+  top: 7.6%;
   width: 15.5rem;
   transform: rotate(0.45deg);
   border-top: 3px solid var(--taste-cyan);
@@ -502,7 +502,7 @@ button {
 .coach-transcript {
   right: 5.4%;
   bottom: 7.2%;
-  width: 20.6rem;
+  width: 18.8rem;
   transform: rotate(-0.45deg);
   border-top: 3px solid var(--taste-lichen);
   animation: float-two 8.5s var(--ease-out) infinite;
@@ -510,7 +510,7 @@ button {
 
 .coach-transcript p {
   margin: 0.74rem 0;
-  max-width: 27ch;
+  max-width: 24ch;
   color: var(--ink);
   font-weight: 760;
 }
@@ -533,17 +533,20 @@ button {
 }
 
 .life-ledger {
-  left: 5.3%;
-  top: 24.5%;
-  width: 20.6rem;
+  left: 5.1%;
+  top: 15.2%;
+  width: 23rem;
   color: var(--ink);
   background:
     linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(255, 245, 220, 0.94)),
     linear-gradient(120deg, rgba(159, 54, 95, 0.11), transparent 48%, rgba(111, 199, 197, 0.1));
   border-color: var(--ink);
-  border-top: 3px solid var(--taste-berry);
-  transform: rotate(-1.15deg);
+  border-top: 4px solid var(--taste-berry);
+  transform: rotate(-1.05deg);
   animation: float-three 9.5s var(--ease-out) infinite;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.88),
+    0 26px 58px rgba(6, 9, 16, 0.28);
 }
 
 .life-ledger .panel-kicker {
@@ -551,17 +554,47 @@ button {
 }
 
 .ledger-note {
-  margin: 0.68rem 0 0.7rem;
+  margin: 0.58rem 0 0.62rem;
   color: var(--steel);
-  font-size: 1rem;
+  font-size: 1.13rem;
   font-weight: 880;
+}
+
+.ledger-status-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 4.9rem 1fr;
+  gap: 0.24rem 0.64rem;
+  margin-bottom: 0.72rem;
+  padding: 0.62rem 0.72rem;
+  border: 1px solid rgba(168, 148, 120, 0.34);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(90deg, rgba(47, 142, 134, 0.08), transparent 44%, rgba(217, 167, 47, 0.09)),
+    rgba(255, 253, 246, 0.62);
+}
+
+.ledger-status-grid span,
+.ledger-close span {
+  color: var(--muted);
+  font-size: 0.64rem;
+  font-weight: 840;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ledger-status-grid strong {
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1.25;
 }
 
 .ledger-list {
   position: relative;
   z-index: 1;
   display: grid;
-  gap: 0.45rem;
+  gap: 0.36rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -572,8 +605,26 @@ button {
   align-items: center;
   gap: 0.52rem;
   color: var(--ink-soft);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 820;
+}
+
+.ledger-close {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.18rem;
+  margin-top: 0.68rem;
+  padding-top: 0.66rem;
+  border-top: 1px solid rgba(168, 148, 120, 0.36);
+}
+
+.ledger-close strong {
+  color: var(--ink);
+  font-family: var(--editorial);
+  font-size: 1.15rem;
+  font-weight: 560;
+  line-height: 1.08;
 }
 
 .ledger-list li::before {
@@ -587,9 +638,9 @@ button {
 }
 
 .state-meter {
-  left: 8.4%;
-  bottom: 8.1%;
-  width: 9.6rem;
+  left: 6.1%;
+  bottom: 5.5%;
+  width: 8.8rem;
   transform: rotate(0.65deg);
   border-top: 3px solid var(--taste-saffron);
   animation: float-four 6.8s var(--ease-out) infinite;
@@ -2184,7 +2235,7 @@ h1 {
   }
 
   .life-ledger {
-    top: 16.5%;
+    top: 11.5%;
   }
 
   .workbench-scene {
@@ -2200,7 +2251,7 @@ h1 {
   }
 
   .life-ledger {
-    width: 19rem;
+    width: min(22rem, calc(100% - 2rem));
   }
 
   .coach-transcript {
@@ -2337,8 +2388,13 @@ h1 {
 
   .life-ledger {
     left: 1rem;
-    top: 5.5rem;
+    top: 4.8rem;
     width: min(19rem, calc(100% - 2rem));
+  }
+
+  .ledger-status-grid,
+  .ledger-close {
+    display: none;
   }
 
   .mobile-proof-panel {
