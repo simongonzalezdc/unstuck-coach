@@ -14,6 +14,7 @@ import { judgeQuickProof } from "./judge-quick-proof.mjs";
 import { verifyJudgeFaq } from "./verify-judge-faq.mjs";
 import { verifyJudgeScorecard } from "./verify-judge-scorecard.mjs";
 import { verifyJudgeBrief } from "./verify-judge-brief.mjs";
+import { verifyLandingAccessibility } from "./verify-landing-accessibility.mjs";
 import { verifyLandingCopy } from "./verify-landing-copy.mjs";
 import { verifyModeRouter } from "./verify-mode-router.mjs";
 import { verifyEvalCoverage } from "./verify-eval-coverage.mjs";
@@ -557,10 +558,12 @@ const readmeRequiredText = [
   "PITCH_REEL.md` compresses the presentation layer into a verified 75-second judge reel.",
   "│   ├── public-bundle-files.mjs",
   "│   ├── render-review-screenshots.mjs",
+  "│   ├── verify-landing-accessibility.mjs",
   "│   ├── verify-whole-person-tour.mjs",
   "│   ├── verify-mode-router.mjs",
   "│   ├── verify-judge-brief.mjs",
   "scripts/render-review-screenshots.mjs` refreshes the landing, admin-band, first-run receipt, scorecard, FAQ, proof-gate, submission section, and reel screenshots for design approval using standard Playwright.",
+  "scripts/verify-landing-accessibility.mjs` checks landing semantics, labeled controls, hash targets, reduced-motion handling, focus-visible treatment, and accessibility behavior wiring.",
   "scripts/verify-eval-coverage.mjs` checks red-face coverage and the research-to-behavior map.",
   "scripts/verify-admin-ops-playbooks.mjs` checks the calendar/inbox admin operations playbooks.",
   "scripts/verify-mode-router.mjs` checks that the coach keeps five stance modes",
@@ -811,7 +814,7 @@ const landingRequiredText = [
   "Inbox live item",
   "Reply without shame tax",
   "My inbox and calendar are a mess and I do not know what is real.",
-  "73 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "74 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "Food/body",
   "Leave breadcrumb",
   "This is activation friction, not a planning problem.",
@@ -863,6 +866,7 @@ const landingRequiredText = [
   "publication-independent",
   "node scripts/final-review-smoke.mjs --expect-ready --skip-build",
   "node scripts/verify-clean-public-stage.mjs",
+  "../scripts/verify-landing-accessibility.mjs",
   "Clean repo preflight",
   "node scripts/verify-submission-surfaces.mjs",
   "Submission surfaces synced.",
@@ -870,7 +874,7 @@ const landingRequiredText = [
   "node scripts/verify-pitch-reel.mjs",
   "75-second pitch reel ready.",
   "Final link missing. Review placeholder still present.",
-  "73 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
+  "74 public files, 9 console cases, 9 transcripts, 9 first-reply checks.",
   "First run receipt",
   "Judge path",
   "Claude Project launch kit",
@@ -1416,6 +1420,11 @@ for (const failure of landingCopy.failures) {
   failures.push(`Landing copy check failed: ${failure}`);
 }
 
+const landingAccessibility = verifyLandingAccessibility(root);
+for (const failure of landingAccessibility.failures) {
+  failures.push(`Landing accessibility check failed: ${failure}`);
+}
+
 const transcriptPack = verifyTranscriptPack(root);
 for (const failure of transcriptPack.failures) {
   failures.push(`Transcript pack check failed: ${failure}`);
@@ -1506,6 +1515,10 @@ const summary = {
   firstReplyScorecardChecks: firstReplyScorecard.checks,
   startHerePromptBlocks: startHere.promptBlocks,
   landingCopyButtons: landingCopy.checkedButtons,
+  landingAccessibilityImages: landingAccessibility.images,
+  landingAccessibilityButtons: landingAccessibility.buttons,
+  landingAccessibilityLabelledSections: landingAccessibility.labelledSections,
+  landingAccessibilityHashLinks: landingAccessibility.localHashLinks,
   transcriptPackCases: transcriptPack.checkedCases,
   wholePersonTourStops: wholePersonTour.stops,
   wholePersonTourPromptBlocks: wholePersonTour.promptBlocks,

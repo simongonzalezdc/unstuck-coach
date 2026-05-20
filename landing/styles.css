@@ -108,6 +108,12 @@ button {
   color: inherit;
 }
 
+:where(a, button, textarea):focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 7px rgba(0, 215, 232, 0.16);
+}
+
 ::selection {
   background: rgba(214, 163, 56, 0.28);
 }

@@ -84,6 +84,7 @@ startline-coach/
 │   ├── prepare-publication-link.mjs
 │   ├── public-bundle-files.mjs
 │   ├── render-review-screenshots.mjs
+│   ├── verify-landing-accessibility.mjs
 │   ├── verify-submission-copy.mjs
 │   ├── verify-submission-surfaces.mjs
 │   ├── verify-pitch-reel.mjs
@@ -233,6 +234,7 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 - `reference/admin-ops-playbooks.md` gives operational calendar and inbox playbooks for hard-anchor recovery, live-obligation rescue, reply debt, missed obligations, and scheduling friction without claiming account access.
 - `scripts/prepare-publication-link.mjs` dry-runs or writes the final public GitHub URL into `SUBMISSION.md`.
 - `scripts/render-review-screenshots.mjs` refreshes the landing, admin-band, first-run receipt, scorecard, FAQ, proof-gate, submission section, and reel screenshots for design approval using standard Playwright.
+- `scripts/verify-landing-accessibility.mjs` checks landing semantics, labeled controls, hash targets, reduced-motion handling, focus-visible treatment, and accessibility behavior wiring.
 - `scripts/verify-submission-copy.mjs` checks that the Skool comment draft stays within the required 2-3 sentence shape.
 - `scripts/verify-submission-surfaces.mjs` checks that the Skool draft, SUBMISSION landing version, and landing-page submission copy stay synchronized.
 - `scripts/verify-pitch-reel.mjs` checks that the 75-second pitch reel has six timed shots, a short voiceover, and no public-unsafe private/local references.
