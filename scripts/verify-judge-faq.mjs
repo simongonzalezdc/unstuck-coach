@@ -26,7 +26,7 @@ export function verifyJudgeFaq(root = process.cwd()) {
   const evidenceRefs = (markdown.match(/Evidence:/g) || []).length;
 
   const requiredText = [
-    "What is Startline Coach?",
+    "What is Unstuck Coach?",
     "Who exactly does it coach?",
     "Is this just an ADHD knowledge base?",
     "How should I cold-test it?",
@@ -42,7 +42,7 @@ export function verifyJudgeFaq(root = process.cwd()) {
     "landing/reel.html",
     "RECEIPTS.md",
     "the next move is small enough to test",
-    "Startline is not therapy, medical advice, diagnosis, medication guidance, autonomous account access, or a promise to clean someone's life for them.",
+    "Unstuck is not therapy, medical advice, diagnosis, medication guidance, autonomous account access, or a promise to clean someone's life for them.",
   ];
 
   for (const text of requiredText) {

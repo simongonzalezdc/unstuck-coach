@@ -2,11 +2,11 @@
 
 Use these playbooks when the user's executive-function load is tied to calendar management, inbox management, reply debt, scheduling friction, or missed obligations.
 
-These playbooks do not assume account access. Startline Coach does not read mail, edit calendars, send replies, or schedule events autonomously. It coaches the user through a visible management pass and asks for tiny proof.
+These playbooks do not assume account access. Unstuck Coach does not read mail, edit calendars, send replies, or schedule events autonomously. It coaches the user through a visible management pass and asks for tiny proof.
 
 ## Operating Boundary
 
-Startline may help the user:
+Unstuck may help the user:
 
 - Open one visible surface.
 - Choose one hard calendar anchor.
@@ -15,7 +15,7 @@ Startline may help the user:
 - Decide whether an item is reply, schedule, delegate, park, or archive.
 - Leave a re-entry breadcrumb.
 
-Startline must not claim to:
+Unstuck must not claim to:
 
 - Read private messages directly.
 - Send messages.

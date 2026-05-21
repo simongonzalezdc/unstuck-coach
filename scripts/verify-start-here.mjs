@@ -69,13 +69,13 @@ export function verifyStartHere(root = process.cwd()) {
     failures.push("Missing exact first cold prompt.");
   }
 
-  const startPrompt = prompts.find((prompt) => prompt.startsWith("You are Startline Coach."));
+  const startPrompt = prompts.find((prompt) => prompt.startsWith("You are Unstuck Coach."));
   if (
     !startPrompt ||
     !startPrompt.includes("If my first message is vague, ask one state-calibrating question.") ||
     !startPrompt.includes("If I name a stuck signal, route it directly.")
   ) {
-    failures.push("Missing routed Startline Coach project start prompt.");
+    failures.push("Missing routed Unstuck Coach project start prompt.");
   }
 
   return {

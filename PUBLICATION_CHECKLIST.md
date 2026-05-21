@@ -47,7 +47,7 @@ node scripts/verify-final-privacy-scan.mjs
 NODE_PATH=/path/to/node_modules node scripts/render-review-screenshots.mjs
 node scripts/build-public-bundle.mjs
 node scripts/verify-clean-public-stage.mjs
-node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public
 node scripts/final-review-smoke.mjs --expect-blocked
 ```
 
@@ -89,7 +89,7 @@ Expected before public-link insertion:
 The generated payload is:
 
 ```text
-output/public-bundle/startline-coach/
+output/public-bundle/unstuck-coach/
 ```
 
 After approval, keep the reviewed source folder as the canonical copy until the final link is inserted and verified. Do not maintain two different `SUBMISSION.md` files.
@@ -106,7 +106,7 @@ Copy the generated payload into the clean Week 5 public repository after the app
 Or stage it with the guarded helper:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public --write --require-ready
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public --write --require-ready
 ```
 
 The `--require-ready` flag is for final publication staging. It refuses to stage if the reviewed source folder still has the placeholder URL or fails `verify-publication-ready.mjs`.

@@ -6,8 +6,8 @@ import { pathToFileURL } from "node:url";
 import { publicBundleFiles } from "./public-bundle-files.mjs";
 
 const binaryPublicBundleFiles = new Set([
-  "landing/assets/startline-coach-logo.png",
-  "landing/assets/startline-admin-bridge.jpg",
+  "landing/assets/unstuck-coach-logo.png",
+  "landing/assets/unstuck-admin-bridge.jpg",
 ]);
 
 const guardScriptFiles = new Set([
@@ -30,7 +30,7 @@ const publicSafetyPatterns = [
 
 const disallowedLiteralFragments = [
   ["source", "Branch"].join(""),
-  ["codex", "startline"].join("/"),
+  ["codex", "unstuck"].join("/"),
   ["skool", "competitions"].join("_"),
   ["EF", "COACH"].join("-"),
   ["si", "mon", "gonzalez"].join(""),
@@ -70,8 +70,12 @@ function isPresentationFile(file) {
 }
 
 function contentForPrivacyScan(file, content) {
-  if (file !== "SUBMISSION.md") return content;
-  return content.replace(
+  const withoutRepoUrls = content.replace(
+    /https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+(?:\/)?/gi,
+    "https://github.com/OWNER/REPO",
+  );
+  if (file !== "SUBMISSION.md") return withoutRepoUrls;
+  return withoutRepoUrls.replace(
     /GitHub link:\s*```text\s*[\s\S]*?```/i,
     "GitHub link:\n\n```text\nhttps://github.com/OWNER/REPO\n```",
   );

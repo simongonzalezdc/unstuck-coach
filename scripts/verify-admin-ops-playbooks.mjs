@@ -7,7 +7,7 @@ import { pathToFileURL } from "node:url";
 const requiredText = [
   "Admin Operations Playbooks",
   "These playbooks do not assume account access.",
-  "Startline Coach does not read mail, edit calendars, send replies, or schedule events autonomously.",
+  "Unstuck Coach does not read mail, edit calendars, send replies, or schedule events autonomously.",
   "Playbook: Calendar Reality Pass",
   "one hard anchor plus one protected buffer",
   "Playbook: Inbox Live-Obligation Pass",

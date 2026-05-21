@@ -6,7 +6,7 @@ This file explains the design lineage without requiring non-public systems or ex
 
 The competition asks for a folder-based AI coach for a specific domain. The folder should be portable into a Claude Project and other project-scoped agent surfaces, and should feel like a coach, not a knowledge base.
 
-Startline Coach is intentionally narrow:
+Unstuck Coach is intentionally narrow:
 
 > Whole-person executive-function accessibility coaching for people whose lives stall at concrete access thresholds: starting, switching, remembering, regulating, capturing, recovering, or closing loops.
 

@@ -1,6 +1,6 @@
 # Judge Scorecard
 
-Use this to evaluate Startline Coach quickly and consistently.
+Use this to evaluate Unstuck Coach quickly and consistently.
 
 Total: 18 points.
 

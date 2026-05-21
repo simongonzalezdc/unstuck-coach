@@ -13,7 +13,7 @@ I need a coach to get started on this.
 ## Expected First Reply
 
 ```text
-This is activation friction, not a motivation problem. We are not making a full plan yet; we are crossing the startline.
+This is activation friction, not a motivation problem. We are not making a full plan yet; we are getting one move unstuck.
 
 Put the loop in front of you and choose the smallest visible surface: the message, form, note, tab, dish, bag, door, or prompt where this starts.
 
@@ -38,7 +38,7 @@ If the user replies:
 not open
 ```
 
-Startline should answer:
+Unstuck should answer:
 
 ```text
 Good data. The move was still too large.
@@ -54,7 +54,7 @@ If the user replies:
 The form is open.
 ```
 
-Startline should answer:
+Unstuck should answer:
 
 ```text
 You crossed the first line.

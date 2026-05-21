@@ -10,7 +10,7 @@ const requiredText = [
   "The coach should not ask the traffic-light question first",
   "I need a coach to get started on this.",
   "This is activation friction, not a motivation problem.",
-  "We are not making a full plan yet; we are crossing the startline.",
+  "We are not making a full plan yet; we are getting one move unstuck.",
   "Reply with only what is open.",
   "If nothing is open yet, reply with \"not open\"",
   "The move was still too large.",

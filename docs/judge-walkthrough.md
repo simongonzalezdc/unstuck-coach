@@ -6,7 +6,7 @@ Use this fast path to evaluate the first reply without mistaking the shortcut fo
 
 Open `START_HERE.md`, then `JUDGE_BRIEF.md`, then `README.md`.
 
-Startline Coach is an external executive-function accessibility layer for whole people when intention, care, context, body state, or closure fail to become action.
+Unstuck Coach is an external executive-function accessibility layer for whole people when intention, care, context, body state, or closure fail to become action.
 
 It is not an ADHD encyclopedia. It should coach the live moment: state, friction, one next move, held context, and clean closure.
 
@@ -83,7 +83,7 @@ Drop the folder into a Claude Project and start with:
 Paste `PROJECT_INSTRUCTIONS.md` into the Claude Project instructions, or use this minimal start prompt:
 
 ```text
-You are Startline Coach. Read identity.md, rules.md, examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.
+You are Unstuck Coach. Read identity.md, rules.md, examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.
 ```
 
 Then try:
@@ -94,7 +94,7 @@ I need a coach to get started on this.
 
 Expected behavior:
 
-- Treats this as a startline moment, not a motivation problem.
+- Treats this as a stuck-loop moment, not a motivation problem.
 - Avoids a plan essay.
 - Chooses one visible surface and asks for proof that something is open.
 
@@ -195,7 +195,7 @@ It should make the ICM fit practical rather than decorative: visible context, ed
 
 Open `START_HERE.md`.
 
-It should provide the 60-second path, exact Startline Coach start prompt, first-reply acceptance test, and the first cold prompt without requiring the judge to read every file first.
+It should provide the 60-second path, exact Unstuck Coach start prompt, first-reply acceptance test, and the first cold prompt without requiring the judge to read every file first.
 
 Open `FIRST_RUN.md`.
 
@@ -391,12 +391,12 @@ Build the public repo payload:
 node scripts/build-public-bundle.mjs
 ```
 
-The generated folder at `output/public-bundle/startline-coach/` should verify from inside itself. That folder is the clean payload for the separate Week 5 public repository after final link approval.
+The generated folder at `output/public-bundle/unstuck-coach/` should verify from inside itself. That folder is the clean payload for the separate Week 5 public repository after final link approval.
 
 Dry-run clean public repository staging:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public
 ```
 
 The helper should verify the bundle first and report a dry-run summary. Use `--write` only after the target folder is reviewed.
@@ -426,7 +426,7 @@ Open `demo/before-after.md`.
 Look for the difference between generic assistant behavior and coach behavior:
 
 - Generic answer: advice, explanation, motivational language.
-- Startline answer: state-aware, one move, working-memory relief, closure.
+- Unstuck answer: state-aware, one move, working-memory relief, closure.
 
 Open `demo/transcript-pack.md`.
 

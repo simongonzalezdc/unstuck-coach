@@ -65,7 +65,7 @@ export function verifyJudgeBrief(root = process.cwd()) {
     "reference/mode-router.md",
     "evals/red-face-tests.md",
     "RECEIPTS.md",
-    "Startline is a coaching scaffold.",
+    "Unstuck is a coaching scaffold.",
     "It does not diagnose, treat, recommend medication, replace professional support, read accounts, send messages, edit calendars, or promise inbox zero.",
   ];
 

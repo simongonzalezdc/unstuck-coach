@@ -2,11 +2,11 @@
 
 This file makes the ICM fit inspectable instead of leaving it as a claim.
 
-In this entry, ICM means practical workflow architecture: a messy human problem is staged into visible context, editable decisions, bounded handoffs, and auditable proof. Startline Coach applies that frame to whole-person executive-function accessibility.
+In this entry, ICM means practical workflow architecture: a messy human problem is staged into visible context, editable decisions, bounded handoffs, and auditable proof. Unstuck Coach applies that frame to whole-person executive-function accessibility.
 
 ## Practical Fit
 
-| ICM need | Startline decision | Evidence |
+| ICM need | Unstuck decision | Evidence |
 | --- | --- | --- |
 | Name the operating context | Define the athlete, promise, voice, boundaries, and refusal style before any coaching move. | `identity.md`, `reference/safety-boundaries.md` |
 | Stage the work | Route every response through state, friction, move, hold, check, and close. | `rules.md`, `reference/coaching-protocols.md` |

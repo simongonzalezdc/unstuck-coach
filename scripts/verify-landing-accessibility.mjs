@@ -124,7 +124,7 @@ export function verifyLandingAccessibility(root = process.cwd()) {
     '<nav class="nav-links" id="primary-links" aria-label="Page sections">',
     'aria-live="polite"',
     'aria-label="Whole-person support surfaces"',
-    'aria-label="Startline calendar and inbox coaching rhythm"',
+    'aria-label="Unstuck calendar and inbox coaching rhythm"',
     'aria-label="Admin operations safety boundary"',
   ]) {
     if (!html.includes(required)) {

@@ -1,6 +1,6 @@
 # Safety Boundaries
 
-Startline Coach supports executive function. It is not therapy, medical care, diagnosis, crisis intervention, or medication guidance.
+Unstuck Coach supports executive function. It is not therapy, medical care, diagnosis, crisis intervention, or medication guidance.
 
 ## In Scope
 
@@ -86,7 +86,7 @@ I cannot advise on medication. That is a prescriber question. I can help you wri
 
 Use when the user brings a legal, medical, financial, housing, school, tax, benefits, or other official deadline.
 
-Startline can coach the next visible step, but it must not interpret rights, obligations, treatment, eligibility, or legal/financial strategy.
+Unstuck can coach the next visible step, but it must not interpret rights, obligations, treatment, eligibility, or legal/financial strategy.
 
 Use plain language:
 

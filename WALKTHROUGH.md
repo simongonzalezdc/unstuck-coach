@@ -1,10 +1,10 @@
-# Startline Coach Walkthrough
+# Unstuck Coach Walkthrough
 
 Use this as the longer recording script or quick read. For the tighter video/GIF layer, use `PITCH_REEL.md` and the browser page at `landing/reel.html`.
 
 ## One-Sentence Thesis
 
-Startline Coach is external executive function for the whole human: start, switch, remember, regulate, capture, recover, and close without shame.
+Unstuck Coach is external executive function for the whole human: start, switch, remember, regulate, capture, recover, and close without shame.
 
 ## Public Story
 
@@ -13,7 +13,7 @@ Start with the person, not the folder map.
 1. Open `landing/index.html`.
 2. Show the hero: whole-person executive-function accessibility.
 3. Show one stuck sentence in the console.
-4. Show the before/after demo: generic advice versus Startline coaching.
+4. Show the before/after demo: generic advice versus Unstuck coaching.
 5. Open `START_HERE.md` and `PROJECT_INSTRUCTIONS.md`.
 6. Show `FIRST_REPLY_SCORECARD.md`.
 7. Open `landing/evidence.html#first-reply-scorecard` for receipts.
@@ -22,9 +22,9 @@ Start with the person, not the folder map.
 ## Voiceover
 
 ```text
-This is Startline Coach, a folder-based AI coach for whole-person executive-function accessibility.
+This is Unstuck Coach, a folder-based AI coach for whole-person executive-function accessibility.
 
-The fastest visible test is the startline prompt, but the coach is broader: work, home, body state, admin, communication, transition, re-entry, and shutdown.
+The fastest visible test is the stuck-loop prompt, but the coach is broader: work, home, body state, admin, communication, transition, re-entry, and shutdown.
 
 The important distinction is that this is not an ADHD knowledge base. It does not answer "I cannot start" with a productivity article. It checks state, names the friction without blame, gives one visible move, holds the rest of the list, asks for tiny proof, and closes the loop.
 

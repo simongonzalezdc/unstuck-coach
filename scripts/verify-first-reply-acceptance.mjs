@@ -21,7 +21,7 @@ const genericAdvicePatterns = [
 
 const frictionSignals = [
   "activation friction",
-  "crossing the startline",
+  "getting one move unstuck",
   "not processing your worth",
   "holding the three loops",
   "Biology comes first",

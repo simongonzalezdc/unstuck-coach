@@ -6,12 +6,12 @@ import { spawnSync } from "node:child_process";
 import { publicBundleFiles } from "./public-bundle-files.mjs";
 
 const root = process.cwd();
-const outDir = path.join(root, "output", "public-bundle", "startline-coach");
+const outDir = path.join(root, "output", "public-bundle", "unstuck-coach");
 const manifestPath = path.join(outDir, "PUBLICATION_MANIFEST.json");
 
 const manifestDisallowedFragments = [
   ["source", "Branch"].join(""),
-  ["codex", "startline"].join("/"),
+  ["codex", "unstuck"].join("/"),
   ["skool", "competitions"].join("_"),
   ["EF", "COACH"].join("-"),
   ["si", "mon", "gonzalez"].join(""),

@@ -1,14 +1,14 @@
-# Startline Coach
+# Unstuck Coach
 
 A folder-based whole-person executive-function accessibility coach for people who need help starting, switching, remembering, regulating, capturing, recovering, and closing loops without shame.
 
 Drop this folder into a Claude Project, Codex workspace, Antigravity-style AI IDE project, or local-model context and ask the coach to help with the life loop in front of you: work, home, body, admin, inbox, calendar, communication, transition, re-entry, or shutdown.
 
-The core idea: Startline Coach acts as portable executive-function accessibility. It externalizes state, context, next action, capture, time, transition, and closure so the person does not have to carry all of that internally.
+The core idea: Unstuck Coach acts as portable executive-function accessibility. It externalizes state, context, next action, capture, time, transition, and closure so the person does not have to carry all of that internally.
 
 ## Who This Is For
 
-Startline Coach is for people who already have values, obligations, care, and intelligence, but lose traction at the executive-function layer:
+Unstuck Coach is for people who already have values, obligations, care, and intelligence, but lose traction at the executive-function layer:
 
 - Too many tasks or life loops in working memory.
 - Difficulty starting a known task, chore, message, errand, calendar check, inbox pass, or repair.
@@ -58,7 +58,7 @@ The landing page gives the visual version of this path. The receipts are availab
 This section is for inspection after the human value is clear.
 
 ```text
-startline-coach/
+unstuck-coach/
 ├── START_HERE.md
 ├── PRODUCT_THESIS.md
 ├── FIRST_RUN.md
@@ -87,9 +87,9 @@ startline-coach/
 │   └── whole-person-tour.md
 ├── landing/
 │   ├── assets/
-│   │   ├── startline-coach-logo.png
-│   │   ├── startline-handoff-card.svg
-│   │   └── startline-admin-bridge.jpg
+│   │   ├── unstuck-coach-logo.png
+│   │   ├── unstuck-handoff-card.svg
+│   │   └── unstuck-admin-bridge.jpg
 │   ├── index.html
 │   ├── evidence.html
 │   ├── reel.html
@@ -156,7 +156,7 @@ startline-coach/
 4. Start a chat with:
 
 ```text
-You are Startline Coach. Read identity.md, rules.md, examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.
+You are Unstuck Coach. Read identity.md, rules.md, examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.
 ```
 
 ### Codex
@@ -164,14 +164,14 @@ You are Startline Coach. Read identity.md, rules.md, examples.md, and reference/
 Open the folder as the Codex workspace and ask Codex to read the operating files before coaching:
 
 ```bash
-codex -C startline-coach "Read PROJECT_INSTRUCTIONS.md and START_HERE.md, then coach the stuck loop in front of me."
+codex -C unstuck-coach "Read PROJECT_INSTRUCTIONS.md and START_HERE.md, then coach the stuck loop in front of me."
 ```
 
 If you are already inside the folder, start Codex there and send the same start prompt used above.
 
 ### Antigravity Or Another AI IDE
 
-Create a project from the Startline folder. Keep file access scoped to this project, then ask the workspace to read `PROJECT_INSTRUCTIONS.md`, `START_HERE.md`, `identity.md`, `rules.md`, `examples.md`, and `reference/` before coaching.
+Create a project from the Unstuck folder. Keep file access scoped to this project, then ask the workspace to read `PROJECT_INSTRUCTIONS.md`, `START_HERE.md`, `identity.md`, `rules.md`, `examples.md`, and `reference/` before coaching.
 
 Use the same first chat message from the Claude Project path.
 
@@ -190,7 +190,7 @@ Then start with one cold prompt from `START_HERE.md`.
 
 ## Quick Evaluation Path
 
-This is a shortcut, not the product boundary. Startline's scope remains whole-person executive-function accessibility across life loops; this path only makes the first reply easy to test.
+This is a shortcut, not the product boundary. Unstuck's scope remains whole-person executive-function accessibility across life loops; this path only makes the first reply easy to test.
 
 Open `START_HERE.md` for the shortest path, `JUDGE_BRIEF.md` for the one-page above-the-brief case, then `landing/index.html` for the visual walkthrough.
 
@@ -209,7 +209,7 @@ The quick test:
 5. Try: `idea: make a shutdown checklist for Sunday nights`
 6. Try: `I tried the same plan three times and failed every time.`
 
-If Startline gives a productivity article, it failed. If it gives one state-aware next move and closes the loop, it is behaving like a coach.
+If Unstuck gives a productivity article, it failed. If it gives one state-aware next move and closes the loop, it is behaving like a coach.
 
 ## Best First Prompts
 
@@ -256,8 +256,8 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 ## Proof Artifacts
 
 - `landing/index.html` gives the visual product front door: whole-person hero, coaching routes, Claude Project launch kit, Codex/AI IDE/local-model setup paths, runnable coach console, live coaching demo, folder-method map, and readable source-proof links.
-- `landing/assets/startline-coach-logo.png` gives the public brand mark used in the navigation and favicon.
-- `landing/assets/startline-admin-bridge.jpg` gives the admin-operations band a bitmap operating-map asset using the simplified PuenteWorks bridge/Mola visual language.
+- `landing/assets/unstuck-coach-logo.png` gives the public brand mark used in the navigation and favicon.
+- `landing/assets/unstuck-admin-bridge.jpg` gives the admin-operations band a bitmap operating-map asset using the simplified PuenteWorks bridge/Mola visual language.
 - `landing/reel.html` gives a record-ready six-scene pitch reel page for the optional video/GIF proof layer.
 - `START_HERE.md` gives the 60-second route, exact start prompt, first-reply acceptance test, and fast cold prompts.
 - `PRODUCT_THESIS.md` explains why the folder is the product, why first contact is the public cold test, how whole-person EF accessibility maps to behavior, and where the coach stops.
@@ -275,7 +275,7 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 - `WALKTHROUGH.md` provides the longer recording/read-through script and shot list.
 - `PITCH_REEL.md` compresses the presentation layer into a verified 75-second judge reel.
 - `RECEIPTS.md` maps each public claim to the exact file that proves it.
-- `demo/before-after.md` shows how Startline Coach differs from generic productivity advice.
+- `demo/before-after.md` shows how Unstuck Coach differs from generic productivity advice.
 - `demo/transcript-pack.md` gives cold-test transcript examples for the moments a judge is likely to try.
 - `demo/whole-person-tour.md` gives a six-stop cold tour across the full life surface.
 - `evals/red-face-tests.md` stress-tests shame, overload, brain dumps, dopamine-menu drift, inbox/calendar reality, time blindness, capture, tangents, hyperfocus, and safety boundaries.
@@ -351,18 +351,18 @@ Run:
 node scripts/build-public-bundle.mjs
 ```
 
-This creates an ignored export at `output/public-bundle/startline-coach/`. After final link approval, copy that exported folder into the clean Week 5 public repository and run the verifier again from inside the copied repo.
+This creates an ignored export at `output/public-bundle/unstuck-coach/`. After final link approval, copy that exported folder into the clean Week 5 public repository and run the verifier again from inside the copied repo.
 
 Dry-run staging into a separate clean repository folder:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public
 ```
 
 After reviewing the target, write it:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public --write
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public --write
 ```
 
 ## Final Publication Gate

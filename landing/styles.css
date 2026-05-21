@@ -2040,7 +2040,7 @@ h1 {
 
 .comparison-grid {
   grid-template-columns: 0.86fr 1fr 1.18fr;
-  grid-template-areas: "user generic startline";
+  grid-template-areas: "user generic unstuck";
 }
 
 .response-pane {
@@ -2059,16 +2059,16 @@ h1 {
   grid-area: generic;
 }
 
-.startline-pane {
-  grid-area: startline;
+.unstuck-pane {
+  grid-area: unstuck;
   color: var(--cream-line);
   background:
     linear-gradient(145deg, rgba(6, 67, 74, 0.98), rgba(6, 9, 16, 0.96));
   border-color: rgba(23, 63, 62, 0.48);
 }
 
-.startline-pane .pane-label,
-.startline-pane p {
+.unstuck-pane .pane-label,
+.unstuck-pane p {
   color: rgba(255, 245, 220, 0.82);
 }
 
@@ -3262,7 +3262,7 @@ h1 {
     grid-template-areas:
       "user"
       "generic"
-      "startline";
+      "unstuck";
   }
 
   .file-node:nth-child(2),

@@ -46,8 +46,8 @@ function assertOutsideRoot(target) {
 }
 
 export function verifyCleanPublicStage() {
-  const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "startline-clean-public-stage-"));
-  const target = path.join(tempRoot, "startline-coach");
+  const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "unstuck-clean-public-stage-"));
+  const target = path.join(tempRoot, "unstuck-coach");
   let targetRemoved = false;
 
   try {

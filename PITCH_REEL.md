@@ -1,4 +1,4 @@
-# Startline Coach Pitch Reel
+# Unstuck Coach Pitch Reel
 
 Use this when the submission needs a short video or GIF proof layer. `WALKTHROUGH.md` is the longer tour; this file is the tight version a viewer can watch without losing the thread.
 
@@ -6,7 +6,7 @@ For a record-ready browser surface, open `landing/reel.html`. It turns this scri
 
 ## One-Line Hook
 
-Startline Coach gives whole people portable executive-function accessibility: start, switch, remember, regulate, capture, recover, and close without shame.
+Unstuck Coach gives whole people portable executive-function accessibility: start, switch, remember, regulate, capture, recover, and close without shame.
 
 ## 75-Second Shot Plan
 
@@ -22,7 +22,7 @@ Startline Coach gives whole people portable executive-function accessibility: st
 ## Voiceover
 
 ```text
-Startline Coach is a folder-based executive-function accessibility coach for whole people: start, switch, remember, regulate, capture, recover, and close. It is not an ADHD knowledge base and not a productivity extractor. Load the folder into a Claude Project, paste the project instructions, and try: I need a coach to get started on this.
+Unstuck Coach is a folder-based executive-function accessibility coach for whole people: start, switch, remember, regulate, capture, recover, and close. It is not an ADHD knowledge base and not a productivity extractor. Load the folder into a Claude Project, paste the project instructions, and try: I need a coach to get started on this.
 
 The first reply has to name the friction without blame, give one visible move, hold the rest of the context, and ask for tiny proof. The landing console previews that loop. The transcript pack, red-face evals, eval-coverage verifier, first-run receipt, scorecard, product thesis, and ICM trace make the behavior inspectable.
 
@@ -42,7 +42,7 @@ The evidence reader renders the source files behind the claim: first-run receipt
 Show the Skool-ready sentence and the readable evidence path:
 
 ```text
-Startline Coach is external executive function for the whole human.
+Unstuck Coach is external executive function for the whole human.
 
 landing/evidence.html#first-reply-scorecard
 ```

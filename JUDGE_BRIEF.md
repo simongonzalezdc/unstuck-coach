@@ -4,7 +4,7 @@ A one-page read for a judge who wants the human case before opening every receip
 
 ## The Wedge
 
-Startline Coach is not a generic ADHD/productivity folder. It is a whole-person executive-function accessibility coach for the moment when someone has intelligence, obligations, and care, but still cannot reliably start, switch, remember, regulate, recover, or close the loop alone.
+Unstuck Coach is not a generic ADHD/productivity folder. It is a whole-person executive-function accessibility coach for the moment when someone has intelligence, obligations, and care, but still cannot reliably start, switch, remember, regulate, recover, or close the loop alone.
 
 The product is the operating surface: state, friction, one humane visible move, held context, tiny proof, re-entry trail, and closure. Coding is one proof scenario. The coach is for the whole human: food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, transitions, hyperfocus recovery, and shutdown. Brain dumps and bounded dopamine-menu sparks are explicit protocols inside that surface.
 
@@ -28,7 +28,7 @@ The folder gives the coach a stable job instead of a pile of advice. The first r
 4. Try: `My inbox and calendar are a mess and I do not know what is real.`
 5. Score the first answer with `FIRST_REPLY_SCORECARD.md`.
 
-Pass means Startline names the friction without blame, gives one visible next move, holds the rest of the context, and asks for tiny proof or one state signal.
+Pass means Unstuck names the friction without blame, gives one visible next move, holds the rest of the context, and asks for tiny proof or one state signal.
 
 ## What Should Fail
 
@@ -38,7 +38,7 @@ The fastest failure signal: the first reply explains executive dysfunction inste
 
 ## ICM Fit
 
-Startline treats ICM as practical workflow architecture: visible context, editable decisions, bounded handoffs, and auditable proof.
+Unstuck treats ICM as practical workflow architecture: visible context, editable decisions, bounded handoffs, and auditable proof.
 
 The fit is not a label. It is implemented as staged coaching behavior:
 
@@ -65,4 +65,4 @@ The landing page should make the product clear first. The receipts carry the pro
 
 ## Boundary
 
-Startline is a coaching scaffold. It does not diagnose, treat, recommend medication, replace professional support, read accounts, send messages, edit calendars, or promise inbox zero.
+Unstuck is a coaching scaffold. It does not diagnose, treat, recommend medication, replace professional support, read accounts, send messages, edit calendars, or promise inbox zero.

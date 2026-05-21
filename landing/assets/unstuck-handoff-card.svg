@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1160" height="720" viewBox="0 0 1160 720" role="img" aria-labelledby="title desc">
-  <title id="title">Startline Coach handoff card</title>
-  <desc id="desc">A visual summary of the Startline Coach loop: state, friction, move, hold, check, close.</desc>
+  <title id="title">Unstuck Coach handoff card</title>
+  <desc id="desc">A visual summary of the Unstuck Coach loop: state, friction, move, hold, check, close.</desc>
   <rect width="1160" height="720" fill="#f4f7f8"/>
   <path d="M72 98h1016v524H72z" fill="#ffffff" stroke="#aab2a6" stroke-width="2"/>
   <path d="M72 98h1016v86H72z" fill="#252726"/>
-  <text x="112" y="151" fill="#ffffff" font-family="Avenir Next, sans-serif" font-size="34" font-weight="800">Startline Coach Handoff Card</text>
+  <text x="112" y="151" fill="#ffffff" font-family="Avenir Next, sans-serif" font-size="34" font-weight="800">Unstuck Coach Handoff Card</text>
   <text x="112" y="219" fill="#8f4937" font-family="Avenir Next, sans-serif" font-size="18" font-weight="800">SUMMARY</text>
   <text x="112" y="257" fill="#252726" font-family="Avenir Next, sans-serif" font-size="30" font-weight="800">External executive function for the whole human.</text>
   <text x="112" y="296" fill="#4f5551" font-family="Avenir Next, sans-serif" font-size="22">For people who need accessible support to start, switch, remember, recover, and close.</text>

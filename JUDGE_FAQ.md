@@ -2,9 +2,9 @@
 
 Use this for short answers before opening the receipt files.
 
-## What is Startline Coach?
+## What is Unstuck Coach?
 
-Startline Coach is a folder-based whole-person executive-function accessibility coach for people whose lives stall at the executive-function layer: starting, switching, remembering, regulating, capturing, recovering, or closing.
+Unstuck Coach is a folder-based whole-person executive-function accessibility coach for people whose lives stall at the executive-function layer: starting, switching, remembering, regulating, capturing, recovering, or closing.
 
 It is designed for a Claude Project or any AI workspace that can read the folder. Load it, paste `PROJECT_INSTRUCTIONS.md`, and try a real stuck prompt.
 
@@ -30,7 +30,7 @@ Evidence: `identity.md`, `PRODUCT_THESIS.md`, `FIRST_RUN.md`, `demo/transcript-p
 
 No. It is ADHD-informed, but the artifact is built around observable behavior: state, friction, one humane visible move, held context, proof, capture, body-state routing, transition, recovery, and closure.
 
-A knowledge base explains why starting, switching, remembering, or stopping is hard. Startline should change the next move and preserve the person's agency.
+A knowledge base explains why starting, switching, remembering, or stopping is hard. Unstuck should change the next move and preserve the person's agency.
 
 Evidence: `rules.md`, `examples.md`, `FIRST_REPLY_SCORECARD.md`, `demo/before-after.md`.
 
@@ -90,7 +90,7 @@ Evidence: `JUDGE_BRIEF.md`, `landing/index.html`, `landing/reel.html`, `PITCH_RE
 
 ## What are the boundaries?
 
-Startline is not therapy, medical advice, diagnosis, medication guidance, autonomous account access, or a promise to clean someone's life for them.
+Unstuck is not therapy, medical advice, diagnosis, medication guidance, autonomous account access, or a promise to clean someone's life for them.
 
 It helps the user name what is real, choose one humane next move, and leave a re-entry trail.
 

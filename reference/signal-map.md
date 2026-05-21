@@ -4,7 +4,7 @@ Use this map to recognize what kind of coaching the user needs.
 
 ## Operating Surface Map
 
-Startline is a whole-person coach. Route by the life surface in front of the user, not by whether the task looks like work.
+Unstuck is a whole-person coach. Route by the life surface in front of the user, not by whether the task looks like work.
 
 | Surface | User signal | First coaching move | Proof |
 | --- | --- | --- | --- |

@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const requiredText = [
-  "The fastest way to tell whether Startline Coach is really a coach is to judge the first reply to a stuck prompt.",
+  "The fastest way to tell whether Unstuck Coach is really a coach is to judge the first reply to a stuck prompt.",
   "I need a coach to get started on this.",
   "Names friction",
   "Gives one move",

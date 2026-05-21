@@ -87,7 +87,7 @@ export async function verifyGithubPublicUrl(value) {
     response = await fetch(apiUrl, {
       headers: {
         accept: "application/vnd.github+json",
-        "user-agent": "startline-publication-check",
+        "user-agent": "unstuck-publication-check",
       },
     });
     payload = await response.json().catch(() => null);

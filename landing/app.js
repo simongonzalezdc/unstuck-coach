@@ -4,7 +4,7 @@ const demos = [
     prompt: "I need to pay the bill, eat something, and answer the text, but I am frozen.",
     generic:
       "Make a list, decide what is most important, set a timer, and reward yourself when you finish.",
-    startline:
+    unstuck:
       "I am holding the three loops. Biology comes first because planning on empty is false data. Eat the smallest available food, then reply with one word: fed.",
   },
   {
@@ -12,15 +12,15 @@ const demos = [
     prompt: "I need a coach to get started on this.",
     generic:
       "You can do it. Try setting a timer, making a to-do list, and reminding yourself why this matters.",
-    startline:
-      "Good. We are not making a plan yet; we are crossing the startline. Put the work in front of you, choose the smallest visible surface, and tell me what is open.",
+    unstuck:
+      "Good. We are not making a plan yet; we are getting one move unstuck. Put the work in front of you, choose the smallest visible surface, and tell me what is open.",
   },
   {
     label: "Message spiral",
     prompt: "That message makes me feel like I did something wrong.",
     generic:
       "Try not to take it personally. People are usually not as upset as you think.",
-    startline:
+    unstuck:
       "We are not processing your worth through a notification. First pass: quote the sentence that carries the threat, then write what it literally asks for.",
   },
   {
@@ -28,7 +28,7 @@ const demos = [
     prompt: "My inbox and calendar are a mess and I do not know what is real.",
     generic:
       "Clean your inbox, update your calendar, prioritize every commitment, and make a better schedule.",
-    startline:
+    unstuck:
       "That is system overload, not a character problem. We are rescuing live obligations: open the calendar, name the next hard anchor, then pick one inbox item tied to time, money, safety, or another person.",
   },
   {
@@ -36,7 +36,7 @@ const demos = [
     prompt: "I need to shower, answer the text, find the form, and clean the kitchen.",
     generic:
       "Prioritize your tasks by urgency and importance. You can use a matrix to decide what to do first.",
-    startline:
+    unstuck:
       "I am holding the list. You only need the first relief move. Choose the loop that gets easier if it moves 10 percent, then touch only that surface.",
   },
   {
@@ -44,7 +44,7 @@ const demos = [
     prompt: "I tried to start the insurance form Monday, yesterday, and this morning. I keep failing.",
     generic:
       "Stay positive and try again. Consistency is built by showing up, even when motivation is low.",
-    startline:
+    unstuck:
       "That is three attempts. We are not trying harder at the same plan. The plan failed; you did not. Pick the closest blocker: energy, missing document, unclear first field, or dread.",
   },
 ];
@@ -163,7 +163,7 @@ if (reviewPanels.length) {
     setActiveReviewPanel(defaultReviewPanel);
   }
 
-  window.StartlineLanding = {
+  window.UnstuckLanding = {
     showPanel(panelId, options = {}) {
       return setActiveReviewPanel(panelId, options);
     },
@@ -172,19 +172,19 @@ if (reviewPanels.length) {
 
 const promptEl = optionalSelector("#demo-prompt");
 const genericEl = optionalSelector("#demo-generic");
-const startlineEl = optionalSelector("#demo-startline");
+const unstuckEl = optionalSelector("#demo-unstuck");
 const tabs = optionalSelectorAll(".prompt-tab");
 let activeDemo = 0;
 let cycleTimer = null;
 
 function setDemo(index, userInitiated = false) {
-  if (!promptEl || !genericEl || !startlineEl || !tabs.length) return;
+  if (!promptEl || !genericEl || !unstuckEl || !tabs.length) return;
 
   activeDemo = index;
   const demo = demos[index];
   promptEl.textContent = demo.prompt;
   genericEl.textContent = demo.generic;
-  startlineEl.textContent = demo.startline;
+  unstuckEl.textContent = demo.unstuck;
 
   tabs.forEach((tab, tabIndex) => {
     const active = tabIndex === index;
@@ -202,7 +202,7 @@ function restartCycle() {
   cycleTimer = null;
 }
 
-if (promptEl && genericEl && startlineEl && tabs.length) {
+if (promptEl && genericEl && unstuckEl && tabs.length) {
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       const index = Number.parseInt(tab.dataset.demo, 10);
@@ -319,7 +319,7 @@ const consolePatterns = [
     state: "Yellow",
     stateNote: "Enough capacity for one concrete move, not enough for a plan essay.",
     friction: "Activation friction",
-    frictionNote: "The blocker is crossing the startline, not understanding the task.",
+    frictionNote: "The blocker is getting one move unstuck, not understanding the task.",
     move: "Put one surface in front of you.",
     moveNote: "Open or touch the closest surface: bill, message, form, tab, doc, sink, bag, or door. Report what is visible.",
     check: "One visible surface.",

@@ -34,7 +34,7 @@ export function verifyPitchReel(root = process.cwd()) {
   const requiredText = [
     "75-Second Shot Plan",
     "One-Line Hook",
-    "Startline Coach gives whole people portable executive-function accessibility",
+    "Unstuck Coach gives whole people portable executive-function accessibility",
     "The first response is scoreable: name friction, give one move, ask for proof.",
     "The protocol chooses state, friction, move, and check instead of giving an article.",
     "The source proof stays readable without slowing the first move.",

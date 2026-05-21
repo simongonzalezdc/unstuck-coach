@@ -111,37 +111,37 @@ async function main() {
   const captures = [
     {
       file: "landing/index.html",
-      name: "startline-review-landing-desktop",
+      name: "unstuck-review-landing-desktop",
       viewport: { width: 1440, height: 1000 },
       requiredText: ["External executive function for the whole human.", "Calendar and inbox"],
     },
     {
       file: "landing/index.html",
-      name: "startline-review-landing-mobile",
+      name: "unstuck-review-landing-mobile",
       viewport: { width: 390, height: 900 },
       requiredText: ["External executive function for the whole human.", "Calendar and inbox"],
     },
     {
       file: "landing/index.html",
-      name: "startline-review-landing-narrow",
+      name: "unstuck-review-landing-narrow",
       viewport: { width: 320, height: 860 },
       requiredText: ["External executive function for the whole human.", "Food first", "Hard anchor", "Literal ask", "Restart mark"],
     },
     {
       file: "landing/evidence.html",
-      name: "startline-review-evidence-desktop",
+      name: "unstuck-review-evidence-desktop",
       viewport: { width: 1440, height: 1000 },
       requiredText: ["Rendered Markdown, not claim cards.", "The file content is on this page.", "START_HERE.md"],
     },
     {
       file: "landing/evidence.html",
-      name: "startline-review-evidence-mobile",
+      name: "unstuck-review-evidence-mobile",
       viewport: { width: 390, height: 900 },
       requiredText: ["Rendered Markdown, not claim cards.", "The file content is on this page.", "START_HERE.md"],
     },
     {
       file: "landing/index.html",
-      name: "startline-review-admin-desktop",
+      name: "unstuck-review-admin-desktop",
       viewport: { width: 1440, height: 1000 },
       selector: ".admin-rhythm-board",
       elementOnly: true,
@@ -149,7 +149,7 @@ async function main() {
     },
     {
       file: "landing/index.html",
-      name: "startline-review-admin-mobile",
+      name: "unstuck-review-admin-mobile",
       viewport: { width: 390, height: 900 },
       selector: ".admin-rhythm-board",
       elementOnly: true,
@@ -157,7 +157,7 @@ async function main() {
     },
     {
       file: "landing/index.html",
-      name: "startline-review-firstrun-desktop",
+      name: "unstuck-review-firstrun-desktop",
       viewport: { width: 1440, height: 1000 },
       selector: "#setup",
       elementOnly: true,
@@ -170,7 +170,7 @@ async function main() {
     },
     {
       file: "landing/index.html",
-      name: "startline-review-firstrun-mobile",
+      name: "unstuck-review-firstrun-mobile",
       viewport: { width: 390, height: 900 },
       selector: "#setup",
       elementOnly: true,
@@ -183,35 +183,35 @@ async function main() {
     },
     {
       file: "landing/index.html",
-      name: "startline-review-scorecard-desktop",
+      name: "unstuck-review-scorecard-desktop",
       viewport: { width: 1440, height: 1000 },
       selector: "#scorecard",
       requiredText: ["Know whether the first reply is coaching.", "Open score evidence"],
     },
     {
       file: "landing/index.html",
-      name: "startline-review-scorecard-mobile",
+      name: "unstuck-review-scorecard-mobile",
       viewport: { width: 390, height: 900 },
       selector: "#scorecard",
       requiredText: ["Know whether the first reply is coaching.", "Open score evidence"],
     },
     {
       file: "landing/index.html",
-      name: "startline-review-faq-desktop",
+      name: "unstuck-review-faq-desktop",
       viewport: { width: 1440, height: 1000 },
       selector: "#faq",
       requiredText: ["The coach helps with the next move, not someone else's life.", "Read boundaries"],
     },
     {
       file: "landing/index.html",
-      name: "startline-review-faq-mobile",
+      name: "unstuck-review-faq-mobile",
       viewport: { width: 390, height: 900 },
       selector: "#faq",
       requiredText: ["The coach helps with the next move, not someone else's life.", "Read boundaries"],
     },
     {
       file: "landing/reel.html",
-      name: "startline-review-reel-desktop",
+      name: "unstuck-review-reel-desktop",
       viewport: { width: 1440, height: 1000 },
       requiredText: [
         "External executive function for the whole human.",
@@ -220,7 +220,7 @@ async function main() {
     },
     {
       file: "landing/reel.html",
-      name: "startline-review-reel-mobile",
+      name: "unstuck-review-reel-mobile",
       viewport: { width: 390, height: 900 },
       requiredText: [
         "External executive function for the whole human.",

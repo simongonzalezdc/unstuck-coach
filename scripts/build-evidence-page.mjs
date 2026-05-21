@@ -27,7 +27,7 @@ const markdownGroups = [
     sources: [
       ["first-run", "Cold start", "FIRST_RUN.md", "Exact first-run receipt for a stuck prompt."],
       ["first-reply-scorecard", "First reply", "FIRST_REPLY_SCORECARD.md", "Pass and fail behavior for the first response."],
-      ["before-after", "Contrast", "demo/before-after.md", "Generic advice versus Startline next-action coaching."],
+      ["before-after", "Contrast", "demo/before-after.md", "Generic advice versus Unstuck next-action coaching."],
       ["transcript-pack", "Cold tests", "demo/transcript-pack.md", "Stuck-signal transcripts as inspectable behavior proof."],
       ["whole-person-tour", "Whole-person scope", "demo/whole-person-tour.md", "Body, admin, message, memory, recovery, and work loops as one coaching surface."],
       ["red-face-tests", "Stress tests", "evals/red-face-tests.md", "Shame, overload, inbox/calendar reality, and communication threat."],
@@ -38,7 +38,7 @@ const markdownGroups = [
     eyebrow: "Research and rules",
     title: "Connect the brief to the product decisions.",
     sources: [
-      ["rules", "Coaching contract", "rules.md", "Operating rules that keep Startline from becoming an article, menu, or pep talk."],
+      ["rules", "Coaching contract", "rules.md", "Operating rules that keep Unstuck from becoming an article, menu, or pep talk."],
       ["competition-rules-trace", "Competition fit", "COMPETITION_RULES_TRACE.md", "Week 5 requirements mapped to concrete files."],
       ["product-thesis", "Product thesis", "PRODUCT_THESIS.md", "Why this is whole-person EF accessibility, not narrow productivity."],
       ["icm-trace", "ICM fit", "ICM_TRACE.md", "Staged, inspectable, editable, auditable workflow logic."],
@@ -71,7 +71,7 @@ const markdownGroups = [
       ["admin-ops-playbooks", "Calendar and inbox", "reference/admin-ops-playbooks.md", "Calendar, inbox, and live obligations without fake account access."],
       ["safety-boundaries", "Safety", "reference/safety-boundaries.md", "Boundary between coaching, medical risk, crisis handling, and professional care."],
       ["receipts", "Proof map", "RECEIPTS.md", "Claim-to-file proof map."],
-      ["identity", "Identity", "identity.md", "What Startline Coach is and is not."],
+      ["identity", "Identity", "identity.md", "What Unstuck Coach is and is not."],
       ["examples", "Examples", "examples.md", "Concrete response patterns."],
     ],
   },
@@ -498,19 +498,19 @@ function renderEvidencePage() {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Startline Coach Evidence Reader</title>
+    <title>Unstuck Coach Evidence Reader</title>
     <meta
       name="description"
-      content="A browser-readable evidence map for Startline Coach, rendering the actual working Markdown files into a judge-friendly proof reader."
+      content="A browser-readable evidence map for Unstuck Coach, rendering the actual working Markdown files into a judge-friendly proof reader."
     >
-    <link rel="icon" type="image/png" href="./assets/startline-coach-logo.png">
+    <link rel="icon" type="image/png" href="./assets/unstuck-coach-logo.png">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body class="evidence-page evidence-single-doc">
     <header class="site-nav" aria-label="Primary">
-      <a class="wordmark" href="./index.html#top" aria-label="Startline Coach home">
-        <img class="wordmark-mark" src="./assets/startline-coach-logo.png" alt="" aria-hidden="true" width="64" height="64">
-        Startline Coach
+      <a class="wordmark" href="./index.html#top" aria-label="Unstuck Coach home">
+        <img class="wordmark-mark" src="./assets/unstuck-coach-logo.png" alt="" aria-hidden="true" width="64" height="64">
+        Unstuck Coach
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation">
         <span class="nav-toggle-line"></span>

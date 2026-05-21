@@ -8,7 +8,7 @@ const defaultExpectedTranscripts = [
   {
     title: "Getting Started",
     user: "I need a coach to get started on this.",
-    coachMustInclude: ["crossing the startline", "Reply with only what is open, touched, or visible"],
+    coachMustInclude: ["getting one move unstuck", "Reply with only what is open, touched, or visible"],
     proofMustInclude: ["activation friction", "visible proof"],
   },
   {
@@ -140,7 +140,7 @@ export function verifyTranscriptPack(root = process.cwd(), expectedTranscripts =
     }
 
     actual.user = fencedBlockAfter(section, "User");
-    actual.coachSnippet = fencedBlockAfter(section, "Startline Coach");
+    actual.coachSnippet = fencedBlockAfter(section, "Unstuck Coach");
     actual.proofChecks = [...section.matchAll(/^- It ([^\n]+)$/gm)].map((match) => match[1].trim());
 
     if (actual.user !== expected.user) {

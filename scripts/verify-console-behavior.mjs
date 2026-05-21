@@ -135,7 +135,7 @@ function makeHarness() {
   const elements = new Map([
     ["#demo-prompt", makeElement()],
     ["#demo-generic", makeElement()],
-    ["#demo-startline", makeElement()],
+    ["#demo-unstuck", makeElement()],
     ["#coach-console", makeElement()],
     ["#coach-input", makeElement()],
     ["#console-state", makeElement()],

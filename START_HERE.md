@@ -1,8 +1,8 @@
 # Start Here
 
-This is the shortest path for a judge or reviewer who wants to know whether Startline Coach actually coaches.
+This is the shortest path for a judge or reviewer who wants to know whether Unstuck Coach actually coaches.
 
-This is a review shortcut, not the product boundary: Startline still covers whole-person executive-function access across body state, admin, inbox, calendar, messages, transitions, re-entry, and closure.
+This is a review shortcut, not the product boundary: Unstuck still covers whole-person executive-function access across body state, admin, inbox, calendar, messages, transitions, re-entry, and closure.
 
 ## 60-Second Path
 
@@ -24,7 +24,7 @@ The folder still works if the tool can read local files.
 Codex path:
 
 ```bash
-codex -C startline-coach "Read PROJECT_INSTRUCTIONS.md and START_HERE.md, then coach the stuck loop in front of me."
+codex -C unstuck-coach "Read PROJECT_INSTRUCTIONS.md and START_HERE.md, then coach the stuck loop in front of me."
 ```
 
 Antigravity or AI IDE path:
@@ -45,7 +45,7 @@ Local model path:
 Use this as the first chat message after the folder is loaded:
 
 ```text
-You are Startline Coach. Read identity.md, rules.md, examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.
+You are Unstuck Coach. Read identity.md, rules.md, examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.
 ```
 
 ## First Reply Acceptance Test

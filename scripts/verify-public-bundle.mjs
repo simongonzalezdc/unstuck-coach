@@ -32,8 +32,8 @@ import { verifyWholePersonTour } from "./verify-whole-person-tour.mjs";
 const root = process.cwd();
 
 const binaryPublicBundleFiles = new Set([
-  "landing/assets/startline-coach-logo.png",
-  "landing/assets/startline-admin-bridge.jpg",
+  "landing/assets/unstuck-coach-logo.png",
+  "landing/assets/unstuck-admin-bridge.jpg",
 ]);
 
 const publicSafetyPatterns = [
@@ -49,7 +49,7 @@ const publicSafetyPatterns = [
 
 const disallowedLiteralFragments = [
   ["source", "Branch"].join(""),
-  ["codex", "startline"].join("/"),
+  ["codex", "unstuck"].join("/"),
   ["skool", "competitions"].join("_"),
   ["EF", "COACH"].join("-"),
   ["si", "mon", "gonzalez"].join(""),
@@ -209,7 +209,7 @@ const receiptsRequiredText = [
 ];
 
 const judgeFaqRequiredText = [
-  "What is Startline Coach?",
+  "What is Unstuck Coach?",
   "Who exactly does it coach?",
   "Is this just an ADHD knowledge base?",
   "How should I cold-test it?",
@@ -221,7 +221,7 @@ const judgeFaqRequiredText = [
   "six-stop whole-person tour",
   "What are the boundaries?",
   "the next move is small enough to test",
-  "Startline is not therapy, medical advice, diagnosis, medication guidance, autonomous account access, or a promise to clean someone's life for them.",
+  "Unstuck is not therapy, medical advice, diagnosis, medication guidance, autonomous account access, or a promise to clean someone's life for them.",
   "RECEIPTS.md",
 ];
 
@@ -258,7 +258,7 @@ const judgeBriefRequiredText = [
   "reference/mode-router.md",
   "evals/red-face-tests.md",
   "RECEIPTS.md",
-  "Startline is a coaching scaffold.",
+  "Unstuck is a coaching scaffold.",
 ];
 
 const publicationChecklistRequiredText = [
@@ -299,7 +299,7 @@ const publicationChecklistRequiredText = [
   "Run the ready gates from the reviewed source folder.",
   "Run the public-bundle and ready gates again from inside that final public repository.",
   "Run this from the reviewed source folder before staging or copying into the final public repository.",
-  "node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public --write --require-ready",
+  "node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public --write --require-ready",
   "The `--require-ready` flag is for final publication staging.",
   "refuses to stage if the reviewed source folder still has the placeholder URL or fails `verify-publication-ready.mjs`",
   "the public repository was staged from the wrong copy",
@@ -307,7 +307,7 @@ const publicationChecklistRequiredText = [
 
 const signalMapRequiredText = [
   "Operating Surface Map",
-  "Startline is a whole-person coach.",
+  "Unstuck is a whole-person coach.",
   "Food and body",
   "Calendar and inbox",
   "Messages and shame",
@@ -386,7 +386,7 @@ const adminOpsPlaybooksRequiredText = [
   "Playbook: Missed Obligation Recovery",
   "Playbook: Scheduling Friction",
   "Close The Admin Pass",
-  "Startline Coach does not read mail, edit calendars, send replies, or schedule events autonomously.",
+  "Unstuck Coach does not read mail, edit calendars, send replies, or schedule events autonomously.",
 ];
 
 const judgeQuickProofRequiredText = [
@@ -425,21 +425,21 @@ const stagingHelperRequiredText = [
 
 const renderReviewScreenshotsRequiredText = [
   "Playwright is required.",
-  "startline-review-landing-desktop",
-  "startline-review-landing-mobile",
-  "startline-review-landing-narrow",
-  "startline-review-admin-desktop",
-  "startline-review-admin-mobile",
-  "startline-review-firstrun-desktop",
-  "startline-review-firstrun-mobile",
-  "startline-review-scorecard-desktop",
-  "startline-review-scorecard-mobile",
-  "startline-review-faq-desktop",
-  "startline-review-faq-mobile",
-  "startline-review-evidence-desktop",
-  "startline-review-evidence-mobile",
-  "startline-review-reel-desktop",
-  "startline-review-reel-mobile",
+  "unstuck-review-landing-desktop",
+  "unstuck-review-landing-mobile",
+  "unstuck-review-landing-narrow",
+  "unstuck-review-admin-desktop",
+  "unstuck-review-admin-mobile",
+  "unstuck-review-firstrun-desktop",
+  "unstuck-review-firstrun-mobile",
+  "unstuck-review-scorecard-desktop",
+  "unstuck-review-scorecard-mobile",
+  "unstuck-review-faq-desktop",
+  "unstuck-review-faq-mobile",
+  "unstuck-review-evidence-desktop",
+  "unstuck-review-evidence-mobile",
+  "unstuck-review-reel-desktop",
+  "unstuck-review-reel-mobile",
   "Calendar and inbox are part of the life loop.",
   "No autonomous reading",
   "The first run is already scripted.",
@@ -507,7 +507,7 @@ const githubPublicUrlRequiredText = [
 ];
 
 const cleanPublicStageRequiredText = [
-  "startline-clean-public-stage-",
+  "unstuck-clean-public-stage-",
   "stage-public-repo.mjs",
   "verify-public-bundle.mjs",
   "Clean-stage target must be outside this working folder.",
@@ -526,7 +526,7 @@ const submissionSurfacesRequiredText = [
 const pitchReelRequiredText = [
   "75-Second Shot Plan",
   "One-Line Hook",
-  "Startline Coach gives whole people portable executive-function accessibility",
+  "Unstuck Coach gives whole people portable executive-function accessibility",
   "landing/reel.html",
   "The source proof stays readable without slowing the first move.",
   "landing/evidence.html#first-reply-scorecard",
@@ -638,8 +638,8 @@ const staleDiagnosisScopeText = [
 
 const readmeRequiredText = [
   "A folder-based whole-person executive-function accessibility coach for people who need help starting, switching, remembering, regulating, capturing, recovering, and closing loops without shame.",
-  "The core idea: Startline Coach acts as portable executive-function accessibility.",
-  "If Startline gives a productivity article, it failed.",
+  "The core idea: Unstuck Coach acts as portable executive-function accessibility.",
+  "If Unstuck gives a productivity article, it failed.",
   "This is a shortcut, not the product boundary.",
   "The landing page gives the visual version of this path.",
   "Receipt Room: Folder Map",
@@ -730,7 +730,7 @@ const visualTextGuardrails = [
     message: "uses generic/banned font-family fallback in reel CSS",
   },
   {
-    file: "landing/assets/startline-handoff-card.svg",
+    file: "landing/assets/unstuck-handoff-card.svg",
     pattern: /font-family="[^"]*(?:Inter|Roboto|Arial|Open Sans|Helvetica)/i,
     message: "uses generic/banned font-family fallback in handoff SVG",
   },
@@ -908,7 +908,7 @@ const visualCssRequiredText = [
     message: "missing mobile nav toggle markup",
   },
   {
-    file: "landing/assets/startline-handoff-card.svg",
+    file: "landing/assets/unstuck-handoff-card.svg",
     text: 'font-family="Avenir Next, sans-serif"',
     message: "missing cleaned handoff-card SVG type stack",
   },
@@ -930,11 +930,11 @@ const landingRequiredText = [
   "Food/body",
   "Leave breadcrumb",
   "This is activation friction, not a planning problem.",
-  "What makes it Startline",
+  "What makes it Unstuck",
   "Whole person under executive load",
   "Whole-person operating surface",
   "The first move can be food, a text, a calendar anchor, or a bill.",
-  "Startline does not turn accessibility support into more output for work.",
+  "Unstuck does not turn accessibility support into more output for work.",
   "State -> friction -> one humane visible move -> tiny proof -> re-entry trail.",
   "Calendar and inbox",
   "Hard anchors, live obligations, reply debt, missed commitments, scheduling friction.",
@@ -948,7 +948,7 @@ const landingRequiredText = [
   "Open tour evidence",
   "Calendar + inbox playbooks",
   "Calendar and inbox layer",
-  "startline-admin-bridge.jpg",
+  "unstuck-admin-bridge.jpg",
   "read accounts or run the user's life",
   "Calendar and inbox are part of the life loop.",
   "turn calendar drift, inbox noise, reply debt, missed obligations, and",
@@ -1019,7 +1019,7 @@ const landingRequiredText = [
   "Paste `PROJECT_INSTRUCTIONS.md`.",
   "Start here",
   "The first run is already scripted.",
-  "You are Startline Coach. Read identity.md, rules.md, examples.md, and reference/.",
+  "You are Unstuck Coach. Read identity.md, rules.md, examples.md, and reference/.",
   "If my first message is vague, ask one state-calibrating question.",
   "If I name a stuck signal, route it directly.",
   "I need a coach to get started on this.",
@@ -1075,8 +1075,12 @@ function read(file) {
 }
 
 function contentForPublicProvenanceScan(file, content) {
-  if (file !== "SUBMISSION.md") return content;
-  return content.replace(
+  const withoutRepoUrls = content.replace(
+    /https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+(?:\/)?/gi,
+    "https://github.com/OWNER/REPO",
+  );
+  if (file !== "SUBMISSION.md") return withoutRepoUrls;
+  return withoutRepoUrls.replace(
     /GitHub link:\s*```text\s*[\s\S]*?```/i,
     "GitHub link:\n\n```text\nhttps://github.com/OWNER/REPO\n```",
   );
@@ -1087,11 +1091,11 @@ function exists(file) {
 }
 
 function readmeTreeFiles(markdown) {
-  const treeMatch = markdown.match(/```text\nstartline-coach\/\n([\s\S]*?)\n```/);
+  const treeMatch = markdown.match(/```text\nunstuck-coach\/\n([\s\S]*?)\n```/);
   if (!treeMatch) {
     return {
       files: [],
-      failures: ["README.md is missing the startline-coach folder tree."],
+      failures: ["README.md is missing the unstuck-coach folder tree."],
     };
   }
 

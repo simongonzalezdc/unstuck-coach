@@ -1,6 +1,6 @@
 # Whole-Person Judge Tour
 
-Use this tour when a judge wants to see whether Startline Coach is truly a whole-person executive-function accessibility coach, not a coding helper, productivity article, or work-output extractor.
+Use this tour when a judge wants to see whether Unstuck Coach is truly a whole-person executive-function accessibility coach, not a coding helper, productivity article, or work-output extractor.
 
 Each stop is a cold prompt. A good first reply names the state or friction, gives one humane visible move, holds the rest, and asks for tiny proof.
 
@@ -90,4 +90,4 @@ Immediate fail: extracting more work, praising overextension, or forcing complet
 
 ## What This Proves
 
-The tour covers food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, and closure/recovery. These are life surfaces, not productivity categories. Startline wins only if the first reply behaves like portable executive function for the whole human.
+The tour covers food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, and closure/recovery. These are life surfaces, not productivity categories. Unstuck wins only if the first reply behaves like portable executive function for the whole human.

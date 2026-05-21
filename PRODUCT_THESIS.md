@@ -1,6 +1,6 @@
-# Startline Coach Product Thesis
+# Unstuck Coach Product Thesis
 
-Startline Coach is designed as a folder, not an app, because the Week 5 object is a coach that can live inside a Claude Project and remain portable to other agent surfaces. The product surface is the context itself: identity, rules, examples, reference protocols, and proof artifacts that make the coach portable, inspectable, and easy to test cold.
+Unstuck Coach is designed as a folder, not an app, because the Week 5 object is a coach that can live inside a Claude Project and remain portable to other agent surfaces. The product surface is the context itself: identity, rules, examples, reference protocols, and proof artifacts that make the coach portable, inspectable, and easy to test cold.
 
 The public cold test is first contact because it is the easiest moment for a judge to evaluate quickly. That does not define the whole product. The full coach covers whole-person executive-function accessibility: start, choose, hold context, sort brain dumps, capture ideas, manage inbox and calendar reality, regulate body state, use bounded activation fuel, transition, recover, and close with a re-entry trail.
 
@@ -18,7 +18,7 @@ The public cold test is first contact because it is the easiest moment for a jud
 
 ## Why The Folder Is The Product
 
-The brief asks for a coach folder someone can drop into a Claude Project. Startline keeps that primary path, but does not make Claude Project the only usable surface. Codex, Antigravity-style project IDEs, and local models can all use the same operating files when they can read the folder or receive the core files in context. The landing page is only the judge door: it shows the thesis, makes the first run copy-ready, and points back to the files that actually shape the coach.
+The brief asks for a coach folder someone can drop into a Claude Project. Unstuck keeps that primary path, but does not make Claude Project the only usable surface. Codex, Antigravity-style project IDEs, and local models can all use the same operating files when they can read the folder or receive the core files in context. The landing page is only the judge door: it shows the thesis, makes the first run copy-ready, and points back to the files that actually shape the coach.
 
 The folder structure creates an interpretable coaching system:
 
@@ -34,7 +34,7 @@ The folder structure creates an interpretable coaching system:
 
 The target user is not someone who needs generic productivity education or moral pressure. They are a whole person who can often describe what matters and still lose the thread at predictable executive-function pressure points. First contact is the fastest demo because it is concrete enough to evaluate in a short competition window.
 
-The product is broader than that demo. Startline also coaches:
+The product is broader than that demo. Unstuck also coaches:
 
 - choosing one next action from competing tasks or life loops,
 - holding context outside the user's working memory,
@@ -50,13 +50,13 @@ The product is broader than that demo. Startline also coaches:
 - re-entering after avoidance or interruption,
 - closing or parking the loop with a visible breadcrumb.
 
-Startline Coach should pass this cold test:
+Unstuck Coach should pass this cold test:
 
 ```text
 I need a coach to get started on this.
 ```
 
-A weak coach answers with encouragement, an article, or a menu. Startline should name the friction without blame, choose one visible move, hold the rest, and ask for tiny proof.
+A weak coach answers with encouragement, an article, or a menu. Unstuck should name the friction without blame, choose one visible move, hold the rest, and ask for tiny proof.
 
 ## How The Method Maps To Behavior
 
@@ -73,7 +73,7 @@ This is the ICM fit in practical terms: the work becomes staged, editable, audit
 
 ## Where It Stops
 
-Startline Coach is not a therapist, diagnostic tool, medication advisor, or autonomous execution engine. It should not decide clinical questions, contact other people, rewrite the user's life system, or promise that executive dysfunction is solved. Its job is bounded and strong: protect dignity, improve access, externalize executive function, reduce the next move, capture the loose thread, and keep re-entry visible.
+Unstuck Coach is not a therapist, diagnostic tool, medication advisor, or autonomous execution engine. It should not decide clinical questions, contact other people, rewrite the user's life system, or promise that executive dysfunction is solved. Its job is bounded and strong: protect dignity, improve access, externalize executive function, reduce the next move, capture the loose thread, and keep re-entry visible.
 
 ## Judge Standard
 

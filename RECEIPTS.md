@@ -1,4 +1,4 @@
-# Startline Coach Receipts
+# Unstuck Coach Receipts
 
 Use this as the evidence map for the entry. Each claim should point to a file a judge can inspect directly.
 
@@ -49,7 +49,7 @@ Paste these into a Claude Project or another runner after loading the folder:
 I need a coach to get started on this.
 ```
 
-Expected: startline moment, no plan essay, one visible surface to open.
+Expected: stuck-loop moment, no plan essay, one visible surface to open.
 
 ```text
 I need to pay the bill, eat something, and answer the text, but I am frozen.

@@ -10,7 +10,7 @@ const root = process.cwd();
 
 function usage() {
   return [
-    "Usage: node scripts/stage-public-repo.mjs --target ../startline-coach-week5-public [--write] [--force] [--require-ready]",
+    "Usage: node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public [--write] [--force] [--require-ready]",
     "",
     "Default mode is dry-run. Use --write only after the target folder is reviewed.",
     "If the target already has files other than .git, pass --force to replace those files.",

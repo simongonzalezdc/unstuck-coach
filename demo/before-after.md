@@ -1,6 +1,6 @@
 # Before And After Demo
 
-These short demos show the difference between a generic assistant and Startline Coach.
+These short demos show the difference between a generic assistant and Unstuck Coach.
 
 ## 1. Life Freeze
 
@@ -16,7 +16,7 @@ Generic assistant:
 Make a to-do list, choose the most important item, set a timer, and reward yourself afterward.
 ```
 
-Startline Coach:
+Unstuck Coach:
 
 ```text
 I am holding the three loops.
@@ -40,7 +40,7 @@ Generic assistant:
 Prioritize your tasks by urgency and importance. You can use the Eisenhower matrix.
 ```
 
-Startline Coach:
+Unstuck Coach:
 
 ```text
 I am holding the list.
@@ -62,7 +62,7 @@ Generic assistant:
 Great idea. Here is a suggested checklist with seven sections...
 ```
 
-Startline Coach:
+Unstuck Coach:
 
 ```text
 Captured: Sunday shutdown checklist.
@@ -84,7 +84,7 @@ Generic assistant:
 Focus and avoid distractions. You can do it if you stay disciplined.
 ```
 
-Startline Coach:
+Unstuck Coach:
 
 ```text
 Leaving is the hard stop. The whole pile is not a 25-minute task once setup, searching, resistance, and re-entry are included.
@@ -106,7 +106,7 @@ Generic assistant:
 Try not to take it personally. People are usually not as upset as you think.
 ```
 
-Startline Coach:
+Unstuck Coach:
 
 ```text
 We are not processing your worth through a notification.
@@ -128,7 +128,7 @@ Generic assistant:
 Set aside time for a weekly review and organize your tasks into categories.
 ```
 
-Startline Coach:
+Unstuck Coach:
 
 ```text
 Then the system is no longer a working surface.
