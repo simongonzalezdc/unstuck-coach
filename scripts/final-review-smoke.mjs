@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 import { spawnSync } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
 import { pathToFileURL } from "node:url";
 
 const args = new Set(process.argv.slice(2));
@@ -9,6 +11,7 @@ const expectBlocked = args.has("--expect-blocked") || !expectReady;
 const skipBuild = args.has("--skip-build");
 const verbose = args.has("--verbose");
 const allowedArgs = new Set(["--expect-ready", "--expect-blocked", "--skip-build", "--verbose"]);
+const root = process.cwd();
 
 for (const arg of args) {
   if (!allowedArgs.has(arg)) {
@@ -52,6 +55,27 @@ const proofChecks = [
   "scripts/verify-clean-public-stage.mjs",
 ];
 
+function isReviewedSourceWorkspace() {
+  return (
+    fs.existsSync(path.join(root, "PRIVATE_COMPLETION_AUDIT.md")) ||
+    fs.existsSync(path.join(root, "PRIVATE_APPROVAL_STATE.md"))
+  );
+}
+
+function removePublicOutputResidue() {
+  if (isReviewedSourceWorkspace()) {
+    return false;
+  }
+
+  const outputDir = path.join(root, "output");
+  if (!fs.existsSync(outputDir)) {
+    return false;
+  }
+
+  fs.rmSync(outputDir, { recursive: true, force: true });
+  return true;
+}
+
 function runNode(script, options = {}) {
   const commandArgs = Array.isArray(script) ? script : [script];
   const result = spawnSync(process.execPath, commandArgs, {
@@ -81,6 +105,8 @@ function parseJson(stdout, label) {
 export function finalReviewSmoke() {
   const failures = [];
   const ran = [];
+  const cleanedOutputResidueBefore = removePublicOutputResidue();
+  let cleanedOutputResidueAfterBuild = false;
 
   for (const script of proofChecks) {
     runNode(script, { echo: verbose });
@@ -90,6 +116,7 @@ export function finalReviewSmoke() {
   if (!skipBuild) {
     runNode("scripts/build-public-bundle.mjs", { echo: verbose });
     ran.push("scripts/build-public-bundle.mjs");
+    cleanedOutputResidueAfterBuild = removePublicOutputResidue();
   }
 
   const publication = runNode("scripts/verify-publication-ready.mjs", {
@@ -137,6 +164,8 @@ export function finalReviewSmoke() {
     status: failures.length === 0 ? "pass" : "fail",
     expectedPublicationState: expectReady ? "ready" : "blocked",
     skippedBuild: skipBuild,
+    cleanedOutputResidueBefore,
+    cleanedOutputResidueAfterBuild,
     verbose,
     ran,
     publicationStatus: publicationSummary.status,

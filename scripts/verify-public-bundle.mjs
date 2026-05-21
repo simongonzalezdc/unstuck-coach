@@ -1160,6 +1160,20 @@ function listFiles(dir = ".") {
   return files;
 }
 
+function isReviewedSourceWorkspace() {
+  return exists("PRIVATE_COMPLETION_AUDIT.md") || exists("PRIVATE_APPROVAL_STATE.md");
+}
+
+function generatedOutputResidueFailures() {
+  if (isReviewedSourceWorkspace() || !exists("output")) {
+    return [];
+  }
+
+  return [
+    "Public bundle workspace contains ignored generated output directory: output/. Remove it before publication.",
+  ];
+}
+
 function localLinkTarget(href) {
   if (!href || href.startsWith("#")) return null;
   if (/^[a-z]+:/i.test(href)) return null;
@@ -1189,6 +1203,10 @@ function undefinedCssVarFailures(files) {
 
 const failures = [];
 const warnings = [];
+
+for (const failure of generatedOutputResidueFailures()) {
+  failures.push(failure);
+}
 
 for (const dir of publicBundleDirs) {
   if (!exists(dir) || !fs.statSync(path.join(root, dir)).isDirectory()) {
