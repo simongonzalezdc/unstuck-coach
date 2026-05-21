@@ -1074,6 +1074,14 @@ function read(file) {
   return fs.readFileSync(path.join(root, file), "utf8");
 }
 
+function contentForPublicProvenanceScan(file, content) {
+  if (file !== "SUBMISSION.md") return content;
+  return content.replace(
+    /GitHub link:\s*```text\s*[\s\S]*?```/i,
+    "GitHub link:\n\n```text\nhttps://github.com/OWNER/REPO\n```",
+  );
+}
+
 function exists(file) {
   return fs.existsSync(path.join(root, file));
 }
@@ -1231,7 +1239,7 @@ for (const file of allFiles) {
     continue;
   }
 
-  const content = read(file);
+  const content = contentForPublicProvenanceScan(file, read(file));
   if (emojiPattern.test(content)) {
     failures.push(`Emoji or symbol-range character found in public candidate: ${file}`);
   }

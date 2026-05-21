@@ -3,7 +3,7 @@
 GitHub link:
 
 ```text
-Pending review. Do not publish until final approval.
+https://github.com/simongonzalezdc/startline-coach-week5
 ```
 
 Skool comment draft:
