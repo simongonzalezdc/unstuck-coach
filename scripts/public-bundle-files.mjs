@@ -1,5 +1,8 @@
 export const publicBundleFiles = [
   ".gitignore",
+  "robots.txt",
+  "sitemap.xml",
+  "llms.txt",
   "AGENTS.md",
   "START_HERE.md",
   "README.md",

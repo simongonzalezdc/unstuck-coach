@@ -73,6 +73,9 @@ function contentForPrivacyScan(file, content) {
   const withoutRepoUrls = content.replace(
     /https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+(?:\/)?/gi,
     "https://github.com/OWNER/REPO",
+  ).replace(
+    /https:\/\/[A-Za-z0-9_.-]+\.github\.io\/[^\s)"'<>]+/gi,
+    "https://OWNER.github.io/REPO/",
   );
   if (file !== "SUBMISSION.md") return withoutRepoUrls;
   return withoutRepoUrls.replace(

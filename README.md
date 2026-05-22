@@ -59,6 +59,9 @@ This section is for inspection after the human value is clear.
 
 ```text
 unstuck-coach/
+├── robots.txt
+├── sitemap.xml
+├── llms.txt
 ├── AGENTS.md
 ├── START_HERE.md
 ├── PRODUCT_THESIS.md
@@ -148,6 +151,21 @@ unstuck-coach/
 ```
 
 ## How To Use
+
+## Search And AI Discovery
+
+When the repository is made public and GitHub Pages is enabled, set the repository About homepage to:
+
+```text
+https://simongonzalezdc.github.io/unstuck-coach-week5/landing/
+```
+
+The front-facing discovery files are:
+
+- `robots.txt` for crawler access and sitemap discovery.
+- `sitemap.xml` for the landing page, evidence reader, and pitch reel URLs.
+- `llms.txt` for answer engines, AI search, and LLM citation context.
+- `landing/index.html` for browser metadata, Open Graph/Twitter previews, canonical URL, and structured data.
 
 ### Claude Project
 
@@ -260,6 +278,7 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 ## Proof Artifacts
 
 - `landing/index.html` gives the visual product front door: whole-person hero, coaching routes, Claude Project launch kit, Codex/AI IDE/local-model setup paths, runnable coach console, live coaching demo, folder-method map, and readable source-proof links.
+- `robots.txt`, `sitemap.xml`, and `llms.txt` give the public repo a crawler, answer-engine, and generative-engine discovery layer once GitHub Pages is enabled.
 - `landing/assets/unstuck-coach-logo.png` gives the public brand mark used in the navigation and favicon.
 - `landing/assets/unstuck-admin-bridge.jpg` gives the admin-operations band a bitmap operating-map asset using the simplified PuenteWorks bridge/Mola visual language.
 - `landing/reel.html` gives a record-ready six-scene pitch reel page for the optional video/GIF proof layer.

@@ -9,6 +9,9 @@ Use this only after the folder owner has reviewed the folder and approved the la
 - Premium/VIP eligibility is documented as confirmed.
 - A clean Week 5 public repository exists.
 - The public repository is not the Week 3 submission repo.
+- GitHub Pages is enabled for the public repository when the landing page should be browser-accessible.
+- The repository About homepage points to the landing page URL.
+- `robots.txt`, `sitemap.xml`, and `llms.txt` are present in the public payload.
 - The final public GitHub URL is ready to paste into `SUBMISSION.md`.
 - The final public GitHub URL is rejected if it points at the old Week 3 repository.
 - The final public GitHub URL is visible through unauthenticated GitHub API access.
@@ -78,6 +81,7 @@ Expected before public-link insertion:
 - `verify-whole-person-tour.mjs` reports 6 tour stops, 6 prompt blocks, 6 proof checks, 6 immediate-fail checks, and zero failures.
 - `judge-quick-proof.mjs` reports `status: "pass"` and summarizes the judge-facing proof counts without requiring the final public GitHub URL.
 - `verify-public-bundle.mjs` reports zero failures.
+- `verify-public-bundle.mjs` reports 83 required files, including the SEO/AEO/GEO discovery files.
 - `verify-final-privacy-scan.mjs` reports `status: "pass"` and zero private/local provenance leaks across the public bundle.
 - `render-review-screenshots.mjs` refreshes landing, narrow/mobile first-glance, evidence reader, calendar/inbox admin-band, first-run receipt, scorecard, FAQ, and reel screenshots when Playwright is available through local install or `NODE_PATH`.
 - `verify-clean-public-stage.mjs` stages into a temporary separate folder, verifies the staged payload, removes the temporary target, and reports zero failures.

@@ -265,6 +265,9 @@ const publicationChecklistRequiredText = [
   "Do Not Publish Until",
   "Premium/VIP eligibility is documented as confirmed.",
   "A clean Week 5 public repository exists.",
+  "GitHub Pages is enabled for the public repository when the landing page should be browser-accessible.",
+  "The repository About homepage points to the landing page URL.",
+  "`robots.txt`, `sitemap.xml`, and `llms.txt` are present in the public payload.",
   "The final public GitHub URL is rejected if it points at the old Week 3 repository.",
   "The final public GitHub URL is visible through unauthenticated GitHub API access.",
   "node scripts/verify-icm-trace.mjs",
@@ -283,6 +286,7 @@ const publicationChecklistRequiredText = [
   "node scripts/verify-publication-ready.mjs",
   "node scripts/verify-github-public-url.mjs",
   "node scripts/verify-final-privacy-scan.mjs",
+  "verify-public-bundle.mjs` reports 83 required files, including the SEO/AEO/GEO discovery files.",
   "node scripts/verify-mode-router.mjs",
   "node scripts/verify-first-reply-scorecard.mjs",
   "node scripts/verify-start-here.mjs",
@@ -639,6 +643,10 @@ const staleDiagnosisScopeText = [
 const readmeRequiredText = [
   "A folder-based whole-person executive-function accessibility coach for people who need help starting, switching, remembering, regulating, capturing, recovering, and closing loops without shame.",
   "The core idea: Unstuck Coach acts as portable executive-function accessibility.",
+  "Search And AI Discovery",
+  "robots.txt` for crawler access and sitemap discovery.",
+  "sitemap.xml` for the landing page, evidence reader, and pitch reel URLs.",
+  "llms.txt` for answer engines, AI search, and LLM citation context.",
   "If Unstuck gives a productivity article, it failed.",
   "This is a shortcut, not the product boundary.",
   "The landing page gives the visual version of this path.",
@@ -675,6 +683,53 @@ const readmeRequiredText = [
   "scripts/verify-github-public-url.mjs` checks that the approved repository URL is visible through unauthenticated GitHub API access.",
   "node scripts/verify-github-public-url.mjs",
   "node scripts/verify-final-privacy-scan.mjs",
+];
+
+const seoDiscoveryRequiredText = [
+  {
+    file: "robots.txt",
+    text: "Sitemap: https://simongonzalezdc.github.io/unstuck-coach-week5/sitemap.xml",
+  },
+  {
+    file: "sitemap.xml",
+    text: "<loc>https://simongonzalezdc.github.io/unstuck-coach-week5/landing/</loc>",
+  },
+  {
+    file: "sitemap.xml",
+    text: "<loc>https://simongonzalezdc.github.io/unstuck-coach-week5/landing/evidence.html</loc>",
+  },
+  {
+    file: "sitemap.xml",
+    text: "<loc>https://simongonzalezdc.github.io/unstuck-coach-week5/landing/reel.html</loc>",
+  },
+  {
+    file: "llms.txt",
+    text: "Unstuck Coach is a folder-based whole-person executive-function accessibility coach.",
+  },
+  {
+    file: "llms.txt",
+    text: "Fast cold test: \"I need a coach to get started on this.\"",
+  },
+  {
+    file: "landing/index.html",
+    text: "<link rel=\"canonical\" href=\"https://simongonzalezdc.github.io/unstuck-coach-week5/landing/\">",
+  },
+  {
+    file: "landing/index.html",
+    text: "<meta property=\"og:title\" content=\"Unstuck Coach | Executive Function Accessibility Coach\">",
+  },
+  {
+    file: "landing/index.html",
+    text: "<script type=\"application/ld+json\">",
+  },
+  {
+    file: "landing/evidence.html",
+    text: "<link rel=\"canonical\" href=\"https://simongonzalezdc.github.io/unstuck-coach-week5/landing/evidence.html\">",
+  },
+  {
+    file: "landing/reel.html",
+    text: "<link rel=\"canonical\" href=\"https://simongonzalezdc.github.io/unstuck-coach-week5/landing/reel.html\">",
+  },
 ];
 
 const icmTraceRequiredText = [
@@ -1078,6 +1133,9 @@ function contentForPublicProvenanceScan(file, content) {
   const withoutRepoUrls = content.replace(
     /https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+(?:\/)?/gi,
     "https://github.com/OWNER/REPO",
+  ).replace(
+    /https:\/\/[A-Za-z0-9_.-]+\.github\.io\/[^\s)"'<>]+/gi,
+    "https://OWNER.github.io/REPO/",
   );
   if (file !== "SUBMISSION.md") return withoutRepoUrls;
   return withoutRepoUrls.replace(
@@ -1532,6 +1590,11 @@ if (exists("README.md")) {
   for (const requiredText of readmeRequiredText) {
     if (!readme.includes(requiredText)) {
       failures.push(`README.md is missing required text: ${requiredText}`);
+    }
+  }
+  for (const requirement of seoDiscoveryRequiredText) {
+    if (!read(requirement.file).includes(requirement.text)) {
+      failures.push(`${requirement.file} is missing SEO/AEO/GEO discovery text: ${requirement.text}`);
     }
   }
   const readmeTree = verifyReadmeTreeAgainstManifest(readme);
