@@ -15,6 +15,10 @@ concurrency:
 
 jobs:
   private-ready-gate:
+    # This private review repo currently has no registered self-hosted runner, and
+    # hosted Actions are billing-gated. Enable this only when a free runner lane
+    # or intentional public-release Actions budget is available.
+    if: vars.ENABLE_PRIVATE_REVIEW_CI == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
