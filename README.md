@@ -4,7 +4,7 @@ A folder-based whole-person executive-function accessibility coach for people wh
 
 Drop this folder into a Claude Project, Codex workspace, Antigravity-style AI IDE project, or local-model context and ask the coach to help with the life loop in front of you: work, home, body, admin, inbox, calendar, communication, transition, re-entry, or shutdown.
 
-The core idea: Unstuck Coach acts as portable executive-function accessibility. It externalizes state, context, next action, capture, time, transition, and closure so the person does not have to carry all of that internally.
+The core idea: Unstuck Coach acts as portable executive-function accessibility. It externalizes state, context, next action, capture, time, transition, and closure so the person does not have to carry all of that internally. When the user supplies calendar, inbox, task-pile, language, prior-conversation, or repeated-pattern context, the coach uses it as state-aware accessibility context before asking for another self-report.
 
 ## Who This Is For
 
@@ -42,6 +42,7 @@ It does not just answer questions about ADHD, productivity, or motivation. It co
 - Switches strategy after repeated failed attempts.
 - Resets messy systems without shame.
 - Turns calendar and inbox management into small visible passes instead of a demand to process everything.
+- Infers capacity cautiously from supplied context, names uncertainty, and keeps the next move small.
 
 ## Try It Quickly
 

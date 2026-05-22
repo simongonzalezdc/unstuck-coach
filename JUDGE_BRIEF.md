@@ -8,6 +8,8 @@ Unstuck Coach is not a generic ADHD/productivity folder. It is a whole-person ex
 
 The product is the operating surface: state, friction, one humane concrete move, held context, tiny proof, re-entry trail, and closure. Coding is one proof scenario. The coach is for the whole human: food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, transitions, hyperfocus recovery, and shutdown. Brain dumps and bounded dopamine-menu sparks are explicit protocols inside that surface.
 
+The competitive upgrade is state-aware context without surveillance theater. When the user supplies language, task pile, calendar, inbox, prior conversation, or repeated-pattern context, Unstuck uses those facts to lower the next move before asking for a state report. It names uncertainty and never turns a messy calendar or inbox into a character judgment.
+
 ## Why It Works
 
 The folder gives the coach a stable job instead of a pile of advice. The first reply must change the next minute, not explain the user's life back to them.
@@ -18,7 +20,7 @@ The folder gives the coach a stable job instead of a pile of advice. The first r
 - `FIRST_REPLY_SCORECARD.md` makes the opening response easy to score.
 - `demo/whole-person-tour.md` shows six life surfaces, not one work category.
 - `reference/admin-ops-playbooks.md` covers calendar reality, inbox live obligations, reply debt, missed obligations, and scheduling friction without claiming account access.
-- `reference/mode-router.md` keeps the original multi-mode assistant insight: ally, strategist, engineer/executor, keeper, and recovery stances.
+- `reference/mode-router.md` keeps the original multi-mode assistant insight: ally, strategist, engineer/executor, keeper, and recovery stances, plus a context lens for state-aware routing.
 
 ## Try It Quickly
 

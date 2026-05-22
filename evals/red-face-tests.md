@@ -238,3 +238,24 @@ Fail:
 - Gives a long menu.
 - Suggests shopping, browsing, research, or an open-ended reward loop.
 - Shames the user for needing stimulation before starting.
+
+## Test 16: Supplied Context Capacity Inference
+
+User:
+
+```text
+I can see my calendar: three back-to-back meetings, one overdue invoice email, and I have been typing in fragments all morning.
+```
+
+Pass:
+
+- Uses the supplied calendar and inbox facts as accessibility context.
+- Names inferred capacity with uncertainty instead of asking for a full state report.
+- Makes the next move smaller because context shows low capacity and live pressure.
+- Protects the next hard anchor or buffer before adding new work.
+
+Fail:
+
+- Turns context into a character judgment or diagnosis.
+- Asks for a full emotional inventory before helping.
+- Ignores the overdue live obligation and treats the calendar as generic productivity data.

@@ -8,6 +8,9 @@ const requiredText = [
   "Admin Operations Playbooks",
   "These playbooks do not assume account access.",
   "Unstuck Coach does not read mail, edit calendars, send replies, or schedule events autonomously.",
+  "Calendar, inbox, and prior-context facts are accessibility context when the user supplies or connects those surfaces.",
+  "Use visible context to reduce load; do not turn it into hidden character judgments.",
+  "If capacity is inferred rather than explicit, name the uncertainty and keep the move small.",
   "Playbook: Calendar Reality Pass",
   "one hard anchor plus one protected buffer",
   "Playbook: Inbox Live-Obligation Pass",
@@ -34,6 +37,8 @@ const forbiddenText = [
   "inbox zero is the proof",
   "I will rebuild the whole week",
   "We will rebuild the whole week for you",
+  "Your calendar proves you are avoidant",
+  "Your inbox proves you are irresponsible",
 ];
 
 export function verifyAdminOpsPlaybooks(root = process.cwd()) {

@@ -4,6 +4,8 @@ Unstuck Coach is designed as a folder, not an app, because the Week 5 object is 
 
 The public cold test is first contact because it is the easiest moment for a judge to evaluate quickly. That does not define the whole product. The full coach covers whole-person executive-function accessibility: start, choose, hold context, sort brain dumps, capture ideas, manage inbox and calendar reality, regulate body state, use bounded activation fuel, transition, recover, and close with a re-entry trail.
 
+Unstuck should not make the user self-diagnose before help. When the user supplies or connects language, task-pile, calendar, inbox, prior-conversation, or repeated-pattern context, the coach treats those facts as accessibility context. It infers capacity cautiously, names uncertainty, and makes the next move smaller without turning the context into a character judgment.
+
 ## Design Principles
 
 | Principle | Decision | Evidence |
@@ -11,6 +13,7 @@ The public cold test is first contact because it is the easiest moment for a jud
 | Folder over app | The coach must be drop-in project knowledge, so the files are the interface across Claude Project, Codex, AI IDEs, and local-model contexts. | `identity.md`, `rules.md`, `examples.md`, `reference/`, `PROJECT_INSTRUCTIONS.md`, `START_HERE.md` |
 | Whole-person EF access | The coach supports task start, choice, working-memory hold, brain-dump sorting, inbox triage, calendar reality checks, capture, body-state routing, bounded activation fuel, transition, recovery, and closure. | `identity.md`, `rules.md`, `reference/coaching-protocols.md`, `reference/admin-ops-playbooks.md`, `reference/signal-map.md` |
 | Mode routing | The coach shifts between ally support, strategy, execution, memory keeping, and recovery closure without making the user choose a mode. | `identity.md`, `rules.md`, `reference/mode-router.md`, `scripts/verify-mode-router.mjs` |
+| State-aware context | The coach uses supplied calendar, inbox, language, prior conversation, and pattern facts before asking for a state report, then names uncertainty and lowers the next move. | `PROJECT_INSTRUCTIONS.md`, `rules.md`, `reference/mode-router.md`, `reference/admin-ops-playbooks.md`, `evals/red-face-tests.md` |
 | First contact before productivity | The first reply should create one concrete move, not explain executive dysfunction. | `START_HERE.md`, `FIRST_RUN.md`, `demo/transcript-pack.md`, `scripts/verify-first-run.mjs`, `scripts/verify-first-reply-acceptance.mjs` |
 | Interpretable context | The method is staged as state, friction, move, hold, check, close so a judge can inspect the loop. | `rules.md`, `reference/coaching-protocols.md`, `ICM_TRACE.md`, `landing/index.html`, `scripts/verify-icm-trace.mjs` |
 | Proof before persuasion | Every public claim points to a file or verifier that can disprove it. | `RECEIPTS.md`, `JUDGE_SCORECARD.md`, `scripts/verify-public-bundle.mjs` |
@@ -68,6 +71,13 @@ The coaching loop is intentionally inspectable:
 4. Hold: keep the rest of the list outside working memory.
 5. Check: ask for proof small enough to produce immediately.
 6. Close: leave a re-entry breadcrumb when the session ends or energy drops.
+
+State does not always need to be asked as a question. If the calendar shows
+back-to-back meetings, an inbox item carries money or relationship consequence,
+the user is writing in fragments, or prior context shows a repeated failed plan,
+the coach can infer likely capacity and act conservatively. The rule is
+explainable humility: "This reads like yellow; I might be wrong, so I will keep
+the next move small."
 
 This is the ICM fit in practical terms: the work becomes staged, editable, auditable context rather than a motivational monologue. `ICM_TRACE.md` makes that fit explicit by mapping each workflow responsibility to files and proof checks; `scripts/verify-icm-trace.mjs` keeps the claim tied to evidence. A judge can open the rules, examples, transcript pack, and verifiers to see whether the loop is actually represented.
 

@@ -449,8 +449,8 @@
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>START_HERE.md</code></dd></div>
-        <div><dt>Lines</dt><dd>100</dd></div>
-        <div><dt>Bytes</dt><dd>3635</dd></div>
+        <div><dt>Lines</dt><dd>103</dd></div>
+        <div><dt>Bytes</dt><dd>3954</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -460,10 +460,11 @@
     <div class="rendered-markdown">
       <div class="rendered-section-list">
     <details class="rendered-section" open>
-          <summary><span>Start Here</span><small>2 lines</small></summary>
+          <summary><span>Start Here</span><small>3 lines</small></summary>
           <div class="rendered-section-body">
             <p>This is the shortest path for a judge or reviewer who wants to know whether Unstuck Coach actually coaches.</p>
 <p>This is a review shortcut, not the product boundary: Unstuck still covers whole-person executive-function access across body state, admin, inbox, calendar, messages, transitions, re-entry, and closure.</p>
+<p>Unstuck is state-aware when context is visible: supplied calendar blocks, inbox pressure, task piles, language fragments, and prior conversation can lower the next move without making the user answer a state questionnaire first.</p>
           </div>
         </details>
 <details class="rendered-section">
@@ -511,9 +512,9 @@
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>What To Inspect Next</span><small>14 lines</small></summary>
+          <summary><span>What To Inspect Next</span><small>15 lines</small></summary>
           <div class="rendered-section-body">
-            <ul><li><code>FIRST_REPLY_SCORECARD.md</code> for the fastest pass/fail gate.</li><li><code>JUDGE_BRIEF.md</code> for the one-page above-the-brief case.</li><li><code>JUDGE_FAQ.md</code> for the shortest answers to likely Week 5 judging questions.</li><li><code>FIRST_RUN.md</code> for the exact cold-start receipt and tiny proof loop.</li><li><code>docs/judge-walkthrough.md</code> for the cold judge path.</li><li><code>landing/index.html#admin-ops</code> for the calendar/inbox operations band.</li><li><code>scripts/render-review-screenshots.mjs</code> for the desktop, mobile, and narrow-mobile visual review captures.</li><li><code>demo/transcript-pack.md</code> for nine cold-test examples.</li><li><code>scripts/verify-first-reply-acceptance.mjs</code> for the executable first-reply gate.</li><li><code>reference/admin-ops-playbooks.md</code> for the calendar/inbox management playbooks.</li><li><code>scripts/verify-admin-ops-playbooks.mjs</code> for the admin-operations playbook gate.</li><li><code>scripts/judge-quick-proof.mjs</code> for a publication-independent proof summary of the judge path.</li><li><code>scripts/verify-judge-brief.mjs</code> for the judge-brief gate.</li><li><code>scripts/verify-public-bundle.mjs</code> for the full public-bundle check.</li></ul>
+            <ul><li><code>FIRST_REPLY_SCORECARD.md</code> for the fastest pass/fail gate.</li><li><code>JUDGE_BRIEF.md</code> for the one-page above-the-brief case.</li><li><code>JUDGE_FAQ.md</code> for the shortest answers to likely Week 5 judging questions.</li><li><code>FIRST_RUN.md</code> for the exact cold-start receipt and tiny proof loop.</li><li><code>docs/judge-walkthrough.md</code> for the cold judge path.</li><li><code>landing/index.html#admin-ops</code> for the calendar/inbox operations band.</li><li><code>scripts/render-review-screenshots.mjs</code> for the desktop, mobile, and narrow-mobile visual review captures.</li><li><code>demo/transcript-pack.md</code> for nine cold-test examples.</li><li><code>scripts/verify-first-reply-acceptance.mjs</code> for the executable first-reply gate.</li><li><code>reference/admin-ops-playbooks.md</code> for the calendar/inbox management playbooks.</li><li><code>reference/mode-router.md#context-lens</code> for state-aware routing from supplied context.</li><li><code>scripts/verify-admin-ops-playbooks.mjs</code> for the admin-operations playbook gate.</li><li><code>scripts/judge-quick-proof.mjs</code> for a publication-independent proof summary of the judge path.</li><li><code>scripts/verify-judge-brief.mjs</code> for the judge-brief gate.</li><li><code>scripts/verify-public-bundle.mjs</code> for the full public-bundle check.</li></ul>
           </div>
         </details>
   </div>
@@ -743,8 +744,8 @@ node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>README.md</code></dd></div>
-        <div><dt>Lines</dt><dd>437</dd></div>
-        <div><dt>Bytes</dt><dd>23160</dd></div>
+        <div><dt>Lines</dt><dd>438</dd></div>
+        <div><dt>Bytes</dt><dd>23466</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -758,7 +759,7 @@ node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
           <div class="rendered-section-body">
             <p>A folder-based whole-person executive-function accessibility coach for people who need help starting, switching, remembering, regulating, capturing, recovering, and closing loops without shame.</p>
 <p>Drop this folder into a Claude Project, Codex workspace, Antigravity-style AI IDE project, or local-model context and ask the coach to help with the life loop in front of you: work, home, body, admin, inbox, calendar, communication, transition, re-entry, or shutdown.</p>
-<p>The core idea: Unstuck Coach acts as portable executive-function accessibility. It externalizes state, context, next action, capture, time, transition, and closure so the person does not have to carry all of that internally.</p>
+<p>The core idea: Unstuck Coach acts as portable executive-function accessibility. It externalizes state, context, next action, capture, time, transition, and closure so the person does not have to carry all of that internally. When the user supplies calendar, inbox, task-pile, language, prior-conversation, or repeated-pattern context, the coach uses it as state-aware accessibility context before asking for another self-report.</p>
           </div>
         </details>
 <details class="rendered-section">
@@ -769,11 +770,11 @@ node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>What This Coach Does</span><small>16 lines</small></summary>
+          <summary><span>What This Coach Does</span><small>17 lines</small></summary>
           <div class="rendered-section-body">
             <p>It helps the user make the next move without turning executive dysfunction into a character flaw.</p>
 <p>It does not just answer questions about ADHD, productivity, or motivation. It coaches in the moment:</p>
-<ul><li>Checks state before planning.</li><li>Reduces options to one next action.</li><li>Holds the rest of the list.</li><li>Offers body-doubling scripts.</li><li>Creates re-entry breadcrumbs.</li><li>Uses shame-free return protocols.</li><li>Captures raw ideas without turning them into a lecture.</li><li>Sorts raw brain dumps into one next move plus parked context.</li><li>Uses a bounded dopamine menu when the user needs activation fuel before starting.</li><li>Makes time visible with buffers, hard stops, and start anchors.</li><li>Uses a tangent firewall: chase, bookmark, or discard.</li><li>Switches strategy after repeated failed attempts.</li><li>Resets messy systems without shame.</li><li>Turns calendar and inbox management into small visible passes instead of a demand to process everything.</li></ul>
+<ul><li>Checks state before planning.</li><li>Reduces options to one next action.</li><li>Holds the rest of the list.</li><li>Offers body-doubling scripts.</li><li>Creates re-entry breadcrumbs.</li><li>Uses shame-free return protocols.</li><li>Captures raw ideas without turning them into a lecture.</li><li>Sorts raw brain dumps into one next move plus parked context.</li><li>Uses a bounded dopamine menu when the user needs activation fuel before starting.</li><li>Makes time visible with buffers, hard stops, and start anchors.</li><li>Uses a tangent firewall: chase, bookmark, or discard.</li><li>Switches strategy after repeated failed attempts.</li><li>Resets messy systems without shame.</li><li>Turns calendar and inbox management into small visible passes instead of a demand to process everything.</li><li>Infers capacity cautiously from supplied context, names uncertainty, and keeps the next move small.</li></ul>
           </div>
         </details>
 <details class="rendered-section">
@@ -1035,8 +1036,8 @@ node scripts/verify-final-privacy-scan.mjs</code></pre>
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>JUDGE_BRIEF.md</code></dd></div>
-        <div><dt>Lines</dt><dd>69</dd></div>
-        <div><dt>Bytes</dt><dd>3757</dd></div>
+        <div><dt>Lines</dt><dd>71</dd></div>
+        <div><dt>Bytes</dt><dd>4162</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -1052,17 +1053,18 @@ node scripts/verify-final-privacy-scan.mjs</code></pre>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>The Wedge</span><small>2 lines</small></summary>
+          <summary><span>The Wedge</span><small>3 lines</small></summary>
           <div class="rendered-section-body">
             <p>Unstuck Coach is not a generic ADHD/productivity folder. It is a whole-person executive-function accessibility coach for the moment when someone has intelligence, obligations, and care, but still cannot reliably start, switch, remember, regulate, recover, or close the loop alone.</p>
 <p>The product is the operating surface: state, friction, one humane concrete move, held context, tiny proof, re-entry trail, and closure. Coding is one proof scenario. The coach is for the whole human: food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, transitions, hyperfocus recovery, and shutdown. Brain dumps and bounded dopamine-menu sparks are explicit protocols inside that surface.</p>
+<p>The competitive upgrade is state-aware context without surveillance theater. When the user supplies language, task pile, calendar, inbox, prior conversation, or repeated-pattern context, Unstuck uses those facts to lower the next move before asking for a state report. It names uncertainty and never turns a messy calendar or inbox into a character judgment.</p>
           </div>
         </details>
 <details class="rendered-section">
           <summary><span>Why It Works</span><small>8 lines</small></summary>
           <div class="rendered-section-body">
             <p>The folder gives the coach a stable job instead of a pile of advice. The first reply must change the next minute, not explain the user's life back to them.</p>
-<ul><li><code>START_HERE.md</code> gives the shortest path into the coach.</li><li><code>PROJECT_INSTRUCTIONS.md</code> carries the paste-ready coach contract.</li><li><code>FIRST_RUN.md</code> shows the expected first exchange.</li><li><code>FIRST_REPLY_SCORECARD.md</code> makes the opening response easy to score.</li><li><code>demo/whole-person-tour.md</code> shows six life surfaces, not one work category.</li><li><code>reference/admin-ops-playbooks.md</code> covers calendar reality, inbox live obligations, reply debt, missed obligations, and scheduling friction without claiming account access.</li><li><code>reference/mode-router.md</code> keeps the original multi-mode assistant insight: ally, strategist, engineer/executor, keeper, and recovery stances.</li></ul>
+<ul><li><code>START_HERE.md</code> gives the shortest path into the coach.</li><li><code>PROJECT_INSTRUCTIONS.md</code> carries the paste-ready coach contract.</li><li><code>FIRST_RUN.md</code> shows the expected first exchange.</li><li><code>FIRST_REPLY_SCORECARD.md</code> makes the opening response easy to score.</li><li><code>demo/whole-person-tour.md</code> shows six life surfaces, not one work category.</li><li><code>reference/admin-ops-playbooks.md</code> covers calendar reality, inbox live obligations, reply debt, missed obligations, and scheduling friction without claiming account access.</li><li><code>reference/mode-router.md</code> keeps the original multi-mode assistant insight: ally, strategist, engineer/executor, keeper, and recovery stances, plus a context lens for state-aware routing.</li></ul>
           </div>
         </details>
 <details class="rendered-section">
@@ -1116,8 +1118,8 @@ node scripts/verify-final-privacy-scan.mjs</code></pre>
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>JUDGE_SCORECARD.md</code></dd></div>
-        <div><dt>Lines</dt><dd>75</dd></div>
-        <div><dt>Bytes</dt><dd>7234</dd></div>
+        <div><dt>Lines</dt><dd>81</dd></div>
+        <div><dt>Bytes</dt><dd>7422</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -1138,7 +1140,7 @@ node scripts/verify-final-privacy-scan.mjs</code></pre>
 <tr><td>Folder methodology</td><td>Files are decorative or redundant</td><td>Files exist but responsibilities blur</td><td>Each file owns one job and supports the Claude Project use case, with ICM fit mapped to staged, inspectable, auditable workflow responsibilities</td><td><code>COMPETITION_RULES_TRACE.md</code>, <code>ICM_TRACE.md</code>, <code>README.md</code>, <code>PROJECT_INSTRUCTIONS.md</code>, <code>rules.md</code>, <code>reference/</code>, <code>scripts/verify-icm-trace.mjs</code></td></tr>
 <tr><td>Coach first, knowledge base second</td><td>Explains ADHD/productivity concepts</td><td>Mixes advice with some coaching</td><td>Names state/friction and gives one next move with a proof check</td><td><code>rules.md</code>, <code>examples.md</code>, <code>FIRST_RUN.md</code>, <code>FIRST_REPLY_SCORECARD.md</code>, <code>demo/before-after.md</code>, <code>demo/transcript-pack.md</code>, <code>demo/whole-person-tour.md</code>, <code>scripts/verify-first-run.mjs</code>, <code>scripts/verify-first-reply-scorecard.mjs</code>, <code>scripts/verify-transcript-pack.mjs</code>, <code>scripts/verify-first-reply-acceptance.mjs</code>, <code>scripts/verify-whole-person-tour.mjs</code></td></tr>
 <tr><td>Cold usability</td><td>Requires author explanation</td><td>Usable after reading several files</td><td>Stranger can start from one root file, paste instructions, test the first reply from the landing launch kit, and score it immediately without narrowing the whole-person product scope</td><td><code>START_HERE.md</code>, <code>FIRST_REPLY_SCORECARD.md</code>, <code>landing/index.html</code>, <code>PROJECT_INSTRUCTIONS.md</code>, <code>docs/judge-walkthrough.md</code>, <code>HANDOFF_CARD.md</code>, <code>scripts/verify-start-here.mjs</code></td></tr>
-<tr><td>Behavior under pressure</td><td>Works only for clean prompts</td><td>Handles some shame/overload cases</td><td>Preserves dignity under shame, inbox/calendar reality, communication threat, overload, failed plans, and hyperfocus crash by shifting stance instead of giving one generic voice</td><td><code>evals/red-face-tests.md</code>, <code>reference/coaching-protocols.md</code>, <code>reference/admin-ops-playbooks.md</code>, <code>reference/mode-router.md</code>, <code>scripts/verify-eval-coverage.mjs</code>, <code>scripts/verify-admin-ops-playbooks.mjs</code>, <code>scripts/verify-mode-router.mjs</code></td></tr>
+<tr><td>Behavior under pressure</td><td>Works only for clean prompts</td><td>Handles some shame/overload cases</td><td>Preserves dignity under shame, inbox/calendar reality, communication threat, overload, failed plans, hyperfocus crash, and supplied-context capacity inference by shifting stance instead of giving one generic voice</td><td><code>evals/red-face-tests.md</code>, <code>reference/coaching-protocols.md</code>, <code>reference/admin-ops-playbooks.md</code>, <code>reference/mode-router.md</code>, <code>scripts/verify-eval-coverage.mjs</code>, <code>scripts/verify-admin-ops-playbooks.mjs</code>, <code>scripts/verify-mode-router.mjs</code></td></tr>
 <tr><td>Research-to-behavior conversion</td><td>Research is decorative</td><td>Research informs some copy</td><td>Research maps to concrete protocols and observable coaching moves, including live-obligation rescue before cleanup</td><td><code>evals/research-to-behavior-checklist.md</code>, <code>reference/source-notes.md</code>, <code>reference/admin-ops-playbooks.md</code>, <code>scripts/verify-eval-coverage.mjs</code>, <code>scripts/verify-admin-ops-playbooks.mjs</code></td></tr>
 <tr><td>Safety and boundaries</td><td>Makes clinical claims or gives unsafe advice</td><td>Mentions boundaries vaguely</td><td>Refuses diagnosis/treatment and routes crisis states appropriately</td><td><code>reference/safety-boundaries.md</code>, <code>HANDOFF_CARD.md</code></td></tr>
 <tr><td>Presentation and proof</td><td>README-only submission</td><td>Has a page or some proof artifacts</td><td>Start-here file, one-page judge brief, product thesis, ICM trace, first-run receipt, first-reply scorecard, judge FAQ, landing page, whole-person operating surface, whole-person judge tour, above-the-brief proof band, calendar/inbox operations band, 60-second cold-run band, copy-ready Claude Project launch kit, runnable console, readable evidence reader, quick source proof, pitch reel, record-ready reel page, transcript pack, admin operations playbooks, receipts, publication checklist, staging helper, clean-stage preflight, repeatable desktop, mobile, and narrow mobile screenshot proof, submission-copy check, submission-surface sync, pitch-reel check, reel-page check, judge-FAQ check, judge-brief check, product-thesis verifier, ICM trace verifier, first-run verifier, first-reply scorecard verifier, start-here verifier, landing-copy verifier, transcript verifier, first-reply verifier, whole-person-tour verifier, admin-ops verifier, bundle verifier, final smoke, and walkthrough make claims inspectable</td><td><code>START_HERE.md</code>, <code>JUDGE_BRIEF.md</code>, <code>PRODUCT_THESIS.md</code>, <code>ICM_TRACE.md</code>, <code>FIRST_RUN.md</code>, <code>FIRST_REPLY_SCORECARD.md</code>, <code>JUDGE_FAQ.md</code>, <code>landing/index.html</code>, <code>landing/reel.html</code>, <code>PITCH_REEL.md</code>, <code>demo/transcript-pack.md</code>, <code>demo/whole-person-tour.md</code>, <code>reference/signal-map.md</code>, <code>reference/admin-ops-playbooks.md</code>, <code>RECEIPTS.md</code>, <code>PUBLICATION_CHECKLIST.md</code>, <code>scripts/stage-public-repo.mjs</code>, <code>scripts/verify-clean-public-stage.mjs</code>, <code>scripts/render-review-screenshots.mjs</code>, <code>scripts/verify-submission-copy.mjs</code>, <code>scripts/verify-submission-surfaces.mjs</code>, <code>scripts/verify-pitch-reel.mjs</code>, <code>scripts/verify-reel-page.mjs</code>, <code>scripts/verify-judge-faq.mjs</code>, <code>scripts/verify-judge-brief.mjs</code>, <code>scripts/verify-product-thesis.mjs</code>, <code>scripts/verify-icm-trace.mjs</code>, <code>scripts/verify-first-run.mjs</code>, <code>scripts/verify-first-reply-scorecard.mjs</code>, <code>scripts/verify-start-here.mjs</code>, <code>scripts/verify-landing-copy.mjs</code>, <code>scripts/verify-transcript-pack.mjs</code>, <code>scripts/verify-first-reply-acceptance.mjs</code>, <code>scripts/verify-whole-person-tour.mjs</code>, <code>scripts/verify-admin-ops-playbooks.mjs</code>, <code>scripts/judge-quick-proof.mjs</code>, <code>scripts/verify-public-bundle.mjs</code>, <code>scripts/final-review-smoke.mjs</code>, <code>WALKTHROUGH.md</code></td></tr></tbody>
@@ -1152,12 +1154,14 @@ node scripts/verify-final-privacy-scan.mjs</code></pre>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Fast Scoring Path</span><small>40 lines</small></summary>
+          <summary><span>Fast Scoring Path</span><small>44 lines</small></summary>
           <div class="rendered-section-body">
             <ol><li>Open <code>START_HERE.md</code>.</li><li>Open <code>JUDGE_BRIEF.md</code>.</li><li>Open <code>FIRST_REPLY_SCORECARD.md</code>.</li><li>Open <code>JUDGE_FAQ.md</code>.</li><li>Open <code>FIRST_RUN.md</code>.</li><li>Open <code>landing/index.html</code> and inspect the calendar/inbox operations band.</li><li>Run the browser console preview with a stuck prompt.</li><li>Paste <code>PROJECT_INSTRUCTIONS.md</code> into a Claude Project.</li><li>Try:</li></ol>
 <pre class="rendered-code" data-language="text"><code>I need a coach to get started on this.</code></pre>
 <ol><li>Try:</li></ol>
 <pre class="rendered-code" data-language="text"><code>My inbox and calendar are a mess and I do not know what is real.</code></pre>
+<ol><li>Try:</li></ol>
+<pre class="rendered-code" data-language="text"><code>I can see my calendar: three back-to-back meetings, one overdue invoice email, and I have been typing in fragments all morning.</code></pre>
 <ol><li>Try:</li></ol>
 <pre class="rendered-code" data-language="text"><code>I need to pay the bill, eat something, and answer the text, but I am frozen.</code></pre>
 <ol><li>Inspect <code>RECEIPTS.md</code> and run:</li></ol>
@@ -1915,8 +1919,8 @@ Return target: the first blank field. Reply with what is visible when the song e
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>evals/red-face-tests.md</code></dd></div>
-        <div><dt>Lines</dt><dd>241</dd></div>
-        <div><dt>Bytes</dt><dd>4782</dd></div>
+        <div><dt>Lines</dt><dd>262</dd></div>
+        <div><dt>Bytes</dt><dd>5504</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -2077,6 +2081,17 @@ Return target: the first blank field. Reply with what is visible when the song e
 <ul><li>Gives a long menu.</li><li>Suggests shopping, browsing, research, or an open-ended reward loop.</li><li>Shames the user for needing stimulation before starting.</li></ul>
           </div>
         </details>
+<details class="rendered-section">
+          <summary><span>Test 16: Supplied Context Capacity Inference</span><small>13 lines</small></summary>
+          <div class="rendered-section-body">
+            <p>User:</p>
+<pre class="rendered-code" data-language="text"><code>I can see my calendar: three back-to-back meetings, one overdue invoice email, and I have been typing in fragments all morning.</code></pre>
+<p>Pass:</p>
+<ul><li>Uses the supplied calendar and inbox facts as accessibility context.</li><li>Names inferred capacity with uncertainty instead of asking for a full state report.</li><li>Makes the next move smaller because context shows low capacity and live pressure.</li><li>Protects the next hard anchor or buffer before adding new work.</li></ul>
+<p>Fail:</p>
+<ul><li>Turns context into a character judgment or diagnosis.</li><li>Asks for a full emotional inventory before helping.</li><li>Ignores the overdue live obligation and treats the calendar as generic productivity data.</li></ul>
+          </div>
+        </details>
   </div>
     </div>
     <footer class="source-actions" aria-label="Document reading controls">
@@ -2140,8 +2155,8 @@ Return target: the first blank field. Reply with what is visible when the song e
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>rules.md</code></dd></div>
-        <div><dt>Lines</dt><dd>538</dd></div>
-        <div><dt>Bytes</dt><dd>17900</dd></div>
+        <div><dt>Lines</dt><dd>560</dd></div>
+        <div><dt>Bytes</dt><dd>19134</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -2188,9 +2203,10 @@ Return target: the first blank field. Reply with what is visible when the song e
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>State First</span><small>13 lines</small></summary>
+          <summary><span>State First</span><small>25 lines</small></summary>
           <div class="rendered-section-body">
             <p>Before cognitive planning, check whether the user is regulated enough to plan.</p>
+<p>Use supplied context before asking the user to self-report state. Language, a task pile, calendar pressure, inbox live obligations, prior conversation, and repeated patterns can all be capacity signals when they are visible or supplied. The goal is not to diagnose the user. The goal is to lower the next move without making them complete an intake ritual.</p>
 <p>Use this traffic-light model:</p>
 <div class="rendered-table-wrap"><table>
     <thead><tr><th>State</th><th>Signs</th><th>Coaching move</th></tr></thead>
@@ -2201,6 +2217,9 @@ Return target: the first blank field. Reply with what is visible when the song e
 <p>If the user sounds Yellow or Red, do not push a full plan. Ask a body-first question:</p>
 <ul><li>&quot;Where do you notice it in your body?&quot;</li><li>&quot;Green, yellow, or red right now?&quot;</li><li>&quot;Before we plan: feet, jaw, chest, stomach. Which one is loudest?&quot;</li><li>&quot;High energy or low energy? Pleasant or unpleasant?&quot;</li></ul>
 <p>Do not start with &quot;How do you feel?&quot; when the user seems dysregulated. Sensation is easier to answer than emotion labeling.</p>
+<p>If capacity is inferable from context, act on the inference and name uncertainty:</p>
+<blockquote>This reads like yellow: lots of live pressure and fragmented language. I might be wrong, so I will keep the next move small.</blockquote>
+<p>Calendar, inbox, and prior-context facts are accessibility context, not hidden character evidence. Use them to protect hard anchors, reduce options, add buffers, and choose one humane move. Do not say or imply that a messy calendar, inbox, or repeated restart proves avoidance, irresponsibility, or a clinical state.</p>
           </div>
         </details>
 <details class="rendered-section">
@@ -2390,10 +2409,11 @@ Proof: [tiny signal]</code></pre>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Calendar Reality Protocol</span><small>10 lines</small></summary>
+          <summary><span>Calendar Reality Protocol</span><small>15 lines</small></summary>
           <div class="rendered-section-body">
             <p>Use when the user has calendar drift, double-booking fear, missed appointments, unrealistic plans, or vague &quot;later&quot; intentions.</p>
 <p>For a longer admin pass, use <code>reference/admin-ops-playbooks.md</code>.</p>
+<p>When the user supplies calendar context, treat it as a legitimate operating surface. The coach may use visible meetings, deadlines, travel, pickup/dropoff, meal, medication, sleep, and recovery needs to infer capacity and pick the next move. Do not ask for a separate traffic-light check unless the calendar facts are not enough to route safely.</p>
 <p>Steps:</p>
 <ol><li>Open the calendar surface.</li><li>Identify hard anchors first: meetings, travel, deadlines, body needs, pickup/dropoff, sleep.</li><li>Add setup, transition, and recovery time.</li><li>Convert &quot;later&quot; into a calendar block, checkpoint, or explicit park.</li></ol>
 <p>Script:</p>
@@ -2601,8 +2621,8 @@ Proof: [tiny signal]</code></pre>
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>PRODUCT_THESIS.md</code></dd></div>
-        <div><dt>Lines</dt><dd>90</dd></div>
-        <div><dt>Bytes</dt><dd>7061</dd></div>
+        <div><dt>Lines</dt><dd>100</dd></div>
+        <div><dt>Bytes</dt><dd>8177</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -2612,20 +2632,22 @@ Proof: [tiny signal]</code></pre>
     <div class="rendered-markdown">
       <div class="rendered-section-list">
     <details class="rendered-section" open>
-          <summary><span>Unstuck Coach Product Thesis</span><small>2 lines</small></summary>
+          <summary><span>Unstuck Coach Product Thesis</span><small>3 lines</small></summary>
           <div class="rendered-section-body">
             <p>Unstuck Coach is designed as a folder, not an app, because the Week 5 object is a coach that can live inside a Claude Project and remain portable to other agent surfaces. The product surface is the context itself: identity, rules, examples, reference protocols, and proof artifacts that make the coach portable, inspectable, and easy to test cold.</p>
 <p>The public cold test is first contact because it is the easiest moment for a judge to evaluate quickly. That does not define the whole product. The full coach covers whole-person executive-function accessibility: start, choose, hold context, sort brain dumps, capture ideas, manage inbox and calendar reality, regulate body state, use bounded activation fuel, transition, recover, and close with a re-entry trail.</p>
+<p>Unstuck should not make the user self-diagnose before help. When the user supplies or connects language, task-pile, calendar, inbox, prior-conversation, or repeated-pattern context, the coach treats those facts as accessibility context. It infers capacity cautiously, names uncertainty, and makes the next move smaller without turning the context into a character judgment.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Design Principles</span><small>9 lines</small></summary>
+          <summary><span>Design Principles</span><small>10 lines</small></summary>
           <div class="rendered-section-body">
             <div class="rendered-table-wrap"><table>
     <thead><tr><th>Principle</th><th>Decision</th><th>Evidence</th></tr></thead>
     <tbody><tr><td>Folder over app</td><td>The coach must be drop-in project knowledge, so the files are the interface across Claude Project, Codex, AI IDEs, and local-model contexts.</td><td><code>identity.md</code>, <code>rules.md</code>, <code>examples.md</code>, <code>reference/</code>, <code>PROJECT_INSTRUCTIONS.md</code>, <code>START_HERE.md</code></td></tr>
 <tr><td>Whole-person EF access</td><td>The coach supports task start, choice, working-memory hold, brain-dump sorting, inbox triage, calendar reality checks, capture, body-state routing, bounded activation fuel, transition, recovery, and closure.</td><td><code>identity.md</code>, <code>rules.md</code>, <code>reference/coaching-protocols.md</code>, <code>reference/admin-ops-playbooks.md</code>, <code>reference/signal-map.md</code></td></tr>
 <tr><td>Mode routing</td><td>The coach shifts between ally support, strategy, execution, memory keeping, and recovery closure without making the user choose a mode.</td><td><code>identity.md</code>, <code>rules.md</code>, <code>reference/mode-router.md</code>, <code>scripts/verify-mode-router.mjs</code></td></tr>
+<tr><td>State-aware context</td><td>The coach uses supplied calendar, inbox, language, prior conversation, and pattern facts before asking for a state report, then names uncertainty and lowers the next move.</td><td><code>PROJECT_INSTRUCTIONS.md</code>, <code>rules.md</code>, <code>reference/mode-router.md</code>, <code>reference/admin-ops-playbooks.md</code>, <code>evals/red-face-tests.md</code></td></tr>
 <tr><td>First contact before productivity</td><td>The first reply should create one concrete move, not explain executive dysfunction.</td><td><code>START_HERE.md</code>, <code>FIRST_RUN.md</code>, <code>demo/transcript-pack.md</code>, <code>scripts/verify-first-run.mjs</code>, <code>scripts/verify-first-reply-acceptance.mjs</code></td></tr>
 <tr><td>Interpretable context</td><td>The method is staged as state, friction, move, hold, check, close so a judge can inspect the loop.</td><td><code>rules.md</code>, <code>reference/coaching-protocols.md</code>, <code>ICM_TRACE.md</code>, <code>landing/index.html</code>, <code>scripts/verify-icm-trace.mjs</code></td></tr>
 <tr><td>Proof before persuasion</td><td>Every public claim points to a file or verifier that can disprove it.</td><td><code>RECEIPTS.md</code>, <code>JUDGE_SCORECARD.md</code>, <code>scripts/verify-public-bundle.mjs</code></td></tr>
@@ -2653,10 +2675,11 @@ Proof: [tiny signal]</code></pre>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>How The Method Maps To Behavior</span><small>8 lines</small></summary>
+          <summary><span>How The Method Maps To Behavior</span><small>14 lines</small></summary>
           <div class="rendered-section-body">
             <p>The coaching loop is intentionally inspectable:</p>
 <ol><li>State: calibrate capacity before assigning action.</li><li>Friction: name the blocker without turning it into identity.</li><li>Move: choose one concrete next action.</li><li>Hold: keep the rest of the list outside working memory.</li><li>Check: ask for proof small enough to produce immediately.</li><li>Close: leave a re-entry breadcrumb when the session ends or energy drops.</li></ol>
+<p>State does not always need to be asked as a question. If the calendar shows back-to-back meetings, an inbox item carries money or relationship consequence, the user is writing in fragments, or prior context shows a repeated failed plan, the coach can infer likely capacity and act conservatively. The rule is explainable humility: &quot;This reads like yellow; I might be wrong, so I will keep the next move small.&quot;</p>
 <p>This is the ICM fit in practical terms: the work becomes staged, editable, auditable context rather than a motivational monologue. <code>ICM_TRACE.md</code> makes that fit explicit by mapping each workflow responsibility to files and proof checks; <code>scripts/verify-icm-trace.mjs</code> keeps the claim tied to evidence. A judge can open the rules, examples, transcript pack, and verifiers to see whether the loop is actually represented.</p>
           </div>
         </details>
@@ -2968,8 +2991,8 @@ node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>evals/research-to-behavior-checklist.md</code></dd></div>
-        <div><dt>Lines</dt><dd>32</dd></div>
-        <div><dt>Bytes</dt><dd>3622</dd></div>
+        <div><dt>Lines</dt><dd>33</dd></div>
+        <div><dt>Bytes</dt><dd>4000</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -2979,7 +3002,7 @@ node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
     <div class="rendered-markdown">
       <div class="rendered-section-list">
     <details class="rendered-section" open>
-          <summary><span>Research-To-Behavior Checklist</span><small>18 lines</small></summary>
+          <summary><span>Research-To-Behavior Checklist</span><small>19 lines</small></summary>
           <div class="rendered-section-body">
             <p>This checklist verifies that the foundational research changed the coach's behavior instead of becoming decorative provenance.</p>
 <div class="rendered-table-wrap"><table>
@@ -2992,6 +3015,7 @@ node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
 <tr><td>Understimulation can block activation</td><td>Dopamine Menu chooses one bounded regulation spark, names the return target, and avoids reward rabbit holes</td><td><code>rules.md</code>, <code>reference/coaching-protocols.md</code>, <code>reference/signal-map.md</code>, <code>evals/red-face-tests.md</code></td></tr>
 <tr><td>Time blindness needs visible anchors</td><td>Time Made Visible uses buffers, hard stops, start times, and checkpoints</td><td><code>rules.md</code>, <code>reference/coaching-protocols.md</code></td></tr>
 <tr><td>Inbox and calendar noise hides live obligations</td><td>Inbox Triage, Calendar Reality, and Admin Operations playbooks rescue hard anchors and live items before cleanup</td><td><code>rules.md</code>, <code>reference/coaching-protocols.md</code>, <code>reference/admin-ops-playbooks.md</code>, <code>evals/red-face-tests.md</code>, <code>demo/transcript-pack.md</code></td></tr>
+<tr><td>State-aware context lowers the self-report tax</td><td>Use supplied calendar, inbox, language, prior conversation, and pattern facts to infer capacity cautiously before asking for a state report; the coach names uncertainty and keeps the move small</td><td><code>rules.md</code>, <code>PROJECT_INSTRUCTIONS.md</code>, <code>reference/mode-router.md</code>, <code>reference/admin-ops-playbooks.md</code>, <code>evals/red-face-tests.md</code></td></tr>
 <tr><td>Novelty can derail focus</td><td>Tangent Firewall offers chase, bookmark, or discard</td><td><code>rules.md</code>, <code>reference/signal-map.md</code>, <code>examples.md</code></td></tr>
 <tr><td>Repeated failed approaches need strategy change</td><td>Three-Attempt Escape stops &quot;try harder&quot; loops</td><td><code>rules.md</code>, <code>reference/coaching-protocols.md</code>, <code>examples.md</code></td></tr>
 <tr><td>Shame worsens executive load</td><td>Return Without Shame, Forgiveness Reset, and Communication Threat Armor protect dignity</td><td><code>rules.md</code>, <code>reference/coaching-protocols.md</code>, <code>evals/red-face-tests.md</code></td></tr>
@@ -3323,8 +3347,8 @@ Proof: [signal].</code></pre>
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>reference/source-notes.md</code></dd></div>
-        <div><dt>Lines</dt><dd>111</dd></div>
-        <div><dt>Bytes</dt><dd>5181</dd></div>
+        <div><dt>Lines</dt><dd>117</dd></div>
+        <div><dt>Bytes</dt><dd>5556</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -3389,9 +3413,10 @@ Proof: [signal].</code></pre>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>State Before Strategy</span><small>1 lines</small></summary>
+          <summary><span>State Before Strategy</span><small>6 lines</small></summary>
           <div class="rendered-section-body">
             <p>If the user is dysregulated, planning usually fails. The coach checks whether the user is green, yellow, or red before asking for cognitive work.</p>
+<p>State can also be inferred from supplied context. Calendar density, hard anchors, inbox live obligations, fragmented language, prior conversation, and repeated failed plans can lower the next move before the coach asks for another state report. The inference must stay humble: name uncertainty, keep the move small, and never turn visible context into a character judgment.</p>
           </div>
         </details>
 <details class="rendered-section">
@@ -3462,8 +3487,8 @@ Proof: [signal].</code></pre>
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>reference/mode-router.md</code></dd></div>
-        <div><dt>Lines</dt><dd>44</dd></div>
-        <div><dt>Bytes</dt><dd>3756</dd></div>
+        <div><dt>Lines</dt><dd>57</dd></div>
+        <div><dt>Bytes</dt><dd>4644</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -3488,14 +3513,20 @@ Proof: [signal].</code></pre>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Routing Rules</span><small>6 lines</small></summary>
+          <summary><span>Routing Rules</span><small>8 lines</small></summary>
           <div class="rendered-section-body">
-            <ol><li>Body state can outrank planning.</li><li>Live obligations can outrank cleanup.</li><li>Shame sorting can outrank reply drafting.</li><li>Capture can outrank categorization.</li><li>Closure can outrank one more task.</li></ol>
+            <ol><li>Body state can outrank planning.</li><li>Live obligations can outrank cleanup.</li><li>Shame sorting can outrank reply drafting.</li><li>Capture can outrank categorization.</li><li>Closure can outrank one more task.</li><li>Use supplied context before asking the user to self-report state.</li><li>Name uncertainty when capacity is inferred.</li></ol>
 <p>If two modes fit, choose the one that removes the most immediate executive load. A good reply can move through modes, but it should not expose a mode menu to the user.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Example Routing</span><small>9 lines</small></summary>
+          <summary><span>Context Lens</span><small>7 lines</small></summary>
+          <div class="rendered-section-body">
+            <p>The coach should read the room from visible surfaces instead of making the user complete a state questionnaire. Calendar density, hard anchors, inbox live obligations, fragmented language, previous conversation, repeated failed plans, and task-pile size can all shape the first move. Treat those facts as accessibility context: useful for reducing load, protecting buffers, and choosing one humane next action. Do not turn them into hidden judgments about character, motivation, or diagnosis.</p>
+          </div>
+        </details>
+<details class="rendered-section">
+          <summary><span>Example Routing</span><small>10 lines</small></summary>
           <div class="rendered-section-body">
             <div class="rendered-table-wrap"><table>
     <thead><tr><th>User signal</th><th>Stance</th><th>Coach response shape</th></tr></thead>
@@ -3505,6 +3536,7 @@ Proof: [signal].</code></pre>
 <tr><td>&quot;I tried the same plan three times and failed every time.&quot;</td><td>Strategist / Choose</td><td>Say the plan failed, not the person, then change the task shape and ask for one proof signal.</td></tr>
 <tr><td>&quot;They said 'we need to talk'&quot;</td><td>Ally / Stabilize -&gt; Strategist / Choose</td><td>Treat the phrase as threat-colored but incomplete; ask for adjacent context and do not draft yet.</td></tr>
 <tr><td>&quot;Meeting in 5 minutes, haven't eaten, inbox overdue.&quot;</td><td>Engineer / Execute -&gt; Ally / Stabilize</td><td>Treat the meeting as the hard anchor; open that surface first and only add body support if within reach.</td></tr>
+<tr><td>&quot;I can see three back-to-back meetings, one overdue invoice email, and I am typing in fragments.&quot;</td><td>Strategist / Choose -&gt; Engineer / Execute</td><td>Infer likely low capacity with uncertainty, protect the next hard anchor, and choose one invoice or buffer move.</td></tr>
 <tr><td>&quot;I cannot stop even though I am fried.&quot;</td><td>Recovery / Close</td><td>Stop extraction, leave a re-entry breadcrumb, and protect recovery.</td></tr></tbody>
   </table></div>
           </div>
@@ -3570,8 +3602,8 @@ Proof: [signal].</code></pre>
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>PROJECT_INSTRUCTIONS.md</code></dd></div>
-        <div><dt>Lines</dt><dd>130</dd></div>
-        <div><dt>Bytes</dt><dd>9986</dd></div>
+        <div><dt>Lines</dt><dd>136</dd></div>
+        <div><dt>Bytes</dt><dd>10373</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -3581,7 +3613,7 @@ Proof: [signal].</code></pre>
     <div class="rendered-markdown">
       <div class="rendered-section-list">
     <details class="rendered-section" open>
-          <summary><span>Claude Project Instructions</span><small>55 lines</small></summary>
+          <summary><span>Claude Project Instructions</span><small>60 lines</small></summary>
           <div class="rendered-section-body">
             <p>Paste this into the Claude Project instructions after adding the full Unstuck Coach folder as project knowledge.</p>
 <p>For Codex, Antigravity-style AI IDE projects, or local-model runners, use the same text as the system/project instruction or first message after loading the folder. If the runner cannot ingest a whole folder, load <code>PROJECT_INSTRUCTIONS.md</code>, <code>identity.md</code>, <code>rules.md</code>, <code>examples.md</code>, and the core files in <code>reference/</code> first.</p>
@@ -3615,6 +3647,12 @@ Use the coaching loop:
 State -&gt; Friction -&gt; Move -&gt; Hold -&gt; Check -&gt; Close.
 
 Always reduce working-memory load. Hold the rest of the list for the user instead of handing it back as a menu.
+
+State can come from context. When the user supplies or connects calendar,
+inbox, previous-conversation, language, or task-pile context, use those visible
+facts as accessibility context before asking for a state report. Name uncertainty
+when capacity is inferred. Calendar and inbox facts may drive coaching moves,
+but they must not become hidden character judgments or clinical claims.
 
 When the user cannot start, assume the first blocker may be a giant task pile, not ignorance. Lower the start line by taking the choosing burden off the user: &quot;Send the messy task pile as-is. Fragments are fine.&quot; If that is too much, ask for any three items. Avoid visual-contact phrasing in first-contact coaching unless the user has already named a single concrete artifact.
 
@@ -4109,7 +4147,7 @@ landing/evidence.html#first-reply-scorecard</code></pre>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>SUBMISSION.md</code></dd></div>
         <div><dt>Lines</dt><dd>28</dd></div>
-        <div><dt>Bytes</dt><dd>2251</dd></div>
+        <div><dt>Bytes</dt><dd>2309</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -4124,9 +4162,9 @@ landing/evidence.html#first-reply-scorecard</code></pre>
             <p>GitHub link:</p>
 <pre class="rendered-code" data-language="text"><code>https://github.com/simongonzalezdc/unstuck-coach-week5</code></pre>
 <p>Skool comment draft:</p>
-<pre class="rendered-code" data-language="text"><code>Unstuck Coach is a folder-based whole-person executive-function accessibility coach for people whose bottleneck is not intelligence or effort, but the moment life asks them to start, switch, remember, regulate, capture, recover, or close loops without shame. It is not an ADHD knowledge base or productivity extractor: it turns food, inboxes, calendars, bills, messages, re-entry, overload, and body-state needs into one humane concrete move with held context and tiny proof. The folder includes paste-ready Claude Project instructions, examples, boundaries, calendar and inbox playbooks, a whole-person tour, transcripts, stress tests, readable evidence, and source proof so the coach can be cold-tested from one messy stuck point.</code></pre>
+<pre class="rendered-code" data-language="text"><code>Unstuck Coach is a folder-based whole-person executive-function accessibility coach for people whose bottleneck is not intelligence or effort, but the moment life asks them to start, switch, remember, regulate, capture, recover, or close loops without shame. It is not an ADHD knowledge base or productivity extractor: it uses supplied language, inboxes, calendars, task piles, and prior context as state-aware accessibility context, then turns the real life loop into one humane concrete move with held context and tiny proof. The folder includes paste-ready Claude Project instructions, boundaries, calendar and inbox playbooks, a whole-person tour, stress tests, readable evidence, and source proof so the coach can be cold-tested from one messy stuck point.</code></pre>
 <p>Landing-page version:</p>
-<pre class="rendered-code" data-language="text"><code>Unstuck Coach is a folder-based whole-person executive-function accessibility coach for people whose bottleneck is not intelligence or effort, but the moment life asks them to start, switch, remember, regulate, capture, recover, or close loops without shame. It is not an ADHD knowledge base or productivity extractor: it turns food, inboxes, calendars, bills, messages, re-entry, overload, and body-state needs into one humane concrete move with held context and tiny proof. The folder includes paste-ready Claude Project instructions, examples, boundaries, calendar and inbox playbooks, a whole-person tour, transcripts, stress tests, readable evidence, and source proof so the coach can be cold-tested from one messy stuck point.</code></pre>
+<pre class="rendered-code" data-language="text"><code>Unstuck Coach is a folder-based whole-person executive-function accessibility coach for people whose bottleneck is not intelligence or effort, but the moment life asks them to start, switch, remember, regulate, capture, recover, or close loops without shame. It is not an ADHD knowledge base or productivity extractor: it uses supplied language, inboxes, calendars, task piles, and prior context as state-aware accessibility context, then turns the real life loop into one humane concrete move with held context and tiny proof. The folder includes paste-ready Claude Project instructions, boundaries, calendar and inbox playbooks, a whole-person tour, stress tests, readable evidence, and source proof so the coach can be cold-tested from one messy stuck point.</code></pre>
 <p>Optional shorter version:</p>
 <pre class="rendered-code" data-language="text"><code>Unstuck Coach is an executive-function accessibility coach for whole people whose lives stall at the executive-function layer. It helps with task initiation, home/admin loops, inbox and calendar management, choosing one next action, holding context, idea capture, communication-threat spirals, transitions, hyperfocus recovery, and shame-free re-entry after avoidance.
 
@@ -4180,8 +4218,8 @@ The key move is coaching over information: state check first, one concrete next 
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>reference/admin-ops-playbooks.md</code></dd></div>
-        <div><dt>Lines</dt><dd>179</dd></div>
-        <div><dt>Bytes</dt><dd>6023</dd></div>
+        <div><dt>Lines</dt><dd>181</dd></div>
+        <div><dt>Bytes</dt><dd>6318</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -4198,9 +4236,10 @@ The key move is coaching over information: state check first, one concrete next 
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Operating Boundary</span><small>14 lines</small></summary>
+          <summary><span>Operating Boundary</span><small>15 lines</small></summary>
           <div class="rendered-section-body">
-            <p>Unstuck may help the user:</p>
+            <p>Calendar, inbox, and prior-context facts are accessibility context when the user supplies or connects those surfaces. Use visible context to reduce load; do not turn it into hidden character judgments. If capacity is inferred rather than explicit, name the uncertainty and keep the move small.</p>
+<p>Unstuck may help the user:</p>
 <ul><li>Open one account surface when needed.</li><li>Choose one hard calendar anchor.</li><li>Find one live inbox item.</li><li>Draft one reply or scheduling block.</li><li>Decide whether an item is reply, schedule, delegate, park, or archive.</li><li>Leave a re-entry breadcrumb.</li></ul>
 <p>Unstuck must not claim to:</p>
 <ul><li>Read private messages directly.</li><li>Send messages.</li><li>Move calendar events.</li><li>Process the whole inbox.</li><li>Rebuild the whole week.</li><li>Treat cleanup as proof.</li></ul>
@@ -4398,8 +4437,8 @@ Copy one line first: the deadline line if it is visible, otherwise the contact l
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>RECEIPTS.md</code></dd></div>
-        <div><dt>Lines</dt><dd>77</dd></div>
-        <div><dt>Bytes</dt><dd>13396</dd></div>
+        <div><dt>Lines</dt><dd>78</dd></div>
+        <div><dt>Bytes</dt><dd>13859</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -4409,7 +4448,7 @@ Copy one line first: the deadline line if it is visible, otherwise the contact l
     <div class="rendered-markdown">
       <div class="rendered-section-list">
     <details class="rendered-section" open>
-          <summary><span>Unstuck Coach Receipts</span><small>39 lines</small></summary>
+          <summary><span>Unstuck Coach Receipts</span><small>40 lines</small></summary>
           <div class="rendered-section-body">
             <p>Use this as the evidence map for the entry. Each claim should point to a file a judge can inspect directly.</p>
 <div class="rendered-table-wrap"><table>
@@ -4424,6 +4463,7 @@ Copy one line first: the deadline line if it is visible, otherwise the contact l
 <tr><td>The first run is a receipt</td><td><code>FIRST_RUN.md</code>, <code>scripts/verify-first-run.mjs</code></td><td>The judge can inspect the exact cold-start prompt, expected first reply, task-pile proof loop, and immediate fail patterns.</td></tr>
 <tr><td>The domain is specific</td><td><code>identity.md</code>, <code>WRITEUP.md</code></td><td>The athlete is a whole person with executive-function access friction at concrete start, switch, memory, body-state, re-entry, and closure thresholds, not a generic self-improvement audience.</td></tr>
 <tr><td>The operating surface is inspectable</td><td><code>reference/signal-map.md</code>, <code>landing/index.html</code>, <code>PROJECT_INSTRUCTIONS.md</code></td><td>The folder maps food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, and closure/recovery to first coaching moves and proof checks.</td></tr>
+<tr><td>It is state-aware without hidden judgment</td><td><code>PROJECT_INSTRUCTIONS.md</code>, <code>rules.md</code>, <code>reference/mode-router.md</code>, <code>reference/admin-ops-playbooks.md</code>, <code>evals/red-face-tests.md</code>, <code>scripts/verify-mode-router.mjs</code>, <code>scripts/verify-eval-coverage.mjs</code></td><td>Supplied calendar, inbox, task-pile, language, prior-conversation, and repeated-pattern facts can infer capacity, but the coach names uncertainty, lowers the next move, and avoids character judgments or diagnosis.</td></tr>
 <tr><td>The whole-person tour is testable</td><td><code>demo/whole-person-tour.md</code>, <code>scripts/verify-whole-person-tour.mjs</code></td><td>A judge can run six cold prompts across food/body, calendar/inbox, messages/shame, home/admin, capture/re-entry, and closure/recovery, with proof checks and immediate-fail signals.</td></tr>
 <tr><td>The coach actually coaches</td><td><code>rules.md</code>, <code>examples.md</code>, <code>demo/before-after.md</code>, <code>demo/transcript-pack.md</code>, <code>scripts/verify-transcript-pack.mjs</code>, <code>scripts/verify-first-reply-acceptance.mjs</code></td><td>Responses start with state/friction/one move rather than articles or tactic lists, and the transcript pack plus first-reply verifier check all nine cold-test examples.</td></tr>
 <tr><td>The protocol is runnable before opening Claude</td><td><code>landing/index.html</code>, <code>landing/app.js</code></td><td>The console translates a messy stuck point into state, friction, one move, and a proof check.</td></tr>
@@ -4926,7 +4966,7 @@ Copy one line first: the deadline line if it is visible, otherwise the contact l
     <h3>verify-admin-ops-playbooks.mjs</h3>
     <p>Checks the calendar and inbox operations playbooks.</p>
     <code>scripts/verify-admin-ops-playbooks.mjs</code>
-    <small>87 lines / 2678 bytes</small>
+    <small>92 lines / 3075 bytes</small>
   </article>
 <article id="verify-whole-person-tour" class="evidence-card verifier-card">
     <h3>verify-whole-person-tour.mjs</h3>
