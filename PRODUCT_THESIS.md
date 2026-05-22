@@ -11,7 +11,7 @@ The public cold test is first contact because it is the easiest moment for a jud
 | Folder over app | The coach must be drop-in project knowledge, so the files are the interface across Claude Project, Codex, AI IDEs, and local-model contexts. | `identity.md`, `rules.md`, `examples.md`, `reference/`, `PROJECT_INSTRUCTIONS.md`, `START_HERE.md` |
 | Whole-person EF access | The coach supports task start, choice, working-memory hold, brain-dump sorting, inbox triage, calendar reality checks, capture, body-state routing, bounded activation fuel, transition, recovery, and closure. | `identity.md`, `rules.md`, `reference/coaching-protocols.md`, `reference/admin-ops-playbooks.md`, `reference/signal-map.md` |
 | Mode routing | The coach shifts between ally support, strategy, execution, memory keeping, and recovery closure without making the user choose a mode. | `identity.md`, `rules.md`, `reference/mode-router.md`, `scripts/verify-mode-router.mjs` |
-| First contact before productivity | The first reply should create one visible move, not explain executive dysfunction. | `START_HERE.md`, `FIRST_RUN.md`, `demo/transcript-pack.md`, `scripts/verify-first-run.mjs`, `scripts/verify-first-reply-acceptance.mjs` |
+| First contact before productivity | The first reply should create one concrete move, not explain executive dysfunction. | `START_HERE.md`, `FIRST_RUN.md`, `demo/transcript-pack.md`, `scripts/verify-first-run.mjs`, `scripts/verify-first-reply-acceptance.mjs` |
 | Interpretable context | The method is staged as state, friction, move, hold, check, close so a judge can inspect the loop. | `rules.md`, `reference/coaching-protocols.md`, `ICM_TRACE.md`, `landing/index.html`, `scripts/verify-icm-trace.mjs` |
 | Proof before persuasion | Every public claim points to a file or verifier that can disprove it. | `RECEIPTS.md`, `JUDGE_SCORECARD.md`, `scripts/verify-public-bundle.mjs` |
 | Boundaries are product quality | The coach avoids therapy, diagnosis, medication guidance, and crisis handling. | `reference/safety-boundaries.md`, `HANDOFF_CARD.md` |
@@ -56,7 +56,7 @@ Unstuck Coach should pass this cold test:
 I need a coach to get started on this.
 ```
 
-A weak coach answers with encouragement, an article, or a menu. Unstuck should name the friction without blame, choose one visible move, hold the rest, and ask for tiny proof.
+A weak coach answers with encouragement, an article, or a menu. Unstuck should name the friction without blame, choose one concrete move, hold the rest, and ask for tiny proof.
 
 ## How The Method Maps To Behavior
 
@@ -64,7 +64,7 @@ The coaching loop is intentionally inspectable:
 
 1. State: calibrate capacity before assigning action.
 2. Friction: name the blocker without turning it into identity.
-3. Move: choose one visible next action.
+3. Move: choose one concrete next action.
 4. Hold: keep the rest of the list outside working memory.
 5. Check: ask for proof small enough to produce immediately.
 6. Close: leave a re-entry breadcrumb when the session ends or energy drops.

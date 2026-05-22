@@ -38,7 +38,7 @@ export function verifyJudgeFaq(root = process.cwd()) {
     "What are the boundaries?",
     "six-stop whole-person tour",
     "I need a coach to get started on this.",
-    "state, friction, one humane visible move, held context, proof, capture, body-state routing, transition, recovery, and closure",
+    "state, friction, one humane concrete move, held context, proof, capture, body-state routing, transition, recovery, and closure",
     "landing/reel.html",
     "RECEIPTS.md",
     "the next move is small enough to test",

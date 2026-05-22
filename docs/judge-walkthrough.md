@@ -96,11 +96,11 @@ Expected behavior:
 
 - Treats this as a stuck-loop moment, not a motivation problem.
 - Avoids a plan essay.
-- Chooses one visible surface and asks for proof that something is open.
+- Accepts the messy task pile as-is and promises one returned next move.
 
 First reply acceptance test:
 
-- Pass: names friction, gives one visible move, asks for tiny proof or one state signal.
+- Pass: names friction, gives one concrete move, asks for tiny proof or one state signal.
 - Fail: article, long menu, moralizing, or vague continuation.
 
 Then try:
@@ -113,7 +113,7 @@ Expected behavior:
 
 - Holds the loops instead of handing them back.
 - Recognizes the body-state need.
-- Gives one humane visible move and asks for tiny proof.
+- Gives one humane concrete move and asks for tiny proof.
 
 Try:
 
@@ -350,7 +350,7 @@ node scripts/verify-whole-person-tour.mjs
 node scripts/judge-quick-proof.mjs
 ```
 
-It should classify activation friction, a getting-started coach request, communication threat, working-memory overload, idea capture, repeated failed plans, body-first recovery, inbox/calendar reality, and calibration fallback. It should also report 13 red-face tests, at least 12 research-to-behavior rows, 5 admin operations playbooks, 6 whole-person tour stops, and a passing judge quick proof summary that does not require the final public GitHub URL.
+It should classify task-start friction, a getting-started coach request, communication threat, working-memory overload, idea capture, repeated failed plans, body-first recovery, inbox/calendar reality, and calibration fallback. It should also report 13 red-face tests, at least 12 research-to-behavior rows, 5 admin operations playbooks, 6 whole-person tour stops, and a passing judge quick proof summary that does not require the final public GitHub URL.
 
 For the transcript-pack proof, run:
 
@@ -366,7 +366,7 @@ For the first-reply acceptance proof, run:
 node scripts/verify-first-reply-acceptance.mjs
 ```
 
-It should check all nine transcript first replies for friction naming, one visible move, tiny proof or state signal, and generic-advice failure patterns.
+It should check all nine transcript first replies for friction naming, one concrete move, tiny proof or state signal, and generic-advice failure patterns.
 
 To verify the proof layer without publishing, run:
 

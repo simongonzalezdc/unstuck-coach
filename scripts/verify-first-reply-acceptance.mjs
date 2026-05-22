@@ -3,8 +3,8 @@
 import { pathToFileURL } from "node:url";
 import { verifyTranscriptPack } from "./verify-transcript-pack.mjs";
 
-const actionPattern = /\b(reply|tell me|copy|quote|mark|pick|choose|open|write|save|park|close|eat|touch)\b/i;
-const proofPattern = /\b(proof|reply|tell me|what is open|surface|fed|quoted?|sentence|breadcrumb|one label|one item|one loop|closest blocker|say yellow|current next action)\b/i;
+const actionPattern = /\b(reply|tell me|send|paste|type|dump|copy|quote|mark|pick|choose|open|write|save|park|close|eat|touch)\b/i;
+const proofPattern = /\b(proof|reply|tell me|messy task pile|raw pile|any three items|three items|fed|quoted?|sentence|breadcrumb|one label|one item|one loop|closest blocker|say yellow|current next action)\b/i;
 
 const genericAdvicePatterns = [
   /\btry breaking (?:it|the task) into smaller pieces\b/i,
@@ -20,7 +20,12 @@ const genericAdvicePatterns = [
 ];
 
 const frictionSignals = [
-  "activation friction",
+  "make this clear",
+  "messy task pile",
+  "sort it outside your head",
+  "hold the rest",
+  "stuck at the start",
+  "not failing",
   "getting one move unstuck",
   "not processing your worth",
   "holding the three loops",
@@ -34,6 +39,17 @@ const frictionSignals = [
   "system overload",
   "I will sort it outside your head",
   "activation fuel",
+];
+
+const unclearFirstContactPatterns = [
+  /\bactivation friction\b/i,
+  /\bvisible surface\b/i,
+  /\bwhat is open\b/i,
+  /\bwhat can you see\b/i,
+  /\bput one thing where you can see it\b/i,
+  /\bname the thing\b/i,
+  /\bthing you can see\b/i,
+  /\bopen, touched, or visible\b/i,
 ];
 
 function wordCount(text) {
@@ -64,7 +80,7 @@ export function verifyFirstReplyAcceptance(root = process.cwd()) {
     }
 
     if (!actionPattern.test(normalizedReply)) {
-      caseFailures.push("does not give a visible next move");
+      caseFailures.push("does not give one concrete next move");
     }
 
     if (!proofPattern.test(normalizedReply)) {
@@ -76,6 +92,15 @@ export function verifyFirstReplyAcceptance(root = process.cwd()) {
       .map((pattern) => pattern.source);
     if (matchedGenericAdvice.length > 0) {
       caseFailures.push(`contains generic advice pattern(s): ${matchedGenericAdvice.join(", ")}`);
+    }
+
+    if (transcriptCase.title === "Getting Started") {
+      const matchedUnclearFirstContact = unclearFirstContactPatterns
+        .filter((pattern) => pattern.test(normalizedReply))
+        .map((pattern) => pattern.source);
+      if (matchedUnclearFirstContact.length > 0) {
+        caseFailures.push(`contains unclear first-contact wording: ${matchedUnclearFirstContact.join(", ")}`);
+      }
     }
 
     const words = wordCount(normalizedReply);
@@ -97,7 +122,7 @@ export function verifyFirstReplyAcceptance(root = process.cwd()) {
       wordCount: words,
       sentenceCount,
       hasFrictionSignal: includesAny(normalizedReply, frictionSignals),
-      hasVisibleMove: actionPattern.test(normalizedReply),
+      hasConcreteMove: actionPattern.test(normalizedReply),
       hasTinyProof: proofPattern.test(normalizedReply),
       genericAdviceMatches: matchedGenericAdvice.length,
       failures: caseFailures,

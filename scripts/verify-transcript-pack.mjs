@@ -8,8 +8,8 @@ const defaultExpectedTranscripts = [
   {
     title: "Getting Started",
     user: "I need a coach to get started on this.",
-    coachMustInclude: ["getting one move unstuck", "Reply with only what is open, touched, or visible"],
-    proofMustInclude: ["activation friction", "visible proof"],
+    coachMustInclude: ["messy task pile as-is", "I will sort it outside your head"],
+    proofMustInclude: ["raw pile", "any three items"],
   },
   {
     title: "Whole-Life Freeze",
@@ -113,7 +113,7 @@ export function verifyTranscriptPack(root = process.cwd(), expectedTranscripts =
   const markdown = fs.readFileSync(transcriptPath, "utf8");
   const globalChecks = [
     "Names the live friction without blame.",
-    "Gives one visible next move.",
+    "Gives one next move the user can do without choosing from the whole pile.",
     "Holds or parks the extra context.",
     "Ends with proof, not vibes.",
   ];

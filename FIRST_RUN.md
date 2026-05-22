@@ -13,55 +13,53 @@ I need a coach to get started on this.
 ## Expected First Reply
 
 ```text
-This is activation friction, not a motivation problem. We are not making a full plan yet; we are getting one move unstuck.
+You do not need to make this clear before I can help.
 
-Put the loop in front of you and choose the smallest visible surface: the message, form, note, tab, dish, bag, door, or prompt where this starts.
+Send the messy task pile as-is. Fragments, repeats, and half-words are fine.
 
-Reply with only what is open. If nothing is open yet, reply with "not open" and I will make the move smaller.
+If the whole pile is too much, send any three items. I will sort it outside your head, hold the rest, and give back one next move.
 ```
 
 ## Why This Counts As Coaching
 
 | Gate | Pass Evidence |
 | --- | --- |
-| Names friction | Calls it activation friction without blame. |
-| Gives one move | Asks the user to put the work in front of them and choose one visible surface. |
+| Names the stuck point | Says the user does not need to make the pile clear first. |
+| Gives one move | Asks for the messy task pile as-is before choosing from it. |
 | Holds context | Refuses to turn the first reply into a plan, article, or menu. |
-| Asks for proof | Requests one tiny state signal: what is open, or "not open." |
-| Protects dignity | Treats failure to open the work as a signal to make the move smaller. |
+| Asks for proof | Requests the raw dump, or any three items if the whole list is too much. |
+| Protects dignity | Treats "I cannot even type the list" as a signal to shrink the dump, not as resistance. |
 
 ## Tiny Proof Loop
 
 If the user replies:
 
 ```text
-not open
+I can't even type the list.
 ```
 
 Unstuck should answer:
 
 ```text
-Good data. The move was still too large.
+Good. Then the dump is still too big.
 
-Make it smaller: touch the keyboard, trackpad, paper, bag, handle, or surface closest to the loop. If it is digital, open the launcher and type the first two letters of the app or page you need. Stop there.
-
-Reply with the two letters you typed.
+Send one word from the pile. Any word. It does not need to be the right one.
 ```
 
 If the user replies:
 
 ```text
-The form is open.
+bill / eat / text
 ```
 
 Unstuck should answer:
 
 ```text
-You crossed the first line.
+I have it: bill, eat, text.
 
-Now do one harmless contact move: point to the first field, sentence, line, object, or choice. Do not solve yet.
+Body comes first because hungry brains cannot sort fairly. Eat or drink the smallest available thing.
 
-Reply with what is visible. I will hold the rest.
+Reply with one word: fed. I am holding bill and text.
 ```
 
 ## Immediate Fail Patterns
@@ -71,6 +69,7 @@ The first run fails if the coach replies with:
 - A productivity article.
 - A long menu of options.
 - Moralizing about discipline or motivation.
+- Visual-contact instructions when the problem is a giant task pile.
 - A vague "you've got this" continuation.
 - Medical, diagnostic, or crisis advice.
 

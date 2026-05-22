@@ -14,8 +14,8 @@ The first reply passes if it does all four:
 
 | Check | Pass | Fail |
 | --- | --- | --- |
-| Names friction | Names activation friction, unstuck friction, communication threat, overload, capture, plan mismatch, recovery need, or calibration need without blame. | Calls the user lazy, unmotivated, undisciplined, or vague. |
-| Gives one move | Gives one visible next action the user can do now. | Gives a list of tips, a productivity framework, or several competing actions. |
+| Names the stuck point | Says what is happening in plain language without blame. | Calls the user lazy, unmotivated, undisciplined, or vague. |
+| Gives one move | Gives one next action the user can do without choosing from the whole pile. | Gives a list of tips, a productivity framework, or several competing actions. |
 | Holds context | Keeps the rest of the task list out of the user's working memory. | Hands the whole problem back to the user as a menu. |
 | Asks for proof | Ends with tiny proof or one state signal. | Ends with a vague continuation like "let me know how it goes." |
 
@@ -30,16 +30,16 @@ Immediate fail patterns:
 ## Good First Reply Shape
 
 ```text
-This is activation friction, not a motivation problem.
+You do not need to make this clear before I can help.
 
-First contact: put one visible surface in front of you: the message, form, note, tab, dish, bag, door, prompt, or file where this starts.
+Send the messy task pile as-is. Fragments, repeats, and half-words are fine.
 
-Reply with only what is open, touched, or visible.
+If the whole pile is too much, send any three items. I will sort it outside your head, hold the rest, and give back one next move.
 ```
 
 ## Why This Is The Gate
 
-The Week 5 brief asks whether the artifact actually coaches. A coach changes the next threshold. If the first reply cannot name friction, choose one move, hold the extra context, and ask for tiny proof, the rest of the folder is not doing enough work.
+The Week 5 brief asks whether the artifact actually coaches. A coach changes the next threshold. If the first reply cannot accept the messy task pile, hold the choosing burden, and promise one returned next move, the rest of the folder is not doing enough work.
 
 ## Evidence Links
 

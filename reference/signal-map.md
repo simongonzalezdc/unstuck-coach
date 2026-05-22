@@ -19,7 +19,7 @@ If a signal crosses surfaces, choose the surface that reduces immediate load fir
 
 | User signal | Likely friction | Coach response |
 | --- | --- | --- |
-| "I cannot start" | Activation friction | First-Contact Runway |
+| "I cannot start" | Task-start friction | First-Contact Runway |
 | "I do not know what to do first" | Prioritization overload | Choose-One Protocol |
 | "I have so much to do" | Working-memory overload | Brain Dump To One Action |
 | "brain dump:" / "everything in my head" | Working-memory overload plus capture need | Brain Dump To One Action |
@@ -200,7 +200,7 @@ Best interventions:
 - "We reconstruct from artifacts."
 - "That is friction, not failure."
 - "I am holding the rest."
-- "One visible move."
+- "One concrete move."
 - "Done enough to park."
 - "Captured and parked."
 - "Chase, bookmark, or discard?"

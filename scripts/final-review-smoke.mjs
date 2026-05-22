@@ -7,10 +7,17 @@ import { pathToFileURL } from "node:url";
 
 const args = new Set(process.argv.slice(2));
 const expectReady = args.has("--expect-ready");
-const expectBlocked = args.has("--expect-blocked") || !expectReady;
+const expectPrivateReady = args.has("--expect-private-ready");
+const expectBlocked = args.has("--expect-blocked") || (!expectReady && !expectPrivateReady);
 const skipBuild = args.has("--skip-build");
 const verbose = args.has("--verbose");
-const allowedArgs = new Set(["--expect-ready", "--expect-blocked", "--skip-build", "--verbose"]);
+const allowedArgs = new Set([
+  "--expect-ready",
+  "--expect-private-ready",
+  "--expect-blocked",
+  "--skip-build",
+  "--verbose",
+]);
 const root = process.cwd();
 
 for (const arg of args) {
@@ -20,7 +27,9 @@ for (const arg of args) {
   }
 }
 
-if (expectReady && args.has("--expect-blocked")) {
+const expectedStateCount = [expectReady, expectPrivateReady, args.has("--expect-blocked")].filter(Boolean).length;
+
+if (expectedStateCount > 1) {
   console.error("Choose only one expected publication state.");
   process.exit(1);
 }
@@ -126,7 +135,7 @@ export function finalReviewSmoke() {
   const publicationSummary = parseJson(publication.stdout, "Publication gate");
   ran.push("scripts/verify-publication-ready.mjs");
 
-  if (expectReady) {
+  if (expectReady || expectPrivateReady) {
     if (publication.status !== 0 || publicationSummary.status !== "ready") {
       failures.push("Expected publication gate to be ready after final public link insertion.");
     } else {
@@ -137,8 +146,15 @@ export function finalReviewSmoke() {
       const githubPublicUrlSummary = parseJson(githubPublicUrl.stdout, "GitHub public URL gate");
       ran.push("scripts/verify-github-public-url.mjs");
 
-      if (githubPublicUrl.status !== 0 || githubPublicUrlSummary.status !== "pass") {
+      if (expectReady && (githubPublicUrl.status !== 0 || githubPublicUrlSummary.status !== "pass")) {
         failures.push("Expected final GitHub URL to be publicly visible before publication.");
+      } else if (
+        expectPrivateReady &&
+        (githubPublicUrl.status === 0 ||
+          githubPublicUrlSummary.status !== "blocked" ||
+          githubPublicUrlSummary.isPublic !== false)
+      ) {
+        failures.push("Expected final GitHub URL to remain private until the owner makes it public.");
       }
     }
   }
@@ -162,7 +178,7 @@ export function finalReviewSmoke() {
 
   return {
     status: failures.length === 0 ? "pass" : "fail",
-    expectedPublicationState: expectReady ? "ready" : "blocked",
+    expectedPublicationState: expectReady ? "ready" : expectPrivateReady ? "private-ready" : "blocked",
     skippedBuild: skipBuild,
     cleanedOutputResidueBefore,
     cleanedOutputResidueAfterBuild,

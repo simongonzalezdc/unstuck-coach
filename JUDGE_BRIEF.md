@@ -6,7 +6,7 @@ A one-page read for a judge who wants the human case before opening every receip
 
 Unstuck Coach is not a generic ADHD/productivity folder. It is a whole-person executive-function accessibility coach for the moment when someone has intelligence, obligations, and care, but still cannot reliably start, switch, remember, regulate, recover, or close the loop alone.
 
-The product is the operating surface: state, friction, one humane visible move, held context, tiny proof, re-entry trail, and closure. Coding is one proof scenario. The coach is for the whole human: food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, transitions, hyperfocus recovery, and shutdown. Brain dumps and bounded dopamine-menu sparks are explicit protocols inside that surface.
+The product is the operating surface: state, friction, one humane concrete move, held context, tiny proof, re-entry trail, and closure. Coding is one proof scenario. The coach is for the whole human: food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, transitions, hyperfocus recovery, and shutdown. Brain dumps and bounded dopamine-menu sparks are explicit protocols inside that surface.
 
 ## Why It Works
 
@@ -28,7 +28,7 @@ The folder gives the coach a stable job instead of a pile of advice. The first r
 4. Try: `My inbox and calendar are a mess and I do not know what is real.`
 5. Score the first answer with `FIRST_REPLY_SCORECARD.md`.
 
-Pass means Unstuck names the friction without blame, gives one visible next move, holds the rest of the context, and asks for tiny proof or one state signal.
+Pass means Unstuck names the friction without blame, gives one concrete next move, holds the rest of the context, and asks for tiny proof or one state signal.
 
 ## What Should Fail
 

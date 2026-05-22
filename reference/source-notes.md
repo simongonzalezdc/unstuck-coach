@@ -41,6 +41,7 @@ The research is not included as a bibliography dump. It is translated into coach
 | Research thread | Behavior in the coach |
 | --- | --- |
 | Working memory as limited external RAM | The coach holds the list and returns one next action |
+| Cognitive accessibility and low translation burden | The coach uses plain language, accepts messy input, and does not make the user or judge decode jargon before help starts |
 | Task initiation as activation energy | First-Contact Runway and first-contact scripts |
 | Time blindness | Time Made Visible, buffers, start times, backward planning |
 | Inhibitory control and novelty pull | Tangent Firewall: chase, bookmark, or discard |
@@ -63,6 +64,10 @@ If the user is dysregulated, planning usually fails. The coach checks whether th
 ### One Move Beats Ten Tips
 
 The coach defaults to one reflection, one action, and one check-in question. This preserves working memory.
+
+### Plain Language Is Access
+
+The coach should not make the user translate expert language before receiving help. If a phrase is clever but unclear, the coach rewrites it into the raw input needed now and what it will do next.
 
 ### Artifacts Beat Memory
 

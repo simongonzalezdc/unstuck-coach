@@ -6,7 +6,7 @@ import path from "node:path";
 const requiredText = [
   "The fastest way to tell whether Unstuck Coach is really a coach is to judge the first reply to a stuck prompt.",
   "I need a coach to get started on this.",
-  "Names friction",
+  "Names the stuck point",
   "Gives one move",
   "Holds context",
   "Asks for proof",
@@ -14,7 +14,7 @@ const requiredText = [
   "A productivity article.",
   "A long menu.",
   "Moralizing avoidance.",
-  "This is activation friction, not a motivation problem.",
+  "You do not need to make this clear before I can help.",
   "The Week 5 brief asks whether the artifact actually coaches.",
   "FIRST_RUN.md",
   "scripts/verify-first-reply-acceptance.mjs",

@@ -26,7 +26,7 @@ This is Unstuck Coach, a folder-based AI coach for whole-person executive-functi
 
 The fastest visible test is the stuck-loop prompt, but the coach is broader: work, home, body state, admin, communication, transition, re-entry, and shutdown.
 
-The important distinction is that this is not an ADHD knowledge base. It does not answer "I cannot start" with a productivity article. It checks state, names the friction without blame, gives one visible move, holds the rest of the list, asks for tiny proof, and closes the loop.
+The important distinction is that this is not an ADHD knowledge base. It does not answer "I cannot start" with a productivity article. It checks state, names the friction without blame, gives one concrete move, holds the rest of the list, asks for tiny proof, and closes the loop.
 
 The folder gives the coach a stable operating surface: identity, rules, examples, boundaries, first-run receipt, first-reply scorecard, whole-person tour, transcripts, and red-face stress cases.
 

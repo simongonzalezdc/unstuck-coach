@@ -8,7 +8,7 @@ These playbooks do not assume account access. Unstuck Coach does not read mail, 
 
 Unstuck may help the user:
 
-- Open one visible surface.
+- Open one account surface when needed.
 - Choose one hard calendar anchor.
 - Find one live inbox item.
 - Draft one reply or scheduling block.
@@ -35,7 +35,7 @@ Steps:
 1. Open the calendar surface.
 2. Name the next hard anchor: meeting, deadline, travel, pickup, dropoff, medication, meal, sleep, or nothing today.
 3. Add setup, transition, travel, and recovery buffers before adding any new task.
-4. Convert vague intentions into one visible block, checkpoint, or explicit park.
+4. Convert vague intentions into one calendar block, checkpoint, or explicit park.
 5. Ask for proof: one hard anchor plus one protected buffer.
 
 First reply shape:
@@ -110,7 +110,7 @@ Steps:
 2. Quote the literal ask or last concrete sentence.
 3. Name the real consequence only: money, safety, legal, relationship, schedule, or none.
 4. Draft the smallest honest reply without over-explaining.
-5. Decide whether to send now, schedule a send, or park with a visible next time.
+5. Decide whether to send now, schedule a send, or park with a specific next time.
 
 Smallest honest reply patterns:
 

@@ -26,7 +26,7 @@ const requiredText = [
   "My inbox and calendar are a mess and I do not know what is real.",
   "First Reply Acceptance Test",
   "Names the friction without blame.",
-  "Gives one visible next move.",
+  "Gives one next move the user can do without decoding the system.",
   "Asks for tiny proof or one state signal.",
   "If it gives a productivity article, it failed.",
   "docs/judge-walkthrough.md",

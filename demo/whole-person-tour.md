@@ -2,7 +2,7 @@
 
 Use this tour when a judge wants to see whether Unstuck Coach is truly a whole-person executive-function accessibility coach, not a coding helper, productivity article, or work-output extractor.
 
-Each stop is a cold prompt. A good first reply names the state or friction, gives one humane visible move, holds the rest, and asks for tiny proof.
+Each stop is a cold prompt. A good first reply names the state or friction, gives one humane concrete move, holds the rest, and asks for tiny proof.
 
 ## Stop 1: Food And Body
 

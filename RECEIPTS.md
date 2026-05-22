@@ -11,7 +11,7 @@ Use this as the evidence map for the entry. Each claim should point to a file a 
 | The first reply is scoreable | `FIRST_REPLY_SCORECARD.md`, `scripts/verify-first-reply-scorecard.mjs`, `scripts/verify-first-reply-acceptance.mjs` | The judge can reject articles, menus, moralizing, vague continuations, and unsafe clinical moves before reading the whole folder. |
 | It is paste-ready beyond Claude Project | `PROJECT_INSTRUCTIONS.md`, `README.md`, `START_HERE.md`, `landing/index.html` | A stranger can add the folder as knowledge in Claude Project, open it as a Codex workspace, create an Antigravity-style project, or paste the core files into a local-model runner. |
 | It has a true first file | `START_HERE.md`, `scripts/verify-start-here.mjs` | The fastest route contains the 60-second path, exact start prompt, first-reply acceptance test, and cold prompts. |
-| The first run is a receipt | `FIRST_RUN.md`, `scripts/verify-first-run.mjs` | The judge can inspect the exact cold-start prompt, expected first reply, tiny proof loop, and immediate fail patterns. |
+| The first run is a receipt | `FIRST_RUN.md`, `scripts/verify-first-run.mjs` | The judge can inspect the exact cold-start prompt, expected first reply, task-pile proof loop, and immediate fail patterns. |
 | The domain is specific | `identity.md`, `WRITEUP.md` | The athlete is a whole person with executive-function access friction at concrete start, switch, memory, body-state, re-entry, and closure thresholds, not a generic self-improvement audience. |
 | The operating surface is inspectable | `reference/signal-map.md`, `landing/index.html`, `PROJECT_INSTRUCTIONS.md` | The folder maps food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, and closure/recovery to first coaching moves and proof checks. |
 | The whole-person tour is testable | `demo/whole-person-tour.md`, `scripts/verify-whole-person-tour.mjs` | A judge can run six cold prompts across food/body, calendar/inbox, messages/shame, home/admin, capture/re-entry, and closure/recovery, with proof checks and immediate-fail signals. |
@@ -19,7 +19,7 @@ Use this as the evidence map for the entry. Each claim should point to a file a 
 | The protocol is runnable before opening Claude | `landing/index.html`, `landing/app.js` | The console translates a messy stuck point into state, friction, one move, and a proof check. |
 | It handles shame and communication threat | `examples.md`, `evals/red-face-tests.md`, `reference/coaching-protocols.md` | Message and conflict spirals are sorted into literal asks before meaning-making. |
 | It externalizes working memory | `rules.md`, `reference/signal-map.md`, `HANDOFF_CARD.md` | The coach holds the list, returns one next move, and parks the rest. |
-| It preserves original Liam calendar and inbox support | `rules.md`, `examples.md`, `reference/coaching-protocols.md`, `reference/admin-ops-playbooks.md`, `reference/signal-map.md`, `PROJECT_INSTRUCTIONS.md`, `landing/index.html`, `landing/app.js` | Inbox piles and calendar drift route to live-obligation rescue, hard anchors, reply debt repair, scheduling friction, missed-obligation recovery, and one visible next item instead of inbox zero or a total schedule rebuild; the landing now gives this layer its own judge-visible band. |
+| It preserves original Liam calendar and inbox support | `rules.md`, `examples.md`, `reference/coaching-protocols.md`, `reference/admin-ops-playbooks.md`, `reference/signal-map.md`, `PROJECT_INSTRUCTIONS.md`, `landing/index.html`, `landing/app.js` | Inbox piles and calendar drift route to live-obligation rescue, hard anchors, reply debt repair, scheduling friction, missed-obligation recovery, and one live item instead of inbox zero or a total schedule rebuild; the landing now gives this layer its own judge-visible band. |
 | It preserves the original multi-mode coaching insight | `identity.md`, `rules.md`, `reference/mode-router.md`, `scripts/verify-mode-router.mjs` | The coach shifts between ally support, strategy, execution, memory keeping, and recovery closure without exposing a confusing mode menu or reducing engineer/execution mode to coding. |
 | The admin layer is operational, not decorative | `reference/admin-ops-playbooks.md`, `scripts/verify-admin-ops-playbooks.mjs` | Calendar and inbox management have five playbooks, five close statuses, and explicit no-account-access boundaries. |
 | It converts research into behavior | `evals/research-to-behavior-checklist.md`, `scripts/verify-eval-coverage.mjs`, `reference/source-notes.md`, `scripts/verify-source-notes.mjs` | Research concepts map to actual protocols, including live-obligation rescue before cleanup, and the public source notes verify competition fit, design lineage, research translation, portability, and private-provenance safety instead of acting as bibliography padding. |
@@ -49,13 +49,13 @@ Paste these into a Claude Project or another runner after loading the folder:
 I need a coach to get started on this.
 ```
 
-Expected: stuck-loop moment, no plan essay, one visible surface to open.
+Expected: accepts the messy task pile as-is, no plan essay, promises one returned next move.
 
 ```text
 I need to pay the bill, eat something, and answer the text, but I am frozen.
 ```
 
-Expected: activation friction, first-contact move, tiny proof.
+Expected: working-memory overload with body-state routing, one food/body proof.
 
 ```text
 My inbox and calendar are a mess and I do not know what is real.

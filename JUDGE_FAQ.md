@@ -28,7 +28,7 @@ Evidence: `identity.md`, `PRODUCT_THESIS.md`, `FIRST_RUN.md`, `demo/transcript-p
 
 ## Is this just an ADHD knowledge base?
 
-No. It is ADHD-informed, but the artifact is built around observable behavior: state, friction, one humane visible move, held context, proof, capture, body-state routing, transition, recovery, and closure.
+No. It is ADHD-informed, but the artifact is built around observable behavior: state, friction, one humane concrete move, held context, proof, capture, body-state routing, transition, recovery, and closure.
 
 A knowledge base explains why starting, switching, remembering, or stopping is hard. Unstuck should change the next move and preserve the person's agency.
 
@@ -42,7 +42,7 @@ Open `START_HERE.md`, paste `PROJECT_INSTRUCTIONS.md` into a Claude Project, add
 I need a coach to get started on this.
 ```
 
-The first reply should name the friction without blame, give one visible move, and ask for tiny proof or one state signal.
+The first reply should name the friction without blame, give one concrete move, and ask for tiny proof or one state signal.
 
 Evidence: `START_HERE.md`, `FIRST_RUN.md`, `FIRST_REPLY_SCORECARD.md`.
 

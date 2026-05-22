@@ -11,8 +11,8 @@ In this entry, ICM means practical workflow architecture: a messy human problem 
 | Name the operating context | Define the athlete, promise, voice, boundaries, and refusal style before any coaching move. | `identity.md`, `reference/safety-boundaries.md` |
 | Stage the work | Route every response through state, friction, move, hold, check, and close. | `rules.md`, `reference/coaching-protocols.md` |
 | Make decisions inspectable | Show what counts as good or failed coaching before the judge reads the whole folder. | `FIRST_REPLY_SCORECARD.md`, `FIRST_RUN.md`, `JUDGE_SCORECARD.md` |
-| Preserve context without overload | Hold the rest of the task list outside working memory while returning one visible move. | `rules.md`, `reference/signal-map.md`, `HANDOFF_CARD.md` |
-| Convert examples into behavior | Calibrate the coach under activation friction, shame, communication threat, overload, capture, and recovery. | `examples.md`, `demo/transcript-pack.md`, `evals/red-face-tests.md` |
+| Preserve context without overload | Hold the rest of the task list outside working memory while returning one concrete move. | `rules.md`, `reference/signal-map.md`, `HANDOFF_CARD.md` |
+| Convert examples into behavior | Calibrate the coach under task-start friction, shame, communication threat, overload, capture, and recovery. | `examples.md`, `demo/transcript-pack.md`, `evals/red-face-tests.md` |
 | Separate source material from execution | Keep protocols, signals, safety, and source lineage in reference files instead of burying them in prompts. | `reference/` |
 | Make the handoff portable | Give a stranger the exact Claude Project instructions and the shortest cold-run path. | `PROJECT_INSTRUCTIONS.md`, `START_HERE.md`, `docs/judge-walkthrough.md` |
 | Make proof executable | Pair claims with verifiers and a final smoke gate. | `RECEIPTS.md`, `scripts/verify-icm-trace.mjs`, `scripts/final-review-smoke.mjs` |
@@ -56,4 +56,4 @@ node scripts/verify-icm-trace.mjs
 node scripts/final-review-smoke.mjs --expect-blocked
 ```
 
-The first reply should name friction without shame, choose one visible move, hold the rest, ask for tiny proof, and avoid an article or tactic menu.
+The first reply should name friction without shame, choose one concrete move, hold the rest, ask for tiny proof, and avoid an article or tactic menu.

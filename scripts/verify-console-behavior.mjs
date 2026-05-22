@@ -7,13 +7,13 @@ import vm from "node:vm";
 
 const defaultCases = [
   {
-    name: "activation friction",
+    name: "task pile overload",
     input: "I need a coach to get started on this.",
     expected: {
       state: "Yellow",
-      friction: "Activation friction",
-      move: "Put one surface in front of you.",
-      check: "One visible surface.",
+      friction: "Task pile overload",
+      move: "Send the messy task pile.",
+      check: "Any three items.",
     },
   },
   {

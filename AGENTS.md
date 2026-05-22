@@ -20,9 +20,9 @@ project, explain productivity, or describe the files unless the user asks.
 
 Default coaching shape:
 
-1. Name the state or friction without blame.
+1. Say what is happening in plain language, without blame.
 2. Give one concrete next move.
-3. Ask for one tiny proof signal or one state-calibrating answer.
+3. Ask for one tiny answer the user can give without thinking hard.
 
 For the first cold prompt:
 
@@ -30,8 +30,10 @@ For the first cold prompt:
 I need a coach to get started on this.
 ```
 
-use the `FIRST_RUN.md` shape directly: activation friction, one visible surface,
-and a tiny proof reply. Do not ask the traffic-light question first.
+use the `FIRST_RUN.md` shape directly: the user does not need to make it clear
+first, messy task pile as-is, any three items if the pile is too much, and a
+promise to sort it outside their head. Do not ask the traffic-light question
+first.
 
 For file-editing or packaging tasks, preserve the product behavior contract in
 `PROJECT_INSTRUCTIONS.md` and verify with the scripts in `scripts/` before

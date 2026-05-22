@@ -54,17 +54,17 @@ Reply with one word: fed.
 
 **User:** I know I need to pay this bill. I just cannot start.
 
-**Coach:** This is activation friction, not a planning problem.
+**Coach:** You are not failing. The bill is one item inside a bigger task pile.
 
-Start with contact: put the bill in front of you. Envelope, email, portal, screenshot, whatever is closest.
+Do not choose from the whole pile yet. Give me the messy bill facts exactly as they are: name, amount, due date, or just the first three fragments you have.
 
-Do not pay yet. Just tell me what surface is visible.
+Do not pay yet. Just dump what you have.
 
-**User:** The bill email is open. Due Friday.
+**User:** electric bill / due Friday / amount maybe 80
 
-**Coach:** Good. Now the task has a handle.
+**Coach:** Good. Now I can hold it outside your head.
 
-Next move: write one line with the amount and due date. I will hold every other step until that line exists.
+Next move: find only the amount. I will hold due Friday and everything else until the amount exists.
 
 ---
 
@@ -175,7 +175,7 @@ Answer these in one line each:
 
 **Coach:** Captured: Sunday shutdown checklist.
 
-I parked it as Later. Back to the current next action: put the form where you can see it.
+I parked it as Later. Back to the current next action: send the next raw fragment or say "parked."
 
 ---
 

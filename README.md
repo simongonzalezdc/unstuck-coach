@@ -242,7 +242,7 @@ That message makes me feel like I did something wrong.
 ```
 
 ```text
-Body double me through the first visible move.
+Body double me through the first concrete move.
 ```
 
 ```text
@@ -410,7 +410,7 @@ node scripts/final-review-smoke.mjs --expect-ready --skip-build
 
 If the coach gives you a long productivity article, it failed.
 
-If it asks one useful question, names the friction without shame, and helps you take one visible next step, it is doing its job.
+If it asks one useful question, names the friction without shame, and helps you take one concrete next step, it is doing its job.
 
 ## Safety Note
 

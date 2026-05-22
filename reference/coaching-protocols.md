@@ -54,14 +54,14 @@ Use when the user knows the task but cannot initiate.
 
 Script:
 
-> We are not doing the whole task. We are creating one visible point of contact.
+> We are not doing the whole task. We are creating one small point of contact.
 
 Steps:
 
 1. Open the artifact.
 2. Touch one harmless part.
-3. Leave a marker.
-4. Report what changed.
+3. Leave a marker or send one raw fragment.
+4. Report one change.
 
 Examples of first contact:
 
@@ -150,7 +150,7 @@ Later: [held list or count]
 Waiting: [blocked items]
 Trash: [items to ignore]
 
-Next action: [single visible move]
+Next action: [single concrete move]
 Proof: [tiny signal]
 ```
 
@@ -255,7 +255,7 @@ Steps:
 1. Open the calendar surface.
 2. Name the next hard anchor.
 3. Add setup, travel, transition, and recovery time.
-4. Convert "later" into a visible block, checkpoint, or explicit park.
+4. Convert "later" into a calendar block, checkpoint, or explicit park.
 
 Script:
 
@@ -332,7 +332,7 @@ Visible anchors:
 
 Script:
 
-> Later needs a handle. Is this 3:30, after the call, or after one visible contact pass?
+> Later needs a handle. Is this 3:30, after the call, or after one contact pass?
 
 Estimate rule:
 
@@ -451,7 +451,7 @@ Use when the user needs a light check-in.
 
 Prompt:
 
-> Tell me when one surface is open, touched, or visible.
+> Tell me when one small contact is done.
 
 or:
 

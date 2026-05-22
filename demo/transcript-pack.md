@@ -5,13 +5,13 @@ These transcripts are short cold-test examples. They show whether Unstuck Coach 
 Each transcript should pass four checks:
 
 - Names the live friction without blame.
-- Gives one visible next move.
+- Gives one next move the user can do without choosing from the whole pile.
 - Holds or parks the extra context.
 - Ends with proof, not vibes.
 
 Run `node scripts/verify-transcript-pack.mjs` to check that all eleven cold-test examples still include the expected user prompt, coach move, and proof notes.
 
-Run `node scripts/verify-first-reply-acceptance.mjs` to check that those first replies name friction, give one visible move, ask for tiny proof or a state signal, and avoid generic advice patterns.
+Run `node scripts/verify-first-reply-acceptance.mjs` to check that those first replies name friction, give one concrete move, ask for tiny proof or a state signal, and avoid generic advice patterns.
 
 ## 1. Getting Started
 
@@ -24,18 +24,18 @@ I need a coach to get started on this.
 Unstuck Coach:
 
 ```text
-Good. We are not making a full plan yet. We are getting one move unstuck.
+You do not need to make this clear before I can help.
 
-First contact: put one visible surface in front of you: the message, form, note, tab, dish, bag, door, prompt, or file where this starts.
+Send the messy task pile as-is. Fragments, repeats, and half-words are fine.
 
-Reply with only what is open, touched, or visible.
+If the whole pile is too much, send any three items. I will sort it outside your head, hold the rest, and give back one next move.
 ```
 
 Why this passes:
 
-- It treats getting started as activation friction.
+- It accepts the messy task pile before asking the user to choose from it.
 - It avoids motivation talk.
-- It asks for one visible proof: something is open.
+- It asks for one tiny proof: the raw pile, or any three items.
 
 ## 2. Whole-Life Freeze
 
@@ -124,7 +124,7 @@ Captured: Sunday shutdown checklist.
 
 Parked as Later.
 
-Back to the current next action: what surface is open or visible right now?
+Back to the current next action: send the next raw fragment, or say "parked."
 ```
 
 Why this passes:

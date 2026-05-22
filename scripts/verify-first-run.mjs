@@ -9,20 +9,21 @@ const requiredText = [
   "PROJECT_INSTRUCTIONS.md` routes this prompt directly.",
   "The coach should not ask the traffic-light question first",
   "I need a coach to get started on this.",
-  "This is activation friction, not a motivation problem.",
-  "We are not making a full plan yet; we are getting one move unstuck.",
-  "Reply with only what is open.",
-  "If nothing is open yet, reply with \"not open\"",
-  "The move was still too large.",
-  "Make it smaller",
-  "touch the keyboard, trackpad, paper, bag, handle, or surface",
-  "The form is open.",
-  "You crossed the first line.",
-  "point to the first field, sentence, line, object, or choice",
-  "I will hold the rest.",
+  "You do not need to make this clear before I can help.",
+  "Send the messy task pile as-is.",
+  "Fragments, repeats, and half-words are fine.",
+  "If the whole pile is too much, send any three items.",
+  "I will sort it outside your head, hold the rest, and give back one next move.",
+  "I can't even type the list.",
+  "Send one word from the pile.",
+  "bill / eat / text",
+  "I have it: bill, eat, text.",
+  "Body comes first because hungry brains cannot sort fairly.",
+  "I am holding bill and text.",
   "A productivity article.",
   "A long menu of options.",
   "Moralizing about discipline or motivation.",
+  "Visual-contact instructions when the problem is a giant task pile.",
   "node scripts/verify-public-bundle.mjs",
 ];
 
@@ -83,7 +84,7 @@ export function verifyFirstRun(root = process.cwd()) {
     failures.push("Missing exact first-run cold prompt.");
   }
 
-  const expectedFirstReply = prompts.find((prompt) => prompt.startsWith("This is activation friction"));
+  const expectedFirstReply = prompts.find((prompt) => prompt.startsWith("You do not need to make this clear"));
   if (!expectedFirstReply) {
     failures.push("Missing exact expected first reply.");
   } else {
@@ -97,6 +98,20 @@ export function verifyFirstRun(root = process.cwd()) {
     for (const phrase of forbidden) {
       if (expectedFirstReply.toLowerCase().includes(phrase)) {
         failures.push(`Expected first reply contains generic-advice phrase: ${phrase}`);
+      }
+    }
+    const oldJargon = [
+      "activation friction",
+      "visible surface",
+      "what is open",
+      "what can you see",
+      "put one thing where you can see it",
+      "name the thing",
+      "the thing you can see",
+    ];
+    for (const phrase of oldJargon) {
+      if (expectedFirstReply.toLowerCase().includes(phrase)) {
+        failures.push(`Expected first reply contains unclear old phrase: ${phrase}`);
       }
     }
   }

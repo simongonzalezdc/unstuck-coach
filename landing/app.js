@@ -13,7 +13,7 @@ const demos = [
     generic:
       "You can do it. Try setting a timer, making a to-do list, and reminding yourself why this matters.",
     unstuck:
-      "Good. We are not making a plan yet; we are getting one move unstuck. Put the work in front of you, choose the smallest visible surface, and tell me what is open.",
+      "You do not need to make this clear before I can help. Send the messy task pile as-is, or any three items if the pile is too much. I will sort it outside your head and give back one next move.",
   },
   {
     label: "Message spiral",
@@ -317,13 +317,13 @@ const consolePatterns = [
   {
     match: /(start|begin|blank|stuck|cannot|can't|open|frozen|freeze|first step|where do i start)/i,
     state: "Yellow",
-    stateNote: "Enough capacity for one concrete move, not enough for a plan essay.",
-    friction: "Activation friction",
-    frictionNote: "The blocker is getting one move unstuck, not understanding the task.",
-    move: "Put one surface in front of you.",
-    moveNote: "Open or touch the closest surface: bill, message, form, tab, doc, sink, bag, or door. Report what is visible.",
-    check: "One visible surface.",
-    checkNote: "No polished report. The proof is what is open, touched, or visible.",
+    stateNote: "Enough capacity to externalize the pile, not enough for a plan essay.",
+    friction: "Task pile overload",
+    frictionNote: "The blocker is choosing from the whole pile while already overloaded.",
+    move: "Send the messy task pile.",
+    moveNote: "Fragments, repeats, and half-words are fine. If the pile is too much, send any three items.",
+    check: "Any three items.",
+    checkNote: "Proof is the raw pile leaving the user's head, not a polished plan.",
   },
 ];
 

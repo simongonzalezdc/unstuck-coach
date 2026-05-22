@@ -24,7 +24,7 @@ Unstuck Coach gives whole people portable executive-function accessibility: star
 ```text
 Unstuck Coach is a folder-based executive-function accessibility coach for whole people: start, switch, remember, regulate, capture, recover, and close. It is not an ADHD knowledge base and not a productivity extractor. Load the folder into a Claude Project, paste the project instructions, and try: I need a coach to get started on this.
 
-The first reply has to name the friction without blame, give one visible move, hold the rest of the context, and ask for tiny proof. The landing console previews that loop. The transcript pack, red-face evals, eval-coverage verifier, first-run receipt, scorecard, product thesis, and ICM trace make the behavior inspectable.
+The first reply has to name the friction without blame, give one concrete move, hold the rest of the context, and ask for tiny proof. The landing console previews that loop. The transcript pack, red-face evals, eval-coverage verifier, first-run receipt, scorecard, product thesis, and ICM trace make the behavior inspectable.
 
 The evidence reader renders the source files behind the claim: first-run receipt, first-reply scorecard, transcripts, stress cases, safety boundaries, whole-person tour, and admin playbooks. The story ends on the coach and the files someone can inspect, not on process machinery.
 ```
