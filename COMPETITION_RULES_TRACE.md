@@ -32,7 +32,7 @@ Publication status is controlled by `PUBLICATION_CHECKLIST.md` and `scripts/veri
 
 ## Above-The-Brief Proof
 
-- `landing/index.html`: visual judge path and runnable deterministic console.
+- `landing/index.html`: visual judge path and hosted GLM live-demo route.
 - `ICM_TRACE.md`: explicit ICM fit map from workflow architecture to folder evidence.
 - `FIRST_RUN.md`: exact cold-start receipt for the first judge prompt.
 - `JUDGE_BRIEF.md`: one-page above-the-brief case, fast judge test, failure modes, ICM fit, evidence map, and blocked publication state.
