@@ -24,5 +24,5 @@ The product is not an ADHD encyclopedia or a generic productivity prompt pack. I
 - `PROJECT_INSTRUCTIONS.md`: paste-ready coach instructions.
 - `FIRST_RUN.md`: exact cold-start receipt.
 - `FIRST_REPLY_SCORECARD.md`: first-response pass/fail gate.
-- `JUDGE_BRIEF.md`: one-page judge case.
-- `RECEIPTS.md`: public claim-to-file proof map.
+- `docs/judge-brief.md`: one-page judge case.
+- `docs/receipts.md`: public claim-to-file proof map.

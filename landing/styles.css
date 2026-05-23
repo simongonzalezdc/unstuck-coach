@@ -2440,6 +2440,66 @@ h1 {
   box-shadow: var(--shadow-tight);
 }
 
+.evidence-source-grid {
+  width: var(--wrap);
+  margin: 0 auto;
+  padding-block: clamp(2.5rem, 6vw, 5.5rem);
+  border-top: 1px solid rgba(6, 9, 16, 0.12);
+  scroll-margin-top: 6.4rem;
+}
+
+.evidence-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.82rem;
+  margin-top: 1.35rem;
+}
+
+.source-card {
+  display: grid;
+  gap: 0.58rem;
+  align-content: start;
+  min-height: 13.2rem;
+  padding: 1rem;
+  border: 1px solid rgba(6, 9, 16, 0.13);
+  border-top: 4px solid var(--taste-saffron);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 242, 0.96), rgba(248, 243, 235, 0.84));
+  box-shadow: var(--shadow-tight);
+}
+
+.source-card span {
+  color: var(--taste-cyan-strong);
+  font-size: 0.72rem;
+  font-weight: 860;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.source-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--editorial);
+  font-size: 1.35rem;
+  line-height: 1.03;
+  overflow-wrap: anywhere;
+}
+
+.source-card p {
+  margin: 0;
+  color: var(--muted-strong);
+  font-size: 0.94rem;
+}
+
+.source-card a {
+  align-self: end;
+  color: var(--taste-cyan-strong);
+  font-weight: 830;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
 .evidence-mobile-index {
   display: none;
 }
@@ -2598,22 +2658,6 @@ h1 {
   gap: 1rem;
 }
 
-.evidence-page.reader-ready .evidence-group[data-evidence-group],
-.evidence-page.reader-ready .rendered-source[data-reader-document],
-.evidence-page.reader-ready .verification-group {
-  display: none;
-}
-
-.evidence-page.reader-ready .evidence-group[data-evidence-group].has-active-doc,
-.evidence-page.reader-ready .rendered-source[data-reader-document].is-active,
-.evidence-page.reader-ready.show-verification .verification-group {
-  display: block;
-}
-
-.evidence-page.reader-ready.show-verification .evidence-group[data-evidence-group] {
-  display: none;
-}
-
 .evidence-card {
   position: relative;
   display: grid;
@@ -2660,7 +2704,6 @@ h1 {
 }
 
 .evidence-card > code,
-.verifier-card code,
 .source-proof code {
   display: block;
   width: fit-content;
@@ -2723,8 +2766,7 @@ h1 {
   gap: 0.5rem;
 }
 
-.source-proof dt,
-.verifier-card small {
+.source-proof dt {
   color: var(--muted-strong);
   font-size: 0.72rem;
   font-weight: 820;
@@ -3120,6 +3162,7 @@ h1 {
 
   .evidence-group-header,
   .evidence-grid,
+  .evidence-card-grid,
   .source-head {
     grid-template-columns: 1fr;
   }
@@ -3305,7 +3348,7 @@ h1 {
 
 @media (max-width: 620px) {
   :root {
-    --wrap: calc(100% - 2rem);
+    --wrap: calc(100% - 1.35rem);
   }
 
   .review-deck-intro h2 {
@@ -3361,8 +3404,8 @@ h1 {
   }
 
   .hero {
-    width: calc(100% - 2rem);
-    padding: 5.55rem 0 2.4rem;
+    width: var(--wrap);
+    padding: 6.05rem 0 3.15rem;
   }
 
   .evidence-page main {
@@ -3412,28 +3455,29 @@ h1 {
   }
 
   .hero-copy {
-    width: min(100%, 21.6rem);
-    max-width: 21.6rem;
+    width: 100%;
+    max-width: 23.4rem;
   }
 
   .hero::before {
-    inset: 5.4rem -1rem 1.5rem;
+    inset: 5.4rem 0 1.5rem;
   }
 
   h1 {
-    font-size: 2.54rem;
-    max-width: 10.8ch;
+    font-size: 2.36rem;
+    max-width: 11.8ch;
+    line-height: 1.02;
   }
 
   .hero-deck {
-    margin-top: 0.92rem;
-    font-size: 0.94rem;
-    line-height: 1.46;
+    margin-top: 1.12rem;
+    font-size: 0.98rem;
+    line-height: 1.58;
   }
 
   .hero-life-rail {
-    gap: 0.32rem;
-    margin-top: 0.76rem;
+    gap: 0.38rem;
+    margin-top: 1rem;
   }
 
   .hero-life-rail span {
@@ -3453,7 +3497,7 @@ h1 {
   }
 
   .hero-actions {
-    margin-top: 1.35rem;
+    margin-top: 1.65rem;
   }
 
   .action {
@@ -3507,8 +3551,8 @@ h1 {
 
   .mobile-proof-panel {
     display: block;
-    margin-top: 0.95rem;
-    padding: 0.46rem;
+    margin-top: 1.25rem;
+    padding: 0.68rem;
     border: 1px solid rgba(6, 9, 16, 0.2);
     border-radius: 1.36rem;
     background:
@@ -3631,7 +3675,7 @@ h1 {
   }
 
   .proof-strip {
-    margin-top: -5.15rem;
+    margin-top: -4.15rem;
   }
 
   .scope-section {

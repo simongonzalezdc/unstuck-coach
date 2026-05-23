@@ -26,6 +26,6 @@ If someone asks "what did the research change?", answer:
 
 > It changed the coach's moves. The folder does not just mention ADHD research; it turns the research into protocols for plain-language first contact, zero-friction capture, brain-dump sorting, bounded activation fuel, visible time, live-obligation rescue, tangent handling, body-first routing, no-shame reset, and repeated-plan escape.
 
-## Verification
+## Review Check
 
-Run `node scripts/verify-eval-coverage.mjs` to check that the red-face tests and research-to-behavior map still cover live-obligation rescue, inbox/calendar reality, and safety boundaries.
+The red-face tests and research-to-behavior map should still cover live-obligation rescue, inbox/calendar reality, and safety boundaries.

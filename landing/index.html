@@ -29,7 +29,7 @@
         "@type": "SoftwareApplication",
         "name": "Unstuck Coach",
         "applicationCategory": "AccessibilityApplication",
-        "operatingSystem": "Claude Project, Codex, AI IDE, local model",
+        "operatingSystem": "Web browser and project knowledge workspace",
         "url": "https://simongonzalezdc.github.io/unstuck-coach-week5/landing/",
         "image": "https://simongonzalezdc.github.io/unstuck-coach-week5/landing/assets/unstuck-coach-logo.png",
         "description": "A folder-based whole-person executive-function accessibility coach that helps people turn messy stuck points into one concrete next move, held context, tiny proof, and clean re-entry.",
@@ -54,7 +54,7 @@
       <nav class="nav-links" id="primary-links" aria-label="Page sections">
         <a href="https://unstuck.kyanitelabs.tech/"><span>Live demo</span></a>
         <a href="#setup"><span>Use the folder</span></a>
-        <a href="./evidence.html#first-reply-scorecard"><span>Read source proof</span></a>
+        <a href="./evidence.html#first-reply-scorecard"><span>Evidence</span></a>
       </nav>
     </header>
 
@@ -192,7 +192,7 @@
             <a href="#setup" data-panel-link="setup"><span>Setup</span><strong>Cold-start script</strong></a>
             <a href="#scope" data-panel-link="scope"><span>Scope</span><strong>Whole-person surface</strong></a>
             <a href="#admin-ops" data-panel-link="admin-ops"><span>Admin</span><strong>Calendar and inbox</strong></a>
-            <a href="#receipts" data-panel-link="receipts"><span>Source</span><strong>Readable files</strong></a>
+            <a href="#receipts" data-panel-link="receipts"><span>Files</span><strong>Readable evidence</strong></a>
           </nav>
           <div class="review-deck-panels" aria-live="polite">
 
@@ -212,9 +212,9 @@
                 <span class="icon icon-path" aria-hidden="true"></span>
                 Test six life surfaces
               </a>
-              <a class="action secondary" href="./evidence.html#verify-whole-person-tour">
+              <a class="action secondary" href="./evidence.html#whole-person-tour">
                 <span class="icon icon-folder" aria-hidden="true"></span>
-                Open tour evidence
+                Read tour evidence
               </a>
               <a class="action secondary" href="./evidence.html#admin-ops-playbooks">
                 <span class="icon icon-path" aria-hidden="true"></span>
@@ -292,9 +292,9 @@
                 <span class="icon icon-path" aria-hidden="true"></span>
                 Open admin playbooks
               </a>
-              <a class="action secondary" href="./evidence.html#verify-admin-ops-playbooks">
+              <a class="action secondary" href="./evidence.html#admin-ops-playbooks">
                 <span class="icon icon-folder" aria-hidden="true"></span>
-                Open admin evidence
+                Read admin evidence
               </a>
             </div>
           </div>
@@ -346,9 +346,9 @@
                 <span class="icon icon-path" aria-hidden="true"></span>
                 Start file
               </a>
-              <a class="action secondary" href="./evidence.html#verify-start-here">
+              <a class="action secondary" href="./evidence.html#first-run">
                 <span class="icon icon-folder" aria-hidden="true"></span>
-                Open first-run evidence
+                Read first-run receipt
               </a>
             </div>
           </div>
@@ -431,9 +431,9 @@
                 <span class="icon icon-path" aria-hidden="true"></span>
                 Read product thesis
               </a>
-              <a class="action secondary" href="./evidence.html#verify-product-thesis">
+              <a class="action secondary" href="./evidence.html#product-thesis">
                 <span class="icon icon-folder" aria-hidden="true"></span>
-                Open thesis evidence
+                Read thesis evidence
               </a>
             </div>
           </div>
@@ -491,8 +491,8 @@
             <h2 id="setup-title">The first run is already scripted.</h2>
             <p>
               Load the folder wherever the workspace can read local files. Claude Project
-              is the primary path, but Codex, Antigravity-style project IDEs, and
-              local models can use the same coach contract.
+              is the primary path, and any project workspace with enough context can use
+              the same coach contract.
             </p>
             <div class="inline-actions">
               <a class="action secondary" href="./evidence.html#project-instructions">
@@ -533,17 +533,17 @@
                 <p>Paste `PROJECT_INSTRUCTIONS.md`, then start with the same coach prompt.</p>
               </article>
               <article>
-                <span class="pane-label">Codex path</span>
-                <strong>Open this folder as the workspace.</strong>
-                <p>Ask Codex to read `PROJECT_INSTRUCTIONS.md`, `START_HERE.md`, `identity.md`, `rules.md`, `examples.md`, and `reference/` before coaching.</p>
+                <span class="pane-label">Workspace path</span>
+                <strong>Open this folder as the active project.</strong>
+                <p>Ask the workspace to read `PROJECT_INSTRUCTIONS.md`, `START_HERE.md`, `identity.md`, `rules.md`, `examples.md`, and `reference/` before coaching.</p>
               </article>
               <article>
-                <span class="pane-label">Antigravity / AI IDE path</span>
-                <strong>Create a project from the Unstuck folder.</strong>
+                <span class="pane-label">Project path</span>
+                <strong>Create a scoped project from the Unstuck folder.</strong>
                 <p>Keep file access scoped to this folder, then load the same coach contract.</p>
               </article>
               <article>
-                <span class="pane-label">Local model path</span>
+                <span class="pane-label">Manual context path</span>
                 <strong>Paste the operating files into context.</strong>
                 <p>Use `PROJECT_INSTRUCTIONS.md`, `identity.md`, `rules.md`, `examples.md`, `reference/coaching-protocols.md`, `reference/signal-map.md`, and `reference/safety-boundaries.md`.</p>
               </article>
@@ -617,9 +617,9 @@
                 <span class="icon icon-path" aria-hidden="true"></span>
                 Open scorecard
               </a>
-              <a class="action secondary" href="./evidence.html#verify-first-reply-scorecard">
+              <a class="action secondary" href="./evidence.html#first-reply-scorecard">
                 <span class="icon icon-folder" aria-hidden="true"></span>
-                Open score evidence
+                Read score evidence
               </a>
               <a class="action secondary" href="./evidence.html#safety-boundaries">
                 <span class="icon icon-path" aria-hidden="true"></span>
@@ -699,13 +699,13 @@
                 <span class="icon icon-path" aria-hidden="true"></span>
                 Open reel script
               </a>
-              <a class="action secondary" href="./evidence.html#verify-pitch-reel">
+              <a class="action secondary" href="./evidence.html#pitch-reel">
                 <span class="icon icon-folder" aria-hidden="true"></span>
-                Open reel evidence
+                Read reel evidence
               </a>
-              <a class="action secondary" href="./evidence.html#verify-reel-page">
+              <a class="action secondary" href="./evidence.html#walkthrough">
                 <span class="icon icon-folder" aria-hidden="true"></span>
-                Open page evidence
+                Read walkthrough
               </a>
             </div>
           </div>
@@ -739,7 +739,7 @@
             <article class="reel-final">
               <span class="pane-label">0:58-1:15</span>
               <strong>Close on evidence.</strong>
-              <p>Open the rendered evidence reader for the source files, examples, and boundaries.</p>
+              <p>Open the evidence reader for the project files, examples, and boundaries.</p>
             </article>
           </div>
         </div>
@@ -818,7 +818,7 @@
           <article class="file-node">
             <span class="file-index">04</span>
             <h3>reference/</h3>
-            <p>Holds protocols, admin operations playbooks, safety boundaries, source notes, and the signal map.</p>
+            <p>Holds protocols, admin operations playbooks, safety boundaries, research notes, and the signal map.</p>
           </article>
           <article class="file-node">
             <span class="file-index">05</span>
@@ -865,10 +865,10 @@
       <section id="receipts" class="section review-panel receipts-section" aria-labelledby="receipts-title">
           <div class="section-heading">
           <p class="eyebrow">Evidence behind the product</p>
-          <h2 id="receipts-title">The source files are readable when someone wants proof.</h2>
+          <h2 id="receipts-title">The project files are readable when someone wants proof.</h2>
           <p>
             The landing should explain Unstuck. The evidence reader should carry
-            the heavier proof work: source files, examples, boundaries, and checks.
+            the heavier proof work: project files, examples, boundaries, and checks.
           </p>
         </div>
         <div class="receipts-grid receipt-reader">
@@ -878,7 +878,7 @@
             <small>FIRST_RUN.md shows the prompt, the expected first move, the tiny proof loop, and what should fail.</small>
           </a>
 
-          <div class="receipt-list" aria-label="Readable source proof">
+          <div class="receipt-list" aria-label="Readable evidence">
             <a href="./evidence.html#rules">
               <span>Coach contract</span>
               <strong>It coaches instead of informing.</strong>
@@ -910,14 +910,14 @@
           </div>
 
           <details class="receipt-more">
-            <summary>More source checks</summary>
-            <div class="receipt-compact-links" aria-label="Additional source checks">
+            <summary>More evidence</summary>
+            <div class="receipt-compact-links" aria-label="Additional evidence">
               <a href="./evidence.html#icm-trace">ICM trace</a>
-              <a href="./evidence.html#verify-icm-trace">ICM trace check</a>
-              <a href="./evidence.html#verify-first-run">First-run check</a>
-              <a href="./evidence.html#verify-landing-copy">Landing-copy check</a>
-              <a href="./evidence.html#verify-first-reply-acceptance">First-reply acceptance test</a>
-              <a href="./evidence.html#verify-competition-rules-trace">Rules trace check</a>
+              <a href="./evidence.html#icm-trace">ICM trace</a>
+              <a href="./evidence.html#first-run">First-run receipt</a>
+              <a href="./evidence.html#first-reply-scorecard">First-reply scorecard</a>
+              <a href="./evidence.html#red-face-tests">Stress tests</a>
+              <a href="./evidence.html#competition-rules-trace">Rules trace</a>
             </div>
           </details>
         </div>

@@ -6,7 +6,7 @@ A one-page read for a judge who wants the human case before opening every receip
 
 Unstuck Coach is not a generic ADHD/productivity folder. It is a whole-person executive-function accessibility coach for the moment when someone has intelligence, obligations, and care, but still cannot reliably start, switch, remember, regulate, recover, or close the loop alone.
 
-The product is the operating surface: state, friction, one humane concrete move, held context, tiny proof, re-entry trail, and closure. Coding is one proof scenario. The coach is for the whole human: food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, transitions, hyperfocus recovery, and shutdown. Brain dumps and bounded dopamine-menu sparks are explicit protocols inside that surface.
+The product is the operating surface: state, friction, one humane concrete move, held context, tiny proof, re-entry trail, and closure. The coach is for the whole human: food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, transitions, hyperfocus recovery, and shutdown. Brain dumps and bounded dopamine-menu sparks are explicit protocols inside that surface.
 
 ## Why It Works
 
@@ -54,14 +54,14 @@ The fit is not a label. It is implemented as staged coaching behavior:
 
 The landing page should make the product clear first. The receipts carry the proof:
 
-- `PRODUCT_THESIS.md`: explains the folder-first product decision.
-- `ICM_TRACE.md`: maps the coach to inspectable workflow architecture.
-- `COMPETITION_RULES_TRACE.md`: maps Week 5 requirements and judging questions to evidence.
+- `docs/product-thesis.md`: explains the folder-first product decision.
+- `docs/icm-trace.md`: maps the coach to inspectable workflow architecture.
+- `docs/competition-rules-trace.md`: maps Week 5 requirements and judging questions to evidence.
 - `FIRST_RUN.md`: shows the cold-start receipt and expected first reply.
 - `FIRST_REPLY_SCORECARD.md`: makes first contact scoreable.
 - `demo/whole-person-tour.md`: proves six life surfaces, not one work category.
 - `evals/red-face-tests.md`: stress-tests shame, overload, time blindness, and safety boundaries.
-- `RECEIPTS.md`: maps public claims to source files.
+- `docs/receipts.md`: maps public claims to project files.
 
 ## Boundary
 

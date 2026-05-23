@@ -8,24 +8,24 @@ The public cold test is first contact because it is the easiest moment for a jud
 
 | Principle | Decision | Evidence |
 | --- | --- | --- |
-| Folder over app | The coach must be drop-in project knowledge, so the files are the interface across Claude Project, Codex, AI IDEs, and local-model contexts. | `identity.md`, `rules.md`, `examples.md`, `reference/`, `PROJECT_INSTRUCTIONS.md`, `START_HERE.md` |
+| Folder over app | The coach must be drop-in project knowledge, so the files are the interface across Claude Project and other file-aware project workspaces. | `identity.md`, `rules.md`, `examples.md`, `reference/`, `PROJECT_INSTRUCTIONS.md`, `START_HERE.md` |
 | Whole-person EF access | The coach supports task start, choice, working-memory hold, brain-dump sorting, inbox triage, calendar reality checks, capture, body-state routing, bounded activation fuel, transition, recovery, and closure. | `identity.md`, `rules.md`, `reference/coaching-protocols.md`, `reference/admin-ops-playbooks.md`, `reference/signal-map.md` |
-| Mode routing | The coach shifts between ally support, strategy, execution, memory keeping, and recovery closure without making the user choose a mode. | `identity.md`, `rules.md`, `reference/mode-router.md`, `scripts/verify-mode-router.mjs` |
-| First contact before productivity | The first reply should create one concrete move, not explain executive dysfunction. | `START_HERE.md`, `FIRST_RUN.md`, `demo/transcript-pack.md`, `scripts/verify-first-run.mjs`, `scripts/verify-first-reply-acceptance.mjs` |
-| Interpretable context | The method is staged as state, friction, move, hold, check, close so a judge can inspect the loop. | `rules.md`, `reference/coaching-protocols.md`, `ICM_TRACE.md`, `landing/index.html`, `scripts/verify-icm-trace.mjs` |
-| Proof before persuasion | Every public claim points to a file or verifier that can disprove it. | `RECEIPTS.md`, `JUDGE_SCORECARD.md`, `scripts/verify-public-bundle.mjs` |
-| Boundaries are product quality | The coach avoids therapy, diagnosis, medication guidance, and crisis handling. | `reference/safety-boundaries.md`, `HANDOFF_CARD.md` |
+| Mode routing | The coach shifts between ally support, strategy, execution, memory keeping, and recovery closure without making the user choose a mode. | `identity.md`, `rules.md`, `reference/mode-router.md` |
+| First contact before productivity | The first reply should create one concrete move, not explain executive dysfunction. | `START_HERE.md`, `FIRST_RUN.md`, `demo/transcript-pack.md` |
+| Interpretable context | The method is staged as state, friction, move, hold, check, close so a judge can inspect the loop. | `rules.md`, `reference/coaching-protocols.md`, `docs/icm-trace.md`, `landing/index.html` |
+| Proof before persuasion | Every public claim points to a file that can disprove it. | `docs/receipts.md`, `docs/judge-scorecard.md` |
+| Boundaries are product quality | The coach avoids therapy, diagnosis, medication guidance, and crisis handling. | `reference/safety-boundaries.md`, `docs/handoff-card.md` |
 
 ## Why The Folder Is The Product
 
-The brief asks for a coach folder someone can drop into a Claude Project. Unstuck keeps that primary path, but does not make Claude Project the only usable surface. Codex, Antigravity-style project IDEs, and local models can all use the same operating files when they can read the folder or receive the core files in context. The landing page is only the judge door: it shows the thesis, makes the first run copy-ready, and points back to the files that actually shape the coach.
+The brief asks for a coach folder someone can drop into a Claude Project. Unstuck keeps that primary path, but does not make Claude Project the only usable surface. Any file-aware project workspace can use the same operating files when it can read the folder or receive the core files in context. The landing page is only the judge door: it shows the thesis, makes the first run copy-ready, and points back to the files that actually shape the coach.
 
 The folder structure creates an interpretable coaching system:
 
 - `identity.md` names the athlete, promise, voice, and limits.
 - `rules.md` defines the coaching loop and response constraints.
 - `examples.md` calibrates tone and behavior under realistic pressure.
-- `reference/` holds reusable protocols, admin operations playbooks, signal maps, source notes, and safety boundaries.
+- `reference/` holds reusable protocols, admin operations playbooks, signal maps, research notes, and safety boundaries.
 - `PROJECT_INSTRUCTIONS.md` turns the folder into paste-ready Claude Project setup.
 - `START_HERE.md` gives a cold judge the fastest possible first run, including non-Claude setup paths.
 - `FIRST_RUN.md` shows the exact cold-start prompt, expected first reply, and proof loop.
@@ -69,7 +69,7 @@ The coaching loop is intentionally inspectable:
 5. Check: ask for proof small enough to produce immediately.
 6. Close: leave a re-entry breadcrumb when the session ends or energy drops.
 
-This is the ICM fit in practical terms: the work becomes staged, editable, auditable context rather than a motivational monologue. `ICM_TRACE.md` makes that fit explicit by mapping each workflow responsibility to files and proof checks; `scripts/verify-icm-trace.mjs` keeps the claim tied to evidence. A judge can open the rules, examples, transcript pack, and verifiers to see whether the loop is actually represented.
+This is the ICM fit in practical terms: the work becomes staged, editable, auditable context rather than a motivational monologue. `docs/icm-trace.md` makes that fit explicit by mapping each workflow responsibility to the files that carry it. A judge can open the rules, examples, transcript pack, and evidence reader to see whether the loop is actually represented.
 
 ## Where It Stops
 

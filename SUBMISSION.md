@@ -12,18 +12,18 @@ Live demo:
 https://unstuck.kyanitelabs.tech/
 ```
 
-The live demo runs on the VPS with GLM-5.1 through Z.AI's international coding-plan endpoint, reasoning enabled, and a 1200-token completion budget.
+The live demo is a normal chat interface for trying the coach before setting up the folder.
 
 Skool comment draft:
 
 ```text
-Unstuck Coach is a folder-based whole-person executive-function accessibility coach for people whose bottleneck is not intelligence or effort, but the moment life asks them to start, switch, remember, regulate, capture, recover, or close loops without shame. It is not an ADHD knowledge base or productivity extractor: it turns food, inboxes, calendars, bills, messages, re-entry, overload, and body-state needs into one humane concrete move with held context and tiny proof. The folder includes paste-ready Claude Project instructions, examples, boundaries, calendar and inbox playbooks, a whole-person tour, transcripts, stress tests, readable evidence, and source proof so the coach can be cold-tested from one messy stuck point.
+Unstuck Coach is a folder-based whole-person executive-function accessibility coach for people whose bottleneck is not intelligence or effort, but the moment life asks them to start, switch, remember, regulate, capture, recover, or close loops without shame. It is not an ADHD knowledge base or productivity extractor: it turns food, inboxes, calendars, bills, messages, re-entry, overload, and body-state needs into one humane concrete move with held context and tiny proof. The folder includes paste-ready Claude Project instructions, examples, boundaries, calendar and inbox playbooks, a whole-person tour, transcripts, stress tests, and readable evidence so the coach can be cold-tested from one messy stuck point.
 ```
 
 Landing-page version:
 
 ```text
-Unstuck Coach is a folder-based whole-person executive-function accessibility coach for people whose bottleneck is not intelligence or effort, but the moment life asks them to start, switch, remember, regulate, capture, recover, or close loops without shame. It is not an ADHD knowledge base or productivity extractor: it turns food, inboxes, calendars, bills, messages, re-entry, overload, and body-state needs into one humane concrete move with held context and tiny proof. The folder includes paste-ready Claude Project instructions, examples, boundaries, calendar and inbox playbooks, a whole-person tour, transcripts, stress tests, readable evidence, and source proof so the coach can be cold-tested from one messy stuck point.
+Unstuck Coach is a folder-based whole-person executive-function accessibility coach for people whose bottleneck is not intelligence or effort, but the moment life asks them to start, switch, remember, regulate, capture, recover, or close loops without shame. It is not an ADHD knowledge base or productivity extractor: it turns food, inboxes, calendars, bills, messages, re-entry, overload, and body-state needs into one humane concrete move with held context and tiny proof. The folder includes paste-ready Claude Project instructions, examples, boundaries, calendar and inbox playbooks, a whole-person tour, transcripts, stress tests, and readable evidence so the coach can be cold-tested from one messy stuck point.
 ```
 
 Optional shorter version:

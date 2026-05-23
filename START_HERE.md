@@ -6,37 +6,30 @@ This is a review shortcut, not the product boundary: Unstuck still covers whole-
 
 ## 60-Second Path
 
-1. Open the live VPS demo: `https://unstuck.kyanitelabs.tech/`.
-2. Confirm `/api/config` reports `Z.AI GLM-5.1 (medium reasoning)` and the page header reports `GLM 5.1`.
-3. Open `landing/index.html`.
-4. Open `JUDGE_BRIEF.md` for the one-page above-the-brief case.
-5. Read the proof strip, calendar/inbox operations band, first-run receipt, and Claude Project launch kit.
-6. Paste `PROJECT_INSTRUCTIONS.md` into a Claude Project.
-7. Add this whole folder as project knowledge.
-8. Try the first cold prompt below.
+1. Open the live demo: `https://unstuck.kyanitelabs.tech/`.
+2. Open `landing/index.html`.
+3. Open `docs/judge-brief.md` for the one-page above-the-brief case.
+4. Read the proof strip, calendar/inbox operations band, first-run receipt, and Claude Project launch kit.
+5. Paste `PROJECT_INSTRUCTIONS.md` into a Claude Project.
+6. Add this whole folder as project knowledge.
+7. Try the first cold prompt below.
 
 ```text
 I need a coach to get started on this.
 ```
 
-## If You Do Not Have Claude Code Or Claude Project
+## If You Do Not Have Claude Project
 
 The folder still works if the tool can read local files.
 
-Codex path:
-
-```bash
-codex -C unstuck-coach "Read PROJECT_INSTRUCTIONS.md and START_HERE.md, then coach the stuck loop in front of me."
-```
-
-Antigravity or AI IDE path:
+Project workspace path:
 
 1. Create a project from this folder.
 2. Keep the agent scoped to the project folder.
 3. Ask it to read `PROJECT_INSTRUCTIONS.md`, `START_HERE.md`, `identity.md`, `rules.md`, `examples.md`, and `reference/`.
 4. Start with the first cold prompt.
 
-Local model path:
+Manual context path:
 
 1. Paste `PROJECT_INSTRUCTIONS.md`.
 2. Add `identity.md`, `rules.md`, `examples.md`, `reference/coaching-protocols.md`, `reference/signal-map.md`, and `reference/safety-boundaries.md`.
@@ -86,16 +79,10 @@ That message makes me feel like I did something wrong.
 ## What To Inspect Next
 
 - `FIRST_REPLY_SCORECARD.md` for the fastest pass/fail gate.
-- `JUDGE_BRIEF.md` for the one-page above-the-brief case.
-- `JUDGE_FAQ.md` for the shortest answers to likely Week 5 judging questions.
+- `docs/judge-brief.md` for the one-page above-the-brief case.
+- `docs/judge-faq.md` for the shortest answers to likely Week 5 judging questions.
 - `FIRST_RUN.md` for the exact cold-start receipt and tiny proof loop.
 - `docs/judge-walkthrough.md` for the cold judge path.
 - `landing/index.html#admin-ops` for the calendar/inbox operations band.
-- `scripts/render-review-screenshots.mjs` for the desktop, mobile, and narrow-mobile visual review captures.
 - `demo/transcript-pack.md` for nine cold-test examples.
-- `scripts/verify-first-reply-acceptance.mjs` for the executable first-reply gate.
 - `reference/admin-ops-playbooks.md` for the calendar/inbox management playbooks.
-- `scripts/verify-admin-ops-playbooks.mjs` for the admin-operations playbook gate.
-- `scripts/judge-quick-proof.mjs` for a publication-independent proof summary of the judge path.
-- `scripts/verify-judge-brief.mjs` for the judge-brief gate.
-- `scripts/verify-public-bundle.mjs` for the full public-bundle check.

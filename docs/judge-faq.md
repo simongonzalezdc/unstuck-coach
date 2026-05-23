@@ -24,7 +24,7 @@ It coaches whole people under executive-function load:
 - transitioning out of hyperfocus,
 - closing or pausing a work loop cleanly.
 
-Evidence: `identity.md`, `PRODUCT_THESIS.md`, `FIRST_RUN.md`, `demo/transcript-pack.md`, `reference/signal-map.md`.
+Evidence: `identity.md`, `docs/product-thesis.md`, `FIRST_RUN.md`, `demo/transcript-pack.md`, `reference/signal-map.md`.
 
 ## Is this just an ADHD knowledge base?
 
@@ -68,7 +68,7 @@ The system makes the workflow staged, inspectable, editable, and auditable:
 - proof is attached to files,
 - the next move is small enough to test.
 
-Evidence: `ICM_TRACE.md`, `COMPETITION_RULES_TRACE.md`, `RECEIPTS.md`.
+Evidence: `docs/icm-trace.md`, `docs/competition-rules-trace.md`, `docs/receipts.md`.
 
 ## What goes above the brief?
 
@@ -86,7 +86,7 @@ The required folder is present, and the entry adds a clearer front door:
 - a pitch reel,
 - receipts that link claims to files.
 
-Evidence: `JUDGE_BRIEF.md`, `landing/index.html`, `landing/reel.html`, `PITCH_REEL.md`, `RECEIPTS.md`, `demo/whole-person-tour.md`, `reference/signal-map.md`, `reference/admin-ops-playbooks.md`.
+Evidence: `docs/judge-brief.md`, `landing/index.html`, `landing/reel.html`, `docs/pitch-reel.md`, `docs/receipts.md`, `demo/whole-person-tour.md`, `reference/signal-map.md`, `reference/admin-ops-playbooks.md`.
 
 ## What are the boundaries?
 
@@ -94,4 +94,4 @@ Unstuck is not therapy, medical advice, diagnosis, medication guidance, autonomo
 
 It helps the user name what is real, choose one humane next move, and leave a re-entry trail.
 
-Evidence: `reference/safety-boundaries.md`, `HANDOFF_CARD.md`, `PROJECT_INSTRUCTIONS.md`.
+Evidence: `reference/safety-boundaries.md`, `docs/handoff-card.md`, `PROJECT_INSTRUCTIONS.md`.

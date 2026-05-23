@@ -47,5 +47,5 @@ The Week 5 brief asks whether the artifact actually coaches. A coach changes the
 - `FIRST_RUN.md` shows the exact cold-start receipt and tiny proof loop.
 - `PROJECT_INSTRUCTIONS.md` makes the first-reply expectation paste-ready.
 - `demo/transcript-pack.md` shows nine cold-test replies.
-- `scripts/verify-first-reply-acceptance.mjs` checks those replies for friction, one move, tiny proof, brevity, and generic-advice failure patterns.
+- The acceptance test is simple: the reply must name friction, give one move, ask for tiny proof, stay brief, and avoid generic-advice patterns.
 - `reference/safety-boundaries.md` defines when the coach must stop or route out.

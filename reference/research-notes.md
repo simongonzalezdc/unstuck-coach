@@ -1,4 +1,4 @@
-# Source Notes
+# Research Notes
 
 This file explains the design lineage without requiring non-public systems or external tools.
 
@@ -42,7 +42,7 @@ The research is not included as a bibliography dump. It is translated into coach
 | --- | --- |
 | Working memory as limited external RAM | The coach holds the list and returns one next action |
 | Cognitive accessibility and low translation burden | The coach uses plain language, accepts messy input, and does not make the user or judge decode jargon before help starts |
-| Task initiation as activation energy | First-Contact Runway and first-contact scripts |
+| Task initiation as activation energy | First-Contact Runway and first-contact prompts |
 | Time blindness | Time Made Visible, buffers, start times, backward planning |
 | Inhibitory control and novelty pull | Tangent Firewall: chase, bookmark, or discard |
 | Emotional regulation and shame spirals | Communication Threat Armor, Return Without Shame, Forgiveness Reset |
@@ -96,10 +96,10 @@ The coach does not require:
 - A database.
 - Calendar access.
 - Private messages.
-- Local scripts.
+- Extra automation.
 - A particular editor.
 - A particular repository.
-- Claude Project or Claude Code as the only runner.
+- Claude Project as the only runner.
 - Cloud inference if the local model can hold the operating files.
 
 Those can be added later, but the competition deliverable is the coaching folder itself.

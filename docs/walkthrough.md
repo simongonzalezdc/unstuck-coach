@@ -1,6 +1,6 @@
 # Unstuck Coach Walkthrough
 
-Use this as the longer recording script or quick read. For the tighter video/GIF layer, use `PITCH_REEL.md` and the browser page at `landing/reel.html`.
+Use this as the longer recording script or quick read. For the tighter video/GIF layer, use `docs/pitch-reel.md` and the browser page at `landing/reel.html`.
 
 ## One-Sentence Thesis
 
@@ -39,18 +39,18 @@ If the response is a lecture, it failed. If it creates one state-aware next move
 
 Use receipts after the human value is clear:
 
-- `JUDGE_BRIEF.md` for the one-page case.
+- `docs/judge-brief.md` for the one-page case.
 - `FIRST_RUN.md` for the cold-start receipt.
 - `FIRST_REPLY_SCORECARD.md` for pass/fail behavior.
 - `demo/transcript-pack.md` for cold-test examples.
 - `demo/whole-person-tour.md` for six life surfaces.
 - `evals/red-face-tests.md` for pressure cases.
-- `RECEIPTS.md` for claim-to-file traceability.
+- `docs/receipts.md` for claim-to-file traceability.
 
 ## Recording Checklist
 
 - Keep the video under 90 seconds.
-- Use `PITCH_REEL.md` and `landing/reel.html` for the short public-facing reel.
+- Use `docs/pitch-reel.md` and `landing/reel.html` for the short public-facing reel.
 - Show the landing page or `START_HERE.md` first, not the file tree.
 - Open the live demo once.
 - Show one live prompt switch in the demo.

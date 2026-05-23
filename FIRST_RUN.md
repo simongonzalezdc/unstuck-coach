@@ -73,16 +73,6 @@ The first run fails if the coach replies with:
 - A vague "you've got this" continuation.
 - Medical, diagnostic, or crisis advice.
 
-## Verification
+## Use This Receipt
 
-Run:
-
-```bash
-node scripts/verify-first-run.mjs
-```
-
-Then run:
-
-```bash
-node scripts/verify-public-bundle.mjs
-```
+Read this file after the first cold prompt. The response should match the shape above before the reader has to inspect the rest of the folder.

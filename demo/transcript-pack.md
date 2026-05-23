@@ -9,9 +9,7 @@ Each transcript should pass four checks:
 - Holds or parks the extra context.
 - Ends with proof, not vibes.
 
-Run `node scripts/verify-transcript-pack.mjs` to check that all eleven cold-test examples still include the expected user prompt, coach move, and proof notes.
-
-Run `node scripts/verify-first-reply-acceptance.mjs` to check that those first replies name friction, give one concrete move, ask for tiny proof or a state signal, and avoid generic advice patterns.
+Use this pack to check that all eleven cold-test examples still include the expected user prompt, coach move, and proof notes. The first replies should name friction, give one concrete move, ask for tiny proof or a state signal, and avoid generic advice patterns.
 
 ## 1. Getting Started
 
