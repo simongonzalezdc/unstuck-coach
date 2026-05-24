@@ -6,10 +6,10 @@ The product is not an ADHD encyclopedia or a generic productivity prompt pack. I
 
 ## Best Entry Points
 
-- Landing page: https://simongonzalezdc.github.io/unstuck-coach-week5/landing/
-- Evidence reader: https://simongonzalezdc.github.io/unstuck-coach-week5/landing/evidence.html
-- Pitch reel: https://simongonzalezdc.github.io/unstuck-coach-week5/landing/reel.html
-- Repository: https://github.com/simongonzalezdc/unstuck-coach-week5
+- Landing page: https://simongonzalezdc.github.io/unstuck-coach/landing/
+- Evidence reader: https://simongonzalezdc.github.io/unstuck-coach/landing/evidence.html
+- Pitch reel: https://simongonzalezdc.github.io/unstuck-coach/landing/reel.html
+- Repository: https://github.com/simongonzalezdc/unstuck-coach
 
 ## What To Cite
 

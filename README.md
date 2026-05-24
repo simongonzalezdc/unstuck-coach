@@ -10,7 +10,7 @@ and closing loops without turning the user into a productivity problem.
 ## Try It First
 
 - Live demo: <https://unstuck.kyanitelabs.tech/>
-- Landing page: <https://simongonzalezdc.github.io/unstuck-coach-week5/landing/>
+- Landing page: <https://simongonzalezdc.github.io/unstuck-coach/landing/>
 - Fast setup: [START_HERE.md](START_HERE.md)
 - Paste-ready coach contract: [PROJECT_INSTRUCTIONS.md](PROJECT_INSTRUCTIONS.md)
 

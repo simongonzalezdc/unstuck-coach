@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://simongonzalezdc.github.io/unstuck-coach-week5/sitemap.xml
+Sitemap: https://simongonzalezdc.github.io/unstuck-coach/sitemap.xml
