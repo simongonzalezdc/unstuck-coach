@@ -17,7 +17,7 @@ Publication status is controlled by `PUBLICATION_CHECKLIST.md` and `scripts/veri
 | Include `examples.md` | `examples.md` | Calibrates responses under task-start friction, capture, overload, communication threat, failed plans, and recovery. |
 | Include `reference/` | `reference/coaching-protocols.md`, `reference/signal-map.md`, `reference/safety-boundaries.md`, `reference/source-notes.md` | Protocols, signal routing, source lineage, and boundaries are separated into reference files. |
 | Include `README.md` | `README.md` | Gives setup, judge path, prompt list, proof artifacts, and verification commands. |
-| Submit a public GitHub repo link | `SUBMISSION.md`, `PUBLICATION_CHECKLIST.md`, `scripts/prepare-publication-link.mjs`, `scripts/verify-publication-ready.mjs` | Intentionally blocked until final approval and clean public Week 5 repo URL insertion. |
+| Submit a public GitHub repo link | `SUBMISSION.md`, `PUBLICATION_CHECKLIST.md`, `scripts/prepare-publication-link.mjs`, `scripts/verify-publication-ready.mjs`, `scripts/verify-github-public-url.mjs` | Final public repository URL is inserted and verified through unauthenticated GitHub API access. |
 | Include 2-3 sentences describing who the coach is and who it coaches | `SUBMISSION.md`, `scripts/verify-submission-copy.mjs` | Verifier checks the Skool comment draft sentence count and length. |
 | Respect Premium/VIP eligibility | `PUBLICATION_CHECKLIST.md` | Eligibility is documented as confirmed before posting. |
 
@@ -35,7 +35,7 @@ Publication status is controlled by `PUBLICATION_CHECKLIST.md` and `scripts/veri
 - `landing/index.html`: visual judge path and hosted GLM live-demo route.
 - `ICM_TRACE.md`: explicit ICM fit map from workflow architecture to folder evidence.
 - `FIRST_RUN.md`: exact cold-start receipt for the first judge prompt.
-- `JUDGE_BRIEF.md`: one-page above-the-brief case, fast judge test, failure modes, ICM fit, evidence map, and blocked publication state.
+- `JUDGE_BRIEF.md`: one-page above-the-brief case, fast judge test, failure modes, ICM fit, evidence map, and ready publication state.
 - `JUDGE_SCORECARD.md`: 18-point scoring rubric.
 - `JUDGE_FAQ.md`: short answers to predictable judge objections.
 - `RECEIPTS.md`: claim-to-file proof map.
@@ -48,13 +48,13 @@ Publication status is controlled by `PUBLICATION_CHECKLIST.md` and `scripts/veri
 - `scripts/verify-judge-faq.mjs`: executable check for the judge FAQ.
 - `scripts/verify-icm-trace.mjs`: executable check for the ICM trace and evidence references.
 - `scripts/verify-public-bundle.mjs`: privacy, structure, landing-link, submission-copy, first-run, and console-behavior checks.
-- `scripts/build-public-bundle.mjs`: ignored export for the clean Week 5 public repo.
+- `scripts/build-public-bundle.mjs`: ignored export for rebuilding the clean public repo payload.
 
-## Current Blockers
+## Ready To Post Checks
 
-These are deliberate blockers, not hidden gaps:
+These checks are the final rule-facing posting state:
 
-- The folder owner must approve or veto the landing page design.
-- A clean public Week 5 repository must exist.
-- The final public GitHub URL must replace the placeholder in `SUBMISSION.md`.
-- `scripts/verify-publication-ready.mjs` must report `status: "ready"` after the final URL is inserted.
+- The approved public GitHub URL is present in `SUBMISSION.md`.
+- The public GitHub URL is visible through unauthenticated GitHub API access.
+- The repository About homepage points to the Kyanite landing page.
+- `scripts/verify-publication-ready.mjs` reports `status: "ready"`.

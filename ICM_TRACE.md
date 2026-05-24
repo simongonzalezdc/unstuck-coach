@@ -16,7 +16,7 @@ In this entry, ICM means practical workflow architecture: a messy human problem 
 | Separate source material from execution | Keep protocols, signals, safety, and source lineage in reference files instead of burying them in prompts. | `reference/` |
 | Make the handoff portable | Give a stranger the exact Claude Project instructions and the shortest cold-run path. | `PROJECT_INSTRUCTIONS.md`, `START_HERE.md`, `docs/judge-walkthrough.md` |
 | Make proof executable | Pair claims with verifiers and a final smoke gate. | `RECEIPTS.md`, `scripts/verify-icm-trace.mjs`, `scripts/final-review-smoke.mjs` |
-| Keep publication auditable | Block public posting until review, eligibility, clean repo, and final link checks pass. | `PUBLICATION_CHECKLIST.md`, `scripts/verify-publication-ready.mjs` |
+| Keep publication auditable | Make the public posting state checkable: eligibility, clean repo, public URL, and final privacy checks are all explicit. | `PUBLICATION_CHECKLIST.md`, `scripts/verify-publication-ready.mjs`, `scripts/verify-github-public-url.mjs` |
 
 ## File Responsibilities
 
@@ -53,7 +53,7 @@ In this entry, ICM means practical workflow architecture: a messy human problem 
 
 ```bash
 node scripts/verify-icm-trace.mjs
-node scripts/final-review-smoke.mjs --expect-blocked
+node scripts/final-review-smoke.mjs --expect-ready --skip-build
 ```
 
 The first reply should name friction without shame, choose one concrete move, hold the rest, ask for tiny proof, and avoid an article or tactic menu.

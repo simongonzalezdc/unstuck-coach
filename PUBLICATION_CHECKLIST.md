@@ -1,18 +1,18 @@
 # Publication Checklist
 
-Use this only after the folder owner has reviewed the folder and approved the landing page.
+Use this to audit the final public posting state.
 
-## Do Not Publish Until
+## Verified Publication Requirements
 
 - The folder owner has read the folder.
 - The folder owner has approved the landing page design.
 - Premium/VIP eligibility is documented as confirmed.
-- A clean Week 5 public repository exists.
+- A clean public repository exists.
 - The public repository is not the Week 3 submission repo.
 - The Kyanite VPS landing route is live at `https://unstuck.kyanitelabs.tech/`.
 - The repository About homepage points to the landing page URL.
 - `robots.txt`, `sitemap.xml`, and `llms.txt` are present in the public payload.
-- The final public GitHub URL is ready to paste into `SUBMISSION.md`.
+- The final public GitHub URL is inserted in `SUBMISSION.md`.
 - The final public GitHub URL is rejected if it points at the old Week 3 repository.
 - The final public GitHub URL is visible through unauthenticated GitHub API access.
 
@@ -50,11 +50,11 @@ node scripts/verify-final-privacy-scan.mjs
 NODE_PATH=/path/to/node_modules node scripts/render-review-screenshots.mjs
 node scripts/build-public-bundle.mjs
 node scripts/verify-clean-public-stage.mjs
-node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public
-node scripts/final-review-smoke.mjs --expect-blocked
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-public
+node scripts/final-review-smoke.mjs --expect-ready --skip-build
 ```
 
-Expected before public-link insertion:
+Expected final state:
 
 - `verify-submission-copy.mjs` reports 2-3 Skool comment sentences.
 - `verify-submission-surfaces.mjs` reports the Skool draft and SUBMISSION landing version are synchronized, while the landing avoids a separate submission panel.
@@ -65,7 +65,7 @@ Expected before public-link insertion:
 - `verify-judge-brief.mjs` reports seven brief sections, evidence references, six fast-test steps, and zero public-unsafe private/local references.
 - `verify-landing-accessibility.mjs` reports labelled landing sections, local hash links, image alt text, copy controls, tab behavior, focus-visible CSS, reduced-motion CSS, and zero failures.
 - `verify-source-notes.mjs` reports source lineage, research-to-behavior rows, design-lineage bullets, portability notes, and zero public-unsafe private/local references.
-- `verify-competition-rules-trace.mjs` reports 12 brief requirement rows, 4 judging question rows, above-the-brief proof bullets, 4 blockers, and zero public-unsafe private/local references.
+- `verify-competition-rules-trace.mjs` reports 12 brief requirement rows, 4 judging question rows, above-the-brief proof bullets, 4 ready-to-post checks, and zero public-unsafe private/local references.
 - `verify-product-thesis.mjs` reports the folder-first product rationale, whole-person scope, proof logic, and boundaries with zero failures.
 - `verify-icm-trace.mjs` reports the public ICM fit map, evidence references, and zero failures.
 - `verify-mode-router.mjs` reports 5 stance rows, 5 routing rules, explicit non-coding-only execution framing, and zero failures.
@@ -85,8 +85,7 @@ Expected before public-link insertion:
 - `verify-final-privacy-scan.mjs` reports `status: "pass"` and zero private/local provenance leaks across the public bundle.
 - `render-review-screenshots.mjs` refreshes landing, narrow/mobile first-glance, evidence reader, calendar/inbox admin-band, first-run receipt, scorecard, FAQ, and reel screenshots when Playwright is available through local install or `NODE_PATH`.
 - `verify-clean-public-stage.mjs` stages into a temporary separate folder, verifies the staged payload, removes the temporary target, and reports zero failures.
-- `final-review-smoke.mjs --expect-blocked` reports `status: "pass"` before the final public link is inserted.
-- Warnings about the missing final GitHub link are expected while the folder is still private.
+- `final-review-smoke.mjs --expect-ready --skip-build` reports `status: "pass"` with the public GitHub link inserted.
 
 ## Public Repo Payload
 
@@ -96,21 +95,21 @@ The generated payload is:
 output/public-bundle/unstuck-coach/
 ```
 
-After approval, keep the reviewed source folder as the canonical copy until the final link is inserted and verified. Do not maintain two different `SUBMISSION.md` files.
+Keep the reviewed source folder as the canonical build copy. Do not maintain two different `SUBMISSION.md` files.
 
 Recommended final sequence:
 
 1. Insert the approved final public GitHub URL in the reviewed source folder.
 2. Run the ready gates from the reviewed source folder.
-3. Build or stage the public payload into the clean Week 5 public repository.
+3. Build or stage the public payload into the clean public repository.
 4. Run the public-bundle and ready gates again from inside that final public repository.
 
-Copy the generated payload into the clean Week 5 public repository after the approved link is present in the reviewed source folder.
+Copy the generated payload into the clean public repository only after the approved link is present in the reviewed source folder.
 
 Or stage it with the guarded helper:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public --write --require-ready
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-public --write --require-ready
 ```
 
 The `--require-ready` flag is for final publication staging. It refuses to stage if the reviewed source folder still has the placeholder URL or fails `verify-publication-ready.mjs`.
@@ -129,9 +128,9 @@ node scripts/final-review-smoke.mjs --expect-ready --skip-build
 
 They should still report zero failures. If any command reports that the final URL is missing or still a placeholder, the public repository was staged from the wrong copy.
 
-## Insert The Final Link
+## Recheck The Final Link
 
-Run this from the reviewed source folder before staging or copying into the final public repository. If the final public repository is already staged, rerun the same command there after copying only to confirm it contains the same approved link.
+Run this from the reviewed source folder before staging or copying into the final public repository. If the final public repository is already staged, rerun the same command there only to confirm it contains the same approved link.
 
 Dry-run first:
 
@@ -157,7 +156,7 @@ node scripts/final-review-smoke.mjs --expect-ready --skip-build
 The final green state is:
 
 - `status` is `ready`.
-- The GitHub link is the real public Week 5 repository.
+- The GitHub link is the real public Unstuck Coach repository.
 - The GitHub link is rejected if it points at the old Week 3 repository.
 - The GitHub link is visible through unauthenticated GitHub API access, proving the private review repo is not being submitted by accident.
 - The Skool comment draft remains 2-3 sentences.

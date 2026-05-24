@@ -183,7 +183,7 @@ Open `WRITEUP.md`.
 
 Open `JUDGE_BRIEF.md`.
 
-It should make the winning case readable before the judge opens every proof artifact: whole-person executive-function accessibility, above-the-brief proof, a fast judge test, failure modes, ICM fit, evidence map, and current publication blockers.
+It should make the winning case readable before the judge opens every proof artifact: whole-person executive-function accessibility, above-the-brief proof, a fast judge test, failure modes, ICM fit, evidence map, and current publication readiness.
 
 Open `PRODUCT_THESIS.md`.
 
@@ -209,7 +209,7 @@ It should compress the argument: specific domain, folder methodology, and proof 
 
 Open `COMPETITION_RULES_TRACE.md`.
 
-It should map the Week 5 brief, required files, judging questions, and current publication blockers to concrete evidence.
+It should map the Week 5 brief, required files, judging questions, and current publication readiness checks to concrete evidence.
 
 Run its verifier:
 
@@ -217,7 +217,7 @@ Run its verifier:
 node scripts/verify-competition-rules-trace.mjs
 ```
 
-It should report 12 brief requirement rows, 4 judging question rows, above-the-brief proof bullets, 4 blockers, and zero public-unsafe private/local references.
+It should report 12 brief requirement rows, 4 judging question rows, above-the-brief proof bullets, 4 ready-to-post checks, and zero public-unsafe private/local references.
 
 Open `HANDOFF_CARD.md`.
 
@@ -237,7 +237,7 @@ It should report nine criteria rows, a sequential fast scoring path, and zero pu
 
 Open `JUDGE_FAQ.md`.
 
-It should answer the predictable Week 5 judging questions quickly: what the coach is, who it coaches, what fails, how it fits ICM, what goes above the brief, and why publication remains blocked until review.
+It should answer the predictable Week 5 judging questions quickly: what the coach is, who it coaches, what fails, how it fits ICM, what goes above the brief, and where the ready publication proof lives.
 
 Open `PROJECT_INSTRUCTIONS.md`.
 
@@ -245,7 +245,7 @@ It should be paste-ready for Claude Project instructions and should preserve the
 
 Open `PUBLICATION_CHECKLIST.md`.
 
-It should keep final publishing separate from review: design approval, documented Premium/VIP eligibility, clean Week 5 public repo, final link insertion, and the green publication gate.
+It should keep final publishing auditable: design approval, documented Premium/VIP eligibility, clean public repo, final link insertion, public URL proof, and the green publication gate.
 
 Open `WALKTHROUGH.md`.
 
@@ -368,14 +368,14 @@ node scripts/verify-first-reply-acceptance.mjs
 
 It should check all nine transcript first replies for friction naming, one concrete move, tiny proof or state signal, and generic-advice failure patterns.
 
-To verify the proof layer without publishing, run:
+To verify the final proof layer, run:
 
 ```bash
 node scripts/judge-quick-proof.mjs
-node scripts/final-review-smoke.mjs --expect-blocked
+node scripts/final-review-smoke.mjs --expect-ready --skip-build
 ```
 
-The quick proof should pass as the publication-independent judge summary. The smoke gate should also pass while keeping publication blocked only because the final public GitHub URL is missing and the review placeholder is still present.
+The quick proof should pass as the judge summary. The smoke gate should also pass with the final public GitHub URL inserted, public, and privacy-checked.
 
 For the clean public-repo staging preflight, run:
 
@@ -391,12 +391,12 @@ Build the public repo payload:
 node scripts/build-public-bundle.mjs
 ```
 
-The generated folder at `output/public-bundle/unstuck-coach/` should verify from inside itself. That folder is the clean payload for the separate Week 5 public repository after final link approval.
+The generated folder at `output/public-bundle/unstuck-coach/` should verify from inside itself. That folder is the clean payload for rebuilding the public repository if the source changes.
 
 Dry-run clean public repository staging:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-public
 ```
 
 The helper should verify the bundle first and report a dry-run summary. Use `--write` only after the target folder is reviewed.

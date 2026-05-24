@@ -180,7 +180,7 @@ export function verifyPublicationReady() {
     competitionRulesTraceBriefRows: competitionRulesTrace.briefRequirementRows,
     competitionRulesTraceJudgingRows: competitionRulesTrace.judgingQuestionRows,
     competitionRulesTraceProofBullets: competitionRulesTrace.aboveBriefProofBullets,
-    competitionRulesTraceBlockers: competitionRulesTrace.blockerBullets,
+    competitionRulesTraceReadyChecks: competitionRulesTrace.readyCheckBullets,
     icmTraceSections: icmTrace.sections,
     icmTraceEvidenceRefs: icmTrace.evidenceRefs,
     modeRouterStances: modeRouter.stances,

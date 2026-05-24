@@ -59,7 +59,7 @@ export function verifyJudgeScorecard(root = process.cwd()) {
     "scripts/render-review-screenshots.mjs",
     "reference/mode-router.md",
     "scripts/verify-mode-router.mjs",
-    "node scripts/final-review-smoke.mjs --expect-blocked",
+    "node scripts/final-review-smoke.mjs --expect-ready --skip-build",
     "live-obligation rescue before cleanup",
     "If the coach gives a productivity article, score the coach-behavior criterion 0",
   ];

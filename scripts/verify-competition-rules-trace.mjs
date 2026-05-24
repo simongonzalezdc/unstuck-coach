@@ -36,7 +36,7 @@ export function verifyCompetitionRulesTrace(root = process.cwd()) {
       briefRequirementRows: 0,
       judgingQuestionRows: 0,
       aboveBriefProofBullets: 0,
-      blockerBullets: 0,
+      readyCheckBullets: 0,
       failures: ["Missing COMPETITION_RULES_TRACE.md."],
     };
   }
@@ -44,8 +44,8 @@ export function verifyCompetitionRulesTrace(root = process.cwd()) {
   const markdown = read(root, "COMPETITION_RULES_TRACE.md");
   const briefRequirementRows = tableRows(section(markdown, "## Brief Requirements", "## Judging Questions")).length;
   const judgingQuestionRows = tableRows(section(markdown, "## Judging Questions", "## Above-The-Brief Proof")).length;
-  const aboveBriefProofBullets = bullets(section(markdown, "## Above-The-Brief Proof", "## Current Blockers")).length;
-  const blockerBullets = bullets(section(markdown, "## Current Blockers")).length;
+  const aboveBriefProofBullets = bullets(section(markdown, "## Above-The-Brief Proof", "## Ready To Post Checks")).length;
+  const readyCheckBullets = bullets(section(markdown, "## Ready To Post Checks")).length;
 
   const requiredText = [
     "This file maps the Week 5 brief to the exact artifact that satisfies each rule or judging question.",
@@ -69,11 +69,14 @@ export function verifyCompetitionRulesTrace(root = process.cwd()) {
     "scripts/verify-competition-rules-trace.mjs",
     "scripts/verify-judge-brief.mjs",
     "scripts/verify-publication-ready.mjs",
+    "scripts/verify-github-public-url.mjs",
     "one-page above-the-brief case",
     "fast judge test",
-    "blocked publication state",
+    "ready publication state",
     "Eligibility is documented as confirmed before posting.",
-    "Intentionally blocked until final approval and clean public Week 5 repo URL insertion.",
+    "Final public repository URL is inserted and verified through unauthenticated GitHub API access.",
+    "Ready To Post Checks",
+    "The approved public GitHub URL is present in `SUBMISSION.md`.",
   ];
 
   for (const text of requiredText) {
@@ -94,8 +97,22 @@ export function verifyCompetitionRulesTrace(root = process.cwd()) {
     failures.push(`Expected at least 13 above-the-brief proof bullets, found ${aboveBriefProofBullets}.`);
   }
 
-  if (blockerBullets !== 4) {
-    failures.push(`Expected 4 current blocker bullets, found ${blockerBullets}.`);
+  if (readyCheckBullets !== 4) {
+    failures.push(`Expected 4 ready-to-post check bullets, found ${readyCheckBullets}.`);
+  }
+
+  const staleLaunchText = [
+    "Current Blockers",
+    "blocked publication state",
+    "Intentionally blocked until final approval",
+    "placeholder in `SUBMISSION.md`",
+    "folder owner must approve",
+  ];
+
+  for (const text of staleLaunchText) {
+    if (markdown.includes(text)) {
+      failures.push(`COMPETITION_RULES_TRACE.md contains stale pre-launch text: ${text}`);
+    }
   }
 
   const forbiddenText = [
@@ -119,7 +136,7 @@ export function verifyCompetitionRulesTrace(root = process.cwd()) {
     briefRequirementRows,
     judgingQuestionRows,
     aboveBriefProofBullets,
-    blockerBullets,
+    readyCheckBullets,
     failures,
   };
 }

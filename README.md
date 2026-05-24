@@ -323,7 +323,7 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 - `scripts/verify-judge-faq.mjs` checks that the judge FAQ keeps eight short answers, evidence references, and no public-unsafe private/local references.
 - `scripts/verify-judge-scorecard.mjs` checks that the judge scorecard keeps nine criteria, a sequential fast path, evidence links, and no public-unsafe private/local references.
 - `scripts/verify-judge-brief.mjs` checks that the judge brief keeps the whole-person wedge, above-the-brief case, fast test, failure modes, ICM fit, evidence map, blocked state, and no public-unsafe private/local references.
-- `scripts/verify-competition-rules-trace.mjs` checks that the Week 5 rules trace keeps the required brief rows, judging-question rows, above-the-brief proof list, blockers, and no public-unsafe private/local references.
+- `scripts/verify-competition-rules-trace.mjs` checks that the Week 5 rules trace keeps the required brief rows, judging-question rows, above-the-brief proof list, ready-to-post checks, and no public-unsafe private/local references.
 - `scripts/verify-product-thesis.mjs` checks that the product thesis stays explicit about folder-first design, first-contact coaching, proof, and boundaries.
 - `scripts/verify-icm-trace.mjs` checks that the ICM trace stays public, evidence-backed, and tied to the proof layer.
 - `scripts/verify-first-run.mjs` checks that the first-run receipt keeps the cold prompt, expected first reply, proof loop, and fail patterns intact.
@@ -363,7 +363,7 @@ node scripts/verify-public-bundle.mjs
 node scripts/verify-final-privacy-scan.mjs
 ```
 
-The quick proof reports the cold-start path, first-reply gate, transcript evidence, whole-person tour, live-demo bridge, protocol behavior verifier, stress evals, admin operations playbooks, source-notes lineage proof, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, concise judge brief, and fastest cold prompts without requiring the final public GitHub link. The bundle verifier checks required files, local landing-page links/assets, product thesis, source notes, Week 5 rules trace, ICM trace, pitch reel, record-ready reel page, judge FAQ, judge scorecard, judge brief, first-run receipt, first-reply scorecard, start-here prompt readiness, landing accessibility, landing copy controls, mode routing, Skool comment shape, synchronized submission surfaces, transcript completeness, whole-person tour coverage, first-reply acceptance, protocol behavior, public-safe checklist text, emoji/symbol-range leakage, private provenance patterns, and the standalone final privacy scan. Before final publication it may warn that the GitHub link is still pending; after the public repo link is inserted, those warnings should be gone.
+The quick proof reports the cold-start path, first-reply gate, transcript evidence, whole-person tour, live-demo bridge, protocol behavior verifier, stress evals, admin operations playbooks, source-notes lineage proof, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, concise judge brief, and fastest cold prompts. The bundle verifier checks required files, local landing-page links/assets, product thesis, source notes, Week 5 rules trace, ICM trace, pitch reel, record-ready reel page, judge FAQ, judge scorecard, judge brief, first-run receipt, first-reply scorecard, start-here prompt readiness, landing accessibility, landing copy controls, mode routing, Skool comment shape, synchronized submission surfaces, transcript completeness, whole-person tour coverage, first-reply acceptance, protocol behavior, public-safe checklist text, emoji/symbol-range leakage, private provenance patterns, and the standalone final privacy scan.
 
 To prove the payload can stage into a separate clean repository folder, run:
 
@@ -379,18 +379,18 @@ Run:
 node scripts/build-public-bundle.mjs
 ```
 
-This creates an ignored export at `output/public-bundle/unstuck-coach/`. After final link approval, copy that exported folder into the clean Week 5 public repository and run the verifier again from inside the copied repo.
+This creates an ignored export at `output/public-bundle/unstuck-coach/`. Use it only when rebuilding the public payload; the submitted public repository should still be verified from inside its own checkout.
 
 Dry-run staging into a separate clean repository folder:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-public
 ```
 
 After reviewing the target, write it:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public --write
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-public --write
 ```
 
 ## Final Publication Gate
@@ -415,15 +415,9 @@ node scripts/verify-github-public-url.mjs
 node scripts/verify-final-privacy-scan.mjs
 ```
 
-Both checks should report `status: "ready"` after the approved repository URL is inserted. Before that handoff, this gate is expected to report `status: "blocked"`. It should also stay blocked if the link points at the old Week 3 repository or at any repository unauthenticated GitHub API access cannot see.
+Both checks should report `status: "ready"` with the approved public repository URL inserted. The gate should fail if the link points at the old Week 3 repository or at any repository unauthenticated GitHub API access cannot see.
 
-For one-command final review before the link exists, run:
-
-```bash
-node scripts/final-review-smoke.mjs --expect-blocked
-```
-
-After the final public link is inserted, run:
+For one-command final review after the public link is inserted, run:
 
 ```bash
 node scripts/final-review-smoke.mjs --expect-ready --skip-build

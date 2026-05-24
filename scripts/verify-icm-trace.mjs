@@ -15,7 +15,7 @@ const requiredText = [
   "A generic ADHD or productivity knowledge base.",
   "Vague claims about methodology without scorecards, receipts, or verifiers.",
   "node scripts/verify-icm-trace.mjs",
-  "node scripts/final-review-smoke.mjs --expect-blocked",
+  "node scripts/final-review-smoke.mjs --expect-ready --skip-build",
   "state, friction, move, hold, check, and close",
 ];
 
