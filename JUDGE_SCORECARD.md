@@ -66,7 +66,7 @@ node scripts/verify-eval-coverage.mjs
 node scripts/verify-admin-ops-playbooks.mjs
 node scripts/judge-quick-proof.mjs
 node scripts/verify-clean-public-stage.mjs
-NODE_PATH=/path/to/node_modules node scripts/render-review-screenshots.mjs
+node scripts/render-review-screenshots.mjs
 node scripts/final-review-smoke.mjs --expect-ready --skip-build
 node scripts/verify-public-bundle.mjs
 ```

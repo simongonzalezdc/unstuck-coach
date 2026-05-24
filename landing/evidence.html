@@ -532,8 +532,8 @@
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>docs/judge-walkthrough.md</code></dd></div>
-        <div><dt>Lines</dt><dd>468</dd></div>
-        <div><dt>Bytes</dt><dd>15104</dd></div>
+        <div><dt>Lines</dt><dd>132</dd></div>
+        <div><dt>Bytes</dt><dd>3863</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -545,186 +545,83 @@
     <details class="rendered-section" open>
           <summary><span>Judge Walkthrough</span><small>1 lines</small></summary>
           <div class="rendered-section-body">
-            <p>Use this fast path to evaluate the first reply without mistaking the shortcut for the whole product scope.</p>
+            <p>Use this path to evaluate Unstuck Coach quickly without shrinking the product to one demo prompt.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>1. Read The Thesis</span><small>3 lines</small></summary>
+          <summary><span>1. Read The Core Case</span><small>3 lines</small></summary>
           <div class="rendered-section-body">
-            <p>Open <code>START_HERE.md</code>, then <code>JUDGE_BRIEF.md</code>, then <code>README.md</code>.</p>
-<p>Unstuck Coach is an external executive-function accessibility layer for whole people when intention, care, context, body state, or closure fail to become action.</p>
-<p>It is not an ADHD encyclopedia. It should coach the live moment: state, friction, one next move, held context, and clean closure.</p>
+            <p>Open <code>START_HERE.md</code>, <code>JUDGE_BRIEF.md</code>, and <code>README.md</code>.</p>
+<p><code>JUDGE_BRIEF.md</code> should make the winning case readable before the judge opens every proof artifact: whole-person executive-function accessibility, above-the-brief proof, the fast cold test, failure modes, ICM fit, evidence map, and publication readiness.</p>
+<p><code>ICM_TRACE.md</code>, <code>JUDGE_FAQ.md</code>, <code>JUDGE_BRIEF.md</code>, and <code>RECEIPTS.md</code> explain why the folder is not just a set of docs. The method is staged, visible, editable, and auditable.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>2. Check The Required Folder Shape</span><small>60 lines</small></summary>
+          <summary><span>2. Try The First Reply</span><small>8 lines</small></summary>
           <div class="rendered-section-body">
-            <p>Required Week 5 files:</p>
-<ul><li><code>identity.md</code>: who the coach is and who it coaches.</li><li><code>rules.md</code>: how it behaves.</li><li><code>examples.md</code>: calibrated interaction examples.</li><li><code>reference/</code>: reusable protocols, admin operations playbooks, signal map, safety boundaries, source notes.</li><li><code>README.md</code>: how a stranger uses it.</li></ul>
-<p>Extra proof files:</p>
-<ul><li><code>START_HERE.md</code></li><li><code>PRODUCT_THESIS.md</code></li><li><code>ICM_TRACE.md</code></li><li><code>FIRST_RUN.md</code></li><li><code>FIRST_REPLY_SCORECARD.md</code></li><li><code>COMPETITION_RULES_TRACE.md</code></li><li><code>WRITEUP.md</code></li><li><code>HANDOFF_CARD.md</code></li><li><code>JUDGE_SCORECARD.md</code></li><li><code>JUDGE_FAQ.md</code></li><li><code>JUDGE_BRIEF.md</code></li><li><code>PROJECT_INSTRUCTIONS.md</code></li><li><code>PUBLICATION_CHECKLIST.md</code></li><li><code>WALKTHROUGH.md</code></li><li><code>PITCH_REEL.md</code></li><li><code>RECEIPTS.md</code></li><li><code>landing/index.html</code></li><li><code>landing/reel.html</code></li><li><code>demo/whole-person-tour.md</code></li><li><code>scripts/prepare-publication-link.mjs</code></li><li><code>scripts/verify-submission-copy.mjs</code></li><li><code>scripts/verify-submission-surfaces.mjs</code></li><li><code>scripts/verify-pitch-reel.mjs</code></li><li><code>scripts/verify-reel-page.mjs</code></li><li><code>scripts/verify-judge-faq.mjs</code></li><li><code>scripts/verify-judge-scorecard.mjs</code></li><li><code>scripts/verify-judge-brief.mjs</code></li><li><code>scripts/verify-competition-rules-trace.mjs</code></li><li><code>scripts/verify-product-thesis.mjs</code></li><li><code>scripts/verify-icm-trace.mjs</code></li><li><code>scripts/verify-first-run.mjs</code></li><li><code>scripts/verify-first-reply-scorecard.mjs</code></li><li><code>scripts/verify-start-here.mjs</code></li><li><code>scripts/verify-landing-copy.mjs</code></li><li><code>scripts/verify-transcript-pack.mjs</code></li><li><code>scripts/verify-first-reply-acceptance.mjs</code></li><li><code>scripts/verify-whole-person-tour.mjs</code></li><li><code>scripts/verify-console-behavior.mjs</code></li><li><code>scripts/verify-eval-coverage.mjs</code></li><li><code>scripts/verify-admin-ops-playbooks.mjs</code></li><li><code>scripts/judge-quick-proof.mjs</code></li><li><code>scripts/verify-public-bundle.mjs</code></li><li><code>scripts/verify-publication-ready.mjs</code></li><li><code>scripts/verify-github-public-url.mjs</code></li><li><code>scripts/build-public-bundle.mjs</code></li><li><code>scripts/stage-public-repo.mjs</code></li><li><code>scripts/final-review-smoke.mjs</code></li><li><code>scripts/verify-clean-public-stage.mjs</code></li><li><code>demo/before-after.md</code></li><li><code>demo/transcript-pack.md</code></li><li><code>demo/whole-person-tour.md</code></li><li><code>evals/red-face-tests.md</code></li><li><code>evals/research-to-behavior-checklist.md</code></li></ul>
-          </div>
-        </details>
-<details class="rendered-section">
-          <summary><span>3. Try Four Prompts</span><small>47 lines</small></summary>
-          <div class="rendered-section-body">
-            <p>Drop the folder into a Claude Project and start with:</p>
-<p>Paste <code>PROJECT_INSTRUCTIONS.md</code> into the Claude Project instructions, or use this minimal start prompt:</p>
-<pre class="rendered-code" data-language="text"><code>You are Unstuck Coach. Read identity.md, rules.md, examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.</code></pre>
-<p>Then try:</p>
+            <p>Load the folder into a Claude Project or use the live demo, then try:</p>
 <pre class="rendered-code" data-language="text"><code>I need a coach to get started on this.</code></pre>
-<p>Expected behavior:</p>
-<ul><li>Treats this as a stuck-loop moment, not a motivation problem.</li><li>Avoids a plan essay.</li><li>Accepts the messy task pile as-is and promises one returned next move.</li></ul>
 <p>First reply acceptance test:</p>
 <ul><li>Pass: names friction, gives one concrete move, asks for tiny proof or one state signal.</li><li>Fail: article, long menu, moralizing, or vague continuation.</li></ul>
-<p>Then try:</p>
-<pre class="rendered-code" data-language="text"><code>I need to pay the bill, eat something, and answer the text, but I am frozen.</code></pre>
-<p>Expected behavior:</p>
-<ul><li>Holds the loops instead of handing them back.</li><li>Recognizes the body-state need.</li><li>Gives one humane concrete move and asks for tiny proof.</li></ul>
-<p>Try:</p>
-<pre class="rendered-code" data-language="text"><code>My inbox and calendar are a mess and I do not know what is real.</code></pre>
-<p>Expected behavior:</p>
-<ul><li>Treats this as system overload, not a personal failure.</li><li>Rescues live obligations before cleanup.</li><li>Asks for one hard calendar anchor or one inbox item tied to time, money, safety, or another person.</li></ul>
-<p>Try:</p>
-<pre class="rendered-code" data-language="text"><code>idea: make a shutdown checklist for Sunday nights</code></pre>
-<p>Expected behavior:</p>
-<ul><li>Captures and parks the idea.</li><li>Does not turn capture into a lecture.</li></ul>
-<p>Try:</p>
-<pre class="rendered-code" data-language="text"><code>I tried the same plan three times and failed every time.</code></pre>
-<p>Expected behavior:</p>
-<ul><li>Stops repeating the failed strategy.</li><li>Says the plan failed, not the person.</li><li>Changes task shape.</li></ul>
+<p>If the coach gives a productivity article, it failed even if the folder looks polished.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>4. Inspect The Proof</span><small>183 lines</small></summary>
+          <summary><span>3. Check Whole-Person Breadth</span><small>19 lines</small></summary>
           <div class="rendered-section-body">
-            <p>Open <code>landing/index.html</code>.</p>
-<p>The landing page should make the product understandable before you read every file:</p>
-<ul><li>the athlete</li><li>the above-the-brief proof band</li><li>the 60-second cold-run band</li><li>the Claude Project launch kit</li><li>the Codex, AI IDE, and local-model setup paths</li><li>the launch-kit copy controls</li><li>the coaching loop</li><li>the calendar/inbox operations band</li><li>the live demo bridge</li><li>the before/after behavior difference</li><li>the folder-method map</li><li>the cold judge path</li><li>the record-ready pitch reel page</li></ul>
-<p>Check the Calendar and inbox layer. It should show Calendar Reality, Inbox Live Obligation, Reply Debt Recovery, and the no-account-access safety boundary before asking you to trust the deeper playbooks.</p>
-<p>Use the console to type a stuck point. It should return:</p>
-<ul><li>state</li><li>friction</li><li>first move</li><li>proof check</li></ul>
-<p>Open <code>WRITEUP.md</code>.</p>
-<p>Open <code>JUDGE_BRIEF.md</code>.</p>
-<p>It should make the winning case readable before the judge opens every proof artifact: whole-person executive-function accessibility, above-the-brief proof, a fast judge test, failure modes, ICM fit, evidence map, and current publication readiness.</p>
-<p>Open <code>PRODUCT_THESIS.md</code>.</p>
-<p>It should make the design point of view explicit: the folder is the product, first contact is a cold test rather than the whole scope, the coaching loop is staged and inspectable, the setup path is portable beyond Claude Project, proof beats persuasion, and the coach stops before therapy, diagnosis, medication advice, or autonomous execution.</p>
-<p>Open <code>ICM_TRACE.md</code>.</p>
-<p>It should make the ICM fit practical rather than decorative: visible context, editable decisions, bounded handoffs, auditable proof, and publication safety should each point to concrete files.</p>
-<p>Open <code>START_HERE.md</code>.</p>
-<p>It should provide the 60-second path, exact Unstuck Coach start prompt, first-reply acceptance test, and the first cold prompt without requiring the judge to read every file first.</p>
-<p>Open <code>FIRST_RUN.md</code>.</p>
-<p>It should show the exact cold-start prompt, expected first reply, tiny proof loop, and immediate fail patterns.</p>
-<p>Open <code>FIRST_REPLY_SCORECARD.md</code>.</p>
-<p>It should make the first reply scoreable before the judge reads the whole folder: name friction, give one move, hold context, ask for proof, and immediately reject articles, menus, moralizing, vague continuations, or unsafe clinical moves.</p>
-<p>It should compress the argument: specific domain, folder methodology, and proof layer.</p>
-<p>Open <code>COMPETITION_RULES_TRACE.md</code>.</p>
-<p>It should map the Week 5 brief, required files, judging questions, and current publication readiness checks to concrete evidence.</p>
-<p>Run its verifier:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-competition-rules-trace.mjs</code></pre>
-<p>It should report 12 brief requirement rows, 4 judging question rows, above-the-brief proof bullets, 4 ready-to-post checks, and zero public-unsafe private/local references.</p>
-<p>Open <code>HANDOFF_CARD.md</code>.</p>
-<p>It should make the coach handoff obvious enough for a stranger to use without a call.</p>
-<p>Open <code>JUDGE_SCORECARD.md</code>.</p>
-<p>It should make the evaluation criteria explicit enough to score the entry without inventing a rubric.</p>
-<p>Run its verifier:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-judge-scorecard.mjs</code></pre>
-<p>It should report nine criteria rows, a sequential fast scoring path, and zero public-unsafe private/local references.</p>
-<p>Open <code>JUDGE_FAQ.md</code>.</p>
-<p>It should answer the predictable Week 5 judging questions quickly: what the coach is, who it coaches, what fails, how it fits ICM, what goes above the brief, and where the ready publication proof lives.</p>
-<p>Open <code>PROJECT_INSTRUCTIONS.md</code>.</p>
-<p>It should be paste-ready for Claude Project instructions and should preserve the core loop: state, friction, move, hold, check, close.</p>
-<p>Open <code>PUBLICATION_CHECKLIST.md</code>.</p>
-<p>It should keep final publishing auditable: design approval, documented Premium/VIP eligibility, clean public repo, final link insertion, public URL proof, and the green publication gate.</p>
-<p>Open <code>WALKTHROUGH.md</code>.</p>
-<p>It should make the presentation path obvious: thesis, handoff, demo, transcripts, receipts, verifier, and the five judge prompts.</p>
-<p>Open <code>RECEIPTS.md</code>.</p>
-<p>It should map every public claim to a concrete artifact, so the entry feels inspectable instead of persuasive-only.</p>
-<p>Open <code>demo/whole-person-tour.md</code>.</p>
-<p>It should make the breadth testable in one place: food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, and closure/recovery. Each stop should have a pasteable prompt, expected first move, proof check, and immediate-fail signal.</p>
-<p>Run its verifier:</p>
+            <p>Try these prompts:</p>
+<pre class="rendered-code" data-language="text"><code>I need to pay the bill, eat something, and answer the text, but I am frozen.</code></pre>
+<pre class="rendered-code" data-language="text"><code>My inbox and calendar are a mess and I do not know what is real.</code></pre>
+<pre class="rendered-code" data-language="text"><code>idea: make a shutdown checklist for Sunday nights</code></pre>
+<pre class="rendered-code" data-language="text"><code>I tried the same plan three times and failed every time.</code></pre>
+<p>The coach should hold the pile, pick one visible next move, change strategy after repeated failure, and avoid handing the whole list back to the user.</p>
+<p>For the broader tour, open <code>demo/whole-person-tour.md</code>. It contains 6 whole-person tour stops across food/body, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, and closure/recovery.</p>
+<p>Run:</p>
 <pre class="rendered-code" data-language="bash"><code>node scripts/verify-whole-person-tour.mjs</code></pre>
-<p>It should report 6 tour stops, 6 prompt blocks, 6 proof checks, 6 immediate-fail checks, and zero failures.</p>
-<p>Run the verifier:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-public-bundle.mjs</code></pre>
-<p>It should report zero failures, a 2-3 sentence Skool comment draft, and nine protocol behavior cases. Warnings about the final GitHub link are expected until the public repo URL is inserted.</p>
-<p>For the submission-copy proof, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-submission-copy.mjs</code></pre>
-<p>It should report a 2-3 sentence comment draft under the character cap.</p>
-<p>For the submission-surface proof, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-submission-surfaces.mjs</code></pre>
-<p>It should report that the primary Skool draft and SUBMISSION landing-page version are synchronized, and that the landing does not render a separate submission panel.</p>
-<p>For the pitch-reel proof, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-pitch-reel.mjs</code></pre>
-<p>It should report six timed shots, a short voiceover, and zero public-unsafe private/local references.</p>
-<p>For the record-ready reel page proof, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-reel-page.mjs</code></pre>
-<p>It should report six reel scenes, resolved local refs, and zero public-unsafe private/local references.</p>
-<p>For the judge FAQ proof, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-judge-faq.mjs</code></pre>
-<p>It should report eight FAQ questions, evidence references, and zero public-unsafe private/local references.</p>
-<p>For the product-thesis proof, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-product-thesis.mjs</code></pre>
-<p>It should report the thesis sections and evidence references with zero failures.</p>
-<p>For the ICM proof, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-icm-trace.mjs</code></pre>
-<p>It should report the ICM trace sections, evidence references, practical-fit rows, and zero failures.</p>
-<p>For the first-reply scorecard proof, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-first-run.mjs
-node scripts/verify-first-reply-scorecard.mjs</code></pre>
-<p>It should report the scorecard checks and table rows with zero failures.</p>
-<p>For the console-only behavior proof, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-console-behavior.mjs
-node scripts/verify-eval-coverage.mjs
-node scripts/verify-admin-ops-playbooks.mjs
-node scripts/verify-whole-person-tour.mjs
-node scripts/judge-quick-proof.mjs</code></pre>
-<p>It should classify task-start friction, a getting-started coach request, communication threat, working-memory overload, idea capture, repeated failed plans, body-first recovery, inbox/calendar reality, and calibration fallback. It should also report 13 red-face tests, at least 12 research-to-behavior rows, 5 admin operations playbooks, 6 whole-person tour stops, and a passing judge quick proof summary that does not require the final public GitHub URL.</p>
-<p>For the transcript-pack proof, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-transcript-pack.mjs</code></pre>
-<p>It should check nine cold-test transcripts and report zero failures.</p>
-<p>For the first-reply acceptance proof, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-first-reply-acceptance.mjs</code></pre>
-<p>It should check all nine transcript first replies for friction naming, one concrete move, tiny proof or state signal, and generic-advice failure patterns.</p>
-<p>To verify the final proof layer, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/judge-quick-proof.mjs
-node scripts/final-review-smoke.mjs --expect-ready --skip-build</code></pre>
-<p>The quick proof should pass as the judge summary. The smoke gate should also pass with the final public GitHub URL inserted, public, and privacy-checked.</p>
-<p>For the clean public-repo staging preflight, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-clean-public-stage.mjs</code></pre>
-<p>It should stage the payload into a temporary separate folder, verify from inside that staged payload, remove the temporary target, and report zero failures.</p>
-<p>Build the public repo payload:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/build-public-bundle.mjs</code></pre>
-<p>The generated folder at <code>output/public-bundle/unstuck-coach/</code> should verify from inside itself. That folder is the clean payload for rebuilding the public repository if the source changes.</p>
-<p>Dry-run clean public repository staging:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-public</code></pre>
-<p>The helper should verify the bundle first and report a dry-run summary. Use <code>--write</code> only after the target folder is reviewed.</p>
-<p>After the final public GitHub repository exists, dry-run the link insertion:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/prepare-publication-link.mjs --url https://github.com/OWNER/REPO</code></pre>
-<p>Then write the approved URL:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/prepare-publication-link.mjs --url https://github.com/OWNER/REPO --write</code></pre>
-<p>After the final public GitHub link is inserted, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-publication-ready.mjs</code></pre>
-<p>It should report <code>status: &quot;ready&quot;</code>. Before the final link is inserted, it should stay blocked.</p>
-<p>Open <code>demo/before-after.md</code>.</p>
-<p>Look for the difference between generic assistant behavior and coach behavior:</p>
-<ul><li>Generic answer: advice, explanation, motivational language.</li><li>Unstuck answer: state-aware, one move, working-memory relief, closure.</li></ul>
-<p>Open <code>demo/transcript-pack.md</code>.</p>
-<p>It should give a judge cold-test examples for getting started, whole-life freeze, message threat, overload, raw capture, repeated failed plans, body-first recovery, inbox/calendar reality, and calibration.</p>
-<p>Open <code>evals/red-face-tests.md</code>.</p>
-<p>The red-face tests check whether the coach still works under shame, overload, inbox/calendar reality, capture, tangents, time blindness, repeated failure, hyperfocus crash, and clinical boundary pressure.</p>
-<p>Open <code>evals/research-to-behavior-checklist.md</code>.</p>
-<p>This file shows how the research turned into behavior:</p>
-<ul><li>working memory -&gt; hold the list</li><li>time blindness -&gt; visible anchors</li><li>inbox/calendar noise -&gt; live-obligation rescue</li><li>interoception -&gt; body-first prompts</li><li>system rot -&gt; bankruptcy/reset</li><li>novelty pull -&gt; tangent firewall</li></ul>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>5. Pass / Fail Criteria</span><small>13 lines</small></summary>
+          <summary><span>4. Inspect The Interface</span><small>10 lines</small></summary>
+          <div class="rendered-section-body">
+            <p>Open <code>landing/index.html</code> or <code>https://unstuck.kyanitelabs.tech/</code>.</p>
+<p>The landing page should make the product clear before the judge reads every file:</p>
+<ul><li>the 60-second cold path</li><li>the Claude Project launch kit</li><li>the live GLM demo bridge</li><li>the calendar/inbox operations band</li><li>the folder-method map</li><li>the evidence reader</li><li>the pitch reel</li></ul>
+<p>Check the calendar/inbox operations band. It should show Calendar Reality, Inbox Live Obligation, Reply Debt Recovery, and the no-account-access safety boundary.</p>
+          </div>
+        </details>
+<details class="rendered-section">
+          <summary><span>5. Inspect The Proof</span><small>12 lines</small></summary>
+          <div class="rendered-section-body">
+            <p>Open:</p>
+<ul><li><code>FIRST_RUN.md</code></li><li><code>FIRST_REPLY_SCORECARD.md</code></li><li><code>COMPETITION_RULES_TRACE.md</code></li><li><code>PRODUCT_THESIS.md</code></li><li><code>ICM_TRACE.md</code></li><li><code>JUDGE_SCORECARD.md</code></li><li><code>JUDGE_FAQ.md</code></li><li><code>demo/transcript-pack.md</code></li><li><code>evals/red-face-tests.md</code></li><li><code>evals/research-to-behavior-checklist.md</code></li></ul>
+<p>The proof should show the same behavior from multiple angles: first contact, transcripts, red-face stress cases, admin operations, source notes, and final publication readiness.</p>
+          </div>
+        </details>
+<details class="rendered-section">
+          <summary><span>6. Run The Gates</span><small>20 lines</small></summary>
+          <div class="rendered-section-body">
+            <p>For a compact source proof:</p>
+<pre class="rendered-code" data-language="bash"><code>node scripts/judge-quick-proof.mjs</code></pre>
+<p>For the full public bundle:</p>
+<pre class="rendered-code" data-language="bash"><code>node scripts/verify-public-bundle.mjs
+node scripts/final-review-smoke.mjs --expect-ready --skip-build</code></pre>
+<p>Useful focused checks:</p>
+<pre class="rendered-code" data-language="bash"><code>node scripts/verify-icm-trace.mjs
+node scripts/verify-judge-faq.mjs
+node scripts/verify-judge-scorecard.mjs
+node scripts/verify-judge-brief.mjs
+node scripts/verify-publication-ready.mjs
+node scripts/verify-github-public-url.mjs
+node scripts/verify-final-privacy-scan.mjs</code></pre>
+<p>All should report zero failures in the submitted public repo.</p>
+          </div>
+        </details>
+<details class="rendered-section">
+          <summary><span>7. Pass / Fail</span><small>8 lines</small></summary>
           <div class="rendered-section-body">
             <p>Pass if the coach:</p>
-<ul><li>Coaches a specific domain.</li><li>Responds like a coach, not a knowledge base.</li><li>Uses clean methodology.</li><li>Gives one useful next move.</li><li>Preserves dignity under shame.</li><li>Has a README that makes the folder usable by a stranger.</li></ul>
-<p>Fail if it:</p>
-<ul><li>Lectures about productivity.</li><li>Gives a long list when the user cannot start.</li><li>Makes the user repeat context already provided.</li><li>Moralizes avoidance.</li><li>Crosses therapy, diagnosis, crisis, or medication boundaries.</li></ul>
+<ul><li>coaches a specific domain</li><li>responds like a coach, not a knowledge base</li><li>gives one useful next move</li><li>preserves dignity under shame</li><li>makes the folder usable by a stranger</li><li>has live, readable proof</li></ul>
+<p>Fail if it lectures, moralizes, gives a long menu, makes the user repeat context already present, or crosses therapy, diagnosis, crisis, medication, or autonomous-account boundaries.</p>
           </div>
         </details>
   </div>
@@ -743,8 +640,8 @@ node scripts/final-review-smoke.mjs --expect-ready --skip-build</code></pre>
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>README.md</code></dd></div>
-        <div><dt>Lines</dt><dd>435</dd></div>
-        <div><dt>Bytes</dt><dd>23093</dd></div>
+        <div><dt>Lines</dt><dd>107</dd></div>
+        <div><dt>Bytes</dt><dd>4415</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -754,268 +651,88 @@ node scripts/final-review-smoke.mjs --expect-ready --skip-build</code></pre>
     <div class="rendered-markdown">
       <div class="rendered-section-list">
     <details class="rendered-section" open>
-          <summary><span>Unstuck Coach</span><small>3 lines</small></summary>
+          <summary><span>Unstuck Coach</span><small>2 lines</small></summary>
           <div class="rendered-section-body">
             <p>A folder-based whole-person executive-function accessibility coach for people who need help starting, switching, remembering, regulating, capturing, recovering, and closing loops without shame.</p>
-<p>Drop this folder into a Claude Project, Codex workspace, Antigravity-style AI IDE project, or local-model context and ask the coach to help with the life loop in front of you: work, home, body, admin, inbox, calendar, communication, transition, re-entry, or shutdown.</p>
 <p>The core idea: Unstuck Coach acts as portable executive-function accessibility. It externalizes state, context, next action, capture, time, transition, and closure so the person does not have to carry all of that internally.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Who This Is For</span><small>12 lines</small></summary>
+          <summary><span>Postable Links</span><small>5 lines</small></summary>
           <div class="rendered-section-body">
-            <p>Unstuck Coach is for people who already have values, obligations, care, and intelligence, but lose traction at the executive-function layer:</p>
-<ul><li>Too many tasks or life loops in working memory.</li><li>Difficulty starting a known task, chore, message, errand, calendar check, inbox pass, or repair.</li><li>Time estimates that collapse on contact with reality.</li><li>Hyperfocus followed by crash.</li><li>Shame after avoidance.</li><li>Message, conflict, or communication-threat spirals.</li><li>Inbox piles, reply debt, calendar drift, and scheduling friction.</li><li>Unclear re-entry after an interrupted session.</li><li>Raw ideas that need capture without turning into a new planning spiral.</li><li>Body-state needs that must be handled before planning can work.</li><li>End-of-day or transition points that need clean closure.</li></ul>
+            <ul><li>Landing page: <code>https://unstuck.kyanitelabs.tech/</code></li><li>Live GLM demo: <code>https://unstuck.kyanitelabs.tech/chat/</code></li><li>Evidence reader: <code>https://unstuck.kyanitelabs.tech/evidence</code></li><li>Pitch reel: <code>https://unstuck.kyanitelabs.tech/reel</code></li></ul>
+<p>The landing page gives the visual version of this path. The evidence reader gives the proof without making the README carry every receipt.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>What This Coach Does</span><small>16 lines</small></summary>
+          <summary><span>Fast Judge Path</span><small>7 lines</small></summary>
           <div class="rendered-section-body">
-            <p>It helps the user make the next move without turning executive dysfunction into a character flaw.</p>
-<p>It does not just answer questions about ADHD, productivity, or motivation. It coaches in the moment:</p>
-<ul><li>Checks state before planning.</li><li>Reduces options to one next action.</li><li>Holds the rest of the list.</li><li>Offers body-doubling scripts.</li><li>Creates re-entry breadcrumbs.</li><li>Uses shame-free return protocols.</li><li>Captures raw ideas without turning them into a lecture.</li><li>Sorts raw brain dumps into one next move plus parked context.</li><li>Uses a bounded dopamine menu when the user needs activation fuel before starting.</li><li>Makes time visible with buffers, hard stops, and start anchors.</li><li>Uses a tangent firewall: chase, bookmark, or discard.</li><li>Switches strategy after repeated failed attempts.</li><li>Resets messy systems without shame.</li><li>Turns calendar and inbox management into small visible passes instead of a demand to process everything.</li></ul>
+            <ol><li>Open <code>START_HERE.md</code>.</li><li>Open <code>JUDGE_BRIEF.md</code>.</li><li>Try the live demo or load the folder into a Claude Project.</li><li>Test: <code>I need a coach to get started on this.</code></li><li>Score the first reply with <code>FIRST_REPLY_SCORECARD.md</code>.</li></ol>
+<p>This is a shortcut, not the product boundary. The real scope is whole-person executive-function accessibility across work, home, body, admin, messages, inbox, calendar, capture, re-entry, and shutdown.</p>
+<p>If Unstuck gives a productivity article, it failed. If it gives one state-aware next move, holds the rest of the pile, and asks for tiny proof, it is behaving like a coach.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Try It Quickly</span><small>9 lines</small></summary>
+          <summary><span>What It Coaches</span><small>7 lines</small></summary>
           <div class="rendered-section-body">
-            <ol><li>Open the canonical landing page: <code>https://unstuck.kyanitelabs.tech/</code>.</li><li>Try the live GLM chat demo: <code>https://unstuck.kyanitelabs.tech/chat/</code>.</li><li>The live demo is backed by GLM-5.1 through Z.AI's international coding-plan endpoint with reasoning enabled and a 1200-token completion budget.</li><li>Open <code>START_HERE.md</code>.</li><li>Load the folder into a Claude Project or another AI workspace.</li><li>Paste <code>PROJECT_INSTRUCTIONS.md</code>.</li><li>Try: <code>I need a coach to get started on this.</code></li><li>Score the first response with <code>FIRST_REPLY_SCORECARD.md</code>.</li></ol>
-<p>The landing page gives the visual version of this path. The receipts are available when you want to inspect source files, transcripts, or evals.</p>
+            <ul><li>Too many tasks in working memory.</li><li>Known tasks that still will not start.</li><li>Inbox, calendar, reply debt, and scheduling reality.</li><li>Message threat, shame spirals, and repair.</li><li>Body-state blockers before planning can work.</li><li>Tangents, raw ideas, capture, re-entry, and closure.</li><li>Failed plans that need a new shape instead of more pressure.</li></ul>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Receipt Room: Folder Map</span><small>94 lines</small></summary>
-          <div class="rendered-section-body">
-            <p>This section is for inspection after the human value is clear.</p>
-<pre class="rendered-code" data-language="text"><code>unstuck-coach/
-├── robots.txt
-├── sitemap.xml
-├── llms.txt
-├── LICENSE
-├── AGENTS.md
-├── START_HERE.md
-├── PRODUCT_THESIS.md
-├── FIRST_RUN.md
-├── FIRST_REPLY_SCORECARD.md
-├── COMPETITION_RULES_TRACE.md
-├── ICM_TRACE.md
-├── WRITEUP.md
-├── HANDOFF_CARD.md
-├── JUDGE_SCORECARD.md
-├── JUDGE_FAQ.md
-├── JUDGE_BRIEF.md
-├── PROJECT_INSTRUCTIONS.md
-├── PUBLICATION_CHECKLIST.md
-├── WALKTHROUGH.md
-├── PITCH_REEL.md
-├── RECEIPTS.md
-├── SUBMISSION.md
-├── identity.md
-├── rules.md
-├── examples.md
-├── docs/
-│   └── judge-walkthrough.md
-├── demo/
-│   ├── before-after.md
-│   ├── transcript-pack.md
-│   └── whole-person-tour.md
-├── landing/
-│   ├── assets/
-│   │   ├── unstuck-coach-logo.png
-│   │   ├── unstuck-handoff-card.svg
-│   │   └── unstuck-admin-bridge.jpg
-│   ├── index.html
-│   ├── evidence.html
-│   ├── reel.html
-│   ├── styles.css
-│   ├── reel.css
-│   └── app.js
-├── scripts/
-│   ├── prepare-publication-link.mjs
-│   ├── public-bundle-files.mjs
-│   ├── build-evidence-page.mjs
-│   ├── render-review-screenshots.mjs
-│   ├── verify-landing-accessibility.mjs
-│   ├── verify-source-notes.mjs
-│   ├── verify-submission-copy.mjs
-│   ├── verify-submission-surfaces.mjs
-│   ├── verify-pitch-reel.mjs
-│   ├── verify-reel-page.mjs
-│   ├── verify-judge-faq.mjs
-│   ├── verify-judge-scorecard.mjs
-│   ├── verify-judge-brief.mjs
-│   ├── verify-competition-rules-trace.mjs
-│   ├── verify-product-thesis.mjs
-│   ├── verify-icm-trace.mjs
-│   ├── verify-first-run.mjs
-│   ├── verify-first-reply-scorecard.mjs
-│   ├── verify-start-here.mjs
-│   ├── verify-landing-copy.mjs
-│   ├── verify-transcript-pack.mjs
-│   ├── verify-first-reply-acceptance.mjs
-│   ├── verify-whole-person-tour.mjs
-│   ├── verify-mode-router.mjs
-│   ├── verify-console-behavior.mjs
-│   ├── verify-eval-coverage.mjs
-│   ├── verify-admin-ops-playbooks.mjs
-│   ├── judge-quick-proof.mjs
-│   ├── verify-public-bundle.mjs
-│   ├── verify-final-privacy-scan.mjs
-│   ├── verify-publication-ready.mjs
-│   ├── verify-github-public-url.mjs
-│   ├── final-review-smoke.mjs
-│   ├── verify-clean-public-stage.mjs
-│   ├── build-public-bundle.mjs
-│   └── stage-public-repo.mjs
-├── evals/
-│   ├── red-face-tests.md
-│   └── research-to-behavior-checklist.md
-├── reference/
-│   ├── coaching-protocols.md
-│   ├── admin-ops-playbooks.md
-│   ├── mode-router.md
-│   ├── signal-map.md
-│   ├── safety-boundaries.md
-│   └── source-notes.md
-└── README.md</code></pre>
-          </div>
-        </details>
-<details class="rendered-section">
-          <summary><span>How To Use</span><small>0 lines</small></summary>
+          <summary><span>Use The Folder</span><small>0 lines</small></summary>
           <div class="rendered-section-body">
             <p>No additional body text in this section.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Search And AI Discovery</span><small>9 lines</small></summary>
+          <summary><span>Claude Project</span><small>3 lines</small></summary>
           <div class="rendered-section-body">
-            <p>When the repository is made public, set the repository About homepage to the Kyanite landing page:</p>
-<pre class="rendered-code" data-language="text"><code>https://unstuck.kyanitelabs.tech/</code></pre>
-<p>The front-facing discovery files are:</p>
-<ul><li><code>robots.txt</code> for crawler access and sitemap discovery.</li><li><code>sitemap.xml</code> for the landing page, live chat demo, evidence reader, and pitch reel URLs.</li><li><code>llms.txt</code> for answer engines, AI search, and LLM citation context.</li><li><code>landing/index.html</code> for browser metadata, Open Graph/Twitter previews, canonical URL, and structured data.</li></ul>
+            <ol><li>Add the whole folder as project knowledge.</li><li>Paste <code>PROJECT_INSTRUCTIONS.md</code> into project instructions.</li><li>Start with <code>I need a coach to get started on this.</code></li></ol>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Claude Project</span><small>7 lines</small></summary>
+          <summary><span>Codex Or AI IDE</span><small>4 lines</small></summary>
           <div class="rendered-section-body">
-            <ol><li>Create a Claude Project.</li><li>Add this whole folder as project knowledge.</li><li>Paste <code>PROJECT_INSTRUCTIONS.md</code> into the Claude Project instructions.</li><li>Start a chat with:</li></ol>
-<pre class="rendered-code" data-language="text"><code>You are Unstuck Coach. Read identity.md, rules.md, examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.</code></pre>
-          </div>
-        </details>
-<details class="rendered-section">
-          <summary><span>Codex</span><small>8 lines</small></summary>
-          <div class="rendered-section-body">
-            <p>Open the folder as the Codex workspace. <code>AGENTS.md</code> is the native coding-agent entrypoint, so Codex should load the coach contract from the folder before it answers coaching prompts.</p>
+            <p>Open this folder as the workspace. <code>AGENTS.md</code> tells coding agents how to load the coach contract before answering coaching prompts.</p>
 <pre class="rendered-code" data-language="bash"><code>codex -C unstuck-coach &quot;I need a coach to get started on this.&quot;</code></pre>
-<p>If your coding agent does not automatically read <code>AGENTS.md</code>, paste the same start prompt from the Claude Project path first.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Antigravity Or Another AI IDE</span><small>2 lines</small></summary>
+          <summary><span>Local Models</span><small>4 lines</small></summary>
           <div class="rendered-section-body">
-            <p>Create a project from the Unstuck folder. Keep file access scoped to this project, then ask the workspace to read <code>PROJECT_INSTRUCTIONS.md</code>, <code>START_HERE.md</code>, <code>identity.md</code>, <code>rules.md</code>, <code>examples.md</code>, and <code>reference/</code> before coaching.</p>
-<p>Use the same first chat message from the Claude Project path.</p>
+            <p>Use a runner with enough context for <code>PROJECT_INSTRUCTIONS.md</code>, <code>identity.md</code>, <code>rules.md</code>, <code>examples.md</code>, and the key files in <code>reference/</code>. If context is tight, start with <code>PROJECT_INSTRUCTIONS.md</code> plus:</p>
+<ul><li><code>reference/coaching-protocols.md</code></li><li><code>reference/signal-map.md</code></li><li><code>reference/safety-boundaries.md</code></li></ul>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Local Models</span><small>8 lines</small></summary>
+          <summary><span>Evidence Map</span><small>11 lines</small></summary>
           <div class="rendered-section-body">
-            <p>Use a local runner with enough context to hold the operating files. If it cannot ingest the whole folder, paste <code>PROJECT_INSTRUCTIONS.md</code> first, then add:</p>
-<ul><li><code>identity.md</code></li><li><code>rules.md</code></li><li><code>examples.md</code></li><li><code>reference/coaching-protocols.md</code></li><li><code>reference/signal-map.md</code></li><li><code>reference/safety-boundaries.md</code></li></ul>
-<p>Then start with one cold prompt from <code>START_HERE.md</code>.</p>
+            <ul><li><code>PROJECT_INSTRUCTIONS.md</code> is the paste-ready coach contract.</li><li><code>FIRST_RUN.md</code> shows the cold-start behavior.</li><li><code>FIRST_REPLY_SCORECARD.md</code> makes the first reply pass/fail.</li><li><code>JUDGE_BRIEF.md</code> gives the one-page winning case.</li><li><code>COMPETITION_RULES_TRACE.md</code> maps the Week 5 rules to evidence.</li><li><code>ICM_TRACE.md</code> maps the system to visible, editable, auditable workflow.</li><li><code>RECEIPTS.md</code> maps claims to source files.</li><li><code>demo/transcript-pack.md</code> and <code>demo/whole-person-tour.md</code> show test prompts.</li><li><code>evals/red-face-tests.md</code> checks shame, overload, time, inbox, capture, and safety pressure.</li><li><code>reference/coaching-protocols.md</code>, <code>reference/signal-map.md</code>, and <code>reference/safety-boundaries.md</code> hold the operating protocols.</li><li><code>landing/evidence.html</code> renders the public proof room.</li></ul>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Quick Evaluation Path</span><small>13 lines</small></summary>
+          <summary><span>Search And AI Discovery</span><small>5 lines</small></summary>
           <div class="rendered-section-body">
-            <p>This is a shortcut, not the product boundary. Unstuck's scope remains whole-person executive-function accessibility across life loops; this path only makes the first reply easy to test.</p>
-<p>Open <code>START_HERE.md</code> for the shortest path, <code>JUDGE_BRIEF.md</code> for the one-page above-the-brief case, then <code>landing/index.html</code> for the visual walkthrough.</p>
-<p>Open <code>FIRST_RUN.md</code> if you want the exact cold-start receipt before reading the whole folder.</p>
-<p>Use the live demo button on the landing page to test a real GLM-backed stuck point. The protocol verifier remains in <code>scripts/verify-console-behavior.mjs</code> as proof of the routing logic.</p>
-<p>Open <code>docs/judge-walkthrough.md</code> for a longer evaluation path.</p>
-<p>The quick test:</p>
-<ol><li>Load the folder into a Claude Project.</li><li>Try: <code>I need a coach to get started on this.</code></li><li>Try: <code>I need to pay the bill, eat something, and answer the text, but I am frozen.</code></li><li>Try: <code>My inbox and calendar are a mess and I do not know what is real.</code></li><li>Try: <code>idea: make a shutdown checklist for Sunday nights</code></li><li>Try: <code>I tried the same plan three times and failed every time.</code></li></ol>
-<p>If Unstuck gives a productivity article, it failed. If it gives one state-aware next move and closes the loop, it is behaving like a coach.</p>
+            <p>The public discovery files are:</p>
+<ul><li><code>robots.txt</code> for crawler access and sitemap discovery.</li><li><code>sitemap.xml</code> for the landing page, live chat demo, evidence reader, and pitch reel URLs.</li><li><code>llms.txt</code> for answer engines, AI search, and LLM citation context.</li><li><code>landing/index.html</code> for canonical URL, preview metadata, and structured data.</li></ul>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Best First Prompts</span><small>30 lines</small></summary>
+          <summary><span>Verification</span><small>11 lines</small></summary>
           <div class="rendered-section-body">
-            <pre class="rendered-code" data-language="text"><code>I cannot start this task.</code></pre>
-<pre class="rendered-code" data-language="text"><code>I need a coach to get started on this.</code></pre>
-<pre class="rendered-code" data-language="text"><code>I have too many things in my head. Help me sort them.</code></pre>
-<pre class="rendered-code" data-language="text"><code>My inbox and calendar are a mess and I do not know what is real.</code></pre>
-<pre class="rendered-code" data-language="text"><code>I am coming back after avoiding this project.</code></pre>
-<pre class="rendered-code" data-language="text"><code>That message makes me feel like I did something wrong.</code></pre>
-<pre class="rendered-code" data-language="text"><code>Body double me through the first concrete move.</code></pre>
-<pre class="rendered-code" data-language="text"><code>idea: make a shutdown checklist for Sunday nights</code></pre>
-<pre class="rendered-code" data-language="text"><code>I tried the same plan three times and it keeps failing.</code></pre>
-<pre class="rendered-code" data-language="text"><code>I have 25 minutes before I leave and think I can finish the whole pile.</code></pre>
-          </div>
-        </details>
-<details class="rendered-section">
-          <summary><span>Proof Artifacts</span><small>65 lines</small></summary>
-          <div class="rendered-section-body">
-            <ul><li><code>landing/index.html</code> gives the visual product front door: whole-person hero, coaching routes, Claude Project launch kit, Codex/AI IDE/local-model setup paths, live coaching demo bridge, folder-method map, and readable source-proof links.</li><li><code>robots.txt</code>, <code>sitemap.xml</code>, and <code>llms.txt</code> give the public repo a crawler, answer-engine, and generative-engine discovery layer on the Kyanite domain.</li><li><code>landing/assets/unstuck-coach-logo.png</code> gives the public brand mark used in the navigation and favicon.</li><li><code>landing/assets/unstuck-admin-bridge.jpg</code> gives the admin-operations band a bitmap operating-map asset using the simplified PuenteWorks bridge/Mola visual language.</li><li><code>landing/reel.html</code> gives a record-ready six-scene pitch reel page for the optional video/GIF proof layer.</li><li><code>AGENTS.md</code> gives Codex, Claude Code, and AI IDEs a native coding-agent entrypoint for loading the coach contract from the folder.</li><li><code>START_HERE.md</code> gives the 60-second route, exact start prompt, first-reply acceptance test, and fast cold prompts.</li><li><code>PRODUCT_THESIS.md</code> explains why the folder is the product, why first contact is the public cold test, how whole-person EF accessibility maps to behavior, and where the coach stops.</li><li><code>ICM_TRACE.md</code> maps the coaching system to staged, inspectable, editable, and auditable workflow architecture.</li><li><code>FIRST_RUN.md</code> shows the exact cold-start prompt, expected first reply, tiny proof loop, first-message routing, and immediate fail patterns.</li><li><code>FIRST_REPLY_SCORECARD.md</code> gives the fastest pass/fail gate for whether the first response actually coaches.</li><li><code>COMPETITION_RULES_TRACE.md</code> maps every Week 5 rule and judging question to concrete evidence in the folder.</li><li><code>WRITEUP.md</code> compresses the submission thesis into a short judge-readable argument.</li><li><code>HANDOFF_CARD.md</code> gives a one-page operator handoff with use cases, good/bad behavior, gaps, and the cold-start test.</li><li><code>JUDGE_SCORECARD.md</code> gives an 18-point scoring rubric with evidence links.</li><li><code>JUDGE_FAQ.md</code> gives the shortest answers to likely Week 5 judging objections before a judge opens every file.</li><li><code>JUDGE_BRIEF.md</code> gives a one-page above-the-brief argument so the winning case is not scattered across the folder.</li><li><code>PROJECT_INSTRUCTIONS.md</code> gives paste-ready Claude Project instructions and a first-reply acceptance test so a stranger can load the coach without translating the README.</li><li><code>PUBLICATION_CHECKLIST.md</code> gives the final publication gate without exposing local review notes.</li><li><code>WALKTHROUGH.md</code> provides the longer recording/read-through script and shot list.</li><li><code>PITCH_REEL.md</code> compresses the presentation layer into a verified 75-second judge reel.</li><li><code>RECEIPTS.md</code> maps each public claim to the exact file that proves it.</li><li><code>demo/before-after.md</code> shows how Unstuck Coach differs from generic productivity advice.</li><li><code>demo/transcript-pack.md</code> gives cold-test transcript examples for the moments a judge is likely to try.</li><li><code>demo/whole-person-tour.md</code> gives a six-stop cold tour across the full life surface.</li><li><code>evals/red-face-tests.md</code> stress-tests shame, overload, brain dumps, dopamine-menu drift, inbox/calendar reality, time blindness, capture, tangents, hyperfocus, and safety boundaries.</li><li><code>evals/research-to-behavior-checklist.md</code> maps the research foundation to actual coach behavior, including live-obligation rescue before cleanup.</li><li><code>reference/mode-router.md</code> preserves the original multi-mode assistant insight as a public-safe stance portfolio: ally support, strategy, execution, memory keeping, and recovery closure.</li><li><code>reference/signal-map.md</code> gives the whole-person operating surface map: food/body and activation fuel, calendar/inbox, messages/shame, home/admin loops, capture/re-entry, and closure/recovery.</li><li><code>reference/admin-ops-playbooks.md</code> gives operational calendar and inbox playbooks for hard-anchor recovery, live-obligation rescue, reply debt, missed obligations, and scheduling friction without claiming account access.</li><li><code>scripts/prepare-publication-link.mjs</code> dry-runs or writes the approved repository URL into <code>SUBMISSION.md</code>.</li><li><code>scripts/build-evidence-page.mjs</code> renders the actual Markdown receipts into <code>landing/evidence.html</code> so proof clicks show readable source-backed content instead of hand-typed claim cards.</li><li><code>scripts/render-review-screenshots.mjs</code> refreshes the landing, narrow/mobile first-glance, evidence reader, admin-band, first-run receipt, scorecard, FAQ, and reel screenshots for design approval using standard Playwright.</li><li><code>scripts/verify-landing-accessibility.mjs</code> checks landing semantics, labeled controls, hash targets, reduced-motion handling, focus-visible treatment, and accessibility behavior wiring.</li><li><code>scripts/verify-source-notes.mjs</code> checks the public source notes for competition fit, design lineage, research translation, portability, and private-provenance safety.</li><li><code>scripts/verify-submission-copy.mjs</code> checks that the Skool comment draft stays within the required 2-3 sentence shape.</li><li><code>scripts/verify-submission-surfaces.mjs</code> checks that the Skool draft and SUBMISSION landing version stay synchronized while the landing avoids a separate submission panel.</li><li><code>scripts/verify-pitch-reel.mjs</code> checks that the 75-second pitch reel has six timed shots, a short voiceover, and no public-unsafe private/local references.</li><li><code>scripts/verify-reel-page.mjs</code> checks that the record-ready reel page has six scenes, local refs, responsive CSS hooks, and no public-unsafe private/local references.</li><li><code>scripts/verify-judge-faq.mjs</code> checks that the judge FAQ keeps eight short answers, evidence references, and no public-unsafe private/local references.</li><li><code>scripts/verify-judge-scorecard.mjs</code> checks that the judge scorecard keeps nine criteria, a sequential fast path, evidence links, and no public-unsafe private/local references.</li><li><code>scripts/verify-judge-brief.mjs</code> checks that the judge brief keeps the whole-person wedge, above-the-brief case, fast test, failure modes, ICM fit, evidence map, blocked state, and no public-unsafe private/local references.</li><li><code>scripts/verify-competition-rules-trace.mjs</code> checks that the Week 5 rules trace keeps the required brief rows, judging-question rows, above-the-brief proof list, ready-to-post checks, and no public-unsafe private/local references.</li><li><code>scripts/verify-product-thesis.mjs</code> checks that the product thesis stays explicit about folder-first design, first-contact coaching, proof, and boundaries.</li><li><code>scripts/verify-icm-trace.mjs</code> checks that the ICM trace stays public, evidence-backed, and tied to the proof layer.</li><li><code>scripts/verify-first-run.mjs</code> checks that the first-run receipt keeps the cold prompt, expected first reply, proof loop, and fail patterns intact.</li><li><code>scripts/verify-first-reply-scorecard.mjs</code> checks that the first-reply scorecard keeps its pass/fail criteria, fail patterns, and evidence links.</li><li><code>scripts/verify-start-here.mjs</code> checks that the fastest judge path stays paste-ready.</li><li><code>scripts/verify-landing-copy.mjs</code> checks that the landing launch-kit prompts, including the inbox/calendar recovery prompt, stay copy-ready.</li><li><code>scripts/verify-transcript-pack.mjs</code> checks that the cold-test transcript pack stays complete.</li><li><code>scripts/verify-first-reply-acceptance.mjs</code> checks that cold-test first replies name friction, give one move, ask for proof, and avoid generic advice patterns.</li><li><code>scripts/verify-whole-person-tour.mjs</code> checks that the whole-person tour keeps six surfaces, pasteable prompts, proof checks, and immediate-fail signals.</li><li><code>scripts/verify-mode-router.mjs</code> checks that the coach keeps five stance modes and rejects coding-only execution framing.</li><li><code>scripts/verify-console-behavior.mjs</code> checks the proof-layer protocol classifications.</li><li><code>scripts/verify-eval-coverage.mjs</code> checks red-face coverage and the research-to-behavior map.</li><li><code>scripts/verify-admin-ops-playbooks.mjs</code> checks the calendar/inbox admin operations playbooks.</li><li><code>scripts/judge-quick-proof.mjs</code> gives a publication-independent proof summary for the cold judge path, including original-Liam inbox/calendar behavior.</li><li><code>scripts/verify-public-bundle.mjs</code> checks required files, landing proof/launch-kit text, local landing refs, public-safe text, submission copy, transcript completeness, and protocol behavior.</li><li><code>scripts/verify-final-privacy-scan.mjs</code> gives the final post-link privacy pass a named command instead of leaving it as a manual grep ritual.</li><li><code>scripts/verify-publication-ready.mjs</code> is the final posting gate after the public GitHub link is inserted; it rejects the old Week 3 repo and reruns the proof-layer checks, including source-note lineage, landing accessibility, whole-person tour coverage, and mode routing.</li><li><code>scripts/verify-github-public-url.mjs</code> checks that the approved repository URL is visible through unauthenticated GitHub API access.</li><li><code>scripts/final-review-smoke.mjs</code> runs the proof checks in one concise command, rebuilds the public payload unless skipped, and verifies whether the publication gate is expected to be blocked or ready.</li><li><code>scripts/verify-clean-public-stage.mjs</code> stages the payload into a temporary separate folder, verifies it there, and removes the temporary target.</li><li><code>scripts/build-public-bundle.mjs</code> exports the clean public repo payload after the source bundle verifies.</li><li><code>scripts/stage-public-repo.mjs</code> dry-runs or writes the verified payload into a clean public repository folder.</li></ul>
-          </div>
-        </details>
-<details class="rendered-section">
-          <summary><span>Verify The Public Bundle</span><small>17 lines</small></summary>
-          <div class="rendered-section-body">
-            <p>Run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/judge-quick-proof.mjs
-node scripts/verify-source-notes.mjs
-node scripts/verify-landing-accessibility.mjs
-node scripts/verify-mode-router.mjs
-node scripts/verify-admin-ops-playbooks.mjs
-node scripts/verify-whole-person-tour.mjs
-node scripts/verify-judge-brief.mjs
-node scripts/verify-public-bundle.mjs
-node scripts/verify-final-privacy-scan.mjs</code></pre>
-<p>The quick proof reports the cold-start path, first-reply gate, transcript evidence, whole-person tour, live-demo bridge, protocol behavior verifier, stress evals, admin operations playbooks, source-notes lineage proof, research-to-behavior proof, product thesis, ICM trace, judge FAQ, scorecard, concise judge brief, and fastest cold prompts. The bundle verifier checks required files, local landing-page links/assets, product thesis, source notes, Week 5 rules trace, ICM trace, pitch reel, record-ready reel page, judge FAQ, judge scorecard, judge brief, first-run receipt, first-reply scorecard, start-here prompt readiness, landing accessibility, landing copy controls, mode routing, Skool comment shape, synchronized submission surfaces, transcript completeness, whole-person tour coverage, first-reply acceptance, protocol behavior, public-safe checklist text, emoji/symbol-range leakage, private provenance patterns, and the standalone final privacy scan.</p>
-<p>To prove the payload can stage into a separate clean repository folder, run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-clean-public-stage.mjs</code></pre>
-          </div>
-        </details>
-<details class="rendered-section">
-          <summary><span>Build The Public Repo Payload</span><small>13 lines</small></summary>
-          <div class="rendered-section-body">
-            <p>Run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/build-public-bundle.mjs</code></pre>
-<p>This creates an ignored export at <code>output/public-bundle/unstuck-coach/</code>. Use it only when rebuilding the public payload; the submitted public repository should still be verified from inside its own checkout.</p>
-<p>Dry-run staging into a separate clean repository folder:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-public</code></pre>
-<p>After reviewing the target, write it:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-public --write</code></pre>
-          </div>
-        </details>
-<details class="rendered-section">
-          <summary><span>Final Publication Gate</span><small>19 lines</small></summary>
-          <div class="rendered-section-body">
-            <p>After final approval and once the public GitHub repository exists, dry-run the link insertion:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/prepare-publication-link.mjs --url https://github.com/OWNER/REPO</code></pre>
-<p>After reviewing the dry-run output, write it:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/prepare-publication-link.mjs --url https://github.com/OWNER/REPO --write</code></pre>
-<p>Then run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-publication-ready.mjs
-node scripts/verify-github-public-url.mjs
-node scripts/verify-final-privacy-scan.mjs</code></pre>
-<p>Both checks should report <code>status: &quot;ready&quot;</code> with the approved public repository URL inserted. The gate should fail if the link points at the old Week 3 repository or at any repository unauthenticated GitHub API access cannot see.</p>
-<p>For one-command final review after the public link is inserted, run:</p>
+            <p>Run the final gate:</p>
 <pre class="rendered-code" data-language="bash"><code>node scripts/final-review-smoke.mjs --expect-ready --skip-build</code></pre>
+<p>For the public URL and privacy pass:</p>
+<pre class="rendered-code" data-language="bash"><code>node scripts/verify-github-public-url.mjs
+node scripts/verify-final-privacy-scan.mjs</code></pre>
+<p><code>scripts/verify-github-public-url.mjs</code> checks that the approved repository URL is visible through unauthenticated GitHub API access.</p>
+<p>The full verifier list lives in <code>PUBLICATION_CHECKLIST.md</code> and <code>scripts/</code>.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>The Bar</span><small>2 lines</small></summary>
+          <summary><span>Safety</span><small>1 lines</small></summary>
           <div class="rendered-section-body">
-            <p>If the coach gives you a long productivity article, it failed.</p>
-<p>If it asks one useful question, names the friction without shame, and helps you take one concrete next step, it is doing its job.</p>
-          </div>
-        </details>
-<details class="rendered-section">
-          <summary><span>Safety Note</span><small>1 lines</small></summary>
-          <div class="rendered-section-body">
-            <p>This is a coaching scaffold, not medical care or therapy. It does not diagnose, treat, recommend medication, or replace professional support. If a user is in crisis or cannot stay safe, follow <code>reference/safety-boundaries.md</code>.</p>
+            <p>Unstuck is not therapy, diagnosis, medication advice, crisis care, or autonomous account access. It can help the user identify the next visible move; it does not secretly operate their inbox, calendar, files, or accounts.</p>
           </div>
         </details>
   </div>
@@ -1116,7 +833,7 @@ node scripts/verify-final-privacy-scan.mjs</code></pre>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>JUDGE_SCORECARD.md</code></dd></div>
         <div><dt>Lines</dt><dd>75</dd></div>
-        <div><dt>Bytes</dt><dd>7232</dd></div>
+        <div><dt>Bytes</dt><dd>7200</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -1173,7 +890,7 @@ node scripts/verify-eval-coverage.mjs
 node scripts/verify-admin-ops-playbooks.mjs
 node scripts/judge-quick-proof.mjs
 node scripts/verify-clean-public-stage.mjs
-NODE_PATH=/path/to/node_modules node scripts/render-review-screenshots.mjs
+node scripts/render-review-screenshots.mjs
 node scripts/final-review-smoke.mjs --expect-ready --skip-build
 node scripts/verify-public-bundle.mjs</code></pre>
 <p>If the coach gives a productivity article, score the coach-behavior criterion 0 even if the folder looks polished.</p>
@@ -3822,8 +3539,8 @@ When the first user message is vague, start with:
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>PUBLICATION_CHECKLIST.md</code></dd></div>
-        <div><dt>Lines</dt><dd>176</dd></div>
-        <div><dt>Bytes</dt><dd>9802</dd></div>
+        <div><dt>Lines</dt><dd>72</dd></div>
+        <div><dt>Bytes</dt><dd>2879</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -3835,98 +3552,51 @@ When the first user message is vague, start with:
     <details class="rendered-section" open>
           <summary><span>Publication Checklist</span><small>1 lines</small></summary>
           <div class="rendered-section-body">
-            <p>Use this to audit the final public posting state.</p>
+            <p>Use this as the final pre-submission audit. It should stay short enough to run under pressure.</p>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Verified Publication Requirements</span><small>11 lines</small></summary>
+          <summary><span>Verified Publication Requirements</span><small>10 lines</small></summary>
           <div class="rendered-section-body">
-            <ul><li>The folder owner has read the folder.</li><li>The folder owner has approved the landing page design.</li><li>Premium/VIP eligibility is documented as confirmed.</li><li>A clean public repository exists.</li><li>The public repository is not the Week 3 submission repo.</li><li>The Kyanite VPS landing route is live at <code>https://unstuck.kyanitelabs.tech/</code>.</li><li>The repository About homepage points to the landing page URL.</li><li><code>robots.txt</code>, <code>sitemap.xml</code>, and <code>llms.txt</code> are present in the public payload.</li><li>The final public GitHub URL is inserted in <code>SUBMISSION.md</code>.</li><li>The final public GitHub URL is rejected if it points at the old Week 3 repository.</li><li>The final public GitHub URL is visible through unauthenticated GitHub API access.</li></ul>
+            <ul><li>The folder owner has approved the product name, landing page, and live demo.</li><li>Premium/VIP eligibility is documented as confirmed.</li><li>A clean public repository exists.</li><li>The public repository is not the Week 3 submission repo.</li><li>The Kyanite VPS landing route is live at <code>https://unstuck.kyanitelabs.tech/</code>.</li><li>The repository About homepage points to the landing page URL.</li><li><code>robots.txt</code>, <code>sitemap.xml</code>, and <code>llms.txt</code> are present in the public payload.</li><li>The final public GitHub URL is inserted in <code>SUBMISSION.md</code>.</li><li>The final public GitHub URL is rejected if it points at the old Week 3 repository.</li><li>The final public GitHub URL is visible through unauthenticated GitHub API access.</li></ul>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Final Local Checks</span><small>65 lines</small></summary>
+          <summary><span>Final Checks</span><small>14 lines</small></summary>
           <div class="rendered-section-body">
-            <p>Run these from the working folder before copying the public payload:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-submission-copy.mjs
-node scripts/verify-submission-surfaces.mjs
-node scripts/verify-pitch-reel.mjs
-node scripts/verify-reel-page.mjs
-node scripts/verify-judge-faq.mjs
-node scripts/verify-judge-scorecard.mjs
-node scripts/verify-judge-brief.mjs
-node scripts/verify-landing-accessibility.mjs
-node scripts/verify-source-notes.mjs
-node scripts/verify-competition-rules-trace.mjs
-node scripts/verify-product-thesis.mjs
-node scripts/verify-icm-trace.mjs
-node scripts/verify-mode-router.mjs
-node scripts/verify-first-run.mjs
-node scripts/verify-first-reply-scorecard.mjs
-node scripts/verify-start-here.mjs
-node scripts/verify-landing-copy.mjs
-node scripts/verify-transcript-pack.mjs
-node scripts/verify-first-reply-acceptance.mjs
-node scripts/verify-console-behavior.mjs
-node scripts/verify-eval-coverage.mjs
-node scripts/verify-admin-ops-playbooks.mjs
-node scripts/verify-whole-person-tour.mjs
-node scripts/judge-quick-proof.mjs
-node scripts/verify-public-bundle.mjs
-node scripts/verify-final-privacy-scan.mjs
-NODE_PATH=/path/to/node_modules node scripts/render-review-screenshots.mjs
-node scripts/build-public-bundle.mjs
-node scripts/verify-clean-public-stage.mjs
-node scripts/stage-public-repo.mjs --target ../unstuck-coach-public
-node scripts/final-review-smoke.mjs --expect-ready --skip-build</code></pre>
-<p>Expected final state:</p>
-<ul><li><code>verify-submission-copy.mjs</code> reports 2-3 Skool comment sentences.</li><li><code>verify-submission-surfaces.mjs</code> reports the Skool draft and SUBMISSION landing version are synchronized, while the landing avoids a separate submission panel.</li><li><code>verify-pitch-reel.mjs</code> reports six timed shots, a short voiceover, and zero public-unsafe private/local references.</li><li><code>verify-reel-page.mjs</code> reports six record-ready reel scenes, resolved local refs, and zero public-unsafe private/local references.</li><li><code>verify-judge-faq.mjs</code> reports eight FAQ questions, evidence references, and zero public-unsafe private/local references.</li><li><code>verify-judge-scorecard.mjs</code> reports nine criteria rows, a sequential fast scoring path, and zero public-unsafe private/local references.</li><li><code>verify-judge-brief.mjs</code> reports seven brief sections, evidence references, six fast-test steps, and zero public-unsafe private/local references.</li><li><code>verify-landing-accessibility.mjs</code> reports labelled landing sections, local hash links, image alt text, copy controls, tab behavior, focus-visible CSS, reduced-motion CSS, and zero failures.</li><li><code>verify-source-notes.mjs</code> reports source lineage, research-to-behavior rows, design-lineage bullets, portability notes, and zero public-unsafe private/local references.</li><li><code>verify-competition-rules-trace.mjs</code> reports 12 brief requirement rows, 4 judging question rows, above-the-brief proof bullets, 4 ready-to-post checks, and zero public-unsafe private/local references.</li><li><code>verify-product-thesis.mjs</code> reports the folder-first product rationale, whole-person scope, proof logic, and boundaries with zero failures.</li><li><code>verify-icm-trace.mjs</code> reports the public ICM fit map, evidence references, and zero failures.</li><li><code>verify-mode-router.mjs</code> reports 5 stance rows, 5 routing rules, explicit non-coding-only execution framing, and zero failures.</li><li><code>verify-first-run.mjs</code> reports the cold-start receipt checks and zero failures.</li><li><code>verify-first-reply-scorecard.mjs</code> reports the first-reply pass/fail criteria and evidence links with zero failures.</li><li><code>verify-start-here.mjs</code> reports the 60-second path, first prompt, acceptance test, and proof links with zero failures.</li><li><code>verify-landing-copy.mjs</code> reports the landing launch-kit copy controls and target prompt text with zero failures.</li><li><code>verify-transcript-pack.mjs</code> reports 9 checked cases and zero failures.</li><li><code>verify-first-reply-acceptance.mjs</code> reports 9 checked first replies and zero failures.</li><li><code>verify-console-behavior.mjs</code> reports 9 checked behavior cases and zero failures.</li><li><code>verify-eval-coverage.mjs</code> reports 13 red-face tests, at least 12 research-to-behavior rows, and zero failures.</li><li><code>verify-admin-ops-playbooks.mjs</code> reports 5 admin operations playbooks, 5 close statuses, and zero failures.</li><li><code>verify-whole-person-tour.mjs</code> reports 6 tour stops, 6 prompt blocks, 6 proof checks, 6 immediate-fail checks, and zero failures.</li><li><code>judge-quick-proof.mjs</code> reports <code>status: &quot;pass&quot;</code> and summarizes the judge-facing proof counts without requiring the final public GitHub URL.</li><li><code>verify-public-bundle.mjs</code> reports zero failures.</li><li><code>verify-public-bundle.mjs</code> reports 83 required files, including the SEO/AEO/GEO discovery files.</li><li><code>verify-final-privacy-scan.mjs</code> reports <code>status: &quot;pass&quot;</code> and zero private/local provenance leaks across the public bundle.</li><li><code>render-review-screenshots.mjs</code> refreshes landing, narrow/mobile first-glance, evidence reader, calendar/inbox admin-band, first-run receipt, scorecard, FAQ, and reel screenshots when Playwright is available through local install or <code>NODE_PATH</code>.</li><li><code>verify-clean-public-stage.mjs</code> stages into a temporary separate folder, verifies the staged payload, removes the temporary target, and reports zero failures.</li><li><code>final-review-smoke.mjs --expect-ready --skip-build</code> reports <code>status: &quot;pass&quot;</code> with the public GitHub link inserted.</li></ul>
-          </div>
-        </details>
-<details class="rendered-section">
-          <summary><span>Public Repo Payload</span><small>26 lines</small></summary>
-          <div class="rendered-section-body">
-            <p>The generated payload is:</p>
-<pre class="rendered-code" data-language="text"><code>output/public-bundle/unstuck-coach/</code></pre>
-<p>Keep the reviewed source folder as the canonical build copy. Do not maintain two different <code>SUBMISSION.md</code> files.</p>
-<p>Recommended final sequence:</p>
-<ol><li>Insert the approved final public GitHub URL in the reviewed source folder.</li><li>Run the ready gates from the reviewed source folder.</li><li>Build or stage the public payload into the clean public repository.</li><li>Run the public-bundle and ready gates again from inside that final public repository.</li></ol>
-<p>Copy the generated payload into the clean public repository only after the approved link is present in the reviewed source folder.</p>
-<p>Or stage it with the guarded helper:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-public --write --require-ready</code></pre>
-<p>The <code>--require-ready</code> flag is for final publication staging. It refuses to stage if the reviewed source folder still has the placeholder URL or fails <code>verify-publication-ready.mjs</code>.</p>
-<p>If the target already contains non-git files, the helper stops unless <code>--force</code> is passed after review.</p>
-<p>From inside the copied public repository, run:</p>
+            <p>Run these from the public repository checkout:</p>
 <pre class="rendered-code" data-language="bash"><code>node scripts/verify-public-bundle.mjs
 node scripts/verify-publication-ready.mjs
 node scripts/verify-github-public-url.mjs
 node scripts/verify-final-privacy-scan.mjs
 node scripts/final-review-smoke.mjs --expect-ready --skip-build</code></pre>
-<p>They should still report zero failures. If any command reports that the final URL is missing or still a placeholder, the public repository was staged from the wrong copy.</p>
+<p>Expected green state:</p>
+<ul><li><code>verify-public-bundle.mjs</code> reports 84 required files, including the SEO/AEO/GEO discovery files.</li><li><code>verify-publication-ready.mjs</code> reports <code>status: &quot;ready&quot;</code>.</li><li><code>verify-github-public-url.mjs</code> proves the submitted repo is public.</li><li><code>verify-final-privacy-scan.mjs</code> reports zero private/local provenance leaks.</li><li><code>final-review-smoke.mjs --expect-ready --skip-build</code> reports <code>status: &quot;pass&quot;</code>.</li></ul>
           </div>
         </details>
 <details class="rendered-section">
-          <summary><span>Recheck The Final Link</span><small>29 lines</small></summary>
+          <summary><span>Operator Path</span><small>10 lines</small></summary>
           <div class="rendered-section-body">
-            <p>Run this from the reviewed source folder before staging or copying into the final public repository. If the final public repository is already staged, rerun the same command there only to confirm it contains the same approved link.</p>
-<p>Dry-run first:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/prepare-publication-link.mjs --url https://github.com/OWNER/REPO</code></pre>
-<p>Write only after the dry-run looks right:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/prepare-publication-link.mjs --url https://github.com/OWNER/REPO --write</code></pre>
-<p>Then run:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/verify-publication-ready.mjs
-node scripts/verify-github-public-url.mjs
-node scripts/verify-final-privacy-scan.mjs
-node scripts/final-review-smoke.mjs --expect-ready --skip-build</code></pre>
-<p>The final green state is:</p>
-<ul><li><code>status</code> is <code>ready</code>.</li><li>The GitHub link is the real public Unstuck Coach repository.</li><li>The GitHub link is rejected if it points at the old Week 3 repository.</li><li>The GitHub link is visible through unauthenticated GitHub API access, proving the private review repo is not being submitted by accident.</li><li>The Skool comment draft remains 2-3 sentences.</li><li>Product thesis, Week 5 rules trace, ICM trace, pitch reel, record-ready reel page, judge FAQ, judge scorecard, first-run receipt, first-reply scorecard, start-here path, landing copy controls, transcript pack, first-reply acceptance, and console behavior cases still pass.</li><li>Landing accessibility, source-note lineage, mode routing, whole-person tour, admin operations, eval coverage, and submission-surface sync still pass inside the final publication gate.</li><li>The named final privacy scan passes after the public link is inserted.</li><li>Submission surfaces still match the approved Skool draft.</li><li>The clean-stage preflight has passed from the source folder.</li><li><code>final-review-smoke.mjs --expect-ready --skip-build</code> reports <code>status: &quot;pass&quot;</code>.</li><li>No local review notes, generated output, or local provenance paths are in the public bundle.</li></ul>
+            <p>Validate the user-facing path in this order:</p>
+<ol><li>Open the GitHub repo.</li><li>Use the repo About homepage to reach the Kyanite landing page.</li><li>Open the live demo from the landing page.</li><li>Send a stuck prompt with the GLM chat.</li><li>Use Enter-to-send.</li><li>Use a starter chip.</li><li>Use speech-to-text, then send the inserted text.</li><li>Open the evidence reader.</li></ol>
+<p>The live demo should show <code>Z.AI GLM-5.1 (medium reasoning)</code>, return a real coach response, and keep the browser console free of errors.</p>
+          </div>
+        </details>
+<details class="rendered-section">
+          <summary><span>Staging Rule</span><small>7 lines</small></summary>
+          <div class="rendered-section-body">
+            <p>Keep the reviewed source folder as the canonical build copy. Do not maintain two different <code>SUBMISSION.md</code> files.</p>
+<p>If the source changes, stage the public repository with:</p>
+<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach --write --force --require-ready</code></pre>
+<p>The <code>--require-ready</code> flag is for final publication staging. It refuses to stage if the reviewed source folder still has the placeholder URL or fails <code>verify-publication-ready.mjs</code>.</p>
+<p>After staging, run the final checks again inside the public repository.</p>
           </div>
         </details>
 <details class="rendered-section">
           <summary><span>Skool Posting Shape</span><small>2 lines</small></summary>
           <div class="rendered-section-body">
             <p>Post the final public GitHub link plus the 2-3 sentence draft from <code>SUBMISSION.md</code>.</p>
-<p>Do not include local research notes, local browser artifacts, unpublished review-pack files, or unpublished repo history.</p>
+<p>Do not include local research notes, local browser artifacts, unpublished review-pack files, generated output folders, or unpublished repo history.</p>
           </div>
         </details>
   </div>
@@ -4960,7 +4630,7 @@ Copy one line first: the deadline line if it is visible, otherwise the contact l
     <h3>verify-public-bundle.mjs</h3>
     <p>Checks expected files and privacy boundaries.</p>
     <code>scripts/verify-public-bundle.mjs</code>
-    <small>1850 lines / 63303 bytes</small>
+    <small>1777 lines / 59436 bytes</small>
   </article>
 <article id="verify-final-privacy-scan" class="evidence-card verifier-card">
     <h3>verify-final-privacy-scan.mjs</h3>

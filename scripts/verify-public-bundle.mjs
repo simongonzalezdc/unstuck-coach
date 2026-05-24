@@ -263,6 +263,7 @@ const judgeBriefRequiredText = [
 
 const publicationChecklistRequiredText = [
   "Verified Publication Requirements",
+  "Use this as the final pre-submission audit.",
   "Premium/VIP eligibility is documented as confirmed.",
   "A clean public repository exists.",
   "The Kyanite VPS landing route is live at `https://unstuck.kyanitelabs.tech/`.",
@@ -270,42 +271,21 @@ const publicationChecklistRequiredText = [
   "`robots.txt`, `sitemap.xml`, and `llms.txt` are present in the public payload.",
   "The final public GitHub URL is rejected if it points at the old Week 3 repository.",
   "The final public GitHub URL is visible through unauthenticated GitHub API access.",
-  "node scripts/verify-icm-trace.mjs",
-  "node scripts/verify-clean-public-stage.mjs",
-  "node scripts/verify-submission-surfaces.mjs",
-  "node scripts/verify-pitch-reel.mjs",
-  "node scripts/verify-judge-faq.mjs",
-  "node scripts/verify-judge-scorecard.mjs",
-  "node scripts/verify-judge-brief.mjs",
-  "node scripts/verify-landing-accessibility.mjs",
-  "node scripts/verify-source-notes.mjs",
-  "node scripts/verify-competition-rules-trace.mjs",
-  "node scripts/verify-product-thesis.mjs",
+  "Operator Path",
+  "Use the repo About homepage to reach the Kyanite landing page.",
+  "Use speech-to-text, then send the inserted text.",
+  "The live demo should show `Z.AI GLM-5.1 (medium reasoning)`",
+  "node scripts/verify-public-bundle.mjs",
   "node scripts/final-review-smoke.mjs --expect-ready --skip-build",
   "node scripts/verify-publication-ready.mjs",
   "node scripts/verify-github-public-url.mjs",
   "node scripts/verify-final-privacy-scan.mjs",
-  "verify-public-bundle.mjs` reports 83 required files, including the SEO/AEO/GEO discovery files.",
-  "node scripts/verify-mode-router.mjs",
-  "node scripts/verify-first-reply-scorecard.mjs",
-  "node scripts/verify-start-here.mjs",
-  "node scripts/verify-landing-copy.mjs",
-  "node scripts/verify-first-reply-acceptance.mjs",
-  "node scripts/verify-console-behavior.mjs",
-  "node scripts/verify-eval-coverage.mjs",
-  "node scripts/verify-admin-ops-playbooks.mjs",
-  "node scripts/verify-whole-person-tour.mjs",
-  "node scripts/judge-quick-proof.mjs",
+  "verify-public-bundle.mjs` reports 84 required files, including the SEO/AEO/GEO discovery files.",
   "Keep the reviewed source folder as the canonical build copy",
   "Do not maintain two different `SUBMISSION.md` files.",
-  "Insert the approved final public GitHub URL in the reviewed source folder.",
-  "Run the ready gates from the reviewed source folder.",
-  "Run the public-bundle and ready gates again from inside that final public repository.",
-  "Run this from the reviewed source folder before staging or copying into the final public repository.",
-  "node scripts/stage-public-repo.mjs --target ../unstuck-coach-public --write --require-ready",
+  "node scripts/stage-public-repo.mjs --target ../unstuck-coach --write --force --require-ready",
   "The `--require-ready` flag is for final publication staging.",
   "refuses to stage if the reviewed source folder still has the placeholder URL or fails `verify-publication-ready.mjs`",
-  "the public repository was staged from the wrong copy",
 ];
 
 const signalMapRequiredText = [
@@ -643,6 +623,14 @@ const staleDiagnosisScopeText = [
 const readmeRequiredText = [
   "A folder-based whole-person executive-function accessibility coach for people who need help starting, switching, remembering, regulating, capturing, recovering, and closing loops without shame.",
   "The core idea: Unstuck Coach acts as portable executive-function accessibility.",
+  "Postable Links",
+  "Live GLM demo: `https://unstuck.kyanitelabs.tech/chat/`",
+  "Evidence reader: `https://unstuck.kyanitelabs.tech/evidence`",
+  "Fast Judge Path",
+  "What It Coaches",
+  "Use The Folder",
+  "Evidence Map",
+  "The evidence reader gives the proof without making the README carry every receipt.",
   "Search And AI Discovery",
   "robots.txt` for crawler access and sitemap discovery.",
   "sitemap.xml` for the landing page, live chat demo, evidence reader, and pitch reel URLs.",
@@ -650,39 +638,26 @@ const readmeRequiredText = [
   "If Unstuck gives a productivity article, it failed.",
   "This is a shortcut, not the product boundary.",
   "The landing page gives the visual version of this path.",
-  "Receipt Room: Folder Map",
-  "├── SUBMISSION.md",
-  "├── docs/",
-  "│   └── judge-walkthrough.md",
-  "reference/mode-router.md` preserves the original multi-mode assistant insight",
-  "reference/signal-map.md` gives the whole-person operating surface map",
-  "│   └── whole-person-tour.md",
-  "demo/whole-person-tour.md` gives a six-stop cold tour across the full life surface.",
-  "JUDGE_FAQ.md` gives the shortest answers to likely Week 5 judging objections",
-  "JUDGE_BRIEF.md` gives a one-page above-the-brief argument so the winning case is not scattered across the folder.",
-  "PITCH_REEL.md` compresses the presentation layer into a verified 75-second judge reel.",
-  "│   ├── public-bundle-files.mjs",
-  "│   ├── build-evidence-page.mjs",
-  "│   ├── render-review-screenshots.mjs",
-  "│   ├── verify-landing-accessibility.mjs",
-  "│   ├── verify-source-notes.mjs",
-  "│   ├── verify-whole-person-tour.mjs",
-  "│   ├── verify-mode-router.mjs",
-  "│   ├── verify-judge-brief.mjs",
-  "scripts/render-review-screenshots.mjs` refreshes the landing, narrow/mobile first-glance, evidence reader, admin-band, first-run receipt, scorecard, FAQ, and reel screenshots for design approval using standard Playwright.",
-  "scripts/build-evidence-page.mjs` renders the actual Markdown receipts into `landing/evidence.html` so proof clicks show readable source-backed content instead of hand-typed claim cards.",
-  "scripts/verify-landing-accessibility.mjs` checks landing semantics, labeled controls, hash targets, reduced-motion handling, focus-visible treatment, and accessibility behavior wiring.",
-  "scripts/verify-source-notes.mjs` checks the public source notes for competition fit, design lineage, research translation, portability, and private-provenance safety.",
-  "scripts/verify-eval-coverage.mjs` checks red-face coverage and the research-to-behavior map.",
-  "scripts/verify-admin-ops-playbooks.mjs` checks the calendar/inbox admin operations playbooks.",
-  "scripts/verify-mode-router.mjs` checks that the coach keeps five stance modes",
-  "scripts/verify-judge-brief.mjs` checks that the judge brief keeps the whole-person wedge, above-the-brief case, fast test, failure modes, ICM fit, evidence map, blocked state, and no public-unsafe private/local references.",
-  "scripts/judge-quick-proof.mjs` gives a publication-independent proof summary",
-  "scripts/verify-final-privacy-scan.mjs` gives the final post-link privacy pass a named command",
-  "whole-person tour coverage",
+  "PROJECT_INSTRUCTIONS.md` is the paste-ready coach contract.",
+  "FIRST_RUN.md` shows the cold-start behavior.",
+  "FIRST_REPLY_SCORECARD.md` makes the first reply pass/fail.",
+  "JUDGE_BRIEF.md` gives the one-page winning case.",
+  "COMPETITION_RULES_TRACE.md` maps the Week 5 rules to evidence.",
+  "ICM_TRACE.md` maps the system to visible, editable, auditable workflow.",
+  "RECEIPTS.md` maps claims to source files.",
+  "landing/evidence.html` renders the public proof room.",
   "scripts/verify-github-public-url.mjs` checks that the approved repository URL is visible through unauthenticated GitHub API access.",
+  "node scripts/final-review-smoke.mjs --expect-ready --skip-build",
   "node scripts/verify-github-public-url.mjs",
   "node scripts/verify-final-privacy-scan.mjs",
+];
+
+const documentationWordLimits = [
+  { file: "README.md", maxWords: 1100 },
+  { file: "PUBLICATION_CHECKLIST.md", maxWords: 700 },
+  { file: "docs/judge-walkthrough.md", maxWords: 1100 },
+  { file: "PROJECT_INSTRUCTIONS.md", maxWords: 1900 },
+  { file: "RECEIPTS.md", maxWords: 1800 },
 ];
 
 const seoDiscoveryRequiredText = [
@@ -1152,68 +1127,16 @@ function exists(file) {
   return fs.existsSync(path.join(root, file));
 }
 
-function readmeTreeFiles(markdown) {
-  const treeMatch = markdown.match(/```text\nunstuck-coach\/\n([\s\S]*?)\n```/);
-  if (!treeMatch) {
-    return {
-      files: [],
-      failures: ["README.md is missing the unstuck-coach folder tree."],
-    };
-  }
-
-  const stack = [];
-  const files = [];
-  const failures = [];
-  const treeLines = treeMatch[1].split("\n").filter(Boolean);
-
-  for (const line of treeLines) {
-    const match = line.match(/^([│ ]*)[├└]── (.+)$/u);
-    if (!match) {
-      failures.push(`README.md folder tree has an unparsable line: ${line}`);
-      continue;
-    }
-
-    const [, prefix, rawName] = match;
-    const depth = prefix.length / 4;
-    if (!Number.isInteger(depth)) {
-      failures.push(`README.md folder tree has unexpected indentation: ${line}`);
-      continue;
-    }
-
-    const isDirectory = rawName.endsWith("/");
-    const name = rawName.replace(/\/$/, "");
-    stack.length = depth;
-
-    if (isDirectory) {
-      stack[depth] = name;
-      continue;
-    }
-
-    files.push([...stack, name].join("/"));
-  }
-
-  return {
-    files,
-    failures,
-  };
+function wordCount(content) {
+  return content.trim().split(/\s+/).filter(Boolean).length;
 }
 
-function verifyReadmeTreeAgainstManifest(markdown) {
-  const tree = readmeTreeFiles(markdown);
-  const expected = publicBundleFiles.filter((file) => file !== ".gitignore");
-  const treeSet = new Set(tree.files);
-  const expectedSet = new Set(expected);
-  const missing = expected.filter((file) => !treeSet.has(file));
-  const unexpected = tree.files.filter((file) => !expectedSet.has(file));
-
-  return {
-    files: tree.files.length,
-    failures: [
-      ...tree.failures,
-      ...missing.map((file) => `README.md folder tree is missing public bundle file: ${file}`),
-      ...unexpected.map((file) => `README.md folder tree lists a file outside the public bundle: ${file}`),
-    ],
-  };
+function documentationWordCounts() {
+  return Object.fromEntries(
+    documentationWordLimits
+      .filter(({ file }) => exists(file))
+      .map(({ file }) => [file, wordCount(read(file))]),
+  );
 }
 
 function listFiles(dir = ".") {
@@ -1601,9 +1524,13 @@ if (exists("README.md")) {
       failures.push(`${requirement.file} is missing SEO/AEO/GEO discovery text: ${requirement.text}`);
     }
   }
-  const readmeTree = verifyReadmeTreeAgainstManifest(readme);
-  for (const failure of readmeTree.failures) {
-    failures.push(failure);
+}
+
+for (const { file, maxWords } of documentationWordLimits) {
+  if (!exists(file)) continue;
+  const count = wordCount(read(file));
+  if (count > maxWords) {
+    failures.push(`${file} is too verbose for public review: ${count} words exceeds ${maxWords}.`);
   }
 }
 
@@ -1837,7 +1764,7 @@ const summary = {
   finalPrivacyScanFiles: finalPrivacyScan.checkedFiles,
   finalPrivacyScanTextFiles: finalPrivacyScan.scannedTextFiles,
   finalPrivacyScanSkippedGuardScripts: finalPrivacyScan.skippedGuardScripts,
-  readmeTreeFiles: exists("README.md") ? verifyReadmeTreeAgainstManifest(read("README.md")).files : 0,
+  documentationWordCounts: documentationWordCounts(),
   failures,
   warnings,
 };
