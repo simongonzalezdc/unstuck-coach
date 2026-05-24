@@ -20,10 +20,12 @@ _(🤖 Cross-Repo Propagate)_
 
 ## Factory interpretation
 
-This issue was picked up by `issue-closer`, but no safe code edit was
-produced by the configured agent providers. The Factory is therefore
-converting the issue into an implementation contract instead of silently
-skipping it.
+This issue was initially picked up by `issue-closer`, but no safe code edit was
+produced by the configured agent providers. The Factory converted the issue
+into this implementation contract instead of silently skipping it.
+
+The follow-up implementation now adds the requested top-level `CHANGELOG.md`
+so the source issue is handled by a repo change, not only by intake tracking.
 
 ## Acceptance contract
 
@@ -35,5 +37,5 @@ skipping it.
 
 ## Next Factory action
 
-Dispatch a repo worker against this contract. If the request is too broad,
-split it into smaller `agent-ready` issues with concrete acceptance checks.
+Verify the PR includes `CHANGELOG.md`, confirm checks are green, and close the
+source issue when the implementation lands.
