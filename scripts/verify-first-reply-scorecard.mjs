@@ -16,33 +16,33 @@ const requiredText = [
   "Moralizing avoidance.",
   "You do not need to make this clear before I can help.",
   "The Week 5 brief asks whether the artifact actually coaches.",
-  "FIRST_RUN.md",
+  "coach/FIRST_RUN.md",
   "scripts/verify-first-reply-acceptance.mjs",
   "reference/safety-boundaries.md",
 ];
 
 export function verifyFirstReplyScorecard(root = process.cwd()) {
-  const file = path.join(root, "FIRST_REPLY_SCORECARD.md");
+  const file = path.join(root, "coach/FIRST_REPLY_SCORECARD.md");
   const failures = [];
 
   if (!fs.existsSync(file)) {
     return {
       checked: false,
       checks: 0,
-      failures: ["Missing FIRST_REPLY_SCORECARD.md"],
+      failures: ["Missing coach/FIRST_REPLY_SCORECARD.md"],
     };
   }
 
   const content = fs.readFileSync(file, "utf8");
   for (const text of requiredText) {
     if (!content.includes(text)) {
-      failures.push(`FIRST_REPLY_SCORECARD.md is missing required text: ${text}`);
+      failures.push(`coach/FIRST_REPLY_SCORECARD.md is missing required text: ${text}`);
     }
   }
 
   const tableRows = (content.match(/^\| .+ \|$/gm) || []).length;
   if (tableRows < 6) {
-    failures.push(`FIRST_REPLY_SCORECARD.md table is too small: ${tableRows} rows`);
+    failures.push(`coach/FIRST_REPLY_SCORECARD.md table is too small: ${tableRows} rows`);
   }
 
   return {

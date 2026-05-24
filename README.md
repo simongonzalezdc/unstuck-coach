@@ -1,46 +1,47 @@
 # Unstuck Coach
 
-A folder-based whole-person executive-function accessibility coach for people who need help starting, switching, remembering, regulating, capturing, recovering, and closing loops without shame.
+Unstuck Coach is a folder-based whole-person executive-function accessibility coach. It helps a person start, switch, remember, regulate, capture, recover, and close loops without having to carry the whole mess in working memory.
 
-The core idea: Unstuck Coach acts as portable executive-function accessibility. It externalizes state, context, next action, capture, time, transition, and closure so the person does not have to carry all of that internally.
+The core idea: the folder is the product. It externalizes state, friction, next action, safety boundaries, examples, and proof so an LLM can coach the live threshold moment instead of giving a productivity article.
 
-## Postable Links
+## Live Paths
 
 - Landing page: `https://unstuck.kyanitelabs.tech/`
-- Live GLM demo: `https://unstuck.kyanitelabs.tech/chat/`
+- Live GLM 5.1 demo: `https://unstuck.kyanitelabs.tech/chat/`
 - Evidence reader: `https://unstuck.kyanitelabs.tech/evidence`
-- Pitch reel: `https://unstuck.kyanitelabs.tech/reel`
 
-The landing page gives the visual version of this path. The evidence reader gives the proof without making the README carry every receipt.
+## Repo Map
+
+This repository is staged so a judge does not have to decode a flat file pile:
+
+- `coach/` is the coach contract: setup instructions, identity, rules, examples, first-run receipt, and first-reply scorecard.
+- `reference/` is the operating layer: coaching protocols, signal map, safety boundaries, mode router, and admin-ops playbooks.
+- `demo/` and `evals/` are behavior proof: transcripts, before/after contrast, whole-person tour, and red-face tests.
+- `docs/judging/` is the competition layer: judge brief, scorecard, FAQ, ICM trace, rules trace, writeup, walkthrough, checklist, and submission copy.
+- `docs/evidence/` is the claim-to-file receipt map.
+- `landing/` is the public website and rendered evidence room.
+- `scripts/` is the verification layer.
+
+That is the ICM shape: staged context, visible decisions, editable documents, and auditable proof.
 
 ## Fast Judge Path
 
-1. Open `START_HERE.md`.
-2. Open `JUDGE_BRIEF.md`.
+1. Open `coach/START_HERE.md`.
+2. Open `docs/judging/JUDGE_BRIEF.md`.
 3. Try the live demo or load the folder into a Claude Project.
 4. Test: `I need a coach to get started on this.`
-5. Score the first reply with `FIRST_REPLY_SCORECARD.md`.
+5. Score the first reply with `coach/FIRST_REPLY_SCORECARD.md`.
 
-This is a shortcut, not the product boundary. The real scope is whole-person executive-function accessibility across work, home, body, admin, messages, inbox, calendar, capture, re-entry, and shutdown.
+This is a shortcut, not the product boundary. The full scope is whole-person executive-function access across work, home, body, admin, messages, inbox, calendar, capture, re-entry, and shutdown.
 
 If Unstuck gives a productivity article, it failed. If it gives one state-aware next move, holds the rest of the pile, and asks for tiny proof, it is behaving like a coach.
-
-## What It Coaches
-
-- Too many tasks in working memory.
-- Known tasks that still will not start.
-- Inbox, calendar, reply debt, and scheduling reality.
-- Message threat, shame spirals, and repair.
-- Body-state blockers before planning can work.
-- Tangents, raw ideas, capture, re-entry, and closure.
-- Failed plans that need a new shape instead of more pressure.
 
 ## Use The Folder
 
 ### Claude Project
 
-1. Add the whole folder as project knowledge.
-2. Paste `PROJECT_INSTRUCTIONS.md` into project instructions.
+1. Add the folder as project knowledge.
+2. Paste `coach/PROJECT_INSTRUCTIONS.md` into project instructions.
 3. Start with `I need a coach to get started on this.`
 
 ### Codex Or AI IDE
@@ -53,7 +54,7 @@ codex -C unstuck-coach "I need a coach to get started on this."
 
 ### Local Models
 
-Use a runner with enough context for `PROJECT_INSTRUCTIONS.md`, `identity.md`, `rules.md`, `examples.md`, and the key files in `reference/`. If context is tight, start with `PROJECT_INSTRUCTIONS.md` plus:
+Use a runner with enough context for `coach/PROJECT_INSTRUCTIONS.md`, `coach/identity.md`, `coach/rules.md`, `coach/examples.md`, and the key files in `reference/`. If context is tight, start with `coach/PROJECT_INSTRUCTIONS.md` plus:
 
 - `reference/coaching-protocols.md`
 - `reference/signal-map.md`
@@ -61,46 +62,32 @@ Use a runner with enough context for `PROJECT_INSTRUCTIONS.md`, `identity.md`, `
 
 ## Evidence Map
 
-- `PROJECT_INSTRUCTIONS.md` is the paste-ready coach contract.
-- `FIRST_RUN.md` shows the cold-start behavior.
-- `FIRST_REPLY_SCORECARD.md` makes the first reply pass/fail.
-- `JUDGE_BRIEF.md` gives the one-page winning case.
-- `COMPETITION_RULES_TRACE.md` maps the Week 5 rules to evidence.
-- `ICM_TRACE.md` maps the system to visible, editable, auditable workflow.
-- `RECEIPTS.md` maps claims to source files.
-- `demo/transcript-pack.md` and `demo/whole-person-tour.md` show test prompts.
-- `evals/red-face-tests.md` checks shame, overload, time, inbox, capture, and safety pressure.
-- `reference/coaching-protocols.md`, `reference/signal-map.md`, and `reference/safety-boundaries.md` hold the operating protocols.
+- `coach/PROJECT_INSTRUCTIONS.md` is the paste-ready coach contract.
+- `coach/FIRST_RUN.md` shows the cold-start behavior.
+- `coach/FIRST_REPLY_SCORECARD.md` makes the first reply pass/fail.
+- `docs/judging/JUDGE_BRIEF.md` gives the one-page winning case.
+- `docs/judging/COMPETITION_RULES_TRACE.md` maps the Week 5 rules to evidence.
+- `docs/judging/ICM_TRACE.md` maps the system to visible, editable, auditable workflow.
+- `docs/evidence/RECEIPTS.md` maps claims to source files.
 - `landing/evidence.html` renders the public proof room.
 
 ## Search And AI Discovery
 
-The public discovery files are:
-
-- `robots.txt` for crawler access and sitemap discovery.
-- `sitemap.xml` for the landing page, live chat demo, evidence reader, and pitch reel URLs.
-- `llms.txt` for answer engines, AI search, and LLM citation context.
-- `landing/index.html` for canonical URL, preview metadata, and structured data.
+- `robots.txt` exposes the sitemap.
+- `sitemap.xml` lists the landing page, live chat demo, and evidence reader URLs.
+- `llms.txt` gives answer engines and AI search a concise citation path.
+- `landing/index.html` carries canonical URL, preview metadata, and structured data.
 
 ## Verification
 
-Run the final gate:
-
 ```bash
 node scripts/final-review-smoke.mjs --expect-ready --skip-build
-```
-
-For the public URL and privacy pass:
-
-```bash
 node scripts/verify-github-public-url.mjs
 node scripts/verify-final-privacy-scan.mjs
 ```
 
-`scripts/verify-github-public-url.mjs` checks that the approved repository URL is visible through unauthenticated GitHub API access.
-
-The full verifier list lives in `PUBLICATION_CHECKLIST.md` and `scripts/`.
+The full verifier list lives in `docs/judging/PUBLICATION_CHECKLIST.md` and `scripts/`.
 
 ## Safety
 
-Unstuck is not therapy, diagnosis, medication advice, crisis care, or autonomous account access. It can help the user identify the next visible move; it does not secretly operate their inbox, calendar, files, or accounts.
+Unstuck is not therapy, diagnosis, medication advice, crisis care, or autonomous account access. It helps the user identify the next visible move; it does not secretly operate their inbox, calendar, files, or accounts.

@@ -6,7 +6,7 @@ import { pathToFileURL } from "node:url";
 import { hasPublicGitHubUrl, isDisallowedSubmissionRepo } from "./verify-publication-ready.mjs";
 
 const root = process.cwd();
-const submissionPath = path.join(root, "SUBMISSION.md");
+const submissionPath = path.join(root, "docs/judging/SUBMISSION.md");
 
 function usage() {
   return [
@@ -14,7 +14,7 @@ function usage() {
     "  node scripts/verify-github-public-url.mjs --url https://github.com/OWNER/REPO",
     "  node scripts/verify-github-public-url.mjs",
     "",
-    "When --url is omitted, the script reads the GitHub link block from SUBMISSION.md.",
+    "When --url is omitted, the script reads the GitHub link block from docs/judging/SUBMISSION.md.",
     "The check uses unauthenticated GitHub API access so a private review repo cannot pass as public.",
   ].join("\n");
 }

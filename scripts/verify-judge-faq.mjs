@@ -9,7 +9,7 @@ function read(root, file) {
 }
 
 export function verifyJudgeFaq(root = process.cwd()) {
-  const file = path.join(root, "JUDGE_FAQ.md");
+  const file = path.join(root, "docs/judging/JUDGE_FAQ.md");
   const failures = [];
 
   if (!fs.existsSync(file)) {
@@ -17,11 +17,11 @@ export function verifyJudgeFaq(root = process.cwd()) {
       checked: false,
       questions: 0,
       evidenceRefs: 0,
-      failures: ["Missing JUDGE_FAQ.md."],
+      failures: ["Missing docs/judging/JUDGE_FAQ.md."],
     };
   }
 
-  const markdown = read(root, "JUDGE_FAQ.md");
+  const markdown = read(root, "docs/judging/JUDGE_FAQ.md");
   const questions = (markdown.match(/^## /gm) || []).length;
   const evidenceRefs = (markdown.match(/Evidence:/g) || []).length;
 
@@ -34,20 +34,19 @@ export function verifyJudgeFaq(root = process.cwd()) {
     "How does it fit ICM?",
     "What goes above the brief?",
     "one-page judge brief",
-    "JUDGE_BRIEF.md",
+    "docs/judging/JUDGE_BRIEF.md",
     "What are the boundaries?",
     "six-stop whole-person tour",
     "I need a coach to get started on this.",
     "state, friction, one humane concrete move, held context, proof, capture, body-state routing, transition, recovery, and closure",
-    "landing/reel.html",
-    "RECEIPTS.md",
+    "docs/evidence/RECEIPTS.md",
     "the next move is small enough to test",
     "Unstuck is not therapy, medical advice, diagnosis, medication guidance, autonomous account access, or a promise to clean someone's life for them.",
   ];
 
   for (const text of requiredText) {
     if (!markdown.includes(text)) {
-      failures.push(`JUDGE_FAQ.md is missing required text: ${text}`);
+      failures.push(`docs/judging/JUDGE_FAQ.md is missing required text: ${text}`);
     }
   }
 
@@ -71,7 +70,7 @@ export function verifyJudgeFaq(root = process.cwd()) {
 
   for (const text of forbiddenText) {
     if (markdown.includes(text)) {
-      failures.push(`JUDGE_FAQ.md contains public-unsafe local/private text: ${text}`);
+      failures.push(`docs/judging/JUDGE_FAQ.md contains public-unsafe local/private text: ${text}`);
     }
   }
 

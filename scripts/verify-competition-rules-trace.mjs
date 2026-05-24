@@ -27,7 +27,7 @@ function bullets(markdownSection) {
 }
 
 export function verifyCompetitionRulesTrace(root = process.cwd()) {
-  const file = path.join(root, "COMPETITION_RULES_TRACE.md");
+  const file = path.join(root, "docs/judging/COMPETITION_RULES_TRACE.md");
   const failures = [];
 
   if (!fs.existsSync(file)) {
@@ -37,11 +37,11 @@ export function verifyCompetitionRulesTrace(root = process.cwd()) {
       judgingQuestionRows: 0,
       aboveBriefProofBullets: 0,
       readyCheckBullets: 0,
-      failures: ["Missing COMPETITION_RULES_TRACE.md."],
+      failures: ["Missing docs/judging/COMPETITION_RULES_TRACE.md."],
     };
   }
 
-  const markdown = read(root, "COMPETITION_RULES_TRACE.md");
+  const markdown = read(root, "docs/judging/COMPETITION_RULES_TRACE.md");
   const briefRequirementRows = tableRows(section(markdown, "## Brief Requirements", "## Judging Questions")).length;
   const judgingQuestionRows = tableRows(section(markdown, "## Judging Questions", "## Above-The-Brief Proof")).length;
   const aboveBriefProofBullets = bullets(section(markdown, "## Above-The-Brief Proof", "## Ready To Post Checks")).length;
@@ -60,12 +60,10 @@ export function verifyCompetitionRulesTrace(root = process.cwd()) {
     "Is the domain specific enough?",
     "Is the methodology clean and useful?",
     "Does the README make it easy for someone else to use?",
-    "ICM_TRACE.md",
-    "JUDGE_SCORECARD.md",
-    "JUDGE_BRIEF.md",
-    "JUDGE_FAQ.md",
-    "PITCH_REEL.md",
-    "landing/reel.html",
+    "docs/judging/ICM_TRACE.md",
+    "docs/judging/JUDGE_SCORECARD.md",
+    "docs/judging/JUDGE_BRIEF.md",
+    "docs/judging/JUDGE_FAQ.md",
     "scripts/verify-competition-rules-trace.mjs",
     "scripts/verify-judge-brief.mjs",
     "scripts/verify-publication-ready.mjs",
@@ -76,12 +74,12 @@ export function verifyCompetitionRulesTrace(root = process.cwd()) {
     "Eligibility is documented as confirmed before posting.",
     "Final public repository URL is inserted and verified through unauthenticated GitHub API access.",
     "Ready To Post Checks",
-    "The approved public GitHub URL is present in `SUBMISSION.md`.",
+    "The approved public GitHub URL is present in `docs/judging/SUBMISSION.md`.",
   ];
 
   for (const text of requiredText) {
     if (!markdown.includes(text)) {
-      failures.push(`COMPETITION_RULES_TRACE.md is missing required text: ${text}`);
+      failures.push(`docs/judging/COMPETITION_RULES_TRACE.md is missing required text: ${text}`);
     }
   }
 
@@ -105,13 +103,13 @@ export function verifyCompetitionRulesTrace(root = process.cwd()) {
     "Current Blockers",
     "blocked publication state",
     "Intentionally blocked until final approval",
-    "placeholder in `SUBMISSION.md`",
+    "placeholder in `docs/judging/SUBMISSION.md`",
     "folder owner must approve",
   ];
 
   for (const text of staleLaunchText) {
     if (markdown.includes(text)) {
-      failures.push(`COMPETITION_RULES_TRACE.md contains stale pre-launch text: ${text}`);
+      failures.push(`docs/judging/COMPETITION_RULES_TRACE.md contains stale pre-launch text: ${text}`);
     }
   }
 
@@ -127,7 +125,7 @@ export function verifyCompetitionRulesTrace(root = process.cwd()) {
 
   for (const text of forbiddenText) {
     if (markdown.includes(text)) {
-      failures.push(`COMPETITION_RULES_TRACE.md contains public-unsafe local/private text: ${text}`);
+      failures.push(`docs/judging/COMPETITION_RULES_TRACE.md contains public-unsafe local/private text: ${text}`);
     }
   }
 

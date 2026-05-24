@@ -18,14 +18,14 @@ const requiredText = [
 ];
 
 const requiredEvidence = [
-  "PROJECT_INSTRUCTIONS.md",
-  "START_HERE.md",
-  "FIRST_RUN.md",
+  "coach/PROJECT_INSTRUCTIONS.md",
+  "coach/START_HERE.md",
+  "coach/FIRST_RUN.md",
   "scripts/verify-first-run.mjs",
   "demo/transcript-pack.md",
   "scripts/verify-first-reply-acceptance.mjs",
-  "RECEIPTS.md",
-  "JUDGE_SCORECARD.md",
+  "docs/evidence/RECEIPTS.md",
+  "docs/judging/JUDGE_SCORECARD.md",
   "scripts/verify-public-bundle.mjs",
   "reference/safety-boundaries.md",
   "reference/mode-router.md",
@@ -33,7 +33,7 @@ const requiredEvidence = [
 ];
 
 export function verifyProductThesis(root = process.cwd()) {
-  const file = path.join(root, "PRODUCT_THESIS.md");
+  const file = path.join(root, "docs/judging/PRODUCT_THESIS.md");
   const failures = [];
 
   if (!fs.existsSync(file)) {
@@ -41,19 +41,19 @@ export function verifyProductThesis(root = process.cwd()) {
       checked: false,
       sections: 0,
       evidenceRefs: 0,
-      failures: ["Missing PRODUCT_THESIS.md"],
+      failures: ["Missing docs/judging/PRODUCT_THESIS.md"],
     };
   }
 
   const content = fs.readFileSync(file, "utf8");
   for (const text of requiredText) {
     if (!content.includes(text)) {
-      failures.push(`PRODUCT_THESIS.md is missing required text: ${text}`);
+      failures.push(`docs/judging/PRODUCT_THESIS.md is missing required text: ${text}`);
     }
   }
   for (const evidence of requiredEvidence) {
     if (!content.includes(evidence)) {
-      failures.push(`PRODUCT_THESIS.md is missing evidence reference: ${evidence}`);
+      failures.push(`docs/judging/PRODUCT_THESIS.md is missing evidence reference: ${evidence}`);
     }
   }
 

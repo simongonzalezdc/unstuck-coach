@@ -20,25 +20,25 @@ const requiredText = [
 ];
 
 const requiredEvidence = [
-  "identity.md",
-  "rules.md",
-  "examples.md",
+  "coach/identity.md",
+  "coach/rules.md",
+  "coach/examples.md",
   "reference/",
-  "PROJECT_INSTRUCTIONS.md",
-  "START_HERE.md",
-  "FIRST_RUN.md",
-  "FIRST_REPLY_SCORECARD.md",
-  "JUDGE_SCORECARD.md",
-  "RECEIPTS.md",
+  "coach/PROJECT_INSTRUCTIONS.md",
+  "coach/START_HERE.md",
+  "coach/FIRST_RUN.md",
+  "coach/FIRST_REPLY_SCORECARD.md",
+  "docs/judging/JUDGE_SCORECARD.md",
+  "docs/evidence/RECEIPTS.md",
   "landing/index.html",
-  "PUBLICATION_CHECKLIST.md",
+  "docs/judging/PUBLICATION_CHECKLIST.md",
   "scripts/verify-icm-trace.mjs",
   "scripts/final-review-smoke.mjs",
   "scripts/verify-publication-ready.mjs",
 ];
 
 export function verifyIcmTrace(root = process.cwd()) {
-  const file = path.join(root, "ICM_TRACE.md");
+  const file = path.join(root, "docs/judging/ICM_TRACE.md");
   const failures = [];
 
   if (!fs.existsSync(file)) {
@@ -47,7 +47,7 @@ export function verifyIcmTrace(root = process.cwd()) {
       sections: 0,
       evidenceRefs: 0,
       fitRows: 0,
-      failures: ["Missing ICM_TRACE.md."],
+      failures: ["Missing docs/judging/ICM_TRACE.md."],
     };
   }
 
@@ -55,13 +55,13 @@ export function verifyIcmTrace(root = process.cwd()) {
 
   for (const text of requiredText) {
     if (!content.includes(text)) {
-      failures.push(`ICM_TRACE.md is missing required text: ${text}`);
+      failures.push(`docs/judging/ICM_TRACE.md is missing required text: ${text}`);
     }
   }
 
   for (const evidence of requiredEvidence) {
     if (!content.includes(evidence)) {
-      failures.push(`ICM_TRACE.md is missing evidence reference: ${evidence}`);
+      failures.push(`docs/judging/ICM_TRACE.md is missing evidence reference: ${evidence}`);
     }
   }
 

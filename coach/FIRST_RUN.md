@@ -2,9 +2,9 @@
 
 This is the one-minute receipt for the core Week 5 question: does the folder actually coach?
 
-The test is intentionally small. Load the folder into a Claude Project, paste `PROJECT_INSTRUCTIONS.md`, then send the cold prompt below.
+The test is intentionally small. Load the folder into a Claude Project, paste `coach/PROJECT_INSTRUCTIONS.md`, then send the cold prompt below.
 
-`PROJECT_INSTRUCTIONS.md` routes this prompt directly. The coach should not ask the traffic-light question first, because the user has already given a stuck signal.
+`coach/PROJECT_INSTRUCTIONS.md` routes this prompt directly. The coach should not ask the traffic-light question first, because the user has already given a stuck signal.
 
 ```text
 I need a coach to get started on this.

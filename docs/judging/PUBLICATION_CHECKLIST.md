@@ -11,7 +11,7 @@ Use this as the final pre-submission audit. It should stay short enough to run u
 - The Kyanite VPS landing route is live at `https://unstuck.kyanitelabs.tech/`.
 - The repository About homepage points to the landing page URL.
 - `robots.txt`, `sitemap.xml`, and `llms.txt` are present in the public payload.
-- The final public GitHub URL is inserted in `SUBMISSION.md`.
+- The final public GitHub URL is inserted in `docs/judging/SUBMISSION.md`.
 - The final public GitHub URL is rejected if it points at the old Week 3 repository.
 - The final public GitHub URL is visible through unauthenticated GitHub API access.
 
@@ -52,7 +52,7 @@ The live demo should show `Z.AI GLM-5.1 (medium reasoning)`, return a real coach
 
 ## Staging Rule
 
-Keep the reviewed source folder as the canonical build copy. Do not maintain two different `SUBMISSION.md` files.
+Keep the reviewed source folder as the canonical build copy. Do not maintain two different `docs/judging/SUBMISSION.md` files.
 
 If the source changes, stage the public repository with:
 
@@ -66,6 +66,6 @@ After staging, run the final checks again inside the public repository.
 
 ## Skool Posting Shape
 
-Post the final public GitHub link plus the 2-3 sentence draft from `SUBMISSION.md`.
+Post the final public GitHub link plus the 2-3 sentence draft from `docs/judging/SUBMISSION.md`.
 
 Do not include local research notes, local browser artifacts, unpublished review-pack files, generated output folders, or unpublished repo history.

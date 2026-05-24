@@ -1,6 +1,6 @@
 # Unstuck Coach Walkthrough
 
-Use this as the longer recording script or quick read. For the tighter video/GIF layer, use `PITCH_REEL.md` and the browser page at `landing/reel.html`.
+Use this as the recording script or quick read-through. The public story should show the live coach and evidence reader, not a separate storyboard page.
 
 ## One-Sentence Thesis
 
@@ -14,8 +14,8 @@ Start with the person, not the folder map.
 2. Show the hero: whole-person executive-function accessibility.
 3. Show one stuck sentence in the console.
 4. Show the before/after demo: generic advice versus Unstuck coaching.
-5. Open `START_HERE.md` and `PROJECT_INSTRUCTIONS.md`.
-6. Show `FIRST_REPLY_SCORECARD.md`.
+5. Open `coach/START_HERE.md` and `coach/PROJECT_INSTRUCTIONS.md`.
+6. Show `coach/FIRST_REPLY_SCORECARD.md`.
 7. Open `landing/evidence.html#first-reply-scorecard` for receipts.
 8. End with the five demo prompts below.
 
@@ -39,19 +39,18 @@ If the response is a lecture, it failed. If it creates one state-aware next move
 
 Use receipts after the human value is clear:
 
-- `JUDGE_BRIEF.md` for the one-page case.
-- `FIRST_RUN.md` for the cold-start receipt.
-- `FIRST_REPLY_SCORECARD.md` for pass/fail behavior.
+- `docs/judging/JUDGE_BRIEF.md` for the one-page case.
+- `coach/FIRST_RUN.md` for the cold-start receipt.
+- `coach/FIRST_REPLY_SCORECARD.md` for pass/fail behavior.
 - `demo/transcript-pack.md` for cold-test examples.
 - `demo/whole-person-tour.md` for six life surfaces.
 - `evals/red-face-tests.md` for pressure cases.
-- `RECEIPTS.md` for claim-to-file traceability.
+- `docs/evidence/RECEIPTS.md` for claim-to-file traceability.
 
 ## Recording Checklist
 
 - Keep the video under 90 seconds.
-- Use `PITCH_REEL.md` and `landing/reel.html` for the short public-facing reel.
-- Show the landing page or `START_HERE.md` first, not the file tree.
+- Show the landing page or `coach/START_HERE.md` first, not the file tree.
 - Open the live demo once.
 - Show one live prompt switch in the demo.
 - Show receipts only after the coach behavior is clear.

@@ -82,7 +82,7 @@ async function captureViewport({ browser, file, name, viewport, selector, requir
   const screenshotPath = path.join(outputDir, `${name}.png`);
   if (elementOnly && selector) {
     await page.addStyleTag({
-      content: ".site-nav, .reel-nav { display: none !important; }",
+      content: ".site-nav { display: none !important; }",
     });
     await page.locator(selector).screenshot({ path: screenshotPath });
   } else {
@@ -131,13 +131,13 @@ async function main() {
       file: "landing/evidence.html",
       name: "unstuck-review-evidence-desktop",
       viewport: { width: 1440, height: 1000 },
-      requiredText: ["Rendered Markdown, not claim cards.", "The file content is on this page.", "START_HERE.md"],
+      requiredText: ["Rendered Markdown, not claim cards.", "The file content is on this page.", "coach/START_HERE.md"],
     },
     {
       file: "landing/evidence.html",
       name: "unstuck-review-evidence-mobile",
       viewport: { width: 390, height: 900 },
-      requiredText: ["Rendered Markdown, not claim cards.", "The file content is on this page.", "START_HERE.md"],
+      requiredText: ["Rendered Markdown, not claim cards.", "The file content is on this page.", "coach/START_HERE.md"],
     },
     {
       file: "landing/index.html",
@@ -208,24 +208,6 @@ async function main() {
       viewport: { width: 390, height: 900 },
       selector: "#faq",
       requiredText: ["The coach helps with the next move, not someone else's life.", "Read boundaries"],
-    },
-    {
-      file: "landing/reel.html",
-      name: "unstuck-review-reel-desktop",
-      viewport: { width: 1440, height: 1000 },
-      requiredText: [
-        "External executive function for the whole human.",
-        "The source proof stays readable without slowing the first move.",
-      ],
-    },
-    {
-      file: "landing/reel.html",
-      name: "unstuck-review-reel-mobile",
-      viewport: { width: 390, height: 900 },
-      requiredText: [
-        "External executive function for the whole human.",
-        "The source proof stays readable without slowing the first move.",
-      ],
     },
   ];
 

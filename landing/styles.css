@@ -125,8 +125,7 @@ button {
   background: rgba(214, 163, 56, 0.28);
 }
 
-.site-nav,
-.reel-nav {
+.site-nav {
   position: fixed;
   top: 1.15rem;
   left: 50%;
@@ -152,8 +151,7 @@ button {
 }
 
 .wordmark,
-.nav-links,
-.reel-nav nav {
+.nav-links {
   display: flex;
   align-items: center;
 }
@@ -223,13 +221,11 @@ button {
   transform: rotate(-45deg);
 }
 
-.nav-links,
-.reel-nav nav {
+.nav-links {
   gap: 0.42rem;
 }
 
-.nav-links a,
-.reel-nav nav a {
+.nav-links a {
   position: relative;
   padding: 0.58rem 0.84rem;
   border: 1px solid transparent;
@@ -249,8 +245,7 @@ button {
   white-space: nowrap;
 }
 
-.nav-links a:hover,
-.reel-nav nav a:hover {
+.nav-links a:hover {
   border-color: rgba(47, 142, 134, 0.18);
   background: rgba(44, 123, 115, 0.09);
   color: var(--ink);
@@ -1081,7 +1076,6 @@ h1 {
 .review-deck .admin-rhythm-layout,
 .review-deck .brief-layout,
 .review-deck .scorecard-layout,
-.review-deck .reel-layout,
 .review-deck .thesis-layout,
 .review-deck .handoff-layout,
 .review-deck .setup-layout,
@@ -1186,7 +1180,6 @@ h1 {
 .admin-rhythm-layout,
 .brief-layout,
 .scorecard-layout,
-.reel-layout,
 .thesis-layout,
 .handoff-layout,
 .setup-layout,
@@ -1198,7 +1191,6 @@ h1 {
 .coldrun-section,
 .admin-rhythm-section,
 .scorecard-section,
-.reel-section,
 .proofgate-section {
   border-top: 1px solid rgba(168, 148, 120, 0.26);
   border-bottom: 1px solid rgba(168, 148, 120, 0.26);
@@ -1208,7 +1200,6 @@ h1 {
 .admin-rhythm-layout,
 .brief-layout,
 .scorecard-layout,
-.reel-layout,
 .thesis-layout,
 .handoff-layout,
 .setup-layout,
@@ -1584,7 +1575,6 @@ h1 {
 .coldrun-steps,
 .brief-board,
 .scorecard-board,
-.reel-board,
 .thesis-points,
 .setup-board,
 .comparison-grid,
@@ -1606,7 +1596,6 @@ h1 {
 
 .brief-board,
 .scorecard-board,
-.reel-board,
 .thesis-points,
 .setup-board,
 .proofgate-board {
@@ -1614,15 +1603,13 @@ h1 {
 }
 
 .setup-board .start-prompt,
-.scorecard-board .fail-card,
-.reel-board .reel-final {
+.scorecard-board .fail-card {
   grid-column: 1 / -1;
 }
 
 .coldrun-steps li,
 .brief-board article,
 .scorecard-board article,
-.reel-board article,
 .thesis-points article,
 .setup-board article,
 .response-pane,
@@ -1652,7 +1639,6 @@ h1 {
 .coldrun-steps li::before,
 .brief-board article::before,
 .scorecard-board article::before,
-.reel-board article::before,
 .thesis-points article::before,
 .setup-board article::before,
 .response-pane::before,
@@ -1673,7 +1659,6 @@ h1 {
 .coldrun-steps li::after,
 .brief-board article::after,
 .scorecard-board article::after,
-.reel-board article::after,
 .thesis-points article::after,
 .setup-board article::after,
 .response-pane::after,
@@ -1699,7 +1684,6 @@ h1 {
 .coldrun-steps li,
 .brief-board article,
 .scorecard-board article,
-.reel-board article,
 .thesis-points article,
 .setup-board article,
 .console-output article,
@@ -1717,7 +1701,6 @@ h1 {
 .coldrun-steps li:nth-child(1),
 .brief-board article:nth-child(1),
 .scorecard-board article:nth-child(1),
-.reel-board article:nth-child(1),
 .thesis-points article:nth-child(1),
 .setup-board article:nth-child(1),
 .console-output article:nth-child(1),
@@ -1728,7 +1711,6 @@ h1 {
 .coldrun-steps li:nth-child(2),
 .brief-board article:nth-child(2),
 .scorecard-board article:nth-child(2),
-.reel-board article:nth-child(2),
 .thesis-points article:nth-child(2),
 .setup-board article:nth-child(2),
 .console-output article:nth-child(2),
@@ -1739,7 +1721,6 @@ h1 {
 .coldrun-steps li:nth-child(3),
 .brief-board article:nth-child(3),
 .scorecard-board article:nth-child(3),
-.reel-board article:nth-child(3),
 .thesis-points article:nth-child(3),
 .setup-board article:nth-child(3),
 .console-output article:nth-child(3),
@@ -1749,7 +1730,6 @@ h1 {
 
 .brief-board article:nth-child(4),
 .scorecard-board article:nth-child(4),
-.reel-board article:nth-child(4),
 .setup-board article:nth-child(4),
 .console-output article:nth-child(4),
 .proofgate-board article:nth-child(4) {
@@ -1757,7 +1737,6 @@ h1 {
 }
 
 .brief-board article:nth-child(5),
-.reel-board article:nth-child(5),
 .setup-board article:nth-child(5),
 .proofgate-board article:nth-child(5) {
   border-top: 5px solid var(--magenta);
@@ -1778,7 +1757,6 @@ h1 {
 .coldrun-steps strong,
 .brief-board strong,
 .scorecard-board strong,
-.reel-board strong,
 .thesis-points strong,
 .console-output strong,
 .proofgate-board strong,
@@ -1793,7 +1771,6 @@ h1 {
 .coldrun-steps p,
 .brief-board p,
 .scorecard-board p,
-.reel-board p,
 .thesis-points p,
 .setup-board p,
 .console-output p,
@@ -1814,8 +1791,7 @@ h1 {
   font-weight: 780;
 }
 
-.scorecard-board .fail-card,
-.reel-board .reel-final {
+.scorecard-board .fail-card {
   color: #fff8e8;
   background:
     linear-gradient(90deg, rgba(255, 245, 220, 0.07) 0 1px, transparent 1px 7rem),
@@ -1829,19 +1805,15 @@ h1 {
     var(--shadow-ink);
 }
 
-.scorecard-board .fail-card strong,
-.reel-board .reel-final strong {
+.scorecard-board .fail-card strong {
   color: #fffdf6;
 }
 
 .scorecard-board .fail-card .pane-label,
-.reel-board .reel-final .pane-label,
-.scorecard-board .fail-card p,
-.reel-board .reel-final p {
+.scorecard-board .fail-card p {
   color: rgba(255, 248, 232, 0.84);
 }
 
-.reel-board code,
 .proofgate-board code,
 .setup-board code {
   font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
@@ -3193,7 +3165,6 @@ h1 {
   .admin-rhythm-layout,
   .brief-layout,
   .scorecard-layout,
-  .reel-layout,
   .thesis-layout,
   .handoff-layout,
   .setup-layout,
@@ -3203,7 +3174,6 @@ h1 {
   .coldrun-steps,
   .brief-board,
   .scorecard-board,
-  .reel-board,
   .thesis-points,
   .setup-board,
   .comparison-grid,
@@ -3337,8 +3307,7 @@ h1 {
     width: 0.38rem;
   }
 
-  .site-nav,
-  .reel-nav {
+  .site-nav {
     top: 0.75rem;
     width: calc(100% - 1rem);
     min-height: 3.35rem;
@@ -3688,8 +3657,7 @@ h1 {
 
   .coldrun-steps li,
   .brief-board article,
-  .scorecard-board article,
-  .reel-board article,
+  .scorecard-board article article,
   .thesis-points article,
   .setup-board article,
   .console-output article,

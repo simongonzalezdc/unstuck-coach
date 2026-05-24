@@ -19,8 +19,6 @@ import { verifyLandingAccessibility } from "./verify-landing-accessibility.mjs";
 import { verifyLandingCopy } from "./verify-landing-copy.mjs";
 import { verifyModeRouter } from "./verify-mode-router.mjs";
 import { verifyEvalCoverage } from "./verify-eval-coverage.mjs";
-import { verifyPitchReel } from "./verify-pitch-reel.mjs";
-import { verifyReelPage } from "./verify-reel-page.mjs";
 import { verifyProductThesis } from "./verify-product-thesis.mjs";
 import { verifySourceNotes } from "./verify-source-notes.mjs";
 import { verifyStartHere } from "./verify-start-here.mjs";
@@ -75,12 +73,12 @@ const unfinishedPresentationPatterns = [
 
 const publishBlockers = [
   {
-    file: "SUBMISSION.md",
+    file: "docs/judging/SUBMISSION.md",
     pattern: /Pending review|Do not publish/i,
     message: "Submission still contains review/publish placeholder text.",
   },
   {
-    file: "SUBMISSION.md",
+    file: "docs/judging/SUBMISSION.md",
     pattern: /GitHub link:\s*\n\s*```text\s*\n\s*Pending review/im,
     message: "Final public GitHub link is not inserted yet.",
   },
@@ -94,7 +92,7 @@ const projectInstructionRequiredText = [
   "reference/mode-router.md",
   "stance portfolio",
   "First Reply Acceptance Test",
-  "FIRST_RUN.md shows the exact cold-start receipt and tiny proof loop.",
+  "coach/FIRST_RUN.md shows the exact cold-start receipt and tiny proof loop.",
   "First-message routing:",
   "If the first user message already names a stuck signal, do not ask the traffic-light question first. Route it directly.",
   "Names the friction without blame.",
@@ -112,12 +110,12 @@ const startHereRequiredText = [
   "landing/index.html#admin-ops",
   "scripts/render-review-screenshots.mjs",
   "desktop, mobile, and narrow-mobile visual review captures",
-  "PROJECT_INSTRUCTIONS.md",
-  "FIRST_RUN.md",
-  "FIRST_REPLY_SCORECARD.md",
-  "JUDGE_BRIEF.md",
+  "coach/PROJECT_INSTRUCTIONS.md",
+  "coach/FIRST_RUN.md",
+  "coach/FIRST_REPLY_SCORECARD.md",
+  "docs/judging/JUDGE_BRIEF.md",
   "one-page above-the-brief case",
-  "JUDGE_FAQ.md",
+  "docs/judging/JUDGE_FAQ.md",
   "I need a coach to get started on this.",
   "First Reply Acceptance Test",
   "If it gives a productivity article, it failed.",
@@ -130,10 +128,10 @@ const judgeScorecardRequiredText = [
   "Total: 18 points.",
   "Coach first, knowledge base second",
   "Product thesis",
-  "ICM_TRACE.md",
-  "JUDGE_FAQ.md",
-  "JUDGE_BRIEF.md",
-  "FIRST_RUN.md",
+  "docs/judging/ICM_TRACE.md",
+  "docs/judging/JUDGE_FAQ.md",
+  "docs/judging/JUDGE_BRIEF.md",
+  "coach/FIRST_RUN.md",
   "calendar/inbox operations band",
   "Open `landing/index.html` and inspect the calendar/inbox operations band.",
   "shifting stance instead of giving one generic voice",
@@ -158,9 +156,9 @@ const handoffCardRequiredText = [
 ];
 
 const judgeWalkthroughRequiredText = [
-  "ICM_TRACE.md",
-  "JUDGE_FAQ.md",
-  "JUDGE_BRIEF.md",
+  "docs/judging/ICM_TRACE.md",
+  "docs/judging/JUDGE_FAQ.md",
+  "docs/judging/JUDGE_BRIEF.md",
   "scripts/verify-icm-trace.mjs",
   "scripts/verify-judge-faq.mjs",
   "scripts/verify-judge-scorecard.mjs",
@@ -169,7 +167,7 @@ const judgeWalkthroughRequiredText = [
   "scripts/judge-quick-proof.mjs",
   "demo/whole-person-tour.md",
   "scripts/verify-whole-person-tour.mjs",
-  "FIRST_RUN.md",
+  "coach/FIRST_RUN.md",
   "winning case readable before the judge opens every proof artifact",
   "First reply acceptance test",
   "Pass: names friction, gives one concrete move, asks for tiny proof or one state signal.",
@@ -195,7 +193,7 @@ const receiptsRequiredText = [
   "My inbox and calendar are a mess and I do not know what is real.",
   "It makes failure obvious quickly",
   "It is above the brief without hiding the folder",
-  "JUDGE_BRIEF.md",
+  "docs/judging/JUDGE_BRIEF.md",
   "one-page winning argument",
   "scripts/verify-judge-brief.mjs",
   "judge brief",
@@ -217,12 +215,12 @@ const judgeFaqRequiredText = [
   "How does it fit ICM?",
   "What goes above the brief?",
   "one-page judge brief",
-  "JUDGE_BRIEF.md",
+  "docs/judging/JUDGE_BRIEF.md",
   "six-stop whole-person tour",
   "What are the boundaries?",
   "the next move is small enough to test",
   "Unstuck is not therapy, medical advice, diagnosis, medication guidance, autonomous account access, or a promise to clean someone's life for them.",
-  "RECEIPTS.md",
+  "docs/evidence/RECEIPTS.md",
 ];
 
 const judgeBriefRequiredText = [
@@ -248,16 +246,16 @@ const judgeBriefRequiredText = [
   "ICM as practical workflow architecture",
   "visible context, editable decisions, bounded handoffs, and auditable proof",
   "The landing page should make the product clear first. The receipts carry the proof:",
-  "PRODUCT_THESIS.md",
-  "ICM_TRACE.md",
-  "COMPETITION_RULES_TRACE.md",
-  "FIRST_RUN.md",
-  "FIRST_REPLY_SCORECARD.md",
+  "docs/judging/PRODUCT_THESIS.md",
+  "docs/judging/ICM_TRACE.md",
+  "docs/judging/COMPETITION_RULES_TRACE.md",
+  "coach/FIRST_RUN.md",
+  "coach/FIRST_REPLY_SCORECARD.md",
   "demo/whole-person-tour.md",
   "reference/admin-ops-playbooks.md",
   "reference/mode-router.md",
   "evals/red-face-tests.md",
-  "RECEIPTS.md",
+  "docs/evidence/RECEIPTS.md",
   "Unstuck is a coaching scaffold.",
 ];
 
@@ -282,7 +280,7 @@ const publicationChecklistRequiredText = [
   "node scripts/verify-final-privacy-scan.mjs",
   "verify-public-bundle.mjs` reports 84 required files, including the SEO/AEO/GEO discovery files.",
   "Keep the reviewed source folder as the canonical build copy",
-  "Do not maintain two different `SUBMISSION.md` files.",
+  "Do not maintain two different `docs/judging/SUBMISSION.md` files.",
   "node scripts/stage-public-repo.mjs --target ../unstuck-coach --write --force --require-ready",
   "The `--require-ready` flag is for final publication staging.",
   "refuses to stage if the reviewed source folder still has the placeholder URL or fails `verify-publication-ready.mjs`",
@@ -308,11 +306,9 @@ const rulesTraceRequiredText = [
   "Brief Requirements",
   "Coach, not knowledge base",
   "ICM fit",
-  "ICM_TRACE.md",
-  "JUDGE_FAQ.md",
-  "JUDGE_BRIEF.md",
-  "PITCH_REEL.md",
-  "landing/reel.html",
+  "docs/judging/ICM_TRACE.md",
+  "docs/judging/JUDGE_FAQ.md",
+  "docs/judging/JUDGE_BRIEF.md",
   "scripts/verify-competition-rules-trace.mjs",
   "scripts/verify-judge-scorecard.mjs",
   "scripts/verify-judge-brief.mjs",
@@ -422,8 +418,6 @@ const renderReviewScreenshotsRequiredText = [
   "unstuck-review-faq-mobile",
   "unstuck-review-evidence-desktop",
   "unstuck-review-evidence-mobile",
-  "unstuck-review-reel-desktop",
-  "unstuck-review-reel-mobile",
   "Calendar and inbox are part of the life loop.",
   "No autonomous reading",
   "The first run is already scripted.",
@@ -434,7 +428,7 @@ const renderReviewScreenshotsRequiredText = [
   "Read boundaries",
   "Rendered Markdown, not claim cards.",
   "The file content is on this page.",
-  "START_HERE.md",
+  "coach/START_HERE.md",
   "horizontalOverflow",
   "consoleOrPageEvents",
 ];
@@ -445,7 +439,6 @@ const finalReviewSmokeRequiredText = [
   "--skip-build",
   "--verbose",
   "verify-submission-surfaces.mjs",
-  "verify-pitch-reel.mjs",
   "verify-judge-faq.mjs",
   "verify-judge-scorecard.mjs",
   "verify-judge-brief.mjs",
@@ -507,30 +500,13 @@ const submissionSurfacesRequiredText = [
   "source proof",
 ];
 
-const pitchReelRequiredText = [
-  "75-Second Shot Plan",
-  "One-Line Hook",
-  "Unstuck Coach gives whole people portable executive-function accessibility",
-  "landing/reel.html",
-  "The source proof stays readable without slowing the first move.",
-  "landing/evidence.html#first-reply-scorecard",
-];
-
 const staleCodingFirstText = [
   {
-    file: "landing/reel.html",
-    text: "Open the likely file.",
-  },
-  {
-    file: "landing/reel.html",
-    text: "Reply with the filename.",
-  },
-  {
-    file: "FIRST_RUN.md",
+    file: "coach/FIRST_RUN.md",
     text: "open the likely file",
   },
   {
-    file: "examples.md",
+    file: "coach/examples.md",
     text: "I know what bug to fix. I just cannot start.",
   },
   {
@@ -538,7 +514,7 @@ const staleCodingFirstText = [
     text: "Open the file, tab, doc, or issue",
   },
   {
-    file: "FIRST_REPLY_SCORECARD.md",
+    file: "coach/FIRST_REPLY_SCORECARD.md",
     text: "open the file, tab, doc, or issue",
   },
   {
@@ -549,7 +525,7 @@ const staleCodingFirstText = [
 
 const staleWholePersonDriftText = [
   {
-    file: "rules.md",
+    file: "coach/rules.md",
     text: "Feedback And Message Armor",
   },
   {
@@ -576,11 +552,11 @@ const staleShortcutScopeText = [
     text: "five-minute test",
   },
   {
-    file: "START_HERE.md",
+    file: "coach/START_HERE.md",
     text: "five-minute judge path",
   },
   {
-    file: "docs/judge-walkthrough.md",
+    file: "docs/judging/judge-walkthrough.md",
     text: "five-minute judge path",
   },
   {
@@ -599,7 +575,7 @@ const staleShortcutScopeText = [
 
 const staleDiagnosisScopeText = [
   {
-    file: "PROJECT_INSTRUCTIONS.md",
+    file: "coach/PROJECT_INSTRUCTIONS.md",
     text: "for people with ADHD, ADHD-like, or neurodivergent executive-function friction",
   },
   {
@@ -615,38 +591,38 @@ const staleDiagnosisScopeText = [
     text: "ADHD accessibility ergonomics",
   },
   {
-    file: "identity.md",
+    file: "coach/identity.md",
     text: "ADHD accessibility ergonomics",
   },
 ];
 
 const readmeRequiredText = [
-  "A folder-based whole-person executive-function accessibility coach for people who need help starting, switching, remembering, regulating, capturing, recovering, and closing loops without shame.",
-  "The core idea: Unstuck Coach acts as portable executive-function accessibility.",
-  "Postable Links",
-  "Live GLM demo: `https://unstuck.kyanitelabs.tech/chat/`",
+  "Unstuck Coach is a folder-based whole-person executive-function accessibility coach.",
+  "The core idea: the folder is the product.",
+  "Live Paths",
+  "Live GLM 5.1 demo: `https://unstuck.kyanitelabs.tech/chat/`",
   "Evidence reader: `https://unstuck.kyanitelabs.tech/evidence`",
+  "Repo Map",
+  "`coach/` is the coach contract",
+  "`docs/judging/` is the competition layer",
+  "That is the ICM shape: staged context, visible decisions, editable documents, and auditable proof.",
   "Fast Judge Path",
-  "What It Coaches",
   "Use The Folder",
   "Evidence Map",
-  "The evidence reader gives the proof without making the README carry every receipt.",
   "Search And AI Discovery",
-  "robots.txt` for crawler access and sitemap discovery.",
-  "sitemap.xml` for the landing page, live chat demo, evidence reader, and pitch reel URLs.",
-  "llms.txt` for answer engines, AI search, and LLM citation context.",
+  "`robots.txt` exposes the sitemap.",
+  "`sitemap.xml` lists the landing page, live chat demo, and evidence reader URLs.",
+  "`llms.txt` gives answer engines and AI search a concise citation path.",
   "If Unstuck gives a productivity article, it failed.",
   "This is a shortcut, not the product boundary.",
-  "The landing page gives the visual version of this path.",
-  "PROJECT_INSTRUCTIONS.md` is the paste-ready coach contract.",
-  "FIRST_RUN.md` shows the cold-start behavior.",
-  "FIRST_REPLY_SCORECARD.md` makes the first reply pass/fail.",
-  "JUDGE_BRIEF.md` gives the one-page winning case.",
-  "COMPETITION_RULES_TRACE.md` maps the Week 5 rules to evidence.",
-  "ICM_TRACE.md` maps the system to visible, editable, auditable workflow.",
-  "RECEIPTS.md` maps claims to source files.",
+  "coach/PROJECT_INSTRUCTIONS.md` is the paste-ready coach contract.",
+  "coach/FIRST_RUN.md` shows the cold-start behavior.",
+  "coach/FIRST_REPLY_SCORECARD.md` makes the first reply pass/fail.",
+  "docs/judging/JUDGE_BRIEF.md` gives the one-page winning case.",
+  "docs/judging/COMPETITION_RULES_TRACE.md` maps the Week 5 rules to evidence.",
+  "docs/judging/ICM_TRACE.md` maps the system to visible, editable, auditable workflow.",
+  "docs/evidence/RECEIPTS.md` maps claims to source files.",
   "landing/evidence.html` renders the public proof room.",
-  "scripts/verify-github-public-url.mjs` checks that the approved repository URL is visible through unauthenticated GitHub API access.",
   "node scripts/final-review-smoke.mjs --expect-ready --skip-build",
   "node scripts/verify-github-public-url.mjs",
   "node scripts/verify-final-privacy-scan.mjs",
@@ -654,10 +630,10 @@ const readmeRequiredText = [
 
 const documentationWordLimits = [
   { file: "README.md", maxWords: 1100 },
-  { file: "PUBLICATION_CHECKLIST.md", maxWords: 700 },
-  { file: "docs/judge-walkthrough.md", maxWords: 1100 },
-  { file: "PROJECT_INSTRUCTIONS.md", maxWords: 1900 },
-  { file: "RECEIPTS.md", maxWords: 1800 },
+  { file: "docs/judging/PUBLICATION_CHECKLIST.md", maxWords: 700 },
+  { file: "docs/judging/judge-walkthrough.md", maxWords: 1100 },
+  { file: "coach/PROJECT_INSTRUCTIONS.md", maxWords: 1900 },
+  { file: "docs/evidence/RECEIPTS.md", maxWords: 1800 },
 ];
 
 const seoDiscoveryRequiredText = [
@@ -676,10 +652,6 @@ const seoDiscoveryRequiredText = [
   {
     file: "sitemap.xml",
     text: "<loc>https://unstuck.kyanitelabs.tech/chat/</loc>",
-  },
-  {
-    file: "sitemap.xml",
-    text: "<loc>https://unstuck.kyanitelabs.tech/reel</loc>",
   },
   {
     file: "llms.txt",
@@ -705,10 +677,6 @@ const seoDiscoveryRequiredText = [
     file: "landing/evidence.html",
     text: "<link rel=\"canonical\" href=\"https://unstuck.kyanitelabs.tech/evidence\">",
   },
-  {
-    file: "landing/reel.html",
-    text: "<link rel=\"canonical\" href=\"https://unstuck.kyanitelabs.tech/reel\">",
-  },
 ];
 
 const icmTraceRequiredText = [
@@ -720,21 +688,6 @@ const icmTraceRequiredText = [
 ];
 
 const visualCssGuardrails = [
-  {
-    file: "landing/reel.css",
-    pattern: /font-size\s*:\s*clamp\([^;]*vw/i,
-    message: "uses viewport-scaled font-size clamp",
-  },
-  {
-    file: "landing/reel.css",
-    pattern: /rgba\(\s*0\s*,\s*0\s*,\s*0\s*,/i,
-    message: "uses pure black rgba instead of project charcoal",
-  },
-  {
-    file: "landing/reel.css",
-    pattern: /#000(?:000)?\b/i,
-    message: "uses pure black hex instead of project charcoal",
-  },
   {
     file: "landing/styles.css",
     pattern: /font-size\s*:\s*clamp\([^;]*vw/i,
@@ -757,11 +710,6 @@ const visualTextGuardrails = [
     file: "landing/styles.css",
     pattern: /font-family\s*:[^;]*(?:Inter|Roboto|Arial|Open Sans|Helvetica)/i,
     message: "uses generic/banned font-family fallback in landing CSS",
-  },
-  {
-    file: "landing/reel.css",
-    pattern: /font-family\s*:[^;]*(?:Inter|Roboto|Arial|Open Sans|Helvetica)/i,
-    message: "uses generic/banned font-family fallback in reel CSS",
   },
   {
     file: "landing/assets/unstuck-handoff-card.svg",
@@ -848,7 +796,7 @@ const visualCssRequiredText = [
   },
   {
     file: "landing/styles.css",
-    text: ".site-nav,",
+    text: ".site-nav",
     message: "missing detached navigation island styling",
   },
   {
@@ -895,31 +843,6 @@ const visualCssRequiredText = [
     file: "landing/styles.css",
     text: "border-top: 5px solid var(--magenta)",
     message: "missing saturated proof-card rail",
-  },
-  {
-    file: "landing/reel.css",
-    text: "var(--paper)",
-    message: "missing warm-paper reel surface",
-  },
-  {
-    file: "landing/reel.css",
-    text: "border-top: 7px solid var(--magenta)",
-    message: "missing colored reel rail",
-  },
-  {
-    file: "landing/reel.css",
-    text: '"PP Editorial New"',
-    message: "missing editorial reel typography",
-  },
-  {
-    file: "landing/reel.css",
-    text: "min-height: 100dvh",
-    message: "missing stable dynamic viewport reel sizing",
-  },
-  {
-    file: "landing/reel.css",
-    text: "transform: rotate(1.2deg)",
-    message: "missing physical reel card tension",
   },
   {
     file: "landing/app.js",
@@ -1018,7 +941,7 @@ const landingRequiredText = [
   "It proves the coach by crossing one real threshold",
   "First reply behavior",
   "First-run behavior",
-  "PROJECT_INSTRUCTIONS.md` routes concrete stuck signals directly.",
+  "coach/PROJECT_INSTRUCTIONS.md` routes concrete stuck signals directly.",
   "The coach should not ask the traffic-light question first",
   "First reply preview",
   "Mobile whole-person life signal",
@@ -1035,25 +958,17 @@ const landingRequiredText = [
   "Copy cold prompt 04",
   "Read boundaries",
   "The coach helps with the next move, not someone else's life.",
-  "75-second walkthrough reel",
-  "Show the life loop before the file map.",
-  "The reel should make the coach feel concrete",
-  "Open reel page",
-  "Open reel script",
-  "Open reel evidence",
-  "0:58-1:15",
-  "Close on evidence.",
   "Names friction.",
   "Gives one move.",
   "Holds context.",
   "Asks for proof.",
   "Article, menu, moralizing, vague continuation, or unsafe clinical advice.",
   "Start before you read everything.",
-  "Open `START_HERE.md`.",
-  "Paste `PROJECT_INSTRUCTIONS.md`.",
+  "Open `coach/START_HERE.md`.",
+  "Paste `coach/PROJECT_INSTRUCTIONS.md`.",
   "Start here",
   "The first run is already scripted.",
-  "You are Unstuck Coach. Read identity.md, rules.md, examples.md, and reference/.",
+  "You are Unstuck Coach. Read coach/identity.md, coach/rules.md, coach/examples.md, and reference/.",
   "If my first message is vague, ask one state-calibrating question.",
   "If I name a stuck signal, route it directly.",
   "I need a coach to get started on this.",
@@ -1062,10 +977,6 @@ const landingRequiredText = [
   "./evidence.html#transcript-pack",
   "./evidence.html#icm-trace",
   "./evidence.html#verify-icm-trace",
-  "./evidence.html#pitch-reel",
-  "./reel.html",
-  "./evidence.html#verify-pitch-reel",
-  "./evidence.html#verify-reel-page",
   "./evidence.html#start-here",
   "./evidence.html#product-thesis",
   "./evidence.html#first-run",
@@ -1116,7 +1027,7 @@ function contentForPublicProvenanceScan(file, content) {
     /https:\/\/[A-Za-z0-9_.-]+\.github\.io\/[^\s)"'<>]+/gi,
     "https://OWNER.github.io/REPO/",
   );
-  if (file !== "SUBMISSION.md") return withoutRepoUrls;
+  if (file !== "docs/judging/SUBMISSION.md") return withoutRepoUrls;
   return withoutRepoUrls.replace(
     /GitHub link:\s*```text\s*[\s\S]*?```/i,
     "GitHub link:\n\n```text\nhttps://github.com/OWNER/REPO\n```",
@@ -1278,74 +1189,74 @@ for (const blocker of publishBlockers) {
   }
 }
 
-if (exists("PROJECT_INSTRUCTIONS.md")) {
-  const projectInstructions = read("PROJECT_INSTRUCTIONS.md");
+if (exists("coach/PROJECT_INSTRUCTIONS.md")) {
+  const projectInstructions = read("coach/PROJECT_INSTRUCTIONS.md");
   for (const requiredText of projectInstructionRequiredText) {
     if (!projectInstructions.includes(requiredText)) {
-      failures.push(`PROJECT_INSTRUCTIONS.md is missing required text: ${requiredText}`);
+      failures.push(`coach/PROJECT_INSTRUCTIONS.md is missing required text: ${requiredText}`);
     }
   }
 }
 
-if (exists("START_HERE.md")) {
-  const startHere = read("START_HERE.md");
+if (exists("coach/START_HERE.md")) {
+  const startHere = read("coach/START_HERE.md");
   for (const requiredText of startHereRequiredText) {
     if (!startHere.includes(requiredText)) {
-      failures.push(`START_HERE.md is missing required text: ${requiredText}`);
+      failures.push(`coach/START_HERE.md is missing required text: ${requiredText}`);
     }
   }
 }
 
-if (exists("JUDGE_SCORECARD.md")) {
-  const judgeScorecard = read("JUDGE_SCORECARD.md");
+if (exists("docs/judging/JUDGE_SCORECARD.md")) {
+  const judgeScorecard = read("docs/judging/JUDGE_SCORECARD.md");
   for (const requiredText of judgeScorecardRequiredText) {
     if (!judgeScorecard.includes(requiredText)) {
-      failures.push(`JUDGE_SCORECARD.md is missing required text: ${requiredText}`);
+      failures.push(`docs/judging/JUDGE_SCORECARD.md is missing required text: ${requiredText}`);
     }
   }
 }
 
-if (exists("HANDOFF_CARD.md")) {
-  const handoffCard = read("HANDOFF_CARD.md");
+if (exists("coach/HANDOFF_CARD.md")) {
+  const handoffCard = read("coach/HANDOFF_CARD.md");
   for (const requiredText of handoffCardRequiredText) {
     if (!handoffCard.includes(requiredText)) {
-      failures.push(`HANDOFF_CARD.md is missing required text: ${requiredText}`);
+      failures.push(`coach/HANDOFF_CARD.md is missing required text: ${requiredText}`);
     }
   }
 }
 
-if (exists("docs/judge-walkthrough.md")) {
-  const judgeWalkthrough = read("docs/judge-walkthrough.md");
+if (exists("docs/judging/judge-walkthrough.md")) {
+  const judgeWalkthrough = read("docs/judging/judge-walkthrough.md");
   for (const requiredText of judgeWalkthroughRequiredText) {
     if (!judgeWalkthrough.includes(requiredText)) {
-      failures.push(`docs/judge-walkthrough.md is missing required text: ${requiredText}`);
+      failures.push(`docs/judging/judge-walkthrough.md is missing required text: ${requiredText}`);
     }
   }
 }
 
-if (exists("RECEIPTS.md")) {
-  const receipts = read("RECEIPTS.md");
+if (exists("docs/evidence/RECEIPTS.md")) {
+  const receipts = read("docs/evidence/RECEIPTS.md");
   for (const requiredText of receiptsRequiredText) {
     if (!receipts.includes(requiredText)) {
-      failures.push(`RECEIPTS.md is missing required text: ${requiredText}`);
+      failures.push(`docs/evidence/RECEIPTS.md is missing required text: ${requiredText}`);
     }
   }
 }
 
-if (exists("JUDGE_FAQ.md")) {
-  const judgeFaq = read("JUDGE_FAQ.md");
+if (exists("docs/judging/JUDGE_FAQ.md")) {
+  const judgeFaq = read("docs/judging/JUDGE_FAQ.md");
   for (const requiredText of judgeFaqRequiredText) {
     if (!judgeFaq.includes(requiredText)) {
-      failures.push(`JUDGE_FAQ.md is missing required text: ${requiredText}`);
+      failures.push(`docs/judging/JUDGE_FAQ.md is missing required text: ${requiredText}`);
     }
   }
 }
 
-if (exists("JUDGE_BRIEF.md")) {
-  const judgeBrief = read("JUDGE_BRIEF.md");
+if (exists("docs/judging/JUDGE_BRIEF.md")) {
+  const judgeBrief = read("docs/judging/JUDGE_BRIEF.md");
   for (const requiredText of judgeBriefRequiredText) {
     if (!judgeBrief.includes(requiredText)) {
-      failures.push(`JUDGE_BRIEF.md is missing required text: ${requiredText}`);
+      failures.push(`docs/judging/JUDGE_BRIEF.md is missing required text: ${requiredText}`);
     }
   }
 }
@@ -1359,29 +1270,29 @@ if (exists("reference/signal-map.md")) {
   }
 }
 
-if (exists("PUBLICATION_CHECKLIST.md")) {
-  const publicationChecklist = read("PUBLICATION_CHECKLIST.md");
+if (exists("docs/judging/PUBLICATION_CHECKLIST.md")) {
+  const publicationChecklist = read("docs/judging/PUBLICATION_CHECKLIST.md");
   for (const requiredText of publicationChecklistRequiredText) {
     if (!publicationChecklist.includes(requiredText)) {
-      failures.push(`PUBLICATION_CHECKLIST.md is missing required text: ${requiredText}`);
+      failures.push(`docs/judging/PUBLICATION_CHECKLIST.md is missing required text: ${requiredText}`);
     }
   }
 }
 
-if (exists("COMPETITION_RULES_TRACE.md")) {
-  const rulesTrace = read("COMPETITION_RULES_TRACE.md");
+if (exists("docs/judging/COMPETITION_RULES_TRACE.md")) {
+  const rulesTrace = read("docs/judging/COMPETITION_RULES_TRACE.md");
   for (const requiredText of rulesTraceRequiredText) {
     if (!rulesTrace.includes(requiredText)) {
-      failures.push(`COMPETITION_RULES_TRACE.md is missing required text: ${requiredText}`);
+      failures.push(`docs/judging/COMPETITION_RULES_TRACE.md is missing required text: ${requiredText}`);
     }
   }
 }
 
-if (exists("ICM_TRACE.md")) {
-  const icmTrace = read("ICM_TRACE.md");
+if (exists("docs/judging/ICM_TRACE.md")) {
+  const icmTrace = read("docs/judging/ICM_TRACE.md");
   for (const requiredText of icmTraceRequiredText) {
     if (!icmTrace.includes(requiredText)) {
-      failures.push(`ICM_TRACE.md is missing required text: ${requiredText}`);
+      failures.push(`docs/judging/ICM_TRACE.md is missing required text: ${requiredText}`);
     }
   }
 }
@@ -1503,15 +1414,6 @@ if (exists("scripts/verify-submission-surfaces.mjs")) {
   }
 }
 
-if (exists("PITCH_REEL.md")) {
-  const pitchReel = read("PITCH_REEL.md");
-  for (const requiredText of pitchReelRequiredText) {
-    if (!pitchReel.includes(requiredText)) {
-      failures.push(`PITCH_REEL.md is missing required text: ${requiredText}`);
-    }
-  }
-}
-
 if (exists("README.md")) {
   const readme = read("README.md");
   for (const requiredText of readmeRequiredText) {
@@ -1577,7 +1479,7 @@ for (const requirement of visualCssRequiredText) {
   }
 }
 
-for (const failure of undefinedCssVarFailures(["landing/styles.css", "landing/reel.css"])) {
+for (const failure of undefinedCssVarFailures(["landing/styles.css"])) {
   failures.push(failure);
 }
 
@@ -1676,16 +1578,6 @@ for (const failure of submissionSurfaces.failures) {
   failures.push(`Submission surfaces check failed: ${failure}`);
 }
 
-const pitchReel = verifyPitchReel(root);
-for (const failure of pitchReel.failures) {
-  failures.push(`Pitch reel check failed: ${failure}`);
-}
-
-const reelPage = verifyReelPage(root);
-for (const failure of reelPage.failures) {
-  failures.push(`Reel page check failed: ${failure}`);
-}
-
 const judgeFaq = verifyJudgeFaq(root);
 for (const failure of judgeFaq.failures) {
   failures.push(`Judge FAQ check failed: ${failure}`);
@@ -1750,10 +1642,6 @@ const summary = {
   skoolCommentSentences: submissionCopy.sentenceCount,
   skoolCommentCharacters: submissionCopy.characterCount,
   submissionSurfaceCharacters: submissionSurfaces.landingSectionCharacters,
-  pitchReelShotRows: pitchReel.shotRows,
-  pitchReelVoiceoverWords: pitchReel.voiceoverWords,
-  reelPageSlides: reelPage.slides,
-  reelPageLocalRefs: reelPage.localRefs,
   judgeFaqQuestions: judgeFaq.questions,
   judgeFaqEvidenceRefs: judgeFaq.evidenceRefs,
   judgeScorecardCriteriaRows: judgeScorecard.criteriaRows,

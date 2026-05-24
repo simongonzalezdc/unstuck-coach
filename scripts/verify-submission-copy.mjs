@@ -26,10 +26,10 @@ export function countSentences(text) {
 export function verifySubmissionCopy(root = process.cwd()) {
   const failures = [];
   const warnings = [];
-  const submissionPath = path.join(root, "SUBMISSION.md");
+  const submissionPath = path.join(root, "docs/judging/SUBMISSION.md");
 
   if (!fs.existsSync(submissionPath)) {
-    failures.push("Missing SUBMISSION.md.");
+    failures.push("Missing docs/judging/SUBMISSION.md.");
     return {
       status: "blocked",
       sentenceCount: 0,
@@ -39,13 +39,13 @@ export function verifySubmissionCopy(root = process.cwd()) {
     };
   }
 
-  const submission = read(root, "SUBMISSION.md");
+  const submission = read(root, "docs/judging/SUBMISSION.md");
   const skoolCommentDraft = extractSkoolCommentDraft(submission);
   const sentenceCount = countSentences(skoolCommentDraft);
   const characterCount = skoolCommentDraft.length;
 
   if (!skoolCommentDraft) {
-    failures.push("SUBMISSION.md does not contain a Skool comment draft code block.");
+    failures.push("docs/judging/SUBMISSION.md does not contain a Skool comment draft code block.");
   }
 
   if (sentenceCount < 2 || sentenceCount > 3) {
@@ -77,7 +77,7 @@ export function verifySubmissionCopy(root = process.cwd()) {
   }
 
   if (!/GitHub link:/i.test(submission)) {
-    warnings.push("SUBMISSION.md does not expose the GitHub link block.");
+    warnings.push("docs/judging/SUBMISSION.md does not expose the GitHub link block.");
   }
 
   return {

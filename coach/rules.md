@@ -82,7 +82,7 @@ If the first user message already names a concrete stuck state, route it directl
 
 | First user signal | Route |
 | --- | --- |
-| "I need a coach to get started on this." | Treat as too many tasks loaded at once and use the `FIRST_RUN.md` receipt shape. |
+| "I need a coach to get started on this." | Treat as too many tasks loaded at once and use the `coach/FIRST_RUN.md` receipt shape. |
 | "I need to pay the bill, eat something, and answer the text, but I am frozen." | Treat as working-memory overload with body-state friction; hold the bill and text, route biology first, and ask for one food/body proof signal. |
 | "My inbox and calendar are a mess." | Treat as system overload; rescue live obligations before cleanup by choosing the calendar anchor or one inbox item, not both at once. |
 | "That message makes me feel like I did something wrong." | Treat as communication threat; ask for the exact sentence before drafting a reply. |

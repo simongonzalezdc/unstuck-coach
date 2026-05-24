@@ -356,12 +356,12 @@
           <ol class="coldrun-steps">
             <li>
               <span>01</span>
-              <strong>Open `START_HERE.md`.</strong>
+              <strong>Open `coach/START_HERE.md`.</strong>
               <p>The root file gives the one-minute path without making someone assemble the folder map first.</p>
             </li>
             <li>
               <span>02</span>
-              <strong>Paste `PROJECT_INSTRUCTIONS.md`.</strong>
+              <strong>Paste `coach/PROJECT_INSTRUCTIONS.md`.</strong>
               <p>The coach starts from state, friction, one concrete move, held context, proof, and closure.</p>
             </li>
             <li>
@@ -523,19 +523,19 @@
                   <span>Copy</span>
                 </button>
               </div>
-              <pre><code id="start-prompt-text">You are Unstuck Coach. Read identity.md, rules.md, examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.</code></pre>
+              <pre><code id="start-prompt-text">You are Unstuck Coach. Read coach/identity.md, coach/rules.md, coach/examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.</code></pre>
             </article>
 
             <div class="setup-path-list" aria-label="Runner paths">
               <article>
                 <span class="pane-label">Claude Project path</span>
                 <strong>Add the folder as project knowledge.</strong>
-                <p>Paste `PROJECT_INSTRUCTIONS.md`, then start with the same coach prompt.</p>
+                <p>Paste `coach/PROJECT_INSTRUCTIONS.md`, then start with the same coach prompt.</p>
               </article>
               <article>
                 <span class="pane-label">Codex path</span>
                 <strong>Open this folder as the workspace.</strong>
-                <p>Ask Codex to read `PROJECT_INSTRUCTIONS.md`, `START_HERE.md`, `identity.md`, `rules.md`, `examples.md`, and `reference/` before coaching.</p>
+                <p>Ask Codex to read `coach/PROJECT_INSTRUCTIONS.md`, `coach/START_HERE.md`, `coach/identity.md`, `coach/rules.md`, `coach/examples.md`, and `reference/` before coaching.</p>
               </article>
               <article>
                 <span class="pane-label">Antigravity / AI IDE path</span>
@@ -545,7 +545,7 @@
               <article>
                 <span class="pane-label">Local model path</span>
                 <strong>Paste the operating files into context.</strong>
-                <p>Use `PROJECT_INSTRUCTIONS.md`, `identity.md`, `rules.md`, `examples.md`, `reference/coaching-protocols.md`, `reference/signal-map.md`, and `reference/safety-boundaries.md`.</p>
+                <p>Use `coach/PROJECT_INSTRUCTIONS.md`, `coach/identity.md`, `coach/rules.md`, `coach/examples.md`, `reference/coaching-protocols.md`, `reference/signal-map.md`, and `reference/safety-boundaries.md`.</p>
               </article>
             </div>
 
@@ -596,8 +596,8 @@
               <span class="pane-label">First-run behavior</span>
               <strong>First reply pass condition</strong>
               <p>Name the friction, give one concrete move, and ask for tiny proof. No article, no menu, no moralizing.</p>
-              <p>`PROJECT_INSTRUCTIONS.md` routes concrete stuck signals directly. The coach should not ask the traffic-light question first.</p>
-              <a href="./evidence.html#first-run">Read `FIRST_RUN.md`</a>
+              <p>`coach/PROJECT_INSTRUCTIONS.md` routes concrete stuck signals directly. The coach should not ask the traffic-light question first.</p>
+              <a href="./evidence.html#first-run">Read `coach/FIRST_RUN.md`</a>
             </article>
           </div>
         </div>
@@ -680,71 +680,6 @@
         </div>
       </section>
 
-      <section id="reel" class="section review-panel reel-section" aria-labelledby="reel-title">
-        <div class="reel-layout">
-          <div class="section-heading compact">
-            <p class="eyebrow">75-second walkthrough reel</p>
-            <h2 id="reel-title">Show the life loop before the file map.</h2>
-            <p>
-              The reel should make the coach feel concrete before it becomes a list
-              of files: a stuck moment, one intervention, the safety boundary, and
-              the evidence behind it.
-            </p>
-            <div class="inline-actions">
-              <a class="action secondary" href="./reel.html">
-                <span class="icon icon-path" aria-hidden="true"></span>
-                Open reel page
-              </a>
-              <a class="action secondary" href="./evidence.html#pitch-reel">
-                <span class="icon icon-path" aria-hidden="true"></span>
-                Open reel script
-              </a>
-              <a class="action secondary" href="./evidence.html#verify-pitch-reel">
-                <span class="icon icon-folder" aria-hidden="true"></span>
-                Open reel evidence
-              </a>
-              <a class="action secondary" href="./evidence.html#verify-reel-page">
-                <span class="icon icon-folder" aria-hidden="true"></span>
-                Open page evidence
-              </a>
-            </div>
-          </div>
-
-          <div class="reel-board" aria-label="Pitch reel shot sequence">
-            <article>
-              <span class="pane-label">0:00-0:08</span>
-              <strong>Threshold.</strong>
-              <p>Hero plus first-reply preview: this is the visible gateway into the whole-person coach.</p>
-            </article>
-            <article>
-              <span class="pane-label">0:08-0:18</span>
-              <strong>Load path.</strong>
-              <p>`START_HERE.md` and the launch kit make the folder testable before anyone reads every file.</p>
-            </article>
-            <article>
-              <span class="pane-label">0:18-0:31</span>
-              <strong>Score the first reply.</strong>
-              <p>Pass means name friction, give one move, hold context, and ask for tiny proof.</p>
-            </article>
-            <article>
-              <span class="pane-label">0:31-0:44</span>
-              <strong>Open the live demo.</strong>
-              <p>A real chat turns a stuck sentence into one next move instead of an article.</p>
-            </article>
-            <article>
-              <span class="pane-label">0:44-0:58</span>
-              <strong>Stress the coach.</strong>
-              <p>Transcript pack, red-face evals, and ICM trace show shame, overload, inbox/calendar reality, communication threat, and re-entry.</p>
-            </article>
-            <article class="reel-final">
-              <span class="pane-label">0:58-1:15</span>
-              <strong>Close on evidence.</strong>
-              <p>Open the rendered evidence reader for the source files, examples, and boundaries.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section id="demo" class="section review-panel demo-section" aria-labelledby="demo-title">
         <div class="section-heading">
           <p class="eyebrow">The difference in the first minute</p>
@@ -802,17 +737,17 @@
         <div class="file-map" aria-label="Required folder structure">
           <article class="file-node">
             <span class="file-index">01</span>
-            <h3>identity.md</h3>
+            <h3>coach/identity.md</h3>
             <p>Defines the athlete, coaching promise, voice, and boundaries.</p>
           </article>
           <article class="file-node">
             <span class="file-index">02</span>
-            <h3>rules.md</h3>
+            <h3>coach/rules.md</h3>
             <p>Turns executive-function signals into state, friction, move, hold, check, close.</p>
           </article>
           <article class="file-node">
             <span class="file-index">03</span>
-            <h3>examples.md</h3>
+            <h3>coach/examples.md</h3>
             <p>Shows calibrated coaching under shame, overload, communication threat, and task-start friction.</p>
           </article>
           <article class="file-node">
@@ -875,19 +810,19 @@
           <a class="receipt-feature" href="./evidence.html#first-run">
             <span>Start here</span>
             <strong>The first run is a receipt.</strong>
-            <small>FIRST_RUN.md shows the prompt, the expected first move, the tiny proof loop, and what should fail.</small>
+            <small>coach/FIRST_RUN.md shows the prompt, the expected first move, the tiny proof loop, and what should fail.</small>
           </a>
 
           <div class="receipt-list" aria-label="Readable source proof">
             <a href="./evidence.html#rules">
               <span>Coach contract</span>
               <strong>It coaches instead of informing.</strong>
-              <small>rules.md</small>
+              <small>coach/rules.md</small>
             </a>
             <a href="./evidence.html#first-reply-scorecard">
               <span>First reply</span>
               <strong>The first reply is scoreable.</strong>
-              <small>FIRST_REPLY_SCORECARD.md</small>
+              <small>coach/FIRST_REPLY_SCORECARD.md</small>
             </a>
             <a href="./evidence.html#whole-person-tour">
               <span>Life surfaces</span>

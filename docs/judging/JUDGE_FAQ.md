@@ -6,9 +6,9 @@ Use this for short answers before opening the receipt files.
 
 Unstuck Coach is a folder-based whole-person executive-function accessibility coach for people whose lives stall at the executive-function layer: starting, switching, remembering, regulating, capturing, recovering, or closing.
 
-It is designed for a Claude Project or any AI workspace that can read the folder. Load it, paste `PROJECT_INSTRUCTIONS.md`, and try a real stuck prompt.
+It is designed for a Claude Project or any AI workspace that can read the folder. Load it, paste `coach/PROJECT_INSTRUCTIONS.md`, and try a real stuck prompt.
 
-Evidence: `identity.md`, `README.md`, `PROJECT_INSTRUCTIONS.md`, `START_HERE.md`.
+Evidence: `coach/identity.md`, `README.md`, `coach/PROJECT_INSTRUCTIONS.md`, `coach/START_HERE.md`.
 
 ## Who exactly does it coach?
 
@@ -24,7 +24,7 @@ It coaches whole people under executive-function load:
 - transitioning out of hyperfocus,
 - closing or pausing a work loop cleanly.
 
-Evidence: `identity.md`, `PRODUCT_THESIS.md`, `FIRST_RUN.md`, `demo/transcript-pack.md`, `reference/signal-map.md`.
+Evidence: `coach/identity.md`, `docs/judging/PRODUCT_THESIS.md`, `coach/FIRST_RUN.md`, `demo/transcript-pack.md`, `reference/signal-map.md`.
 
 ## Is this just an ADHD knowledge base?
 
@@ -32,11 +32,11 @@ No. It is ADHD-informed, but the artifact is built around observable behavior: s
 
 A knowledge base explains why starting, switching, remembering, or stopping is hard. Unstuck should change the next move and preserve the person's agency.
 
-Evidence: `rules.md`, `examples.md`, `FIRST_REPLY_SCORECARD.md`, `demo/before-after.md`.
+Evidence: `coach/rules.md`, `coach/examples.md`, `coach/FIRST_REPLY_SCORECARD.md`, `demo/before-after.md`.
 
 ## How should I cold-test it?
 
-Open `START_HERE.md`, paste `PROJECT_INSTRUCTIONS.md` into a Claude Project, add the folder as project knowledge, and try:
+Open `coach/START_HERE.md`, paste `coach/PROJECT_INSTRUCTIONS.md` into a Claude Project, add the folder as project knowledge, and try:
 
 ```text
 I need a coach to get started on this.
@@ -44,7 +44,7 @@ I need a coach to get started on this.
 
 The first reply should name the friction without blame, give one concrete move, and ask for tiny proof or one state signal.
 
-Evidence: `START_HERE.md`, `FIRST_RUN.md`, `FIRST_REPLY_SCORECARD.md`.
+Evidence: `coach/START_HERE.md`, `coach/FIRST_RUN.md`, `coach/FIRST_REPLY_SCORECARD.md`.
 
 ## What is an immediate fail?
 
@@ -56,7 +56,7 @@ Fail the coach if the first reply becomes:
 - a vague continuation,
 - unsafe clinical advice.
 
-Evidence: `FIRST_REPLY_SCORECARD.md`, `PROJECT_INSTRUCTIONS.md`.
+Evidence: `coach/FIRST_REPLY_SCORECARD.md`, `coach/PROJECT_INSTRUCTIONS.md`.
 
 ## How does it fit ICM?
 
@@ -68,7 +68,7 @@ The system makes the workflow staged, inspectable, editable, and auditable:
 - proof is attached to files,
 - the next move is small enough to test.
 
-Evidence: `ICM_TRACE.md`, `COMPETITION_RULES_TRACE.md`, `RECEIPTS.md`.
+Evidence: `docs/judging/ICM_TRACE.md`, `docs/judging/COMPETITION_RULES_TRACE.md`, `docs/evidence/RECEIPTS.md`.
 
 ## What goes above the brief?
 
@@ -83,10 +83,9 @@ The required folder is present, and the entry adds a clearer front door:
 - cold-test transcripts,
 - red-face evals,
 - calendar/inbox admin operations playbooks,
-- a pitch reel,
 - receipts that link claims to files.
 
-Evidence: `JUDGE_BRIEF.md`, `landing/index.html`, `landing/reel.html`, `PITCH_REEL.md`, `RECEIPTS.md`, `demo/whole-person-tour.md`, `reference/signal-map.md`, `reference/admin-ops-playbooks.md`.
+Evidence: `docs/judging/JUDGE_BRIEF.md`, `landing/index.html`, `docs/evidence/RECEIPTS.md`, `demo/whole-person-tour.md`, `reference/signal-map.md`, `reference/admin-ops-playbooks.md`.
 
 ## What are the boundaries?
 
@@ -94,4 +93,4 @@ Unstuck is not therapy, medical advice, diagnosis, medication guidance, autonomo
 
 It helps the user name what is real, choose one humane next move, and leave a re-entry trail.
 
-Evidence: `reference/safety-boundaries.md`, `HANDOFF_CARD.md`, `PROJECT_INSTRUCTIONS.md`.
+Evidence: `reference/safety-boundaries.md`, `coach/HANDOFF_CARD.md`, `coach/PROJECT_INSTRUCTIONS.md`.

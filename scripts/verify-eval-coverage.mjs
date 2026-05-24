@@ -42,7 +42,7 @@ export function verifyEvalCoverage(root = process.cwd()) {
     "Cognitive load increases when instructions need translation",
     "First-contact replies use plain language, accept messy input, and tell the user what the coach will do next",
     "Inbox Triage, Calendar Reality, and Admin Operations playbooks rescue hard anchors and live items before cleanup",
-    "`rules.md`, `reference/coaching-protocols.md`, `reference/admin-ops-playbooks.md`, `evals/red-face-tests.md`, `demo/transcript-pack.md`",
+    "`coach/rules.md`, `reference/coaching-protocols.md`, `reference/admin-ops-playbooks.md`, `evals/red-face-tests.md`, `demo/transcript-pack.md`",
     "live-obligation rescue",
   ];
 

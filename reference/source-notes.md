@@ -12,9 +12,9 @@ Unstuck Coach is intentionally narrow:
 
 The folder follows the required shape:
 
-- `identity.md`: who the coach is.
-- `rules.md`: how the coach coaches.
-- `examples.md`: what good interactions look like.
+- `coach/identity.md`: who the coach is.
+- `coach/rules.md`: how the coach coaches.
+- `coach/examples.md`: what good interactions look like.
 - `reference/`: reusable protocols and boundaries.
 - `README.md`: how to use the folder.
 
@@ -106,5 +106,5 @@ Those can be added later, but the competition deliverable is the coaching folder
 
 Portable usage rule:
 
-- If a tool can read the folder, ask it to load `PROJECT_INSTRUCTIONS.md`, `START_HERE.md`, `identity.md`, `rules.md`, `examples.md`, and `reference/`.
-- If a tool cannot read the folder, paste `PROJECT_INSTRUCTIONS.md` first, then add the core identity, rules, examples, coaching protocols, signal map, and safety boundaries.
+- If a tool can read the folder, ask it to load `coach/PROJECT_INSTRUCTIONS.md`, `coach/START_HERE.md`, `coach/identity.md`, `coach/rules.md`, `coach/examples.md`, and `reference/`.
+- If a tool cannot read the folder, paste `coach/PROJECT_INSTRUCTIONS.md` first, then add the core identity, rules, examples, coaching protocols, signal map, and safety boundaries.

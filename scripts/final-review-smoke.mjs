@@ -37,8 +37,6 @@ if (expectedStateCount > 1) {
 const proofChecks = [
   "scripts/verify-submission-copy.mjs",
   "scripts/verify-submission-surfaces.mjs",
-  "scripts/verify-pitch-reel.mjs",
-  "scripts/verify-reel-page.mjs",
   "scripts/verify-judge-faq.mjs",
   "scripts/verify-judge-scorecard.mjs",
   "scripts/verify-judge-brief.mjs",
@@ -165,8 +163,8 @@ export function finalReviewSmoke() {
     }
 
     const expectedBlockers = [
-      "SUBMISSION.md GitHub link is not a final public GitHub repository URL.",
-      "SUBMISSION.md still contains review/publish placeholder text.",
+      "docs/judging/SUBMISSION.md GitHub link is not a final public GitHub repository URL.",
+      "docs/judging/SUBMISSION.md still contains review/publish placeholder text.",
     ];
 
     for (const blocker of expectedBlockers) {

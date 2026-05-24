@@ -535,7 +535,7 @@ setupEvidenceReader();
 const revealTargets = isEvidencePage
   ? []
   : optionalSelectorAll(
-      ".section-heading, .scope-core, .scope-lanes li, .admin-rhythm-visual, .admin-rhythm-card, .admin-boundary, .coldrun-steps li, .brief-board article, .scorecard-board article, .reel-board article, .thesis-points article, .handoff-figure, .setup-board article, .response-pane, .coach-console, .console-output article, .file-node, .behavior-grid article, .receipts-grid a, .evidence-hero-panel, .evidence-index a, .evidence-card",
+      ".section-heading, .scope-core, .scope-lanes li, .admin-rhythm-visual, .admin-rhythm-card, .admin-boundary, .coldrun-steps li, .brief-board article, .scorecard-board article, .thesis-points article, .handoff-figure, .setup-board article, .response-pane, .coach-console, .console-output article, .file-node, .behavior-grid article, .receipts-grid a, .evidence-hero-panel, .evidence-index a, .evidence-card",
     );
 
 revealTargets.forEach((target) => {

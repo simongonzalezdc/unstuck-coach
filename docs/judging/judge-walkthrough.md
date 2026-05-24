@@ -4,11 +4,11 @@ Use this path to evaluate Unstuck Coach quickly without shrinking the product to
 
 ## 1. Read The Core Case
 
-Open `START_HERE.md`, `JUDGE_BRIEF.md`, and `README.md`.
+Open `coach/START_HERE.md`, `docs/judging/JUDGE_BRIEF.md`, and `README.md`.
 
-`JUDGE_BRIEF.md` should make the winning case readable before the judge opens every proof artifact: whole-person executive-function accessibility, above-the-brief proof, the fast cold test, failure modes, ICM fit, evidence map, and publication readiness.
+`docs/judging/JUDGE_BRIEF.md` should make the winning case readable before the judge opens every proof artifact: whole-person executive-function accessibility, above-the-brief proof, the fast cold test, failure modes, ICM fit, evidence map, and publication readiness.
 
-`ICM_TRACE.md`, `JUDGE_FAQ.md`, `JUDGE_BRIEF.md`, and `RECEIPTS.md` explain why the folder is not just a set of docs. The method is staged, visible, editable, and auditable.
+`docs/judging/ICM_TRACE.md`, `docs/judging/JUDGE_FAQ.md`, `docs/judging/JUDGE_BRIEF.md`, and `docs/evidence/RECEIPTS.md` explain why the folder is not just a set of docs. The method is staged, visible, editable, and auditable.
 
 ## 2. Try The First Reply
 
@@ -67,7 +67,7 @@ The landing page should make the product clear before the judge reads every file
 - the calendar/inbox operations band
 - the folder-method map
 - the evidence reader
-- the pitch reel
+- the rendered evidence reader
 
 Check the calendar/inbox operations band. It should show Calendar Reality, Inbox Live Obligation, Reply Debt Recovery, and the no-account-access safety boundary.
 
@@ -75,13 +75,13 @@ Check the calendar/inbox operations band. It should show Calendar Reality, Inbox
 
 Open:
 
-- `FIRST_RUN.md`
-- `FIRST_REPLY_SCORECARD.md`
-- `COMPETITION_RULES_TRACE.md`
-- `PRODUCT_THESIS.md`
-- `ICM_TRACE.md`
-- `JUDGE_SCORECARD.md`
-- `JUDGE_FAQ.md`
+- `coach/FIRST_RUN.md`
+- `coach/FIRST_REPLY_SCORECARD.md`
+- `docs/judging/COMPETITION_RULES_TRACE.md`
+- `docs/judging/PRODUCT_THESIS.md`
+- `docs/judging/ICM_TRACE.md`
+- `docs/judging/JUDGE_SCORECARD.md`
+- `docs/judging/JUDGE_FAQ.md`
 - `demo/transcript-pack.md`
 - `evals/red-face-tests.md`
 - `evals/research-to-behavior-checklist.md`

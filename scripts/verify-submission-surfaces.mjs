@@ -29,7 +29,7 @@ function stripHtml(html) {
 
 export function verifySubmissionSurfaces(root = process.cwd()) {
   const failures = [];
-  const submissionPath = path.join(root, "SUBMISSION.md");
+  const submissionPath = path.join(root, "docs/judging/SUBMISSION.md");
   const landingPath = path.join(root, "landing", "index.html");
 
   if (!fs.existsSync(submissionPath)) {
@@ -37,7 +37,7 @@ export function verifySubmissionSurfaces(root = process.cwd()) {
       checked: false,
       skoolCommentCharacters: 0,
       landingVersionCharacters: 0,
-      failures: ["Missing SUBMISSION.md."],
+      failures: ["Missing docs/judging/SUBMISSION.md."],
     };
   }
 
@@ -50,7 +50,7 @@ export function verifySubmissionSurfaces(root = process.cwd()) {
     };
   }
 
-  const submission = read(root, "SUBMISSION.md");
+  const submission = read(root, "docs/judging/SUBMISSION.md");
   const landing = read(root, "landing/index.html");
   const skoolComment = extractSkoolCommentDraft(submission);
   const landingVersion = extractTextBlock(submission, "Landing-page version");
@@ -61,15 +61,15 @@ export function verifySubmissionSurfaces(root = process.cwd()) {
   const normalizedLandingVersion = normalize(landingVersion);
 
   if (!skoolComment) {
-    failures.push("SUBMISSION.md is missing the primary Skool comment draft.");
+    failures.push("docs/judging/SUBMISSION.md is missing the primary Skool comment draft.");
   }
 
   if (!landingVersion) {
-    failures.push("SUBMISSION.md is missing the Landing-page version block.");
+    failures.push("docs/judging/SUBMISSION.md is missing the Landing-page version block.");
   }
 
   if (normalizedSkool && normalizedLandingVersion && normalizedSkool !== normalizedLandingVersion) {
-    failures.push("Landing-page version in SUBMISSION.md must match the primary Skool comment draft.");
+    failures.push("Landing-page version in docs/judging/SUBMISSION.md must match the primary Skool comment draft.");
   }
 
   if (landingSection) {

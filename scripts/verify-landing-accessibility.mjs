@@ -53,7 +53,6 @@ export function verifyLandingAccessibility(root = process.cwd()) {
   const htmlPath = path.join(root, "landing/index.html");
   const evidencePath = path.join(root, "landing/evidence.html");
   const cssPath = path.join(root, "landing/styles.css");
-  const reelCssPath = path.join(root, "landing/reel.css");
   const appPath = path.join(root, "landing/app.js");
 
   if (!fs.existsSync(htmlPath)) {
@@ -82,7 +81,6 @@ export function verifyLandingAccessibility(root = process.cwd()) {
   const html = read(root, "landing/index.html");
   const evidenceHtml = fs.existsSync(evidencePath) ? read(root, "landing/evidence.html") : "";
   const css = fs.existsSync(cssPath) ? read(root, "landing/styles.css") : "";
-  const reelCss = fs.existsSync(reelCssPath) ? read(root, "landing/reel.css") : "";
   const app = fs.existsSync(appPath) ? read(root, "landing/app.js") : "";
   const ids = findIds(html);
   const evidenceIds = findIds(evidenceHtml);
@@ -276,12 +274,6 @@ export function verifyLandingAccessibility(root = process.cwd()) {
       source: css,
       pattern: /transition\s*:\s*[^;]*\btransform\b/i,
       message: "transform transitions are disallowed because interaction should not move or scale controls.",
-    },
-    {
-      label: "landing/reel.css",
-      source: reelCss,
-      pattern: /\banimation\s*:\s*(?!\s*none\b)[^;]+/i,
-      message: "decorative CSS animations are disallowed on the reel page.",
     },
   ]) {
     if (pattern.test(source)) {

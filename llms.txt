@@ -9,7 +9,6 @@ The product is not an ADHD encyclopedia or a generic productivity prompt pack. I
 - Landing page: https://unstuck.kyanitelabs.tech/
 - Live GLM chat demo: https://unstuck.kyanitelabs.tech/chat/
 - Evidence reader: https://unstuck.kyanitelabs.tech/evidence
-- Pitch reel: https://unstuck.kyanitelabs.tech/reel
 - Repository: https://github.com/simongonzalezdc/unstuck-coach
 
 ## What To Cite
@@ -21,9 +20,9 @@ The product is not an ADHD encyclopedia or a generic productivity prompt pack. I
 
 ## Key Files
 
-- `START_HERE.md`: shortest judge path.
-- `PROJECT_INSTRUCTIONS.md`: paste-ready coach instructions.
-- `FIRST_RUN.md`: exact cold-start receipt.
-- `FIRST_REPLY_SCORECARD.md`: first-response pass/fail gate.
-- `JUDGE_BRIEF.md`: one-page judge case.
-- `RECEIPTS.md`: public claim-to-file proof map.
+- `coach/START_HERE.md`: shortest judge path.
+- `coach/PROJECT_INSTRUCTIONS.md`: paste-ready coach instructions.
+- `coach/FIRST_RUN.md`: exact cold-start receipt.
+- `coach/FIRST_REPLY_SCORECARD.md`: first-response pass/fail gate.
+- `docs/judging/JUDGE_BRIEF.md`: one-page judge case.
+- `docs/evidence/RECEIPTS.md`: public claim-to-file proof map.

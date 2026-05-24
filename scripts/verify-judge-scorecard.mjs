@@ -14,7 +14,7 @@ function fastPathSteps(markdown) {
 }
 
 export function verifyJudgeScorecard(root = process.cwd()) {
-  const file = path.join(root, "JUDGE_SCORECARD.md");
+  const file = path.join(root, "docs/judging/JUDGE_SCORECARD.md");
   const failures = [];
 
   if (!fs.existsSync(file)) {
@@ -22,11 +22,11 @@ export function verifyJudgeScorecard(root = process.cwd()) {
       checked: false,
       criteriaRows: 0,
       fastPathSteps: 0,
-      failures: ["Missing JUDGE_SCORECARD.md."],
+      failures: ["Missing docs/judging/JUDGE_SCORECARD.md."],
     };
   }
 
-  const markdown = read(root, "JUDGE_SCORECARD.md");
+  const markdown = read(root, "docs/judging/JUDGE_SCORECARD.md");
   const criteriaRows = [...markdown.matchAll(/^\| [^|-][^|]+\| [^|]+\| [^|]+\| [^|]+\| `[^`]+/gm)]
     .filter((match) => !match[0].includes("Criterion")).length;
   const steps = fastPathSteps(markdown);
@@ -46,11 +46,10 @@ export function verifyJudgeScorecard(root = process.cwd()) {
     "repeatable desktop, mobile, and narrow mobile screenshot proof",
     "calendar/inbox operations band",
     "Open `landing/index.html` and inspect the calendar/inbox operations band.",
-    "JUDGE_BRIEF.md",
+    "docs/judging/JUDGE_BRIEF.md",
     "one-page judge brief",
-    "JUDGE_FAQ.md",
+    "docs/judging/JUDGE_FAQ.md",
     "demo/whole-person-tour.md",
-    "landing/reel.html",
     "scripts/verify-judge-faq.mjs",
     "scripts/verify-judge-scorecard.mjs",
     "scripts/verify-judge-brief.mjs",
@@ -66,7 +65,7 @@ export function verifyJudgeScorecard(root = process.cwd()) {
 
   for (const text of requiredText) {
     if (!markdown.includes(text)) {
-      failures.push(`JUDGE_SCORECARD.md is missing required text: ${text}`);
+      failures.push(`docs/judging/JUDGE_SCORECARD.md is missing required text: ${text}`);
     }
   }
 
@@ -97,7 +96,7 @@ export function verifyJudgeScorecard(root = process.cwd()) {
 
   for (const text of forbiddenText) {
     if (markdown.includes(text)) {
-      failures.push(`JUDGE_SCORECARD.md contains public-unsafe local/private text: ${text}`);
+      failures.push(`docs/judging/JUDGE_SCORECARD.md contains public-unsafe local/private text: ${text}`);
     }
   }
 

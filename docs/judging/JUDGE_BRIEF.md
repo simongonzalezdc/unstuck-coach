@@ -12,21 +12,21 @@ The product is the operating surface: state, friction, one humane concrete move,
 
 The folder gives the coach a stable job instead of a pile of advice. The first reply must change the next minute, not explain the user's life back to them.
 
-- `START_HERE.md` gives the shortest path into the coach.
-- `PROJECT_INSTRUCTIONS.md` carries the paste-ready coach contract.
-- `FIRST_RUN.md` shows the expected first exchange.
-- `FIRST_REPLY_SCORECARD.md` makes the opening response easy to score.
+- `coach/START_HERE.md` gives the shortest path into the coach.
+- `coach/PROJECT_INSTRUCTIONS.md` carries the paste-ready coach contract.
+- `coach/FIRST_RUN.md` shows the expected first exchange.
+- `coach/FIRST_REPLY_SCORECARD.md` makes the opening response easy to score.
 - `demo/whole-person-tour.md` shows six life surfaces, not one work category.
 - `reference/admin-ops-playbooks.md` covers calendar reality, inbox live obligations, reply debt, missed obligations, and scheduling friction without claiming account access.
 - `reference/mode-router.md` keeps the original multi-mode assistant insight: ally, strategist, engineer/executor, keeper, and recovery stances.
 
 ## Try It Quickly
 
-1. Open `START_HERE.md`.
-2. Paste `PROJECT_INSTRUCTIONS.md` into a Claude Project with the folder loaded.
+1. Open `coach/START_HERE.md`.
+2. Paste `coach/PROJECT_INSTRUCTIONS.md` into a Claude Project with the folder loaded.
 3. Try: `I need a coach to get started on this.`
 4. Try: `My inbox and calendar are a mess and I do not know what is real.`
-5. Score the first answer with `FIRST_REPLY_SCORECARD.md`.
+5. Score the first answer with `coach/FIRST_REPLY_SCORECARD.md`.
 
 Pass means Unstuck names the friction without blame, gives one concrete next move, holds the rest of the context, and asks for tiny proof or one state signal.
 
@@ -54,14 +54,14 @@ The fit is not a label. It is implemented as staged coaching behavior:
 
 The landing page should make the product clear first. The receipts carry the proof:
 
-- `PRODUCT_THESIS.md`: explains the folder-first product decision.
-- `ICM_TRACE.md`: maps the coach to inspectable workflow architecture.
-- `COMPETITION_RULES_TRACE.md`: maps Week 5 requirements and judging questions to evidence.
-- `FIRST_RUN.md`: shows the cold-start receipt and expected first reply.
-- `FIRST_REPLY_SCORECARD.md`: makes first contact scoreable.
+- `docs/judging/PRODUCT_THESIS.md`: explains the folder-first product decision.
+- `docs/judging/ICM_TRACE.md`: maps the coach to inspectable workflow architecture.
+- `docs/judging/COMPETITION_RULES_TRACE.md`: maps Week 5 requirements and judging questions to evidence.
+- `coach/FIRST_RUN.md`: shows the cold-start receipt and expected first reply.
+- `coach/FIRST_REPLY_SCORECARD.md`: makes first contact scoreable.
 - `demo/whole-person-tour.md`: proves six life surfaces, not one work category.
 - `evals/red-face-tests.md`: stress-tests shame, overload, time blindness, and safety boundaries.
-- `RECEIPTS.md`: maps public claims to source files.
+- `docs/evidence/RECEIPTS.md`: maps public claims to source files.
 
 ## Boundary
 

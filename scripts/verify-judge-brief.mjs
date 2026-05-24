@@ -9,7 +9,7 @@ function read(root, file) {
 }
 
 export function verifyJudgeBrief(root = process.cwd()) {
-  const file = path.join(root, "JUDGE_BRIEF.md");
+  const file = path.join(root, "docs/judging/JUDGE_BRIEF.md");
   const failures = [];
 
   if (!fs.existsSync(file)) {
@@ -18,11 +18,11 @@ export function verifyJudgeBrief(root = process.cwd()) {
       sections: 0,
       evidenceRefs: 0,
       fastTestSteps: 0,
-      failures: ["Missing JUDGE_BRIEF.md."],
+      failures: ["Missing docs/judging/JUDGE_BRIEF.md."],
     };
   }
 
-  const markdown = read(root, "JUDGE_BRIEF.md");
+  const markdown = read(root, "docs/judging/JUDGE_BRIEF.md");
   const sections = (markdown.match(/^## /gm) || []).length;
   const evidenceRefs = (markdown.match(/`(?:[^`]+\.md|scripts\/[^`]+\.mjs|landing\/index\.html)`/g) || []).length;
   const fastTest =
@@ -55,23 +55,23 @@ export function verifyJudgeBrief(root = process.cwd()) {
     "ICM as practical workflow architecture",
     "visible context, editable decisions, bounded handoffs, and auditable proof",
     "The landing page should make the product clear first. The receipts carry the proof:",
-    "PRODUCT_THESIS.md",
-    "ICM_TRACE.md",
-    "COMPETITION_RULES_TRACE.md",
-    "FIRST_RUN.md",
-    "FIRST_REPLY_SCORECARD.md",
+    "docs/judging/PRODUCT_THESIS.md",
+    "docs/judging/ICM_TRACE.md",
+    "docs/judging/COMPETITION_RULES_TRACE.md",
+    "coach/FIRST_RUN.md",
+    "coach/FIRST_REPLY_SCORECARD.md",
     "demo/whole-person-tour.md",
     "reference/admin-ops-playbooks.md",
     "reference/mode-router.md",
     "evals/red-face-tests.md",
-    "RECEIPTS.md",
+    "docs/evidence/RECEIPTS.md",
     "Unstuck is a coaching scaffold.",
     "It does not diagnose, treat, recommend medication, replace professional support, read accounts, send messages, edit calendars, or promise inbox zero.",
   ];
 
   for (const text of requiredText) {
     if (!markdown.includes(text)) {
-      failures.push(`JUDGE_BRIEF.md is missing required text: ${text}`);
+      failures.push(`docs/judging/JUDGE_BRIEF.md is missing required text: ${text}`);
     }
   }
 
@@ -99,7 +99,7 @@ export function verifyJudgeBrief(root = process.cwd()) {
 
   for (const text of forbiddenText) {
     if (markdown.includes(text)) {
-      failures.push(`JUDGE_BRIEF.md contains public-unsafe local/private text: ${text}`);
+      failures.push(`docs/judging/JUDGE_BRIEF.md contains public-unsafe local/private text: ${text}`);
     }
   }
 

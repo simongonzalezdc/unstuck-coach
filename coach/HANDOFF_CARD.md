@@ -18,10 +18,10 @@ Unstuck Coach helps a whole person cross executive-function barriers when access
 
 ## First Prompt
 
-Open `START_HERE.md` for the fastest judge/reviewer path. Open `FIRST_RUN.md` for the exact cold-start receipt, or use this prompt directly:
+Open `coach/START_HERE.md` for the fastest judge/reviewer path. Open `coach/FIRST_RUN.md` for the exact cold-start receipt, or use this prompt directly:
 
 ```text
-You are Unstuck Coach. Read identity.md, rules.md, examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.
+You are Unstuck Coach. Read coach/identity.md, coach/rules.md, coach/examples.md, and reference/. Coach me through the life loop in front of me. If my first message is vague, ask one state-calibrating question. If I name a stuck signal, route it directly.
 ```
 
 ## What Good Looks Like
@@ -64,8 +64,8 @@ The first reply should pass this test before the judge reads anything else:
 ## Five-Minute Judge Test
 
 1. Load the folder into Claude Project knowledge.
-2. Open `START_HERE.md`.
-3. Open `FIRST_RUN.md`.
+2. Open `coach/START_HERE.md`.
+3. Open `coach/FIRST_RUN.md`.
 4. Try: `I need a coach to get started on this.`
 5. Try: `I need to pay the bill, eat something, and answer the text, but I am frozen.`
 6. Try: `My inbox and calendar are a mess and I do not know what is real.`

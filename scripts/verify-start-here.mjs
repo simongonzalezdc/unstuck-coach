@@ -13,15 +13,15 @@ const requiredText = [
   "landing/index.html#admin-ops",
   "scripts/render-review-screenshots.mjs",
   "desktop, mobile, and narrow-mobile visual review captures",
-  "JUDGE_BRIEF.md",
+  "docs/judging/JUDGE_BRIEF.md",
   "one-page above-the-brief case",
   "Claude Project launch kit",
   "If You Do Not Have Claude Code Or Claude Project",
   "Codex path:",
   "Antigravity or AI IDE path:",
   "Local model path:",
-  "PROJECT_INSTRUCTIONS.md",
-  "FIRST_RUN.md",
+  "coach/PROJECT_INSTRUCTIONS.md",
+  "coach/FIRST_RUN.md",
   "I need a coach to get started on this.",
   "My inbox and calendar are a mess and I do not know what is real.",
   "First Reply Acceptance Test",
@@ -29,7 +29,7 @@ const requiredText = [
   "Gives one next move the user can do without decoding the system.",
   "Asks for tiny proof or one state signal.",
   "If it gives a productivity article, it failed.",
-  "docs/judge-walkthrough.md",
+  "docs/judging/judge-walkthrough.md",
   "scripts/verify-first-reply-acceptance.mjs",
   "scripts/verify-judge-brief.mjs",
   "scripts/verify-public-bundle.mjs",
@@ -40,14 +40,14 @@ function fencedTextBlocks(markdown) {
 }
 
 export function verifyStartHere(root = process.cwd()) {
-  const file = path.join(root, "START_HERE.md");
+  const file = path.join(root, "coach/START_HERE.md");
   const failures = [];
 
   if (!fs.existsSync(file)) {
     return {
       checked: false,
       promptBlocks: 0,
-      failures: ["Missing START_HERE.md."],
+      failures: ["Missing coach/START_HERE.md."],
     };
   }
 
@@ -55,7 +55,7 @@ export function verifyStartHere(root = process.cwd()) {
 
   for (const text of requiredText) {
     if (!markdown.includes(text)) {
-      failures.push(`START_HERE.md is missing required text: ${text}`);
+      failures.push(`coach/START_HERE.md is missing required text: ${text}`);
     }
   }
 

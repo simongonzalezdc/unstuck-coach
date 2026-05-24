@@ -6,7 +6,7 @@ import { pathToFileURL } from "node:url";
 
 const requiredText = [
   "This is the one-minute receipt for the core Week 5 question: does the folder actually coach?",
-  "PROJECT_INSTRUCTIONS.md` routes this prompt directly.",
+  "coach/PROJECT_INSTRUCTIONS.md` routes this prompt directly.",
   "The coach should not ask the traffic-light question first",
   "I need a coach to get started on this.",
   "You do not need to make this clear before I can help.",
@@ -30,7 +30,7 @@ const requiredText = [
 const projectInstructionRequiredText = [
   "First-message routing:",
   "If the first user message already names a stuck signal, do not ask the traffic-light question first. Route it directly.",
-  "use the FIRST_RUN.md shape",
+  "use the coach/FIRST_RUN.md shape",
   "I need a coach to get started on this.",
   "It should not ask the traffic-light question first because the user has already given a stuck signal.",
   "Second cold prompt:",
@@ -42,7 +42,7 @@ function fencedTextBlocks(markdown) {
 }
 
 export function verifyFirstRun(root = process.cwd()) {
-  const file = path.join(root, "FIRST_RUN.md");
+  const file = path.join(root, "coach/FIRST_RUN.md");
   const failures = [];
 
   if (!fs.existsSync(file)) {
@@ -50,7 +50,7 @@ export function verifyFirstRun(root = process.cwd()) {
       checked: false,
       checks: 0,
       promptBlocks: 0,
-      failures: ["Missing FIRST_RUN.md."],
+      failures: ["Missing coach/FIRST_RUN.md."],
     };
   }
 
@@ -58,18 +58,18 @@ export function verifyFirstRun(root = process.cwd()) {
 
   for (const text of requiredText) {
     if (!markdown.includes(text)) {
-      failures.push(`FIRST_RUN.md is missing required text: ${text}`);
+      failures.push(`coach/FIRST_RUN.md is missing required text: ${text}`);
     }
   }
 
-  const projectInstructionsPath = path.join(root, "PROJECT_INSTRUCTIONS.md");
+  const projectInstructionsPath = path.join(root, "coach/PROJECT_INSTRUCTIONS.md");
   if (!fs.existsSync(projectInstructionsPath)) {
-    failures.push("Missing PROJECT_INSTRUCTIONS.md.");
+    failures.push("Missing coach/PROJECT_INSTRUCTIONS.md.");
   } else {
     const projectInstructions = fs.readFileSync(projectInstructionsPath, "utf8");
     for (const text of projectInstructionRequiredText) {
       if (!projectInstructions.includes(text)) {
-        failures.push(`PROJECT_INSTRUCTIONS.md is missing first-run routing text: ${text}`);
+        failures.push(`coach/PROJECT_INSTRUCTIONS.md is missing first-run routing text: ${text}`);
       }
     }
   }
@@ -118,7 +118,7 @@ export function verifyFirstRun(root = process.cwd()) {
 
   const tableRows = (markdown.match(/^\| .+ \|$/gm) || []).length;
   if (tableRows < 5) {
-    failures.push(`FIRST_RUN.md score table is too small: ${tableRows} rows.`);
+    failures.push(`coach/FIRST_RUN.md score table is too small: ${tableRows} rows.`);
   }
 
   return {

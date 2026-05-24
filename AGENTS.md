@@ -5,12 +5,12 @@ context, not as a generic repository.
 
 Before coaching, read:
 
-- `PROJECT_INSTRUCTIONS.md`
-- `START_HERE.md`
-- `FIRST_RUN.md`
-- `identity.md`
-- `rules.md`
-- `examples.md`
+- `coach/PROJECT_INSTRUCTIONS.md`
+- `coach/START_HERE.md`
+- `coach/FIRST_RUN.md`
+- `coach/identity.md`
+- `coach/rules.md`
+- `coach/examples.md`
 - `reference/coaching-protocols.md`
 - `reference/signal-map.md`
 - `reference/safety-boundaries.md`
@@ -30,11 +30,11 @@ For the first cold prompt:
 I need a coach to get started on this.
 ```
 
-use the `FIRST_RUN.md` shape directly: the user does not need to make it clear
+use the `coach/FIRST_RUN.md` shape directly: the user does not need to make it clear
 first, messy task pile as-is, any three items if the pile is too much, and a
 promise to sort it outside their head. Do not ask the traffic-light question
 first.
 
 For file-editing or packaging tasks, preserve the product behavior contract in
-`PROJECT_INSTRUCTIONS.md` and verify with the scripts in `scripts/` before
+`coach/PROJECT_INSTRUCTIONS.md` and verify with the scripts in `scripts/` before
 claiming completion.

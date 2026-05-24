@@ -19,8 +19,6 @@ import { verifyLandingCopy } from "./verify-landing-copy.mjs";
 import { verifyModeRouter } from "./verify-mode-router.mjs";
 import { verifyEvalCoverage } from "./verify-eval-coverage.mjs";
 import { verifyFinalPrivacyScan } from "./verify-final-privacy-scan.mjs";
-import { verifyPitchReel } from "./verify-pitch-reel.mjs";
-import { verifyReelPage } from "./verify-reel-page.mjs";
 import { verifyProductThesis } from "./verify-product-thesis.mjs";
 import { verifySourceNotes } from "./verify-source-notes.mjs";
 import { verifyStartHere } from "./verify-start-here.mjs";
@@ -30,7 +28,7 @@ import { verifyTranscriptPack } from "./verify-transcript-pack.mjs";
 import { verifyWholePersonTour } from "./verify-whole-person-tour.mjs";
 
 const root = process.cwd();
-const submissionPath = path.join(root, "SUBMISSION.md");
+const submissionPath = path.join(root, "docs/judging/SUBMISSION.md");
 
 function read(filePath) {
   return fs.readFileSync(filePath, "utf8");
@@ -69,22 +67,22 @@ export function verifyPublicationReady() {
   ];
 
   if (!fs.existsSync(submissionPath)) {
-    failures.push("Missing SUBMISSION.md.");
+    failures.push("Missing docs/judging/SUBMISSION.md.");
   }
 
   const submission = fs.existsSync(submissionPath) ? read(submissionPath) : "";
   const githubLink = extractGitHubLink(submission);
 
   if (!githubLink) {
-    failures.push("SUBMISSION.md does not contain a GitHub link block.");
+    failures.push("docs/judging/SUBMISSION.md does not contain a GitHub link block.");
   } else if (!hasPublicGitHubUrl(githubLink)) {
-    failures.push("SUBMISSION.md GitHub link is not a final public GitHub repository URL.");
+    failures.push("docs/judging/SUBMISSION.md GitHub link is not a final public GitHub repository URL.");
   } else if (isDisallowedSubmissionRepo(githubLink)) {
-    failures.push("SUBMISSION.md GitHub link still points at the old Week 3 repo, not a clean Week 5 public repository.");
+    failures.push("docs/judging/SUBMISSION.md GitHub link still points at the old Week 3 repo, not a clean Week 5 public repository.");
   }
 
   if (/Pending review|Do not publish/i.test(submission)) {
-    failures.push("SUBMISSION.md still contains review/publish placeholder text.");
+    failures.push("docs/judging/SUBMISSION.md still contains review/publish placeholder text.");
   }
 
   if (blockedManifestFragments.some((fragment) => publicBundleFiles.join("\n").includes(fragment))) {
@@ -145,12 +143,6 @@ export function verifyPublicationReady() {
   const submissionSurfaces = verifySubmissionSurfaces(root);
   addVerifierFailures(failures, "Submission surfaces", submissionSurfaces);
 
-  const pitchReel = verifyPitchReel(root);
-  addVerifierFailures(failures, "Pitch reel", pitchReel);
-
-  const reelPage = verifyReelPage(root);
-  addVerifierFailures(failures, "Reel page", reelPage);
-
   const judgeFaq = verifyJudgeFaq(root);
   addVerifierFailures(failures, "Judge FAQ", judgeFaq);
 
@@ -164,7 +156,7 @@ export function verifyPublicationReady() {
   addVerifierFailures(failures, "Final privacy scan", finalPrivacyScan);
 
   if (!/Skool comment draft:/i.test(submission)) {
-    warnings.push("SUBMISSION.md does not expose the Skool comment draft heading.");
+    warnings.push("docs/judging/SUBMISSION.md does not expose the Skool comment draft heading.");
   }
 
   return {
@@ -205,10 +197,6 @@ export function verifyPublicationReady() {
     skoolCommentSentences: submissionCopy.sentenceCount,
     skoolCommentCharacters: submissionCopy.characterCount,
     submissionSurfaceCharacters: submissionSurfaces.landingSectionCharacters,
-    pitchReelShotRows: pitchReel.shotRows,
-    pitchReelVoiceoverWords: pitchReel.voiceoverWords,
-    reelPageSlides: reelPage.slides,
-    reelPageLocalRefs: reelPage.localRefs,
     judgeFaqQuestions: judgeFaq.questions,
     judgeFaqEvidenceRefs: judgeFaq.evidenceRefs,
     judgeScorecardCriteriaRows: judgeScorecard.criteriaRows,

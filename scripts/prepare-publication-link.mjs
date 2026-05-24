@@ -5,7 +5,7 @@ import path from "node:path";
 import { hasPublicGitHubUrl, isDisallowedSubmissionRepo } from "./verify-publication-ready.mjs";
 
 const root = process.cwd();
-const submissionPath = path.join(root, "SUBMISSION.md");
+const submissionPath = path.join(root, "docs/judging/SUBMISSION.md");
 
 function usage() {
   return [
@@ -47,7 +47,7 @@ function replaceGitHubLink(submission, url) {
   const nextBlock = `GitHub link:\n\n\`\`\`text\n${url}\n\`\`\``;
   const pattern = /GitHub link:\s*```text\s*[\s\S]*?```/i;
   if (!pattern.test(submission)) {
-    throw new Error("Could not find the GitHub link block in SUBMISSION.md.");
+    throw new Error("Could not find the GitHub link block in docs/judging/SUBMISSION.md.");
   }
   return submission.replace(pattern, nextBlock);
 }
@@ -73,7 +73,7 @@ if (!args.url) {
 }
 
 if (!fs.existsSync(submissionPath)) {
-  failures.push("Missing SUBMISSION.md.");
+  failures.push("Missing docs/judging/SUBMISSION.md.");
 }
 
 if (failures.length > 0) {
