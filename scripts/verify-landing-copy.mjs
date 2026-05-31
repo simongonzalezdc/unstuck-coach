@@ -20,8 +20,8 @@ const expectedSamples = [
 ];
 
 const expectedCopy = [
-  "Paste the stuck sentence. Get one humane next move.",
-  "For task initiation, working-memory overload, re-entry, messages, admin loops, and shutdown without shame.",
+  "Paste the stuck sentence.",
+  "Unstuck Coach gives you one humane next move for task initiation, reply debt, re-entry, admin loops, and working-memory overload.",
   "Try Unstuck Coach",
   "See privacy and boundaries",
   "No polished prompt needed. Fragments count.",

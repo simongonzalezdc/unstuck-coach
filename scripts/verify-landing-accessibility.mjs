@@ -183,7 +183,8 @@ export function verifyLandingAccessibility(root = process.cwd()) {
   }
 
   for (const requiredCopy of [
-    "Paste the stuck sentence. Get one humane next move.",
+    "Paste the stuck sentence.",
+    "Unstuck Coach gives you one humane next move",
     "Try Unstuck Coach",
     "See privacy and boundaries",
     "not therapy, diagnosis, or medical treatment",

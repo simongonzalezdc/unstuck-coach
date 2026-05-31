@@ -1,32 +1,77 @@
 .reel-page {
+  min-height: 100dvh;
   background:
-    linear-gradient(90deg, rgba(6, 9, 16, 0.018) 0 1px, transparent 1px 142px),
-    linear-gradient(180deg, rgba(6, 9, 16, 0.016) 0 1px, transparent 1px 142px),
-    radial-gradient(circle at 84% 8%, rgba(111, 199, 197, 0.12), transparent 25rem),
-    radial-gradient(circle at 8% 78%, rgba(214, 95, 53, 0.075), transparent 23rem),
-    linear-gradient(125deg, rgba(217, 167, 47, 0.085), transparent 34%),
-    linear-gradient(235deg, rgba(47, 142, 134, 0.08), transparent 38%),
-    var(--paper);
+    linear-gradient(90deg, rgba(8, 117, 141, 0.055) 0 10%, transparent 10% 36%, rgba(184, 107, 43, 0.045) 36% 45%, transparent 45%),
+    linear-gradient(180deg, var(--surface) 0%, var(--paper) 58%, var(--paper-deep) 100%);
 }
 
 .reel-nav {
-  min-height: 3.65rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.75rem;
+  padding: 0.72rem max(1rem, calc((100vw - 1120px) / 2));
+  border-bottom: 1px solid rgba(16, 19, 23, 0.08);
+  background: rgba(255, 253, 248, 0.9);
+  backdrop-filter: blur(16px);
+}
+
+.wordmark,
+.reel-nav nav {
+  display: flex;
+  align-items: center;
+}
+
+.wordmark {
+  gap: 0.65rem;
+  color: var(--ink-soft);
+  font-weight: 820;
+  text-decoration: none;
+}
+
+.wordmark-mark {
+  width: 2.15rem;
+  height: 2.15rem;
+  border: 1px solid rgba(8, 117, 141, 0.28);
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.reel-nav nav {
+  gap: 0.35rem;
+}
+
+.reel-nav nav a {
+  padding: 0.62rem 0.82rem;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: var(--step--1);
+  font-weight: 720;
+  text-decoration: none;
+}
+
+.reel-nav nav a:hover {
+  color: var(--ink);
+  background: rgba(8, 117, 141, 0.08);
 }
 
 .reel-stage {
   min-height: 100dvh;
-  padding-top: 5.8rem;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 .reel-slide {
   position: relative;
-  min-height: calc(100dvh - 5.8rem);
+  min-height: calc(100dvh - 3.75rem);
   display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(31rem, 1.14fr);
-  gap: 4.6rem;
+  grid-template-columns: minmax(0, 0.84fr) minmax(20rem, 1.16fr);
+  gap: 3rem;
   align-items: center;
-  padding: 5.7rem max(1.5rem, calc((100vw - 1180px) / 2));
+  padding: 4.75rem max(1rem, calc((100vw - 1120px) / 2));
   scroll-snap-align: start;
   overflow: hidden;
   isolation: isolate;
@@ -35,74 +80,62 @@
 .reel-slide::before {
   content: "";
   position: absolute;
-  inset: 2rem max(1rem, calc((100vw - 1220px) / 2));
+  inset: 1.2rem max(0.75rem, calc((100vw - 1150px) / 2));
   z-index: -1;
-  border: 1px solid rgba(6, 9, 16, 0.1);
+  border: 1px solid rgba(16, 19, 23, 0.11);
   border-radius: var(--radius);
   background:
-    linear-gradient(90deg, rgba(255, 250, 242, 0.96), rgba(255, 248, 236, 0.68) 58%, rgba(255, 248, 236, 0.2)),
-    linear-gradient(120deg, rgba(47, 142, 134, 0.075), transparent 36%, rgba(217, 167, 47, 0.075)),
-    repeating-linear-gradient(135deg, rgba(6, 9, 16, 0.028) 0 1px, transparent 1px 56px),
-    repeating-linear-gradient(90deg, rgba(217, 208, 196, 0.24) 0 1px, transparent 1px 142px),
-    repeating-linear-gradient(0deg, rgba(217, 208, 196, 0.2) 0 1px, transparent 1px 142px);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    inset 0 0 0 0.42rem rgba(255, 245, 220, 0.22);
+    linear-gradient(90deg, rgba(255, 253, 248, 0.96), rgba(255, 253, 248, 0.64) 62%, rgba(215, 240, 242, 0.28)),
+    repeating-linear-gradient(90deg, rgba(16, 19, 23, 0.025) 0 1px, transparent 1px 92px),
+    repeating-linear-gradient(0deg, rgba(16, 19, 23, 0.02) 0 1px, transparent 1px 92px);
+  box-shadow: var(--shadow-paper);
 }
 
 .reel-slide::after {
   content: "";
   position: absolute;
-  left: max(1.8rem, calc((100vw - 1218px) / 2));
-  top: 9.2rem;
-  bottom: 5.2rem;
+  left: max(1.2rem, calc((100vw - 1138px) / 2));
+  top: 5.6rem;
+  bottom: 4.6rem;
   z-index: 0;
   width: 0.22rem;
   border-radius: 999px;
-  background:
-    linear-gradient(180deg, var(--taste-ink), var(--taste-teal), var(--taste-cyan), var(--taste-saffron), var(--taste-clay), var(--taste-berry)),
-    repeating-linear-gradient(180deg, transparent 0 20px, rgba(255, 248, 236, 0.74) 20px 22px, transparent 22px 42px);
-  box-shadow:
-    0 0 0 1px rgba(6, 9, 16, 0.72),
-    0 18px 34px rgba(255, 75, 31, 0.1);
+  background: linear-gradient(180deg, var(--apatite-950), var(--apatite-700), var(--apatite-500), var(--attention));
 }
 
-.reel-slide:nth-child(odd) {
+.reel-slide:nth-child(even)::before {
   background:
-    linear-gradient(135deg, rgba(111, 199, 197, 0.065), rgba(255, 248, 236, 0.7) 42%, rgba(217, 167, 47, 0.07)),
-    var(--paper);
-}
-
-.reel-slide:nth-child(even) {
-  background:
-    linear-gradient(135deg, rgba(255, 253, 246, 0.92), rgba(240, 226, 203, 0.62)),
-    var(--surface);
+    linear-gradient(90deg, rgba(234, 248, 247, 0.54), rgba(255, 253, 248, 0.84) 42%, rgba(239, 229, 212, 0.42)),
+    repeating-linear-gradient(90deg, rgba(16, 19, 23, 0.022) 0 1px, transparent 1px 92px),
+    repeating-linear-gradient(0deg, rgba(16, 19, 23, 0.018) 0 1px, transparent 1px 92px);
 }
 
 .slide-copy {
   position: relative;
   z-index: 1;
   max-width: 34rem;
-  padding-left: 1rem;
+  padding-left: 0.95rem;
 }
 
 .slide-copy h1,
 .slide-copy h2 {
+  max-width: 12ch;
   margin: 0;
-  max-width: 11.5ch;
-  font-family: "PP Editorial New", "Canela", "Fraunces", Georgia, serif;
-  font-size: 4.45rem;
-  font-weight: 560;
-  line-height: 0.985;
-  padding-bottom: 0.1em;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--step-5);
+  font-weight: 860;
+  line-height: 0.98;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
 .slide-copy p:not(.eyebrow) {
-  max-width: 34rem;
-  color: var(--ink-soft);
-  font-size: 1.08rem;
-  line-height: 1.7;
+  max-width: var(--measure);
+  color: var(--muted);
+  font-size: var(--step-1);
+  line-height: 1.55;
+  text-wrap: pretty;
 }
 
 .slide-art,
@@ -110,11 +143,10 @@
 .terminal-card {
   position: relative;
   z-index: 1;
-  border: 2px solid var(--ink);
+  border: 1px solid rgba(16, 19, 23, 0.13);
   border-radius: var(--radius);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.76),
-    0 32px 80px rgba(6, 9, 16, 0.17);
+  background: rgba(255, 253, 248, 0.86);
+  box-shadow: var(--shadow-paper);
   overflow: hidden;
 }
 
@@ -123,82 +155,64 @@
 .terminal-card::before {
   content: "";
   position: absolute;
-  inset: 0.45rem;
-  border: 1px solid rgba(255, 255, 255, 0.62);
-  border-radius: 5px;
+  inset: 0;
+  width: 0.38rem;
+  background: var(--apatite-700);
   pointer-events: none;
 }
 
 .slide-art {
-  min-height: 25rem;
+  min-height: 24rem;
   display: grid;
   align-content: center;
   gap: 1rem;
-  padding: 2.2rem;
-  color: var(--cream-line);
-  background:
-    radial-gradient(circle at 50% 44%, rgba(255, 245, 220, 0.11), transparent 17rem),
-    radial-gradient(circle at 82% 86%, rgba(159, 54, 95, 0.15), transparent 16rem),
-    repeating-linear-gradient(135deg, transparent 0 38px, rgba(255, 245, 220, 0.052) 38px 39px, transparent 39px 82px),
-    linear-gradient(145deg, rgba(6, 9, 16, 0.98), rgba(6, 67, 74, 0.96));
-  outline: 1px solid rgba(255, 245, 220, 0.56);
-  outline-offset: -0.78rem;
-  border-color: var(--ink);
-  border-top: 7px solid var(--magenta);
-  border-top: 7px solid var(--taste-berry);
-  transform: rotate(1.2deg);
+  padding: 2rem;
+  border-top: 7px solid var(--apatite-700);
+  transform: rotate(0.6deg);
 }
 
 .slide-art strong {
   max-width: 18rem;
-  color: var(--cream-line);
-  font-size: 2.05rem;
+  color: var(--ink);
+  font-size: var(--step-3);
+  font-weight: 850;
   line-height: 1.08;
 }
 
 .slide-art p {
   max-width: 25rem;
   margin: 0;
-  color: rgba(255, 245, 220, 0.82);
-  font-size: 1.1rem;
+  color: var(--muted);
   line-height: 1.6;
 }
 
 .slide-art small {
-  color: rgba(255, 245, 220, 0.62);
-  font-size: 0.68rem;
+  color: var(--apatite-900);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
   font-weight: 780;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.threshold-art {
-  position: relative;
 }
 
 .threshold-art::after {
   content: "";
   position: absolute;
-  left: -12%;
-  right: -7%;
-  bottom: 22%;
-  height: 4.6rem;
-  border: 2px solid var(--ink);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(90deg, var(--taste-ink) 0 22%, var(--taste-teal) 22% 38%, var(--taste-cyan) 38% 51%, var(--taste-lichen) 51% 61%, var(--taste-saffron) 61% 72%, var(--taste-clay) 72% 86%, var(--taste-berry) 86% 100%);
-  clip-path: polygon(0 22%, 8% 0, 16% 22%, 24% 0, 32% 22%, 40% 0, 48% 22%, 56% 0, 64% 22%, 72% 0, 80% 22%, 88% 0, 100% 22%, 100% 100%, 0 100%);
-  opacity: 0.46;
-  transform: rotate(-13deg);
+  right: 1.2rem;
+  bottom: 1.2rem;
+  width: 7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--apatite-950), var(--apatite-700), var(--apatite-500));
 }
 
 .slide-grid {
   display: grid;
   gap: 0.72rem;
-  background:
-    linear-gradient(90deg, var(--steel), var(--ink) 46%, #07101c),
-    repeating-linear-gradient(90deg, transparent 0 46px, rgba(255, 245, 220, 0.09) 46px 47px, transparent 47px 92px);
   padding: 0.72rem;
+  background:
+    linear-gradient(135deg, rgba(5, 39, 51, 0.98), rgba(6, 75, 95, 0.94)),
+    var(--apatite-950);
 }
 
 .three-up {
@@ -214,115 +228,100 @@
 }
 
 .slide-grid article {
-  min-height: 14rem;
+  min-height: 13rem;
   display: grid;
   align-content: space-between;
   gap: 1rem;
-  padding: 1.22rem;
-  border: 1px solid rgba(255, 245, 220, 0.34);
-  border-radius: 5px;
-  background:
-    repeating-linear-gradient(90deg, rgba(6, 9, 16, 0.014) 0 1px, transparent 1px 32px),
-    linear-gradient(180deg, rgba(255, 250, 242, 0.96), rgba(251, 241, 223, 0.84));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.76);
+  padding: 1.08rem;
+  border: 1px solid rgba(255, 253, 248, 0.42);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 248, 0.93);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.66);
 }
 
 .slide-grid article:nth-child(1) {
-  border-top: 5px solid var(--taste-cyan);
+  border-top: 5px solid var(--apatite-500);
 }
 
 .slide-grid article:nth-child(2) {
-  border-top: 5px solid var(--taste-lichen);
+  border-top: 5px solid var(--apatite-700);
 }
 
 .slide-grid article:nth-child(3) {
-  border-top: 5px solid var(--taste-saffron);
+  border-top: 5px solid var(--attention);
 }
 
 .slide-grid article:nth-child(4) {
-  border-top: 5px solid var(--taste-clay);
+  border-top: 5px solid var(--apatite-900);
 }
 
 .slide-grid strong {
   max-width: 15rem;
   color: var(--ink);
-  font-size: 1.35rem;
+  font-size: var(--step-2);
   line-height: 1.14;
   overflow-wrap: anywhere;
 }
 
 .slide-grid p {
   margin: 0;
-  color: var(--ink-soft);
+  color: var(--muted);
 }
 
-.final-slide {
-  color: var(--cream-line);
-  background:
-    linear-gradient(145deg, rgba(8, 7, 5, 0.96), rgba(23, 63, 62, 0.92) 58%, rgba(159, 54, 95, 0.34)),
-    var(--ink);
+.pane-label {
+  color: var(--apatite-900);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 780;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .final-slide::before {
-  border-color: rgba(255, 245, 220, 0.18);
+  border-color: rgba(5, 39, 51, 0.3);
   background:
-    repeating-linear-gradient(90deg, rgba(255, 245, 220, 0.08) 0 1px, transparent 1px 104px),
-    repeating-linear-gradient(0deg, rgba(255, 245, 220, 0.07) 0 1px, transparent 1px 104px);
+    linear-gradient(135deg, rgba(5, 39, 51, 0.98), rgba(6, 75, 95, 0.94)),
+    var(--apatite-950);
 }
 
-.final-slide .eyebrow,
-.final-slide .slide-copy p {
-  color: rgba(255, 245, 220, 0.76);
+.final-slide .slide-copy h2,
+.final-slide .slide-copy p,
+.final-slide .eyebrow {
+  color: var(--surface);
 }
 
 .terminal-card {
-  padding: 1.3rem;
-  color: var(--cream-line);
-  background: rgba(255, 245, 220, 0.08);
-  border-color: rgba(255, 245, 220, 0.24);
+  padding: 1.35rem;
+  color: var(--surface);
+  background: rgba(255, 253, 248, 0.08);
+  border-color: rgba(255, 253, 248, 0.24);
 }
 
-.terminal-card pre {
-  margin: 1rem 0;
-  padding: 1rem;
-  border: 1px solid rgba(255, 245, 220, 0.18);
-  border-radius: var(--radius);
-  background: rgba(8, 7, 5, 0.32);
-  overflow-wrap: anywhere;
-  white-space: pre-wrap;
-}
-
-.terminal-card code {
-  color: var(--cream-line);
-  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
-  font-size: 0.98rem;
+.terminal-card .pane-label {
+  color: var(--apatite-100);
 }
 
 .terminal-card p {
   margin: 0;
-  color: rgba(255, 245, 220, 0.76);
+  color: rgba(255, 253, 248, 0.82);
 }
 
 .proof-card a {
   display: inline-flex;
   width: fit-content;
   margin-top: 1rem;
-  padding: 0.7rem 0.95rem;
-  border: 1px solid rgba(255, 245, 220, 0.28);
+  padding: 0.72rem 0.95rem;
+  border: 1px solid rgba(255, 253, 248, 0.32);
   border-radius: 999px;
-  color: var(--cream-line);
-  background: rgba(255, 245, 220, 0.1);
-  font-weight: 800;
+  color: var(--surface);
+  background: rgba(255, 253, 248, 0.1);
+  font-weight: 820;
   text-decoration: none;
 }
 
 @media (max-width: 980px) {
   .reel-nav nav {
     display: none;
-  }
-
-  .reel-stage {
-    padding-top: 5rem;
   }
 
   .reel-slide,
@@ -339,13 +338,8 @@
 
   .reel-slide::after {
     left: 1.5rem;
-    top: 7.4rem;
-    bottom: 3.9rem;
-  }
-
-  .slide-copy h1,
-  .slide-copy h2 {
-    font-size: 3.35rem;
+    top: 6rem;
+    bottom: 4rem;
   }
 
   .slide-art {
@@ -354,36 +348,23 @@
 }
 
 @media (max-width: 620px) {
-  .reel-stage {
-    padding-top: 4.4rem;
-  }
-
   .reel-slide {
-    padding: 4.2rem 1rem;
+    padding: 4.1rem 1rem;
   }
 
   .reel-slide::before {
-    inset: 1.2rem 0.5rem;
+    inset: 1rem 0.5rem;
   }
 
   .reel-slide::after {
     left: 1rem;
-    top: 6.8rem;
+    top: 5.8rem;
     bottom: 3.2rem;
     width: 0.2rem;
   }
 
   .slide-copy {
     padding-left: 0.78rem;
-  }
-
-  .slide-copy h1,
-  .slide-copy h2 {
-    font-size: 2.55rem;
-  }
-
-  .slide-copy p:not(.eyebrow) {
-    font-size: 1rem;
   }
 
   .slide-art,

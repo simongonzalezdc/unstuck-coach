@@ -45,8 +45,8 @@ export function verifyReelPage(root = process.cwd()) {
   }
 
   const requiredHtml = [
-    "Record-ready pitch reel scenes",
-    "External executive function for the whole human.",
+    "Record-ready product reel scenes",
+    "One stuck sentence becomes one next move.",
     "start, switch, remember",
     "A stranger can start before reading every file.",
     "I need a coach to get started on this.",
@@ -71,10 +71,10 @@ export function verifyReelPage(root = process.cwd()) {
     "grid-template-columns",
     "overflow-wrap: anywhere",
     "var(--paper)",
-    "border-top: 7px solid var(--magenta)",
-    '"PP Editorial New"',
+    "border-top: 7px solid var(--apatite-700)",
+    "font-family: var(--font-sans)",
     "min-height: 100dvh",
-    "transform: rotate(1.2deg)",
+    "transform: rotate(0.6deg)",
     "@media (max-width: 620px)",
   ];
 
