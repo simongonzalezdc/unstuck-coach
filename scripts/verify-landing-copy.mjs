@@ -4,38 +4,33 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
-const expectedCopyTargets = [
+const expectedSamples = [
   {
-    button: "Copy start prompt",
-    target: "start-prompt-text",
-    text: "Coach me through the life loop in front of me.",
-  },
-  {
-    button: "Copy cold prompt 01",
-    target: "cold-prompt-start",
+    label: "Start",
     text: "I need a coach to get started on this.",
   },
   {
-    button: "Copy cold prompt 02",
-    target: "cold-prompt-life",
-    text: "I need to pay the bill, eat something, and answer the text, but I am frozen.",
-  },
-  {
-    button: "Copy cold prompt 03",
-    target: "cold-prompt-inbox-calendar",
-    text: "My inbox and calendar are a mess and I do not know what is real.",
-  },
-  {
-    button: "Copy cold prompt 04",
-    target: "cold-prompt-feedback",
+    label: "Reply",
     text: "That message makes me feel like I did something wrong.",
+  },
+  {
+    label: "Re-enter",
+    text: "I disappeared from this task and I do not know how to re-enter.",
   },
 ];
 
-function hasTarget(markup, target, text) {
-  const escapedText = text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const targetPattern = new RegExp(`id="${target}"[\\s\\S]*?${escapedText}`);
-  return targetPattern.test(markup);
+const expectedCopy = [
+  "Paste the stuck sentence. Get one humane next move.",
+  "For task initiation, working-memory overload, re-entry, messages, admin loops, and shutdown without shame.",
+  "Try Unstuck Coach",
+  "See privacy and boundaries",
+  "No polished prompt needed. Fragments count.",
+  "Unstuck Coach is not therapy, diagnosis, or medical treatment.",
+  "No prompt histories, request bodies, API keys, or provider payloads in analytics.",
+];
+
+function normalize(value) {
+  return value.replace(/\s+/g, " ").trim();
 }
 
 export function verifyLandingCopy(root = process.cwd()) {
@@ -45,49 +40,56 @@ export function verifyLandingCopy(root = process.cwd()) {
 
   if (!fs.existsSync(htmlPath)) {
     return {
-      checkedButtons: 0,
+      checkedSamples: 0,
+      checkedCopyBlocks: 0,
       failures: ["Missing landing/index.html."],
     };
   }
 
   if (!fs.existsSync(jsPath)) {
     return {
-      checkedButtons: 0,
+      checkedSamples: 0,
+      checkedCopyBlocks: 0,
       failures: ["Missing landing/app.js."],
     };
   }
 
   const html = fs.readFileSync(htmlPath, "utf8");
   const app = fs.readFileSync(jsPath, "utf8");
+  const normalizedHtml = normalize(html.replace(/<[^>]*>/g, " "));
 
-  for (const expected of expectedCopyTargets) {
-    if (!html.includes(`aria-label="${expected.button}"`)) {
-      failures.push(`Missing copy button: ${expected.button}`);
+  for (const sample of expectedSamples) {
+    if (!html.includes(`data-sample="${sample.text}"`)) {
+      failures.push(`Missing sample value: ${sample.text}`);
     }
-
-    if (!html.includes(`data-copy-target="#${expected.target}"`)) {
-      failures.push(`Missing copy target wiring for ${expected.button}`);
+    if (!new RegExp(`data-sample="${sample.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"[^>]*>${sample.label}<`, "i").test(html)) {
+      failures.push(`Missing sample label wiring: ${sample.label}`);
     }
+  }
 
-    if (!hasTarget(html, expected.target, expected.text)) {
-      failures.push(`Missing copy target text for ${expected.target}`);
+  for (const copy of expectedCopy) {
+    if (!normalizedHtml.includes(copy)) {
+      failures.push(`Missing product copy: ${copy}`);
     }
   }
 
   for (const requiredAppText of [
-    "copyControls",
-    "navigator.clipboard",
-    "Fall through to the textarea path for local file previews.",
-    "document.execCommand(\"copy\")",
-    "label.textContent = \"Copied\"",
+    "const sampleButtons = Array.from(document.querySelectorAll(\"[data-sample]\"))",
+    "stuckSentence.value = button.dataset.sample || \"\"",
+    "stuckSentence.focus()",
   ]) {
     if (!app.includes(requiredAppText)) {
-      failures.push(`landing/app.js missing copy behavior text: ${requiredAppText}`);
+      failures.push(`landing/app.js missing sample behavior text: ${requiredAppText}`);
     }
   }
 
+  if (!html.includes("data-analytics-event=\"demo cta clicked\"")) {
+    failures.push("Landing CTA analytics event wiring is missing.");
+  }
+
   return {
-    checkedButtons: expectedCopyTargets.length,
+    checkedSamples: expectedSamples.length,
+    checkedCopyBlocks: expectedCopy.length,
     failures,
   };
 }

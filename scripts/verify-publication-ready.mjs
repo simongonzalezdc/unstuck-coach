@@ -3,53 +3,13 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { publicBundleFiles } from "./public-bundle-files.mjs";
-import { verifyAdminOpsPlaybooks } from "./verify-admin-ops-playbooks.mjs";
 import { verifyConsoleBehavior } from "./verify-console-behavior.mjs";
-import { verifyCompetitionRulesTrace } from "./verify-competition-rules-trace.mjs";
-import { verifyFirstReplyAcceptance } from "./verify-first-reply-acceptance.mjs";
-import { verifyFirstReplyScorecard } from "./verify-first-reply-scorecard.mjs";
-import { verifyFirstRun } from "./verify-first-run.mjs";
-import { verifyIcmTrace } from "./verify-icm-trace.mjs";
-import { verifyJudgeFaq } from "./verify-judge-faq.mjs";
-import { verifyJudgeScorecard } from "./verify-judge-scorecard.mjs";
-import { verifyJudgeBrief } from "./verify-judge-brief.mjs";
+import { verifyFinalPrivacyScan } from "./verify-final-privacy-scan.mjs";
 import { verifyLandingAccessibility } from "./verify-landing-accessibility.mjs";
 import { verifyLandingCopy } from "./verify-landing-copy.mjs";
-import { verifyModeRouter } from "./verify-mode-router.mjs";
-import { verifyEvalCoverage } from "./verify-eval-coverage.mjs";
-import { verifyFinalPrivacyScan } from "./verify-final-privacy-scan.mjs";
-import { verifyPitchReel } from "./verify-pitch-reel.mjs";
-import { verifyReelPage } from "./verify-reel-page.mjs";
-import { verifyProductThesis } from "./verify-product-thesis.mjs";
-import { verifySourceNotes } from "./verify-source-notes.mjs";
-import { verifyStartHere } from "./verify-start-here.mjs";
-import { verifySubmissionCopy } from "./verify-submission-copy.mjs";
-import { verifySubmissionSurfaces } from "./verify-submission-surfaces.mjs";
-import { verifyTranscriptPack } from "./verify-transcript-pack.mjs";
-import { verifyWholePersonTour } from "./verify-whole-person-tour.mjs";
 
-const root = process.cwd();
-const submissionPath = path.join(root, "SUBMISSION.md");
-
-function read(filePath) {
-  return fs.readFileSync(filePath, "utf8");
-}
-
-function extractGitHubLink(submission) {
-  const block = submission.match(/GitHub link:\s*```text\s*([\s\S]*?)```/i);
-  return block ? block[1].trim() : "";
-}
-
-export function hasPublicGitHubUrl(value) {
-  return /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+(?:\/)?$/i.test(value);
-}
-
-export function isDisallowedSubmissionRepo(value) {
-  const oldOwner = ["Kyanite", "Labs"].join("");
-  const oldRepo = ["dev", "learning", "archaeologist"].join("-");
-  const normalized = value.trim().replace(/\/$/, "").toLowerCase();
-  return normalized === `https://github.com/${oldOwner}/${oldRepo}`.toLowerCase();
+function read(root, file) {
+  return fs.readFileSync(path.join(root, file), "utf8");
 }
 
 function addVerifierFailures(failures, label, result) {
@@ -58,65 +18,23 @@ function addVerifierFailures(failures, label, result) {
   }
 }
 
-export function verifyPublicationReady() {
+export function verifyPublicationReady(root = process.cwd()) {
   const failures = [];
   const warnings = [];
-  const blockedManifestFragments = [
-    "PRIVATE_",
-    ["docs", "plans"].join("/"),
-    "output/",
-    ".omx/",
-  ];
 
-  if (!fs.existsSync(submissionPath)) {
-    failures.push("Missing SUBMISSION.md.");
+  for (const file of ["landing/index.html", "landing/styles.css", "landing/app.js", "robots.txt", "sitemap.xml", "llms.txt", "README.md"]) {
+    if (!fs.existsSync(path.join(root, file))) {
+      failures.push(`Missing publication file: ${file}`);
+    }
   }
 
-  const submission = fs.existsSync(submissionPath) ? read(submissionPath) : "";
-  const githubLink = extractGitHubLink(submission);
-
-  if (!githubLink) {
-    failures.push("SUBMISSION.md does not contain a GitHub link block.");
-  } else if (!hasPublicGitHubUrl(githubLink)) {
-    failures.push("SUBMISSION.md GitHub link is not a final public GitHub repository URL.");
-  } else if (isDisallowedSubmissionRepo(githubLink)) {
-    failures.push("SUBMISSION.md GitHub link still points at the old Week 3 repo, not a clean Week 5 public repository.");
-  }
-
-  if (/Pending review|Do not publish/i.test(submission)) {
-    failures.push("SUBMISSION.md still contains review/publish placeholder text.");
-  }
-
-  if (blockedManifestFragments.some((fragment) => publicBundleFiles.join("\n").includes(fragment))) {
-    failures.push("Public bundle manifest includes private/generated paths.");
-  }
+  const html = fs.existsSync(path.join(root, "landing/index.html")) ? read(root, "landing/index.html") : "";
+  const robots = fs.existsSync(path.join(root, "robots.txt")) ? read(root, "robots.txt") : "";
+  const sitemap = fs.existsSync(path.join(root, "sitemap.xml")) ? read(root, "sitemap.xml") : "";
+  const llms = fs.existsSync(path.join(root, "llms.txt")) ? read(root, "llms.txt") : "";
 
   const consoleBehavior = verifyConsoleBehavior(root);
   addVerifierFailures(failures, "Console behavior", consoleBehavior);
-
-  const productThesis = verifyProductThesis(root);
-  addVerifierFailures(failures, "Product thesis", productThesis);
-
-  const sourceNotes = verifySourceNotes(root);
-  addVerifierFailures(failures, "Source notes", sourceNotes);
-
-  const competitionRulesTrace = verifyCompetitionRulesTrace(root);
-  addVerifierFailures(failures, "Competition rules trace", competitionRulesTrace);
-
-  const icmTrace = verifyIcmTrace(root);
-  addVerifierFailures(failures, "ICM trace", icmTrace);
-
-  const modeRouter = verifyModeRouter(root);
-  addVerifierFailures(failures, "Mode router", modeRouter);
-
-  const firstRun = verifyFirstRun(root);
-  addVerifierFailures(failures, "First run", firstRun);
-
-  const firstReplyScorecard = verifyFirstReplyScorecard(root);
-  addVerifierFailures(failures, "First-reply scorecard", firstReplyScorecard);
-
-  const startHere = verifyStartHere(root);
-  addVerifierFailures(failures, "Start-here", startHere);
 
   const landingCopy = verifyLandingCopy(root);
   addVerifierFailures(failures, "Landing copy", landingCopy);
@@ -124,98 +42,71 @@ export function verifyPublicationReady() {
   const landingAccessibility = verifyLandingAccessibility(root);
   addVerifierFailures(failures, "Landing accessibility", landingAccessibility);
 
-  const transcriptPack = verifyTranscriptPack(root);
-  addVerifierFailures(failures, "Transcript pack", transcriptPack);
-
-  const wholePersonTour = verifyWholePersonTour(root);
-  addVerifierFailures(failures, "Whole-person tour", wholePersonTour);
-
-  const firstReplyAcceptance = verifyFirstReplyAcceptance(root);
-  addVerifierFailures(failures, "First-reply acceptance", firstReplyAcceptance);
-
-  const evalCoverage = verifyEvalCoverage(root);
-  addVerifierFailures(failures, "Eval coverage", evalCoverage);
-
-  const adminOpsPlaybooks = verifyAdminOpsPlaybooks(root);
-  addVerifierFailures(failures, "Admin operations playbooks", adminOpsPlaybooks);
-
-  const submissionCopy = verifySubmissionCopy(root);
-  addVerifierFailures(failures, "Submission copy", submissionCopy);
-
-  const submissionSurfaces = verifySubmissionSurfaces(root);
-  addVerifierFailures(failures, "Submission surfaces", submissionSurfaces);
-
-  const pitchReel = verifyPitchReel(root);
-  addVerifierFailures(failures, "Pitch reel", pitchReel);
-
-  const reelPage = verifyReelPage(root);
-  addVerifierFailures(failures, "Reel page", reelPage);
-
-  const judgeFaq = verifyJudgeFaq(root);
-  addVerifierFailures(failures, "Judge FAQ", judgeFaq);
-
-  const judgeScorecard = verifyJudgeScorecard(root);
-  addVerifierFailures(failures, "Judge scorecard", judgeScorecard);
-
-  const judgeBrief = verifyJudgeBrief(root);
-  addVerifierFailures(failures, "Judge brief", judgeBrief);
-
   const finalPrivacyScan = verifyFinalPrivacyScan(root);
   addVerifierFailures(failures, "Final privacy scan", finalPrivacyScan);
 
-  if (!/Skool comment draft:/i.test(submission)) {
-    warnings.push("SUBMISSION.md does not expose the Skool comment draft heading.");
+  for (const requiredUrl of [
+    "https://unstuck.kyanitelabs.tech/",
+    "https://unstuck.kyanitelabs.tech/chat/",
+    "https://kyanitelabs.tech/unstuck/",
+  ]) {
+    if (!html.includes(requiredUrl) && !llms.includes(requiredUrl)) {
+      failures.push(`Publication surface is missing required URL: ${requiredUrl}`);
+    }
+  }
+
+  if (!/User-agent:\s*OAI-SearchBot[\s\S]*?Allow:\s*\//i.test(robots)) {
+    failures.push("robots.txt must allow OAI-SearchBot for ChatGPT search visibility.");
+  }
+
+  if (!/User-agent:\s*GPTBot[\s\S]*?Disallow:\s*\//i.test(robots)) {
+    failures.push("robots.txt must explicitly disallow GPTBot unless training access is approved.");
+  }
+
+  if (!robots.includes("Sitemap: https://unstuck.kyanitelabs.tech/sitemap.xml")) {
+    failures.push("robots.txt is missing the production sitemap URL.");
+  }
+
+  for (const loc of ["https://unstuck.kyanitelabs.tech/", "https://unstuck.kyanitelabs.tech/chat/"]) {
+    if (!sitemap.includes(`<loc>${loc}</loc>`)) {
+      failures.push(`sitemap.xml is missing ${loc}`);
+    }
+  }
+
+  for (const requiredLlmsText of [
+    "non-clinical executive-function accessibility coach",
+    "stuck sentence into one humane next move",
+    "not therapy, diagnosis, or medical treatment",
+    "Analytics should not store prompts, histories, request bodies, API keys, or provider payloads.",
+  ]) {
+    if (!llms.includes(requiredLlmsText)) {
+      failures.push(`llms.txt is missing product/discovery text: ${requiredLlmsText}`);
+    }
+  }
+
+  const retiredTerms = [
+    ["compe", "tition"].join(""),
+    ["jud", "ge"].join(""),
+    ["week", "5"].join(""),
+    ["Claude", " Project", " folder"].join(""),
+  ];
+  if (new RegExp(retiredTerms.join("|"), "i").test(`${html}\n${robots}\n${sitemap}\n${llms}`)) {
+    failures.push("Publication files still contain retired event-era language.");
+  }
+
+  if (!html.includes("application/ld+json")) {
+    warnings.push("Landing page does not include structured data.");
   }
 
   return {
     status: failures.length === 0 ? "ready" : "blocked",
-    githubLink,
-    consoleBehaviorCases: consoleBehavior.checkedCases,
-    productThesisSections: productThesis.sections,
-    sourceNotesSections: sourceNotes.sections,
-    sourceNotesDesignLineageBullets: sourceNotes.designLineageBullets,
-    sourceNotesResearchRows: sourceNotes.researchRows,
-    sourceNotesKeyDesignChoices: sourceNotes.keyDesignChoices,
-    sourceNotesPortabilityBullets: sourceNotes.portabilityBullets,
-    competitionRulesTraceBriefRows: competitionRulesTrace.briefRequirementRows,
-    competitionRulesTraceJudgingRows: competitionRulesTrace.judgingQuestionRows,
-    competitionRulesTraceProofBullets: competitionRulesTrace.aboveBriefProofBullets,
-    competitionRulesTraceBlockers: competitionRulesTrace.blockerBullets,
-    icmTraceSections: icmTrace.sections,
-    icmTraceEvidenceRefs: icmTrace.evidenceRefs,
-    modeRouterStances: modeRouter.stances,
-    modeRouterRules: modeRouter.routingRules,
-    firstRunChecks: firstRun.checks,
-    firstRunPromptBlocks: firstRun.promptBlocks,
-    firstReplyScorecardChecks: firstReplyScorecard.checks,
-    startHerePromptBlocks: startHere.promptBlocks,
-    landingCopyButtons: landingCopy.checkedButtons,
+    consoleBehaviorSamples: consoleBehavior.checkedSamples,
+    landingCopySamples: landingCopy.checkedSamples,
+    landingCopyBlocks: landingCopy.checkedCopyBlocks,
     landingAccessibilityImages: landingAccessibility.images,
     landingAccessibilityButtons: landingAccessibility.buttons,
     landingAccessibilityLabelledSections: landingAccessibility.labelledSections,
     landingAccessibilityHashLinks: landingAccessibility.localHashLinks,
-    transcriptPackCases: transcriptPack.checkedCases,
-    wholePersonTourStops: wholePersonTour.stops,
-    wholePersonTourPromptBlocks: wholePersonTour.promptBlocks,
-    firstReplyAcceptanceCases: firstReplyAcceptance.checkedCases,
-    redFaceTests: evalCoverage.redFaceTests,
-    researchToBehaviorRows: evalCoverage.researchRows,
-    adminOpsPlaybooks: adminOpsPlaybooks.playbooks,
-    adminOpsCloseStatuses: adminOpsPlaybooks.closingStatuses,
-    skoolCommentSentences: submissionCopy.sentenceCount,
-    skoolCommentCharacters: submissionCopy.characterCount,
-    submissionSurfaceCharacters: submissionSurfaces.landingSectionCharacters,
-    pitchReelShotRows: pitchReel.shotRows,
-    pitchReelVoiceoverWords: pitchReel.voiceoverWords,
-    reelPageSlides: reelPage.slides,
-    reelPageLocalRefs: reelPage.localRefs,
-    judgeFaqQuestions: judgeFaq.questions,
-    judgeFaqEvidenceRefs: judgeFaq.evidenceRefs,
-    judgeScorecardCriteriaRows: judgeScorecard.criteriaRows,
-    judgeScorecardFastPathSteps: judgeScorecard.fastPathSteps,
-    judgeBriefSections: judgeBrief.sections,
-    judgeBriefEvidenceRefs: judgeBrief.evidenceRefs,
-    judgeBriefFastTestSteps: judgeBrief.fastTestSteps,
     finalPrivacyScanFiles: finalPrivacyScan.checkedFiles,
     finalPrivacyScanTextFiles: finalPrivacyScan.scannedTextFiles,
     finalPrivacyScanSkippedGuardScripts: finalPrivacyScan.skippedGuardScripts,
