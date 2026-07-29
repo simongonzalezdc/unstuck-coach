@@ -1,11 +1,25 @@
 # Unstuck Coach
 
-Unstuck Coach is a whole-person executive-function accessibility coach. It helps someone turn a messy stuck point into one humane next move while keeping the rest of the task pile out of working memory.
+Executive-function accessibility coach that turns a messy stuck point into one humane next move.
 
-## Quick start
+**Who it is for:** ADHD / neurodivergent users (and coaches building for them) who need a next step, not a shame spiral.
 
-Clone the repository and follow scripts or package docs in-tree for the current install path.
+**What you get:** coach project assets for accessibility-first unsticking; live product and protocol live in KyaniteLabs siblings.
+
+## Try it
+
+```bash
+git clone https://github.com/simongonzalezdc/unstuck-coach.git
+cd unstuck-coach
+# open project assets; live demo when deployed: https://unstuck.kyanitelabs.tech/
+```
 
 ## Docs
 
-- See source tree and package metadata for authoritative usage.
+- This repository: coach project surface
+- Protocol: [KyaniteLabs/unstuck-coach-protocol](https://github.com/KyaniteLabs/unstuck-coach-protocol)
+- Live: [KyaniteLabs/unstuck-coach-live](https://github.com/KyaniteLabs/unstuck-coach-live)
+
+## License
+
+See [LICENSE](LICENSE).
