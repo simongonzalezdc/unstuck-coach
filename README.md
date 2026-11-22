@@ -47,7 +47,7 @@ It does not just answer questions about ADHD, productivity, or motivation. It co
 
 1. Open the canonical landing page: `https://unstuck.kyanitelabs.tech/`.
 2. Try the live GLM chat demo: `https://unstuck.kyanitelabs.tech/chat/`.
-3. The live demo is backed by GLM-5.1 through Z.AI's international coding-plan endpoint with reasoning enabled and a 1200-token completion budget.
+3. The live demo is backed by GLM-4.5-Air through Z.AI's international coding-plan endpoint with reasoning enabled and a 1200-token completion budget; the exact model is whatever the demo's `/api/config` endpoint reports.
 4. Open `START_HERE.md`.
 5. Load the folder into a Claude Project or another AI workspace.
 6. Paste `PROJECT_INSTRUCTIONS.md`.
